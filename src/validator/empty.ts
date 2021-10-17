@@ -6,26 +6,13 @@ import EmptyValidatable from "../validatable/empty";
 import Return from "@dikac/t-validator/validatable/simple";
 import Instance from "@dikac/t-validator/validatable/validatable";
 
-export default class Empty<MessageType>
-    implements
-        Validator<string, '', Readonly<Instance<'', MessageType>>>,
-        Message<(result:Readonly<Value<string> & Validatable>)=>MessageType>
-{
+export default function Empty<MessageType>(
+    message : (result:Readonly<Value<string> & Validatable>)=>MessageType
+) : Validator<string, '', Readonly<Instance<'', MessageType>>> {
 
-    constructor(
-       public message : (result:Readonly<Value<string> & Validatable>)=>MessageType
-    ) {
-    }
+    return function (value) {
 
-    validate<Argument extends ''>(value: Argument) :
-        Readonly<Instance<'', MessageType, true>>
+        return new EmptyValidatable(value, message);
 
-    validate<Argument extends string>(value: Argument) :
-        Return<string, Argument, string, Readonly<Instance<string, MessageType>>>
-
-    validate<Argument extends string>(value: Argument) {
-
-        return <Return<string, Argument, string, Readonly<Instance<string, MessageType>>>>
-            new EmptyValidatable<Argument, MessageType>(value, this.message);
-    }
+    } as Validator<string, '', Readonly<Instance<'', MessageType>>>
 }

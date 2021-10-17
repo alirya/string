@@ -14,8 +14,8 @@ for(let [value, [valid, regex, message]] of map) {
 
     it(message, ()=>{
 
-        let validator = new Match(regex, MatchMessage)
-        let valdiatable = validator.validate(value)
+        let validator = Match(regex, MatchMessage)
+        let valdiatable = validator(value)
         expect(valdiatable.valid).toBe(valid);
     });
 }

@@ -1,10 +1,7 @@
 import NotEmptyValidatable from "../validatable/not-empty";
-export default class NotEmpty {
-    constructor(message) {
-        this.message = message;
-    }
-    validate(value) {
-        return new NotEmptyValidatable(value, this.message);
-    }
+export default function NotEmpty(message) {
+    return function (value) {
+        return new NotEmptyValidatable(value, message);
+    };
 }
 //# sourceMappingURL=not-empty.js.map

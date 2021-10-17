@@ -8,26 +8,16 @@ import MinimumNumber from "@dikac/t-number/minimum/minimum";
 import Count from "../number/count";
 import Return from "@dikac/t-validator/validatable/simple";
 
-export default class Minimum<MessageType>
-    implements
-        Validator<string, string, boolean, boolean, MinimumValidatable<string, MessageType>>,
-        Message<(result:Readonly<Value<string> & Inclusive & MinimumNumber & Validatable>)=>MessageType>,
-        MinimumNumber,
-        Inclusive
-{
-    constructor(
-        public minimum : number,
-        public inclusive : boolean,
-        public message : (result:Readonly<Value<string> & Inclusive & MinimumNumber & Validatable>)=>MessageType,
-        public converter : (value:string)=>number = Count,
-    ) {
-    }
+export default function Minimum<MessageType>(
+    minimum : number,
+    inclusive : boolean,
+    message : (result:Readonly<Value<string> & Inclusive & MinimumNumber & Validatable>)=>MessageType,
+    converter : (value:string)=>number = Count,
+) : Validator<string, string, boolean, boolean, MinimumValidatable<string, MessageType>> {
 
-    validate<Argument extends string>(
-        value: Argument
-    ) : Return<string, Argument, string, MinimumValidatable<Argument, MessageType>> {
+    return function (value) {
 
-        return <Return<string, Argument, string, MinimumValidatable<Argument, MessageType>>>
-            new MinimumValidatable<Argument, MessageType>(value, this.minimum, this.inclusive, this.message, this.converter);
-    }
+        return new MinimumValidatable(value, minimum, inclusive, message, converter)
+
+    } as Validator<string, string, boolean, boolean, MinimumValidatable<string, MessageType>>
 }

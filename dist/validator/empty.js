@@ -1,10 +1,7 @@
 import EmptyValidatable from "../validatable/empty";
-export default class Empty {
-    constructor(message) {
-        this.message = message;
-    }
-    validate(value) {
-        return new EmptyValidatable(value, this.message);
-    }
+export default function Empty(message) {
+    return function (value) {
+        return new EmptyValidatable(value, message);
+    };
 }
 //# sourceMappingURL=empty.js.map

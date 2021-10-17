@@ -52,8 +52,8 @@ for(let [value, [valid, message]] of map) {
 
     it(message, ()=>{
 
-        let validator = new Alphanumeric(AlphanumericMessage);
-        let validatable = validator.validate(value);
+        let validator = Alphanumeric(AlphanumericMessage);
+        let validatable = validator(value);
         expect(validatable.valid).toBe(valid);
         expect(validatable.value).toBe(value);
 

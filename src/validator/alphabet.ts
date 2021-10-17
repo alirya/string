@@ -6,22 +6,13 @@ import AlphabetValidatable from "../validatable/alphabet";
 import Instance from "@dikac/t-validator/validatable/validatable";
 import Return from "@dikac/t-validator/validatable/simple";
 
-export default class Alphabet<MessageType>
-    implements
-        Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>,
-        Message<(result:Readonly<Value<string> & Validatable>)=>MessageType>
-{
+export default function Alphabet<MessageType>(
+    message : (result:Readonly<Value<string> & Validatable>)=>MessageType
+) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
 
-    constructor(
-       public message : (result:Readonly<Value<string> & Validatable>)=>MessageType
-    ) {
-    }
+    return function (value) {
 
-    validate<Argument extends string>(
-        value: Argument
-    ) : Return<string, Argument, string, Readonly<Instance<string, MessageType>>> {
+        return new AlphabetValidatable(value, message)
 
-        return <Return<string, Argument, string, Readonly<Instance<string, MessageType>>>>
-            new AlphabetValidatable<Argument, MessageType>(value, this.message);
-    }
+    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
 }

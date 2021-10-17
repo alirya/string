@@ -6,23 +6,14 @@ import MatchValidatable from "../validatable/match";
 import Instance from "@dikac/t-validator/validatable/validatable";
 import Return from "@dikac/t-validator/validatable/simple";
 
-export default class Match<MessageType>
-    implements
-        Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>,
-        Message<(result:Readonly<Value<string> & Validatable>)=>MessageType>
-{
+export default function Match<MessageType>(
+    pattern : RegExp,
+    message : (result:Readonly<Value<string> & Validatable>)=>MessageType
+) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
 
-    constructor(
-       public pattern : RegExp,
-       public message : (result:Readonly<Value<string> & Validatable>)=>MessageType
-    ) {
-    }
+    return function (value) {
 
-    validate<Argument extends string>(
-        value: Argument
-    ) : Return<string, Argument, string, Readonly<Instance<string, MessageType>>> {
+        return new MatchValidatable(value, pattern, message);
 
-        return <Return<string, Argument, string, Readonly<Instance<string, MessageType>>>>
-            new MatchValidatable<Argument, MessageType>(value, this.pattern, this.message);
-    }
+    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
 }

@@ -1,10 +1,7 @@
 import NumericValidatable from "../validatable/numeric";
-export default class Numeric {
-    constructor(message) {
-        this.message = message;
-    }
-    validate(value) {
-        return new NumericValidatable(value, this.message);
-    }
+export default function Numeric(message) {
+    return function (value) {
+        return new NumericValidatable(value, message);
+    };
 }
 //# sourceMappingURL=numeric.js.map

@@ -1,10 +1,7 @@
 import StringValidatable from "../validatable/string";
-export default class String {
-    constructor(message) {
-        this.message = message;
-    }
-    validate(value) {
-        return StringValidatable(value, this.message);
-    }
+export default function String(message) {
+    return function (value) {
+        return StringValidatable(value, message);
+    };
 }
 //# sourceMappingURL=string.js.map

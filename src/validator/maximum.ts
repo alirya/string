@@ -8,26 +8,16 @@ import MaximumNumber from "@dikac/t-number/maximum/maximum";
 import Count from "../number/count";
 import Return from "@dikac/t-validator/validatable/simple";
 
-export default class Maximum<MessageType>
-    implements
-        Validator<string, string, boolean, boolean, MaximumValidatable<string, MessageType>>,
-        Message<(result:Readonly<Value<string> & Inclusive & MaximumNumber & Validatable>)=>MessageType>,
-        MaximumNumber,
-        Inclusive
-{
-    constructor(
-        public maximum : number,
-        public inclusive : boolean,
-        public message : (result:Readonly<Value<string> & Inclusive & MaximumNumber & Validatable>)=>MessageType,
-        public converter : (value:string)=>number = Count,
-    ) {
-    }
+export default function Maximum<MessageType>(
+    maximum : number,
+    inclusive : boolean,
+    message : (result:Readonly<Value<string> & Inclusive & MaximumNumber & Validatable>)=>MessageType,
+    converter : (value:string)=>number = Count,
+) : Validator<string, string, boolean, boolean, MaximumValidatable<string, MessageType>> {
 
-    validate<Argument extends string>(
-        value: Argument
-    ) : Return<string, Argument, string, MaximumValidatable<Argument, MessageType>> {
+    return function (value) {
 
-        return <Return<string, Argument, string, MaximumValidatable<Argument, MessageType>>>
-            new MaximumValidatable<Argument, MessageType>(value, this.maximum, this.inclusive, this.message, this.converter);
-    }
+        return new MaximumValidatable(value, maximum, inclusive, message, converter)
+
+    } as Validator<string, string, boolean, boolean, MaximumValidatable<string, MessageType>>
 }

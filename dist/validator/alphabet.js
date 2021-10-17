@@ -1,10 +1,7 @@
 import AlphabetValidatable from "../validatable/alphabet";
-export default class Alphabet {
-    constructor(message) {
-        this.message = message;
-    }
-    validate(value) {
-        return new AlphabetValidatable(value, this.message);
-    }
+export default function Alphabet(message) {
+    return function (value) {
+        return new AlphabetValidatable(value, message);
+    };
 }
 //# sourceMappingURL=alphabet.js.map

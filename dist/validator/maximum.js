@@ -1,14 +1,8 @@
 import MaximumValidatable from "../validatable/maximum";
 import Count from "../number/count";
-export default class Maximum {
-    constructor(maximum, inclusive, message, converter = Count) {
-        this.maximum = maximum;
-        this.inclusive = inclusive;
-        this.message = message;
-        this.converter = converter;
-    }
-    validate(value) {
-        return new MaximumValidatable(value, this.maximum, this.inclusive, this.message, this.converter);
-    }
+export default function Maximum(maximum, inclusive, message, converter = Count) {
+    return function (value) {
+        return new MaximumValidatable(value, maximum, inclusive, message, converter);
+    };
 }
 //# sourceMappingURL=maximum.js.map
