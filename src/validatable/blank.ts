@@ -1,14 +1,12 @@
 import Value from "@dikac/t-value/value";
 import Validatable from "@dikac/t-validatable/validatable";
-import BlankBoolean from "../boolean/blank";
-import Callback from "./callback";
+import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
+import NotBlankBoolean from "../boolean/not-blank";
 
-export default class Blank<ValueType extends string, MessageType> extends Callback<ValueType, MessageType> {
-    constructor(
-        value : ValueType,
-        message : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType,
-    ) {
-        super(value, BlankBoolean, message)
-    }
+export default function Blank<ValueType extends string, MessageType>(
+    value : ValueType,
+    message : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType,
+) {
 
+    return ValidatableCallbacks<string, ValueType, MessageType>(value, NotBlankBoolean, message);
 }

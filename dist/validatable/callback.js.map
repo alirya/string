@@ -1,1 +1,0 @@
-{"version":3,"file":"callback.js","sourceRoot":"","sources":["../../src/validatable/callback.ts"],"names":[],"mappings":"AAAA,OAAO,oBAAoB,MAAM,yCAAyC,CAAC;AAI3E,MAAM,CAAC,OAAO,OAAO,QAAqD,SAAQ,oBAA+C;IAE7H,OAAO;QAEH,OAAO,IAAI,CAAC,KAAK,CAAC;IACtB,CAAC;IAED,QAAQ;QAEJ,OAAO,IAAI,CAAC,KAAK,CAAC;IACtB,CAAC;CACJ"}
