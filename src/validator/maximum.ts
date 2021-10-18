@@ -7,11 +7,14 @@ import Inclusive from "@dikac/t-number/inclusive/inclusive";
 import MaximumNumber from "@dikac/t-number/maximum/maximum";
 import Count from "../number/count";
 import Return from "@dikac/t-validator/validatable/simple";
+import MaximumString from "../validatable/string/maximum";
+
+
 
 export default function Maximum<MessageType>(
     maximum : number,
     inclusive : boolean,
-    message : (result:Readonly<Value<string> & Inclusive & MaximumNumber & Validatable>)=>MessageType,
+    message : (result:Readonly<Value<string> & Inclusive & MaximumNumber & Validatable>)=>MessageType|string = MaximumString,
     converter : (value:string)=>number = Count,
 ) : Validator<string, string, boolean, boolean, MaximumValidatable<string, MessageType>> {
 

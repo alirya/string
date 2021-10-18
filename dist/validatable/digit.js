@@ -1,9 +1,9 @@
-import DigitFromObject from "../boolean/digit";
+import IsDigit from "../boolean/digit";
 export default class Digit {
     constructor(value, message) {
         this.value = value;
         this.messageFactory = message;
-        this.valid = DigitFromObject(value);
+        this.valid = IsDigit(value);
     }
     toString() {
         return this.value;

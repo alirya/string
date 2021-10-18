@@ -1,5 +1,6 @@
 import AlphanumericValidatable from "../validatable/alphanumeric";
-export default function Alphanumeric(message) {
+import AlphanumericString from "../validatable/string/alphanumeric";
+export default function Alphanumeric(message = AlphanumericString) {
     return function (value) {
         return new AlphanumericValidatable(value, message);
     };

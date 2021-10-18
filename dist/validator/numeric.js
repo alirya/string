@@ -1,5 +1,6 @@
 import NumericValidatable from "../validatable/numeric";
-export default function Numeric(message) {
+import NumericString from "../validatable/string/numeric";
+export default function Numeric(message = NumericString) {
     return function (value) {
         return new NumericValidatable(value, message);
     };

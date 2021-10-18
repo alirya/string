@@ -1,7 +1,7 @@
 import Value from "@dikac/t-value/value";
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
-import DigitFromObject from "../boolean/digit";
+import IsDigit from "../boolean/digit";
 import ValueOf from "@dikac/t-value/value-of/value-of";
 
 export default class Digit<ValueType extends string, MessageType>
@@ -18,7 +18,7 @@ export default class Digit<ValueType extends string, MessageType>
     ) {
 
         this.messageFactory = message;
-        this.valid = DigitFromObject(value);
+        this.valid = IsDigit(value);
 
     }
 

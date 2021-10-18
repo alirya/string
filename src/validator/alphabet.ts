@@ -5,9 +5,16 @@ import Value from "@dikac/t-value/value";
 import AlphabetValidatable from "../validatable/alphabet";
 import Instance from "@dikac/t-validator/validatable/validatable";
 import Return from "@dikac/t-validator/validatable/simple";
+import AlphabetString from "../validatable/string/alphabet";
+
+export default function Alphabet() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 
 export default function Alphabet<MessageType>(
     message : (result:Readonly<Value<string> & Validatable>)=>MessageType
+) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+
+export default function Alphabet<MessageType>(
+    message : (result:Readonly<Value<string> & Validatable>)=>MessageType|string = AlphabetString
 ) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
 
     return function (value) {

@@ -1,5 +1,6 @@
 import StringValidatable from "../validatable/string";
-export default function String(message) {
+import StringString from "../validatable/string/string";
+export default function String(message = StringString) {
     return function (value) {
         return StringValidatable(value, message);
     };

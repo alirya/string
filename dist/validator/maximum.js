@@ -1,6 +1,7 @@
 import MaximumValidatable from "../validatable/maximum";
 import Count from "../number/count";
-export default function Maximum(maximum, inclusive, message, converter = Count) {
+import MaximumString from "../validatable/string/maximum";
+export default function Maximum(maximum, inclusive, message = MaximumString, converter = Count) {
     return function (value) {
         return new MaximumValidatable(value, maximum, inclusive, message, converter);
     };

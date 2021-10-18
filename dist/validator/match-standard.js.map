@@ -1,1 +1,0 @@
-{"version":3,"file":"match-standard.js","sourceRoot":"","sources":["../../src/validator/match-standard.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,SAAS,CAAC;AAC5B,OAAO,WAAW,MAAM,6BAA6B,CAAC;AAItD,MAAM,CAAC,OAAO,UAAU,aAAa,CAAC,OAAgB;IAElD,OAAO,KAAK,CAAC,OAAO,EAAE,WAAW,CAAC,CAAC;AACvC,CAAC"}

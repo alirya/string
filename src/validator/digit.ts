@@ -5,10 +5,17 @@ import Value from "@dikac/t-value/value";
 import DigitValidatable from "../validatable/digit";
 import Return from "@dikac/t-validator/validatable/simple";
 import Instance from "@dikac/t-validator/validatable/validatable";
+import DigitString from "../validatable/string/digit";
+
+export default function Digit() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 
 export default function Digit<MessageType>(
     message : (result:Readonly<Value<string>> & Readonly<Validatable>)=>MessageType
-) {
+) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+
+export default function Digit<MessageType>(
+    message : (result:Readonly<Value<string>> & Readonly<Validatable>)=>MessageType|string = DigitString
+) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
 
     return function (value) {
 

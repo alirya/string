@@ -1,5 +1,6 @@
 import NotEmptyValidatable from "../validatable/not-empty";
-export default function NotEmpty(message) {
+import NotEmptyString from "../validatable/string/not-empty";
+export default function NotEmpty(message = NotEmptyString) {
     return function (value) {
         return new NotEmptyValidatable(value, message);
     };
