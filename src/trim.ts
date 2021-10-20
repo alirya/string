@@ -1,8 +1,13 @@
-import {trim} from "lodash";
+import {trim, trimEnd} from "lodash";
+import String from "./string/string";
+import Suffix from "./suffix/suffix";
+import Circumfix from "./circumfix/circumfix";
 
 /**
  * @see trim
  */
-const Trim : (string : string, characters ?: string) => string = trim;
-export default Trim;
 
+export default function Trim({string, circumfix} : String & Partial<Circumfix>) {
+
+    return trimEnd(string, circumfix)
+}

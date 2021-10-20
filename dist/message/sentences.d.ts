@@ -1,6 +1,7 @@
 import ValueOf from "@dikac/t-value/value-of/value-of";
 import Validatable from "@dikac/t-validatable/validatable";
 /**
+ * @deprecated
  * create a string message, by joining subject, (reject, or accept), expect, actual according
  * to order
  */

@@ -1,5 +1,6 @@
 import Sentences from "./sentences";
 /**
+ * @deprecated
  * string implementation of {@see Sentences}
  */
 export default class Sentence {

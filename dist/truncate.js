@@ -9,7 +9,7 @@ import { truncate } from "lodash";
  *
  * @param separator
  */
-export default function Truncate(string, length, omission = '...', separator) {
+export default function Truncate({ string, length, omission = "...", separator }) {
     return truncate(string, {
         length: length,
         omission: omission,

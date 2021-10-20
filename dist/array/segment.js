@@ -1,15 +1,18 @@
 /**
- * split {@param string} to its each segment marked by {@param delimiter}
+ * split {@param string} to its each segment marked by {@param separator}
  *
  * @param string
- * @param delimiter
+ * @param separator
+ *
+ * example
+ *     Segment('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
  */
-export default function Segment(string, delimiter) {
-    let list = string.split(delimiter);
+export default function Segment({ string, separator }) {
+    let list = string.split(separator);
     let length = list.length;
     let adds = [];
     for (let i = 1; i <= length; i++) {
-        adds.push(list.slice(0, i).join(delimiter));
+        adds.push(list.slice(0, i).join(separator));
     }
     return adds;
 }

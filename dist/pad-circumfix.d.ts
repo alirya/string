@@ -1,5 +1,8 @@
+import String from "./string/string";
+import Circumfix from "./circumfix/circumfix";
 /**
  * @see pad
  */
-declare const PadCircumfix: (string: string, length: number, characters: string) => string;
-export default PadCircumfix;
+export default function PadCircumfix({ string, length, circumfix }: String & Circumfix & {
+    length: number;
+}): string;

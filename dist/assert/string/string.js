@@ -1,5 +1,5 @@
 import SentencesMust from "../../message/sentences-must";
-export default function String(valid, value, subject = 'type', conversion = value => typeof value) {
+export default function String({ valid, value, subject = 'type', conversion = value => typeof value }) {
     let sentence = SentencesMust(valid);
     sentence.expect.push('string');
     sentence.subject.push(subject);

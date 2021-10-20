@@ -1,14 +1,13 @@
+import Empty from "./empty";
 /**
- * check if {@param string} is white space (\s) or empty string {@see Empty}
+ * check if {@param string} is all white space (space, tab, no-break space, etc.) or empty string {@see Empty}
  *
  * @param string
  */
-import Empty from "./empty";
-import Trim from "../trim";
 
 export default function Blank(
     string : string,
 ) : boolean {
 
-    return Empty(Trim(string));
+    return Empty(string.trim());
 }

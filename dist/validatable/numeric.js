@@ -1,18 +1,6 @@
 import NumericFromObject from "../boolean/numeric";
-export default class Numeric {
-    constructor(value, message) {
-        this.value = value;
-        this.messageFactory = message;
-        this.valid = NumericFromObject(this.value);
-    }
-    toString() {
-        return this.value;
-    }
-    valueOf() {
-        return this.value;
-    }
-    get message() {
-        return this.messageFactory(this);
-    }
+import Callback from "@dikac/t-validator/validatable/callback";
+export default function Numeric({ value, message }) {
+    return Callback(value, NumericFromObject, message);
 }
 //# sourceMappingURL=numeric.js.map

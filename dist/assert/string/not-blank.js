@@ -1,5 +1,5 @@
 import Sentence from "../../message/sentence";
-export default function NotBlank(valid, value, subject = 'string') {
+export default function NotBlank({ valid, value, subject = 'string', }) {
     let sentence = new Sentence(valid);
     sentence.reject = 'must not';
     sentence.accept = 'is not';

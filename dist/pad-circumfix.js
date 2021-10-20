@@ -2,6 +2,7 @@ import { pad } from "lodash";
 /**
  * @see pad
  */
-const PadCircumfix = pad;
-export default PadCircumfix;
+export default function PadCircumfix({ string, length, circumfix }) {
+    return pad(string, length, circumfix);
+}
 //# sourceMappingURL=pad-circumfix.js.map

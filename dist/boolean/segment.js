@@ -5,25 +5,22 @@ import Difference from "@dikac/t-array/difference";
  * @param root
  * @param compare
  *
- * @param delimiter
+ * @param separator
  * separator each segment
  *
  * @example
- * // return true
- * Segment('root', 'root.parent', '.')
+ * Segment('root', 'root.parent', '.') : true
  *
  * @example
- * // return true
- * Segment('root', 'root', '.')
+ * Segment('root', 'root', '.') : true
  *
  * @example
- * // return false
- * Segment('root.parent', 'root', '.')
+ * Segment('root.parent', 'root', '.') : false
  */
-export default function Segment(root, compare, delimiter) {
+export default function Segment({ root, compare, separator }) {
     if (root === compare) {
         return true;
     }
-    return Difference(root.split(delimiter), compare.split(delimiter)).length === 0;
+    return Difference(root.split(separator), compare.split(separator)).length === 0;
 }
 //# sourceMappingURL=segment.js.map

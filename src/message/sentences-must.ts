@@ -1,6 +1,7 @@
 import Sentences from "./sentences";
 
 /**
+ * @deprecated
  * create {@see Sentences} with some populated data
  * {@see Sentences.reject} set to ['must']
  * {@see Sentences.accept} set to ['is']

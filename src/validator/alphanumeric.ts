@@ -19,7 +19,7 @@ export default function Alphanumeric<MessageType>(
 
     return function (value) {
 
-        return new AlphanumericValidatable(value, message);
+        return AlphanumericValidatable({value, message});
 
     } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
 

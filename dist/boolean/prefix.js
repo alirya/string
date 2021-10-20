@@ -1,10 +1,10 @@
 import { startsWith } from "lodash";
 /**
  * @see startsWith
- * @param string
+ * @param value
  * @param prefix
  */
-export default function Prefix(string, prefix) {
-    return startsWith(string, prefix);
+export default function Prefix({ value, prefix }) {
+    return startsWith(value, prefix);
 }
 //# sourceMappingURL=prefix.js.map

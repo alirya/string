@@ -1,5 +1,8 @@
+import String from "./string/string";
+import Prefix from "./prefix/prefix";
 /**
  * @see padStart
  */
-declare const PadPrefix: (string: string, length: number, characters: string) => string;
-export default PadPrefix;
+export default function PadSuffix({ string, length, prefix }: String & Prefix & {
+    length: number;
+}): string;

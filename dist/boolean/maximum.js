@@ -5,7 +5,7 @@ import Count from "../number/count";
  *
  * {@param converter} is use to calculate length/size of {@param string}
  */
-export default function Maximum(string, maximum, inclusive, converter = Count) {
-    return Lower(converter(string), maximum, inclusive);
+export default function Maximum({ value, maximum, inclusive, converter = Count }) {
+    return Lower(converter(value), maximum, inclusive);
 }
 //# sourceMappingURL=maximum.js.map

@@ -19,7 +19,7 @@ export default function Digit<MessageType>(
 
     return function (value) {
 
-        return new DigitValidatable(value, message);
+        return DigitValidatable({value, message});
 
     } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
 }

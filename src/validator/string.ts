@@ -19,7 +19,7 @@ export default function String<MessageType>(
 
     return function (value) {
 
-        return StringValidatable(value, message);
+        return StringValidatable({value, message});
 
     } as Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>
 }

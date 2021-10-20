@@ -4,11 +4,11 @@
  * @param string
  * @param character
  */
-export default function PrefixCharacter(string, character) {
+export default function PrefixCharacter({ string, prefix }) {
     if (string.length !== 0) {
-        character = character[0];
-        if (string[0] !== character) {
-            return character + string;
+        prefix = prefix[0];
+        if (string[0] !== prefix) {
+            return prefix + string;
         }
     }
     return string;

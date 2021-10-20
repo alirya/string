@@ -1,1 +1,1 @@
-{"version":3,"file":"pad-circumfix.js","sourceRoot":"","sources":["../src/pad-circumfix.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,GAAG,EAAC,MAAM,QAAQ,CAAC;AAC3B;;GAEG;AACH,MAAM,YAAY,GAAuE,GAAG,CAAC;AAC7F,eAAe,YAAY,CAAC"}
+{"version":3,"file":"pad-circumfix.js","sourceRoot":"","sources":["../src/pad-circumfix.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,GAAG,EAAS,MAAM,QAAQ,CAAC;AAInC;;GAEG;AAEH,MAAM,CAAC,OAAO,UAAU,YAAY,CAAC,EAAC,MAAM,EAAE,MAAM,EAAG,SAAS,EAAwC;IAEpG,OAAO,GAAG,CAAC,MAAM,EAAE,MAAM,EAAE,SAAS,CAAC,CAAA;AACzC,CAAC"}

@@ -1,1 +1,4 @@
-export default function Alphabet(string: string, subject?: string): Error;
+import Value from "@dikac/t-value/value";
+export default function Alphabet({ value, subject }: Value<string> & {
+    subject?: string;
+}): Error;

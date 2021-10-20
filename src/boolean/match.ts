@@ -6,12 +6,5 @@
  */
 export default function Match(string : string, pattern : RegExp) : boolean {
 
-    let match = string.match(pattern);
-
-    if(match !== null) {
-
-        return true;
-    }
-
-    return false;
+    return string.match(pattern) !== null;
 }

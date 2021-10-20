@@ -1,5 +1,6 @@
+import String from "./string/string";
+import Circumfix from "./circumfix/circumfix";
 /**
  * @see trim
  */
-declare const Trim: (string: string, characters?: string) => string;
-export default Trim;
+export default function Trim({ string, circumfix }: String & Partial<Circumfix>): string;

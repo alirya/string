@@ -1,4 +1,5 @@
 import { trimStart } from "lodash";
-const TrimPrefix = trimStart;
-export default TrimPrefix;
+export default function TrimSuffix({ string, prefix }) {
+    return trimStart(string, prefix);
+}
 //# sourceMappingURL=trim-prefix.js.map

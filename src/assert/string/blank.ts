@@ -1,11 +1,13 @@
 import Truncate from "../../truncate";
 import SentencesMust from "../../message/sentences-must";
+import Validatable from "@dikac/t-validatable/validatable";
+import Value from "@dikac/t-value/value";
 
-export default function Blank(
-    valid : boolean,
-    value : string,
-    subject : string = 'string',
-) : string {
+export default function Blank({
+    valid,
+    value,
+    subject = 'string',
+} : Validatable & Value<string> & {subject ?: string }) : string {
 
     let sentence = SentencesMust(valid);
     sentence.expect.push('blank', 'string');

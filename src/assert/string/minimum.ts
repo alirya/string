@@ -1,12 +1,16 @@
 import Sentences from "../../message/sentences";
+import String from "../../string/string";
+import Validatable from "@dikac/t-validatable/validatable";
+import MinimumNumber from "@dikac/t-number/minimum/minimum";
+import Inclusive from "@dikac/t-number/inclusive/inclusive";
 
-export default function Minimum(
-    valid : boolean,
-    string : string,
-    minimum : number,
-    inclusive : boolean,
-    subject : string = 'string',
-) : string {
+export default function Minimum({
+    valid,
+    string,
+    minimum,
+    inclusive,
+    subject = 'string',
+} : Validatable & String & MinimumNumber & Inclusive & {subject ?: string}) : string {
 
     let sentence = new Sentences(valid);
 

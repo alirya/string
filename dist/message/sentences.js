@@ -3,6 +3,7 @@ import Trim from "../trim";
 import SuffixCharacter from "../suffix-character";
 import RemoveSuffixCharacter from "../remove-suffix-character";
 /**
+ * @deprecated
  * create a string message, by joining subject, (reject, or accept), expect, actual according
  * to order
  */

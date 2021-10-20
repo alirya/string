@@ -1,6 +1,8 @@
+import Value from "@dikac/t-value/value";
+import Prefix from "../prefix/prefix";
 /**
  * @see startsWith
- * @param string
+ * @param value
  * @param prefix
  */
-export default function Prefix(string: string, prefix: string): boolean;
+export default function Prefix({ value, prefix }: Value<string> & Prefix<string>): boolean;

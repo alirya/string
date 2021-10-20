@@ -1,29 +1,35 @@
-import Affix from "./affix/affix";
+import Affix from "./affix/affix/affix";
 import PrefixCharacter from "./prefix-character";
 import SuffixCharacter from "./suffix-character";
-
+import AffixOption from "./affix/affix";
+import PadPrefix from "./pad-prefix";
+import PadSuffix from "./pad-suffix";
+import PadCircumfix from "./pad-circumfix";
+import String from "./string/string";
+import Padding from "./padding/padding";
 /**
- * add {@param character} to {@param string} if not exist and {@param string} not empty
+ * add {@param padding} to {@param string} if not exist and {@param string} not empty
  *
  * @param string
- * @param character
  * @param padding
+ * @param affix
  */
-export default function AffixCharacter(
-    string : string,
-    character : string,
-    padding : Affix
-) : string {
+export default function AffixCharacter({
+    string,
+    padding,
+    affix,
+} : String & Padding & Affix) : string {
 
-    switch (padding) {
-        case Affix.PREFIX:
-            return PrefixCharacter(string, character);
+    switch (affix) {
+        case AffixOption.PREFIX:
+            return PrefixCharacter({string, prefix: padding});
 
-        case Affix.SUFFIX:
-            return SuffixCharacter(string, character);
+        case AffixOption.SUFFIX:
+            return SuffixCharacter({string, suffix: padding});
 
-        case Affix.CIRCUMFIX:
-            string = PrefixCharacter(string, character);
-            return SuffixCharacter(string, character);
+        case AffixOption.CIRCUMFIX:
+            string = PrefixCharacter({string, prefix: padding});
+            string = SuffixCharacter({string, suffix: padding});
+            return string;
     }
 }

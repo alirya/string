@@ -3,6 +3,7 @@ import Validatable from "@dikac/t-validatable/validatable";
 import Sentences from "./sentences";
 
 /**
+ * @deprecated
  * string implementation of {@see Sentences}
  */
 export default class Sentence implements ValueOf<string>, Validatable {

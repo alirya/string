@@ -1,12 +1,18 @@
 import Truncate from "../../truncate";
 import Sentences from "../../message/sentences";
+import Validatable from "@dikac/t-validatable/validatable";
+import String from "../../string/string";
+import MaximumNumber from "@dikac/t-number/maximum/maximum";
+import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import Value from "@dikac/t-value/value";
+import Pattern from "../../pattern/pattern/pattern";
 
-export default function Match(
-    valid : boolean,
-    value : string,
-    pattern : RegExp,
-    subject : string = 'string',
-) : string {
+export default function Match({
+    valid,
+    value,
+    pattern,
+    subject = 'string',
+} : Validatable & Value<string> & Pattern & {subject ?: string}) : string {
 
     let sentence = new Sentences(valid);
 

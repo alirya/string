@@ -8,9 +8,9 @@ import SuffixCharacter from "./suffix-character";
  * @param prefix
  * @param suffix
  */
-export default function Enclose(string, prefix, suffix) {
-    string = PrefixCharacter(string, prefix);
-    string = SuffixCharacter(string, suffix);
+export default function Enclose({ string, prefix, suffix, }) {
+    string = PrefixCharacter({ string, prefix });
+    string = SuffixCharacter({ string, suffix });
     return string;
 }
 //# sourceMappingURL=enclose.js.map

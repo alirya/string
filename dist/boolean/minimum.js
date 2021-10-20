@@ -5,7 +5,7 @@ import Count from "../number/count";
  *
  * {@param converter} is use to calculate length/size of {@param string}
  */
-export default function Minimum(string, minimum, inclusive, converter = Count) {
-    return Greater(converter(string), minimum, inclusive);
+export default function Minimum({ value, minimum, inclusive, converter = Count }) {
+    return Greater(converter(value), minimum, inclusive);
 }
 //# sourceMappingURL=minimum.js.map

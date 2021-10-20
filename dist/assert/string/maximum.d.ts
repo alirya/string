@@ -1,1 +1,7 @@
-export default function Maximum(valid: boolean, string: string, maximum: number, inclusive: boolean, subject?: string): string;
+import Validatable from "@dikac/t-validatable/validatable";
+import String from "../../string/string";
+import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import MaximumNumber from "@dikac/t-number/maximum/maximum";
+export default function Maximum({ valid, string, maximum, inclusive, subject, }: Validatable & String & MaximumNumber & Inclusive & {
+    subject?: string;
+}): string;

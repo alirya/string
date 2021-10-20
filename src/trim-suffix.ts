@@ -1,5 +1,9 @@
-import {trimStart} from "lodash";
+import {trimEnd} from "lodash";
+import Suffix from "./suffix/suffix";
+import String from "./string/string";
 
-const TrimSuffix : (string : string, characters ?: string) => string = trimStart;
-export default TrimSuffix;
 
+export default function TrimSuffix({string, suffix} : String & Partial<Suffix>) {
+
+    return trimEnd(string, suffix)
+}

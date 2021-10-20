@@ -2,6 +2,7 @@ import { padEnd } from "lodash";
 /**
  * @see padEnd
  */
-const PadSuffix = padEnd;
-export default PadSuffix;
+export default function PadSuffix({ string, length, suffix }) {
+    return padEnd(string, length, suffix);
+}
 //# sourceMappingURL=pad-suffix.js.map

@@ -1,22 +1,23 @@
+import Separator from "../separator/separator";
 /**
  * check if {@param compare} is part of {@param root}
  *
  * @param root
  * @param compare
  *
- * @param delimiter
+ * @param separator
  * separator each segment
  *
  * @example
- * // return true
- * Segment('root', 'root.parent', '.')
+ * Segment('root', 'root.parent', '.') : true
  *
  * @example
- * // return true
- * Segment('root', 'root', '.')
+ * Segment('root', 'root', '.') : true
  *
  * @example
- * // return false
- * Segment('root.parent', 'root', '.')
+ * Segment('root.parent', 'root', '.') : false
  */
-export default function Segment(root: string, compare: string, delimiter: string): boolean;
+export default function Segment({ root, compare, separator }: Separator & {
+    root: string;
+    compare: string;
+}): boolean;

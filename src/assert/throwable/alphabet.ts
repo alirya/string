@@ -1,9 +1,10 @@
 import AlphabetType from "../string/alphabet";
+import Value from "@dikac/t-value/value";
 
-export default function Alphabet(
-    string : string,
-    subject : string = 'string'
-) : Error {
+export default function Alphabet({
+    value,
+    subject = 'string'
+} : Value<string> & {subject ?: string}) : Error {
 
-    return new Error(AlphabetType(false, string, subject))
+    return new Error(AlphabetType(false, value, subject))
 }

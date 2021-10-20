@@ -1,5 +1,5 @@
 import Sentences from "../../message/sentences";
-export default function Maximum(valid, string, maximum, inclusive, subject = 'string') {
+export default function Maximum({ valid, string, maximum, inclusive, subject = 'string', }) {
     let sentence = new Sentences(valid);
     sentence.subject.push(subject);
     sentence.subject.push('length');

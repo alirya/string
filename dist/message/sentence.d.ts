@@ -1,6 +1,7 @@
 import ValueOf from "@dikac/t-value/value-of/value-of";
 import Validatable from "@dikac/t-validatable/validatable";
 /**
+ * @deprecated
  * string implementation of {@see Sentences}
  */
 export default class Sentence implements ValueOf<string>, Validatable {

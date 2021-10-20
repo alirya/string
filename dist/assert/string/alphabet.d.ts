@@ -1,1 +1,5 @@
-export default function Alphabet(valid: boolean, value: string, subject?: string): string;
+import Validatable from "@dikac/t-validatable/validatable";
+import Value from "@dikac/t-value/value";
+export default function Alphabet({ valid, value, subject }: Validatable & Value<string> & {
+    subject?: string;
+}): string;

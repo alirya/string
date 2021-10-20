@@ -1,7 +1,12 @@
-import {padStart} from "lodash";
+import {padEnd, padStart} from "lodash";
+import String from "./string/string";
+import Suffix from "./suffix/suffix";
+import Prefix from "./prefix/prefix";
 /**
  * @see padStart
  */
-const PadPrefix : (string : string, length : number, characters : string) => string = padStart;
-export default PadPrefix;
 
+export default function PadSuffix({string, length , prefix} : String & Prefix & {length:number}) {
+
+    return padStart(string, length, prefix)
+}

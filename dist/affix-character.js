@@ -1,22 +1,23 @@
-import Affix from "./affix/affix";
 import PrefixCharacter from "./prefix-character";
 import SuffixCharacter from "./suffix-character";
+import AffixOption from "./affix/affix";
 /**
- * add {@param character} to {@param string} if not exist and {@param string} not empty
+ * add {@param padding} to {@param string} if not exist and {@param string} not empty
  *
  * @param string
- * @param character
  * @param padding
+ * @param affix
  */
-export default function AffixCharacter(string, character, padding) {
-    switch (padding) {
-        case Affix.PREFIX:
-            return PrefixCharacter(string, character);
-        case Affix.SUFFIX:
-            return SuffixCharacter(string, character);
-        case Affix.CIRCUMFIX:
-            string = PrefixCharacter(string, character);
-            return SuffixCharacter(string, character);
+export default function AffixCharacter({ string, padding, affix, }) {
+    switch (affix) {
+        case AffixOption.PREFIX:
+            return PrefixCharacter({ string, prefix: padding });
+        case AffixOption.SUFFIX:
+            return SuffixCharacter({ string, suffix: padding });
+        case AffixOption.CIRCUMFIX:
+            string = PrefixCharacter({ string, prefix: padding });
+            string = SuffixCharacter({ string, suffix: padding });
+            return string;
     }
 }
 //# sourceMappingURL=affix-character.js.map

@@ -1,3 +1,6 @@
+import String from "./string/string";
+import Prefix from "./prefix/prefix";
+import Suffix from "./suffix/suffix";
 /**
  * remove {@param prefix} from start and {@param suffix} from end of {@param string}
  *
@@ -5,4 +8,4 @@
  * @param prefix
  * @param suffix
  */
-export default function Unclose(string: string, prefix: string, suffix: string): string;
+export default function Unclose({ string, prefix, suffix }: String & Prefix & Suffix): string;

@@ -7,9 +7,9 @@ import RemoveSuffixCharacter from "./remove-suffix-character";
  * @param prefix
  * @param suffix
  */
-export default function Unclose(string, prefix, suffix) {
-    string = RemovePrefixCharacter(string, prefix);
-    string = RemoveSuffixCharacter(string, suffix);
+export default function Unclose({ string, prefix, suffix }) {
+    string = RemovePrefixCharacter({ string, prefix });
+    string = RemoveSuffixCharacter({ string, suffix });
     return string;
 }
 //# sourceMappingURL=unclose.js.map

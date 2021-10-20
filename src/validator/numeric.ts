@@ -19,7 +19,7 @@ export default function Numeric<MessageType>(
 
     return function (value) {
 
-        return new NumericValidatable(value, message);
+        return NumericValidatable({value, message});
 
     } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
 }

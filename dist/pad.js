@@ -1,4 +1,4 @@
-import PaddingOption from "./affix/affix";
+import AffixOption from "./affix/affix";
 import PadPrefix from "./pad-prefix";
 import PadSuffix from "./pad-suffix";
 import PadCircumfix from "./pad-circumfix";
@@ -13,14 +13,14 @@ import PadCircumfix from "./pad-circumfix";
  * @param length
  * @param mode
  */
-export default function Pad(string, padding, length, mode) {
-    switch (mode) {
-        case PaddingOption.PREFIX:
-            return PadPrefix(string, length, padding);
-        case PaddingOption.SUFFIX:
-            return PadSuffix(string, length, padding);
-        case PaddingOption.CIRCUMFIX:
-            return PadCircumfix(string, length, padding);
+export default function Pad({ string, padding, length, affix }) {
+    switch (affix) {
+        case AffixOption.PREFIX:
+            return PadPrefix({ string, length, prefix: padding });
+        case AffixOption.SUFFIX:
+            return PadSuffix({ string, length, suffix: padding });
+        case AffixOption.CIRCUMFIX:
+            return PadCircumfix({ string, length, circumfix: padding });
     }
 }
 //# sourceMappingURL=pad.js.map

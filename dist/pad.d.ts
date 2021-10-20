@@ -1,4 +1,6 @@
-import PaddingOption from "./affix/affix";
+import Affix from "./affix/affix/affix";
+import String from "./string/string";
+import Padding from "./padding/padding";
 /**
  * pad string depend on {@param mode}
  * {@see PadPrefix}
@@ -10,4 +12,6 @@ import PaddingOption from "./affix/affix";
  * @param length
  * @param mode
  */
-export default function Pad(string: string, padding: string, length: number, mode: PaddingOption): string;
+export default function Pad({ string, padding, length, affix }: String & Padding & {
+    length: number;
+} & Affix): string;

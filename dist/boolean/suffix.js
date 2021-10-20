@@ -4,7 +4,7 @@ import { endsWith } from "lodash";
  * @param string
  * @param suffix
  */
-export default function Suffix(string, suffix) {
-    return endsWith(string, suffix);
+export default function Suffix({ value, suffix }) {
+    return endsWith(value, suffix);
 }
 //# sourceMappingURL=suffix.js.map

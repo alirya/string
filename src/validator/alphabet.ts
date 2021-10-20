@@ -19,7 +19,7 @@ export default function Alphabet<MessageType>(
 
     return function (value) {
 
-        return new AlphabetValidatable(value, message)
+        return AlphabetValidatable({value, message})
 
     } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
 }

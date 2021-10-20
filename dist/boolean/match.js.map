@@ -1,1 +1,1 @@
-{"version":3,"file":"match.js","sourceRoot":"","sources":["../../src/boolean/match.ts"],"names":[],"mappings":"AAAA;;;;;GAKG;AACH,MAAM,CAAC,OAAO,UAAU,KAAK,CAAC,MAAe,EAAE,OAAgB;IAE3D,IAAI,KAAK,GAAG,MAAM,CAAC,KAAK,CAAC,OAAO,CAAC,CAAC;IAElC,IAAG,KAAK,KAAK,IAAI,EAAE;QAEf,OAAO,IAAI,CAAC;KACf;IAED,OAAO,KAAK,CAAC;AACjB,CAAC"}
+{"version":3,"file":"match.js","sourceRoot":"","sources":["../../src/boolean/match.ts"],"names":[],"mappings":"AAAA;;;;;GAKG;AACH,MAAM,CAAC,OAAO,UAAU,KAAK,CAAC,MAAe,EAAE,OAAgB;IAE3D,OAAO,MAAM,CAAC,KAAK,CAAC,OAAO,CAAC,KAAK,IAAI,CAAC;AAC1C,CAAC"}

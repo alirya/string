@@ -2,6 +2,7 @@ import { padStart } from "lodash";
 /**
  * @see padStart
  */
-const PadPrefix = padStart;
-export default PadPrefix;
+export default function PadSuffix({ string, length, prefix }) {
+    return padStart(string, length, prefix);
+}
 //# sourceMappingURL=pad-prefix.js.map

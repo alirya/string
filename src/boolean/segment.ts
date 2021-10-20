@@ -1,4 +1,5 @@
 import Difference from "@dikac/t-array/difference";
+import Separator from "../separator/separator";
 
 /**
  * check if {@param compare} is part of {@param root}
@@ -6,26 +7,23 @@ import Difference from "@dikac/t-array/difference";
  * @param root
  * @param compare
  *
- * @param delimiter
+ * @param separator
  * separator each segment
  *
  * @example
- * // return true
- * Segment('root', 'root.parent', '.')
+ * Segment('root', 'root.parent', '.') : true
  *
  * @example
- * // return true
- * Segment('root', 'root', '.')
+ * Segment('root', 'root', '.') : true
  *
  * @example
- * // return false
- * Segment('root.parent', 'root', '.')
+ * Segment('root.parent', 'root', '.') : false
  */
-export default function Segment(
-    root : string,
-    compare : string,
-    delimiter : string
-) : boolean {
+export default function Segment({
+    root,
+    compare,
+    separator
+} : Separator & {root:string, compare: string}) : boolean {
 
     if(root === compare) {
 
@@ -33,7 +31,7 @@ export default function Segment(
     }
 
     return Difference(
-        root.split(delimiter),
-        compare.split(delimiter),
+        root.split(separator),
+        compare.split(separator),
     ).length === 0;
 }

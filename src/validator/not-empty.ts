@@ -19,7 +19,7 @@ export default function NotEmpty<MessageType>(
 
     return function (value) {
 
-        return new NotEmptyValidatable(value, message);
+        return NotEmptyValidatable({value, message});
 
     } as Validator<string, '', true, false, Readonly<Instance<string, MessageType>>>
 }

@@ -1,10 +1,10 @@
 /**
  * remove {@param character} at the start of {@param string}
  */
-export default function RemovePrefixCharacter(string, character) {
+export default function RemovePrefixCharacter({ string, prefix }) {
     if (string.length !== 0) {
-        character = character[0];
-        if (string[0] === character) {
+        prefix = prefix[0];
+        if (string[0] === prefix) {
             return string.slice(1);
         }
     }

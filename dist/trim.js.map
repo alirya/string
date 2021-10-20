@@ -1,1 +1,1 @@
-{"version":3,"file":"trim.js","sourceRoot":"","sources":["../src/trim.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,IAAI,EAAC,MAAM,QAAQ,CAAC;AAE5B;;GAEG;AACH,MAAM,IAAI,GAAuD,IAAI,CAAC;AACtE,eAAe,IAAI,CAAC"}
+{"version":3,"file":"trim.js","sourceRoot":"","sources":["../src/trim.ts"],"names":[],"mappings":"AAAA,OAAO,EAAO,OAAO,EAAC,MAAM,QAAQ,CAAC;AAKrC;;GAEG;AAEH,MAAM,CAAC,OAAO,UAAU,IAAI,CAAC,EAAC,MAAM,EAAE,SAAS,EAA+B;IAE1E,OAAO,OAAO,CAAC,MAAM,EAAE,SAAS,CAAC,CAAA;AACrC,CAAC"}

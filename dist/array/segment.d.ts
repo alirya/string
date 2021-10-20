@@ -1,7 +1,12 @@
+import String from "../string/string";
+import Separator from "../separator/separator";
 /**
- * split {@param string} to its each segment marked by {@param delimiter}
+ * split {@param string} to its each segment marked by {@param separator}
  *
  * @param string
- * @param delimiter
+ * @param separator
+ *
+ * example
+ *     Segment('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
  */
-export default function Segment(string: string, delimiter: string): string[];
+export default function Segment({ string, separator }: String & Separator): string[];

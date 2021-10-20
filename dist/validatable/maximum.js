@@ -1,22 +1,6 @@
 import MaximumObject from "./boolean/maximum";
-import Count from "../number/count";
-export default class Maximum {
-    constructor(value, maximum, inclusive, message, converter = Count) {
-        this.value = value;
-        this.maximum = maximum;
-        this.inclusive = inclusive;
-        this.converter = converter;
-        this.messageFactory = message;
-        this.valid = MaximumObject(this);
-    }
-    valueOf() {
-        return this.value;
-    }
-    toString() {
-        return this.value;
-    }
-    get message() {
-        return this.messageFactory(this);
-    }
+import Callback from "@dikac/t-validator/validatable/callback";
+export default function Minimum({ value, maximum, inclusive, message, converter }) {
+    return Callback({ value, maximum, inclusive, converter }, MaximumObject, message);
 }
 //# sourceMappingURL=maximum.js.map

@@ -1,8 +1,8 @@
 import Value from "@dikac/t-value/value";
 import Validatable from "@dikac/t-validatable/validatable";
-import StringMessage from "../../assert/string/string";
+import StringMessage, {Argument} from "../../assert/string/string";
 
-export default function String(object : Readonly<Value & Validatable>) : string {
+export default function String(object : Argument) : string {
 
-    return StringMessage(object.valid, object.value)
+    return StringMessage(object)
 }

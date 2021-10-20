@@ -1,1 +1,1 @@
-{"version":3,"file":"trim-prefix.js","sourceRoot":"","sources":["../src/trim-prefix.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,SAAS,EAAC,MAAM,QAAQ,CAAC;AAEjC,MAAM,UAAU,GAAuD,SAAS,CAAC;AACjF,eAAe,UAAU,CAAC"}
+{"version":3,"file":"trim-prefix.js","sourceRoot":"","sources":["../src/trim-prefix.ts"],"names":[],"mappings":"AAAA,OAAO,EAAU,SAAS,EAAC,MAAM,QAAQ,CAAC;AAK1C,MAAM,CAAC,OAAO,UAAU,UAAU,CAAC,EAAC,MAAM,EAAE,MAAM,EAA4B;IAE1E,OAAO,SAAS,CAAC,MAAM,EAAE,MAAM,CAAC,CAAA;AACpC,CAAC"}

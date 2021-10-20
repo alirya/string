@@ -1,12 +1,17 @@
 import Sentences from "../../message/sentences";
+import Validatable from "@dikac/t-validatable/validatable";
+import String from "../../string/string";
+import MinimumNumber from "@dikac/t-number/minimum/minimum";
+import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import MaximumNumber from "@dikac/t-number/maximum/maximum";
 
-export default function Maximum(
-    valid : boolean,
-    string : string,
-    maximum : number,
-    inclusive : boolean,
-    subject : string = 'string',
-) : string {
+export default function Maximum({
+    valid,
+    string,
+    maximum,
+    inclusive,
+    subject = 'string',
+} : Validatable & String & MaximumNumber & Inclusive & {subject ?: string}) : string {
 
     let sentence = new Sentences(valid);
 

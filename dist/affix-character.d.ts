@@ -1,9 +1,11 @@
-import Affix from "./affix/affix";
+import Affix from "./affix/affix/affix";
+import String from "./string/string";
+import Padding from "./padding/padding";
 /**
- * add {@param character} to {@param string} if not exist and {@param string} not empty
+ * add {@param padding} to {@param string} if not exist and {@param string} not empty
  *
  * @param string
- * @param character
  * @param padding
+ * @param affix
  */
-export default function AffixCharacter(string: string, character: string, padding: Affix): string;
+export default function AffixCharacter({ string, padding, affix, }: String & Padding & Affix): string;

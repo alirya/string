@@ -1,2 +1,3 @@
-declare const TrimSuffix: (string: string, characters?: string) => string;
-export default TrimSuffix;
+import Suffix from "./suffix/suffix";
+import String from "./string/string";
+export default function TrimSuffix({ string, suffix }: String & Partial<Suffix>): string;

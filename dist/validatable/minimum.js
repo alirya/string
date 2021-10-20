@@ -1,22 +1,6 @@
 import MinimumObject from "./boolean/minimum";
-import Count from "../number/count";
-export default class Minimum {
-    constructor(value, minimum, inclusive, message, converter = Count) {
-        this.value = value;
-        this.minimum = minimum;
-        this.inclusive = inclusive;
-        this.converter = converter;
-        this.valid = MinimumObject(this);
-        this.messageFactory = message;
-    }
-    valueOf() {
-        return this.value;
-    }
-    toString() {
-        return this.value;
-    }
-    get message() {
-        return this.messageFactory(this);
-    }
+import Callback from "@dikac/t-validator/validatable/callback";
+export default function Minimum({ value, minimum, inclusive, message, converter }) {
+    return Callback({ value, minimum, inclusive, converter }, MinimumObject, message);
 }
 //# sourceMappingURL=minimum.js.map

@@ -4,11 +4,12 @@
  * @param string
  * @param character
  */
-export default function SuffixCharacter(string, character) {
+export default function SuffixCharacter({ string, suffix }) {
+    // TODO IMPROVE IMPLEMENTATION
     if (string.length !== 0) {
-        character = character[0];
-        if (string[string.length - 1] !== character) {
-            return string + character;
+        suffix = suffix[0];
+        if (string[string.length - 1] !== suffix) {
+            return string + suffix;
         }
     }
     return string;

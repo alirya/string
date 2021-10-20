@@ -1,8 +1,12 @@
 import {padEnd} from "lodash";
+import String from "./string/string";
+import Suffix from "./suffix/suffix";
 
 /**
  * @see padEnd
  */
-const PadSuffix : (string : string, length : number, characters : string) => string = padEnd;
-export default PadSuffix;
 
+export default function PadSuffix({string, length , suffix} : String & Suffix & {length:number}) {
+
+    return padEnd(string, length, suffix)
+}

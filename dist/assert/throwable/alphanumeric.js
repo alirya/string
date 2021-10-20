@@ -1,5 +1,5 @@
 import AlphanumericType from "../string/alphanumeric";
-export default function Alphanumeric(string, subject = 'string') {
-    return new Error(AlphanumericType(false, string, subject));
+export default function Alphanumeric({ value, subject = 'string' }) {
+    return new Error(AlphanumericType(false, value, subject));
 }
 //# sourceMappingURL=alphanumeric.js.map

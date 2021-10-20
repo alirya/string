@@ -1,6 +1,6 @@
 import Match from "../../value/match";
 import SentencesMust from "../../message/sentences-must";
-export default function Digit(valid, value, subject = 'string') {
+export default function Digit({ valid, value, subject = 'string' }) {
     let sentence = SentencesMust(valid);
     sentence.expect.push('digit');
     sentence.subject.push(subject);

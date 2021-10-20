@@ -1,7 +1,8 @@
 import EmptyValidatable from "../validatable/empty";
-export default function Empty(message) {
+import EmptyString from "../validatable/string/empty";
+export default function Empty(message = EmptyString) {
     return function (value) {
-        return new EmptyValidatable(value, message);
+        return EmptyValidatable({ value, message });
     };
 }
 //# sourceMappingURL=empty.js.map

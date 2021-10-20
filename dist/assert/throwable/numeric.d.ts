@@ -1,1 +1,4 @@
-export default function Numeric(string: string, subject?: string): Error;
+import Value from "@dikac/t-value/value";
+export default function Numeric({ value, subject }: Value<string> & {
+    subject?: string;
+}): Error;

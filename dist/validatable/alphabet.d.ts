@@ -1,13 +1,4 @@
 import Value from "@dikac/t-value/value";
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
-import ValueOf from "@dikac/t-value/value-of/value-of";
-export default class Alphabet<ValueType extends string, MessageType> implements Readonly<Value<ValueType>>, Readonly<Message<MessageType>>, ValueOf<string>, Readonly<Validatable> {
-    readonly value: ValueType;
-    readonly valid: boolean;
-    private messageFactory;
-    constructor(value: ValueType, message: (result: Readonly<Value<ValueType> & Validatable>) => MessageType);
-    valueOf(): string;
-    toString(): string;
-    get message(): MessageType;
-}
+export default function Alphabet<ValueType extends string, MessageType>({ value, message }: Value<ValueType> & Message<(result: Readonly<Value<ValueType> & Validatable>) => MessageType>): import("@dikac/t-validator/validatable/simple").default<string, string, ValueType, Readonly<Value<string> & Validatable<boolean> & Message<MessageType>>>;

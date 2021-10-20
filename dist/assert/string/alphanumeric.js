@@ -1,6 +1,6 @@
 import Match from "../../value/match";
 import SentencesMust from "../../message/sentences-must";
-export default function Alphanumeric(valid, value, subject = 'string') {
+export default function Alphanumeric({ valid, value, subject = 'string' }) {
     let sentence = SentencesMust(valid);
     sentence.expect.push('alphanumeric');
     sentence.subject.push(subject);
