@@ -1,33 +1,22 @@
 import Truncate from "../../truncate";
-export default function Empty({ valid, value, subject = 'string', }) {
-    let message = [subject];
-    if (valid) {
-        message.push('is not');
-    }
-    else {
-        message.push('must not');
-    }
-    message.push('empty', 'string');
+import SentencesMust from "../../message/sentences-must";
+export default Empty;
+var Empty;
+(function (Empty) {
+    Empty.Parameter = EmptyParameter;
+    Empty.Object = EmptyObject;
+})(Empty || (Empty = {}));
+export function EmptyParameter(value, valid, subject = 'string') {
+    let sentence = SentencesMust(valid);
+    sentence.expect.push('empty', 'string');
+    sentence.subject.push(subject);
+    sentence.comma.push('expect');
     if (!valid && value.length) {
-        message.push('actual', `"${Truncate({ string: value, length: 8 })}"`);
+        sentence.actual.push('actual', `"${Truncate(value, 8)}"`);
     }
-    // if(!valid && value.length) {
-    //
-    //     sentence.actual.push('actual', `"${Truncate(value, 8)}"`);
-    //
-    // }
-    //
-    // let sentence = SentencesMust(valid);
-    // sentence.expect.push('empty', 'string');
-    // sentence.subject.push(subject);
-    //
-    // sentence.comma.push('expect');
-    //
-    // if(!valid && value.length) {
-    //
-    //     sentence.actual.push('actual', `"${Truncate(value, 8)}"`);
-    //
-    // }
-    return message.join(' ');
+    return sentence.message;
+}
+export function EmptyObject({ valid, value, subject = 'string', }) {
+    return EmptyParameter(value, valid, subject);
 }
 //# sourceMappingURL=empty.js.map

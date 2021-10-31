@@ -2,7 +2,31 @@ import {truncate} from "lodash";
 import Separator from "./separator/separator";
 import String from "./string/string";
 
-export type Argument = String & {length:number} & Partial<Separator> & {omission?: string};
+
+
+namespace Truncate {
+
+    export const Parameter = TruncateParameter;
+    export const Object = TruncateObject;
+    export type Argument = TruncateArgument;
+}
+
+export function TruncateParameter (
+    value : string,
+    length : number,
+    omission : string = '...',
+    separator ?: RegExp|string
+)  : string {
+
+    return truncate(value, {
+        length : length,
+        omission : omission,
+        separator : separator
+    })
+}
+
+
+export type TruncateArgument = String & {length:number} & Partial<Separator> & {omission?: string};
 
 /**
  * wrapper for {@see truncate}
@@ -16,13 +40,16 @@ export type Argument = String & {length:number} & Partial<Separator> & {omission
  */
 
 
-export default function Truncate ({string, length, omission = "...", separator} : Argument)  : string {
+export function TruncateObject ({
+        value,
+        length,
+        omission = "...",
+        separator
+    } : TruncateArgument)  : string {
 
-    return truncate(string, {
-        length : length,
-        omission : omission,
-        separator : separator
-    })
+    return TruncateParameter(value, length, omission, separator)
 }
 
 
+
+export default Truncate;

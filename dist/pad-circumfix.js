@@ -1,8 +1,17 @@
 import { pad } from "lodash";
+var PadCircumfix;
+(function (PadCircumfix) {
+    PadCircumfix.Parameter = PadCircumfixParameter;
+    PadCircumfix.Object = PadCircumfixObject;
+})(PadCircumfix || (PadCircumfix = {}));
 /**
  * @see pad
  */
-export default function PadCircumfix({ string, length, circumfix }) {
-    return pad(string, length, circumfix);
+export function PadCircumfixParameter(value, length, circumfix) {
+    return pad(value, length, circumfix);
 }
+export function PadCircumfixObject({ value, length, circumfix }) {
+    return pad(value, length, circumfix);
+}
+export default PadCircumfix;
 //# sourceMappingURL=pad-circumfix.js.map

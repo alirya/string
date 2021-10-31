@@ -1,17 +1,24 @@
-import Affix from "./affix/affix/affix";
 import String from "./string/string";
-import Padding from "./padding/padding";
+import Suffix from "./suffix/suffix";
+import Prefix from "./prefix/prefix";
+import Circumfix from "./circumfix/circumfix";
+declare namespace Pad {
+    const Parameter: typeof PadParameter;
+    const Object: typeof PadObject;
+    type ArgumentCircumfix = PadArgumentCircumfix;
+    type ArgumentPair = PadArgumentPair;
+}
 /**
- * pad string depend on {@param mode}
- * {@see PadPrefix}
- * {@see PadSuffix}
- * {@see PadCircumfix}
- *
- * @param string
- * @param padding
- * @param length
- * @param mode
+ * @see padStart
  */
-export default function Pad({ string, padding, length, affix }: String & Padding & {
+export declare function PadParameter(value: string, length: number, circumfix: string): string;
+export declare function PadParameter(value: string, length: number, prefix: string, suffix: string): string;
+export declare type PadArgumentPair = String & Prefix & Suffix & {
     length: number;
-} & Affix): string;
+};
+export declare type PadArgumentCircumfix = String & Circumfix & {
+    length: number;
+};
+export declare function PadObject({ value, length, prefix, suffix }: PadArgumentPair): string;
+export declare function PadObject({ value, length, circumfix }: PadArgumentCircumfix): string;
+export default Pad;

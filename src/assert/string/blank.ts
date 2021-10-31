@@ -3,11 +3,21 @@ import SentencesMust from "../../message/sentences-must";
 import Validatable from "@dikac/t-validatable/validatable";
 import Value from "@dikac/t-value/value";
 
-export default function Blank({
-    valid,
-    value,
-    subject = 'string',
-} : Validatable & Value<string> & {subject ?: string }) : string {
+
+export default Blank;
+namespace Blank {
+
+    export const Parameter = BlankParameter;
+    export const Object = BlankObject;
+    export type Argument = BlankArgument;
+}
+
+
+export function BlankParameter(
+    valid : boolean,
+    value : string,
+    subject : string = 'string',
+) : string {
 
     let sentence = SentencesMust(valid);
     sentence.expect.push('blank', 'string');
@@ -23,3 +33,15 @@ export default function Blank({
 
     return sentence.message;
 }
+
+export type BlankArgument = Validatable & Value<string> & {subject ?: string };
+
+export function BlankObject({
+    valid,
+    value,
+    subject = 'string',
+} : BlankArgument) : string {
+
+    return BlankParameter(valid, value, subject);
+}
+

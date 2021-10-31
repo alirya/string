@@ -1,6 +1,12 @@
 import Match from "../../value/match";
 import SentencesMust from "../../message/sentences-must";
-export default function Digit({ valid, value, subject = 'string' }) {
+export default Digit;
+var Digit;
+(function (Digit) {
+    Digit.Parameter = DigitParameter;
+    Digit.Object = DigitObject;
+})(Digit || (Digit = {}));
+export function DigitParameter(valid, value, subject = 'string') {
     let sentence = SentencesMust(valid);
     sentence.expect.push('digit');
     sentence.subject.push(subject);
@@ -12,5 +18,8 @@ export default function Digit({ valid, value, subject = 'string' }) {
         }
     }
     return sentence.message;
+}
+export function DigitObject({ valid, value, subject = 'string' }) {
+    return DigitParameter(valid, value, subject);
 }
 //# sourceMappingURL=digit.js.map

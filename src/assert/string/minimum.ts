@@ -4,13 +4,21 @@ import Validatable from "@dikac/t-validatable/validatable";
 import MinimumNumber from "@dikac/t-number/minimum/minimum";
 import Inclusive from "@dikac/t-number/inclusive/inclusive";
 
-export default function Minimum({
-    valid,
-    string,
-    minimum,
-    inclusive,
-    subject = 'string',
-} : Validatable & String & MinimumNumber & Inclusive & {subject ?: string}) : string {
+export default Minimum;
+namespace Minimum {
+
+    export const Parameter = MinimumParameter;
+    export const Object = MinimumObject;
+    export type Argument = MinimumArgument;
+}
+
+export function MinimumParameter(
+    value : string,
+    valid : boolean,
+    minimum : number,
+    inclusive : boolean,
+    subject : string = 'string',
+) : string {
 
     let sentence = new Sentences(valid);
 
@@ -34,4 +42,17 @@ export default function Minimum({
     sentence.expect.push('than', minimum.toString());
 
     return sentence.message;
+}
+
+export type MinimumArgument = Validatable & String & MinimumNumber & Inclusive & {subject ?: string};
+
+export function MinimumObject({
+    value,
+    valid,
+    minimum,
+    inclusive,
+    subject = 'string',
+} : MinimumArgument) : string {
+
+    return MinimumParameter(value, valid, minimum, inclusive, subject);
 }

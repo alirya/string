@@ -1,4 +1,16 @@
 import { truncate } from "lodash";
+var Truncate;
+(function (Truncate) {
+    Truncate.Parameter = TruncateParameter;
+    Truncate.Object = TruncateObject;
+})(Truncate || (Truncate = {}));
+export function TruncateParameter(value, length, omission = '...', separator) {
+    return truncate(value, {
+        length: length,
+        omission: omission,
+        separator: separator
+    });
+}
 /**
  * wrapper for {@see truncate}
  *
@@ -9,11 +21,8 @@ import { truncate } from "lodash";
  *
  * @param separator
  */
-export default function Truncate({ string, length, omission = "...", separator }) {
-    return truncate(string, {
-        length: length,
-        omission: omission,
-        separator: separator
-    });
+export function TruncateObject({ value, length, omission = "...", separator }) {
+    return TruncateParameter(value, length, omission, separator);
 }
+export default Truncate;
 //# sourceMappingURL=truncate.js.map

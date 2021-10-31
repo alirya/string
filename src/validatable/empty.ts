@@ -5,7 +5,8 @@ import EmptyBoolean from "./boolean/empty";
 import ValueOf from "@dikac/t-value/value-of/value-of";
 import Callback from "@dikac/t-validator/validatable/callback";
 import MatchBoolean from "./boolean/match";
-import EmptyParameter from "../boolean/empty";
+import IsEmpty from "../boolean/empty";
+
 //
 // export default class Empty<ValueType extends string, MessageType>
 //     implements
@@ -40,13 +41,33 @@ import EmptyParameter from "../boolean/empty";
 //     }
 // }
 
-export default function Empty<ValueType extends string, MessageType>({
+export default Empty;
+namespace Empty {
+
+    export const Parameter = EmptyParameter;
+    export const Object = EmptyObject;
+    export type Argument<ValueType extends string, MessageType> = EmptyArgument<ValueType, MessageType>;
+}
+
+
+
+export function EmptyParameter<ValueType extends string, MessageType>(
+    value : ValueType,
+    message : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType,
+) : Readonly<Value<ValueType> & Message<MessageType> & Validatable> {
+
+    return Callback(value, IsEmpty, message) as Readonly<Value<ValueType> & Message<MessageType> & Validatable>;
+}
+
+export type EmptyArgument<ValueType extends string, MessageType> = Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>;
+
+export function EmptyObject<ValueType extends string, MessageType>({
         value,
         message,
     } : Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>
 ) : Readonly<Value<ValueType> & Message<MessageType> & Validatable> {
 
-    return Callback(value, EmptyParameter, message) as Readonly<Value<ValueType> & Message<MessageType> & Validatable>;
+    return EmptyParameter(value, message);
 }
 
 

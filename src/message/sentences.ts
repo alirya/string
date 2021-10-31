@@ -2,8 +2,8 @@ import ValueOf from "@dikac/t-value/value-of/value-of";
 import NotEmpty from "../boolean/not-empty";
 import Validatable from "@dikac/t-validatable/validatable";
 import Trim from "../trim";
-import SuffixCharacter from "../suffix-character";
-import RemoveSuffixCharacter from "../remove-suffix-character";
+import SuffixCharacter from "../suffix";
+import RemoveSuffixCharacter from "../remove-suffix";
 
 /**
  * @deprecated

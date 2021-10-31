@@ -1,9 +1,21 @@
-import {trimEnd, trimStart} from "lodash";
-import String from "./string/string";
-import Suffix from "./suffix/suffix";
+import {trimStart} from "lodash";
 import Prefix from "./prefix/prefix";
+import String from "./string/string";
 
-export default function TrimSuffix({string, prefix} : String & Partial<Prefix>) {
+export const TrimPrefixParameter : (string : string, prefix ?: string) => string = trimStart;
 
-    return trimStart(string, prefix)
+namespace TrimPrefix {
+
+    export const Parameter = TrimPrefixParameter;
+    export const Object = TrimPrefixObject;
+    export type Argument = TrimPrefixArgument;
 }
+
+export type TrimPrefixArgument = String & Partial<Prefix>;
+
+export function TrimPrefixObject({value, prefix} : TrimPrefixArgument) {
+
+    return TrimPrefixParameter(value, prefix)
+}
+
+export default TrimPrefix;

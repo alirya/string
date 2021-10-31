@@ -34,7 +34,16 @@ import Callback from "@dikac/t-validator/validatable/callback";
 //         return this.messageFactory(this);
 //     }
 // }
-export default function NotEmpty({ value, message }) {
+export default NotEmpty;
+var NotEmpty;
+(function (NotEmpty) {
+    NotEmpty.Parameter = NotEmptyParameter;
+    NotEmpty.Object = NotEmptyObject;
+})(NotEmpty || (NotEmpty = {}));
+export function NotEmptyParameter(value, message) {
     return Callback(value, NotEmptyBoolean, message);
+}
+export function NotEmptyObject({ value, message }) {
+    return NotEmptyParameter(value, message);
 }
 //# sourceMappingURL=not-empty.js.map

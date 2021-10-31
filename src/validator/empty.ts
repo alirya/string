@@ -4,7 +4,7 @@ import Message from "@dikac/t-message/message";
 import Value from "@dikac/t-value/value";
 import EmptyValidatable from "../validatable/empty";
 import Return from "@dikac/t-validator/validatable/simple";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Instance from "@dikac/t-validator/validatable/dynamic";
 import EmptyString from "../validatable/string/empty";
 
 

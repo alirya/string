@@ -5,7 +5,6 @@ import NotEmptyBoolean from "./boolean/not-empty";
 import ValueOf from "@dikac/t-value/value-of/value-of";
 import Callback from "@dikac/t-validator/validatable/callback";
 import NumericFromObject from "../boolean/numeric";
-import NotBlankBoolean from "../boolean/not-blank";
 //
 // export default class NotEmpty<ValueType extends string, MessageType>
 //     implements
@@ -41,12 +40,33 @@ import NotBlankBoolean from "../boolean/not-blank";
 //     }
 // }
 
+export default NotEmpty;
+namespace NotEmpty {
 
-export default function NotEmpty<ValueType extends string, MessageType>({
-        value,
-        message
-    } : Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType> & Value<ValueType>
+    export const Parameter = NotEmptyParameter;
+    export const Object = NotEmptyObject;
+    export type Argument<ValueType extends string, MessageType> = NotEmptyArgument<ValueType, MessageType>;
+}
+
+export function NotEmptyParameter<ValueType extends string, MessageType>(
+    value : ValueType,
+    message : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType
 ) : Readonly<Value<ValueType> & Message<MessageType> & Validatable> {
 
     return Callback(value, NotEmptyBoolean, message) as Readonly<Value<ValueType> & Message<MessageType> & Validatable>;
 }
+
+export type NotEmptyArgument<
+    ValueType extends string,
+    MessageType
+    > = Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType> & Value<ValueType>
+
+export function NotEmptyObject<ValueType extends string, MessageType>({
+      value,
+      message
+  } : NotEmptyArgument<ValueType, MessageType>
+) : Readonly<Value<ValueType> & Message<MessageType> & Validatable> {
+
+    return NotEmptyParameter(value, message);
+}
+

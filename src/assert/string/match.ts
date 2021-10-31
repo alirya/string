@@ -7,12 +7,21 @@ import Inclusive from "@dikac/t-number/inclusive/inclusive";
 import Value from "@dikac/t-value/value";
 import Pattern from "../../pattern/pattern/pattern";
 
-export default function Match({
-    valid,
-    value,
-    pattern,
-    subject = 'string',
-} : Validatable & Value<string> & Pattern & {subject ?: string}) : string {
+
+export default Match;
+namespace Match {
+
+    export const Parameter = MatchParameter;
+    export const Object = MatchObject;
+    export type Argument = MatchArgument;
+}
+
+export function MatchParameter(
+    value : string,
+    valid : boolean,
+    pattern : RegExp,
+    subject : string = 'string',
+) : string {
 
     let sentence = new Sentences(valid);
 
@@ -24,4 +33,17 @@ export default function Match({
     sentence.subject.push(subject, `"${Truncate(value, 8)}"`);
 
     return sentence.message;
+}
+
+export type MatchArgument = Validatable & Value<string> & Pattern & {subject ?: string};
+
+
+export function MatchObject({
+    valid,
+    value,
+    pattern,
+    subject = 'string',
+} : MatchArgument) : string {
+
+    return MatchParameter(value, valid, pattern, subject);
 }

@@ -5,6 +5,7 @@ import AlphanumericFromObject from "../boolean/alphanumeric";
 import ValueOf from "@dikac/t-value/value-of/value-of";
 import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
 import NotBlankBoolean from "../boolean/not-blank";
+
 //
 // export default class Alphanumeric<ValueType extends string, MessageType>
 //     implements
@@ -39,11 +40,32 @@ import NotBlankBoolean from "../boolean/not-blank";
 //     }
 // }
 
-export default function Alphanumeric<ValueType extends string, MessageType>({
+export default Alphanumeric;
+namespace Alphanumeric {
+
+    export const Parameter = AlphanumericParameter;
+    export const Object = AlphanumericObject;
+    export type Argument<ValueType extends string, MessageType> = AlphanumericArgument<ValueType, MessageType>;
+}
+
+
+export function AlphanumericParameter<ValueType extends string, MessageType>(
+    value : ValueType,
+    message : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType
+) {
+
+    return new ValidatableCallbacks.Class.Parameter<string, ValueType, MessageType>(value, AlphanumericFromObject, message);
+}
+
+export type AlphanumericArgument<ValueType extends string, MessageType>
+    =
+    Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>;
+
+export function AlphanumericObject<ValueType extends string, MessageType>({
     value,
     message
-} : Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>) {
+} : AlphanumericArgument<ValueType, MessageType>) {
 
-    return ValidatableCallbacks<string, ValueType, MessageType>(value, AlphanumericFromObject, message);
+    return AlphanumericParameter(value, message);
 }
 

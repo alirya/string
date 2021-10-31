@@ -33,7 +33,16 @@ import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
 //         return this.messageFactory(this);
 //     }
 // }
-export default function Alphanumeric({ value, message }) {
-    return ValidatableCallbacks(value, AlphanumericFromObject, message);
+export default Alphanumeric;
+var Alphanumeric;
+(function (Alphanumeric) {
+    Alphanumeric.Parameter = AlphanumericParameter;
+    Alphanumeric.Object = AlphanumericObject;
+})(Alphanumeric || (Alphanumeric = {}));
+export function AlphanumericParameter(value, message) {
+    return new ValidatableCallbacks.Class.Parameter(value, AlphanumericFromObject, message);
+}
+export function AlphanumericObject({ value, message }) {
+    return AlphanumericParameter(value, message);
 }
 //# sourceMappingURL=alphanumeric.js.map

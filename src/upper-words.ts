@@ -1,14 +1,35 @@
 import UpperFirst from './upper-first';
 import Separator from "./separator/separator";
 import String from "./string/string";
+import Value from "@dikac/t-value/value";
 
-export default function UpperWords ({string, separator} : String & Separator) : string {
 
-    for (const split of string.match(separator) || []) {
+namespace UpperWords {
 
-        string = string.split(split).map(UpperFirst).join(split);
+    export const Parameter = UpperWordsParameter;
+    export const Object = UpperWordsObject;
+    export type Argument = UpperWordsArgument;
+}
+
+
+export function UpperWordsObject ({value, separator} : UpperWordsArgument) : string {
+
+    return UpperWordsParameter(value, separator);
+}
+
+export type UpperWordsArgument = Value<string> & Separator;
+
+export function UpperWordsParameter (
+    value : string,
+    separator : string|RegExp
+) : string {
+
+    for (const split of value.match(separator) || []) {
+
+        value = value.split(split).map(UpperFirst).join(split);
     }
 
-    return UpperFirst(string);
-
+    return UpperFirst(value);
 }
+
+export default UpperWords;

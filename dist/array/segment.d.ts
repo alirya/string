@@ -9,4 +9,4 @@ import Separator from "../separator/separator";
  * example
  *     Segment('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
  */
-export default function Segment({ string, separator }: String & Separator): string[];
+export default function Segment({ value, separator }: String & Separator): string[];

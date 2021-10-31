@@ -1,3 +1,3 @@
-export default interface Separator<SeparatorType extends string|RegExp = string> {
-    separator: SeparatorType;
+export default interface Separator<String extends string = string> {
+    separator: String;
 }

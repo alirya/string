@@ -3,11 +3,37 @@ import Suffix from "./suffix/suffix";
 import Separator from "./separator/separator";
 import {Object} from "ts-toolbelt";
 import SafeCast from "./safe-cast";
+import Value from "@dikac/t-value/value";
 
-export default function JoinAffix(
-    strings : string[],
-    option : Object.Optional<Prefix & Suffix> & Separator
+namespace JoinAffix {
+
+    export const Parameter = JoinAffixParameter;
+    export const Object = JoinAffixObject;
+    export type Argument = JoinAffixArgument;
+}
+
+
+export function JoinAffixParameter(
+    value : string[],
+    separator : string,
+    prefix ?: string,
+    suffix ?: string,
 ) : string {
 
-    return SafeCast(option.prefix) + strings.join(option.separator) + SafeCast(option.suffix);
+    return SafeCast(prefix) + value.join(separator) + SafeCast(suffix);
 }
+
+export type JoinAffixArgument = Partial<Prefix & Suffix> & Separator & Value<string[]>;
+
+
+export function JoinAffixObject({
+        value,
+        separator,
+        prefix,
+        suffix,
+    } : JoinAffixArgument) {
+
+    return JoinAffixParameter(value, separator, prefix, suffix);
+}
+
+export default JoinAffix;

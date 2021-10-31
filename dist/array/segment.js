@@ -7,8 +7,8 @@
  * example
  *     Segment('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
  */
-export default function Segment({ string, separator }) {
-    let list = string.split(separator);
+export default function Segment({ value, separator }) {
+    let list = value.split(separator);
     let length = list.length;
     let adds = [];
     for (let i = 1; i <= length; i++) {

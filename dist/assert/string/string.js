@@ -1,5 +1,11 @@
 import SentencesMust from "../../message/sentences-must";
-export default function String({ valid, value, subject = 'type', conversion = value => typeof value }) {
+export default String;
+var String;
+(function (String) {
+    String.Parameter = StringParameter;
+    String.Object = StringObject;
+})(String || (String = {}));
+export function StringParameter(value, valid, subject = 'type', conversion = value => typeof value) {
     let sentence = SentencesMust(valid);
     sentence.expect.push('string');
     sentence.subject.push(subject);
@@ -8,5 +14,8 @@ export default function String({ valid, value, subject = 'type', conversion = va
         sentence.actual.push('actual', conversion(value));
     }
     return sentence.message;
+}
+export function StringObject({ valid, value, subject = 'type', conversion = value => typeof value }) {
+    return StringParameter(value, valid, subject, conversion);
 }
 //# sourceMappingURL=string.js.map

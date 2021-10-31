@@ -1,5 +1,5 @@
 import Callback from "@dikac/t-validator/validatable/callback";
-import EmptyParameter from "../boolean/empty";
+import IsEmpty from "../boolean/empty";
 //
 // export default class Empty<ValueType extends string, MessageType>
 //     implements
@@ -33,7 +33,16 @@ import EmptyParameter from "../boolean/empty";
 //         return this.messageFactory(this);
 //     }
 // }
-export default function Empty({ value, message, }) {
-    return Callback(value, EmptyParameter, message);
+export default Empty;
+var Empty;
+(function (Empty) {
+    Empty.Parameter = EmptyParameter;
+    Empty.Object = EmptyObject;
+})(Empty || (Empty = {}));
+export function EmptyParameter(value, message) {
+    return Callback(value, IsEmpty, message);
+}
+export function EmptyObject({ value, message, }) {
+    return EmptyParameter(value, message);
 }
 //# sourceMappingURL=empty.js.map

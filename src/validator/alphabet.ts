@@ -3,7 +3,7 @@ import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
 import Value from "@dikac/t-value/value";
 import AlphabetValidatable from "../validatable/alphabet";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Instance from "@dikac/t-validator/validatable/dynamic";
 import Return from "@dikac/t-validator/validatable/simple";
 import AlphabetString from "../validatable/string/alphabet";
 

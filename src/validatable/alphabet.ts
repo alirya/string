@@ -42,11 +42,32 @@ import AlphanumericFromObject from "../boolean/alphanumeric";
 //     }
 // }
 
-export default function Alphabet<ValueType extends string, MessageType>({
+export default Alphabet;
+namespace Alphabet {
+
+    export const Parameter = AlphabetParameter;
+    export const Object = AlphabetObject;
+    export type Argument<ValueType extends string, MessageType> = AlphabetArgument<ValueType, MessageType>;
+}
+
+
+export function AlphabetParameter<ValueType extends string, MessageType>(
+    value : ValueType,
+    message : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType
+) {
+
+    return new ValidatableCallbacks.Class.Parameter<string, ValueType, MessageType>(value, AlphabetFromObject, message);
+}
+
+export type AlphabetArgument<ValueType extends string, MessageType>
+    = Value<ValueType> &
+    Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>;
+
+export function AlphabetObject<ValueType extends string, MessageType>({
     value,
     message
 } : Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>) {
 
-    return ValidatableCallbacks<string, ValueType, MessageType>(value, AlphabetFromObject, message);
+    return new ValidatableCallbacks.Class.Parameter<string, ValueType, MessageType>(value, AlphabetFromObject, message);
 }
 

@@ -1,6 +1,12 @@
 import Separator from "./separator/separator";
 import String from "./string/string";
-export declare type Argument = String & {
+declare namespace Truncate {
+    const Parameter: typeof TruncateParameter;
+    const Object: typeof TruncateObject;
+    type Argument = TruncateArgument;
+}
+export declare function TruncateParameter(value: string, length: number, omission?: string, separator?: RegExp | string): string;
+export declare type TruncateArgument = String & {
     length: number;
 } & Partial<Separator> & {
     omission?: string;
@@ -15,4 +21,5 @@ export declare type Argument = String & {
  *
  * @param separator
  */
-export default function Truncate({ string, length, omission, separator }: Argument): string;
+export declare function TruncateObject({ value, length, omission, separator }: TruncateArgument): string;
+export default Truncate;

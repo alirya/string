@@ -3,49 +3,43 @@ import SentencesMust from "../../message/sentences-must";
 import Validatable from "@dikac/t-validatable/validatable";
 import Value from "@dikac/t-value/value";
 
-export default function Empty({
-    valid,
-    value,
-    subject = 'string',
-} : Validatable & Value<string> & {subject?:string}) : string {
 
-    let message = [subject];
+export default Empty;
+namespace Empty {
 
-    if(valid) {
+    export const Parameter = EmptyParameter;
+    export const Object = EmptyObject;
+    export type Argument = EmptyArgument;
+}
 
-        message.push('is not')
+export function EmptyParameter(
+    value : string,
+    valid : boolean,
+    subject : string = 'string',
+) : string {
 
-    } else {
+    let sentence = SentencesMust(valid);
+    sentence.expect.push('empty', 'string');
+    sentence.subject.push(subject);
 
-        message.push('must not')
-    }
-
-    message.push('empty', 'string');
-
+    sentence.comma.push('expect');
 
     if(!valid && value.length) {
 
-        message.push('actual', `"${Truncate({string:value, length:8})}"`);
+        sentence.actual.push('actual', `"${Truncate(value, 8)}"`);
 
     }
 
-    // if(!valid && value.length) {
-    //
-    //     sentence.actual.push('actual', `"${Truncate(value, 8)}"`);
-    //
-    // }
-    //
-    // let sentence = SentencesMust(valid);
-    // sentence.expect.push('empty', 'string');
-    // sentence.subject.push(subject);
-    //
-    // sentence.comma.push('expect');
-    //
-    // if(!valid && value.length) {
-    //
-    //     sentence.actual.push('actual', `"${Truncate(value, 8)}"`);
-    //
-    // }
+    return sentence.message;
+}
 
-    return message.join(' ');
+export type EmptyArgument = Validatable & Value<string> & {subject?:string};
+
+export function EmptyObject({
+    valid,
+    value,
+    subject = 'string',
+} : EmptyArgument) : string {
+
+    return EmptyParameter(value, valid, subject);
 }

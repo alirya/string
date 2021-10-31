@@ -1,0 +1,1 @@
+{"version":3,"file":"not-empty.js","sourceRoot":"","sources":["../../src/ensure/not-empty.ts"],"names":[],"mappings":"AAAA,OAAO,cAAc,MAAM,qBAAqB,CAAC;AACjD,OAAO,aAAa,MAAM,+BAA+B,CAAC;AAE1D,MAAM,CAAC,OAAO,UAAU,QAAQ,CAC5B,KAAc,EACd,QAAiC,aAAa;IAG9C,cAAc,CAAC,KAAK,EAAE,KAAK,CAAC,CAAC;IAE7B,OAAO,KAAK,CAAC;AACjB,CAAC"}

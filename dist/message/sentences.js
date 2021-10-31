@@ -1,7 +1,7 @@
 import NotEmpty from "../boolean/not-empty";
 import Trim from "../trim";
-import SuffixCharacter from "../suffix-character";
-import RemoveSuffixCharacter from "../remove-suffix-character";
+import SuffixCharacter from "../suffix";
+import RemoveSuffixCharacter from "../remove-suffix";
 /**
  * @deprecated
  * create a string message, by joining subject, (reject, or accept), expect, actual according

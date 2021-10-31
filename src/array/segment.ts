@@ -11,11 +11,11 @@ import Separator from "../separator/separator";
  *     Segment('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
  */
 export default function Segment({
-    string,
+    value,
     separator
 } : String & Separator) : string[] {
 
-    let list = string.split(separator);
+    let list = value.split(separator);
     let length = list.length;
 
     let adds : string[] = [];

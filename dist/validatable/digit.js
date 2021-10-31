@@ -34,9 +34,18 @@ import Callback from "@dikac/t-validator/validatable/callback";
 //         return this.value;
 //     }
 // }
-export default function Digit({ value, // : ValueType,
+export default Digit;
+var Digit;
+(function (Digit) {
+    Digit.Parameter = DigitParameter;
+    Digit.Object = DigitObject;
+})(Digit || (Digit = {}));
+export function DigitParameter(value, message) {
+    return Callback(value, IsDigit, message);
+}
+export function DigitObject({ value, // : ValueType,
 message, // : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType,
  }) {
-    return Callback(value, IsDigit, message);
+    return DigitParameter(value, message);
 }
 //# sourceMappingURL=digit.js.map

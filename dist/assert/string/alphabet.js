@@ -1,6 +1,12 @@
 import Match from "../../value/match";
 import SentencesMust from "../../message/sentences-must";
-export default function Alphabet({ valid, value, subject = 'string' }) {
+export default Alphabet;
+var Alphabet;
+(function (Alphabet) {
+    Alphabet.Parameter = AlphabetParameter;
+    Alphabet.Object = AlphabetObject;
+})(Alphabet || (Alphabet = {}));
+export function AlphabetParameter(value, valid, subject = 'string') {
     let sentence = SentencesMust(valid);
     sentence.expect.push('alphabet');
     sentence.subject.push(subject);
@@ -12,5 +18,8 @@ export default function Alphabet({ valid, value, subject = 'string' }) {
         }
     }
     return sentence.message;
+}
+export function AlphabetObject({ valid, value, subject }) {
+    return AlphabetParameter(value, valid, subject);
 }
 //# sourceMappingURL=alphabet.js.map

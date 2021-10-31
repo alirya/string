@@ -1,4 +1,4 @@
-export default interface ToString<Option = void> {
+export default interface ToString<Options extends unknown[]> {
 
-    toString(option : Option) : string;
+    toString(...options : Options) : string;
 }
