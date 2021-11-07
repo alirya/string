@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-string",
-  "version": "0.15.4",
+  "version": "0.16.0-alpha.0",
   "description": "Typescript string",
   "dependencies": {
     "@dikac/t-function": "^0.15.0-beta.3",
