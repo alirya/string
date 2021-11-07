@@ -1,26 +1,14 @@
-import Validator from "@dikac/t-validator/simple";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Value from "@dikac/t-value/value";
-import EmptyValidatable from "../validatable/empty";
-import Return from "@dikac/t-validator/validatable/simple";
-import Instance from "@dikac/t-validator/validatable/dynamic";
-import EmptyString from "../validatable/string/empty";
+import EmptyParameter from "./empty-parameter";
+import EmptyParameters from "./empty-parameters";
+import EmptyVoid from "./empty-void";
 
 
-export default function Empty() : Validator<string, '', Readonly<Instance<'', string>>>;
+namespace Empty {
 
-export default function Empty<MessageType>(
-    message : (result:Readonly<Value<string> & Validatable>)=>MessageType
-) : Validator<string, '', Readonly<Instance<'', MessageType>>>;
-
-export default function Empty<MessageType>(
-    message : (result:Readonly<Value<string> & Validatable>)=>MessageType|string = EmptyString
-) : Validator<string, '', Readonly<Instance<'', MessageType>>> {
-
-    return function (value) {
-
-        return EmptyValidatable({value, message});
-
-    } as Validator<string, '', Readonly<Instance<'', MessageType>>>
+    export const Parameter = EmptyParameter;
+    export const Parameters = EmptyParameters;
+    export const Void = EmptyVoid;
 }
+
+export default Empty;
+

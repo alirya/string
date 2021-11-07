@@ -1,8 +1,11 @@
-import NotEmptyValidatable from "../validatable/not-empty";
-import NotEmptyString from "../validatable/string/not-empty";
-export default function NotEmpty(message = NotEmptyString) {
-    return function (value) {
-        return NotEmptyValidatable({ value, message });
-    };
-}
+import NotEmptyParameter from "./not-empty-parameter";
+import NotEmptyParameters from "./not-empty-parameters";
+import NotEmptyVoid from "./not-empty-void";
+var NotEmpty;
+(function (NotEmpty) {
+    NotEmpty.Parameter = NotEmptyParameter;
+    NotEmpty.Parameters = NotEmptyParameters;
+    NotEmpty.Void = NotEmptyVoid;
+})(NotEmpty || (NotEmpty = {}));
+export default NotEmpty;
 //# sourceMappingURL=not-empty.js.map

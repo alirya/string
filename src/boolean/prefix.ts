@@ -1,13 +1,16 @@
 import {startsWith} from "lodash";
-import Value from "@dikac/t-value/value";
 import Prefix from "../prefix/prefix";
+import PrefixParameter from "./prefix-parameter";
+import PrefixParameters from "./prefix-parameters";
 /**
  * @see startsWith
  * @param value
  * @param prefix
  */
-export default function Prefix({value, prefix} : Value<string> & Prefix<string>) : boolean {
+namespace Prefix {
 
-    return startsWith(value, prefix);
-
+    export const Parameters = PrefixParameters;
+    export const Parameter = PrefixParameter;
 }
+
+export default Prefix;

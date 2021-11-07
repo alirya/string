@@ -1,15 +1,29 @@
-import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
-import NotBlankBoolean from "../boolean/not-blank";
-export default Blank;
+import BlankParameter from "./blank-parameter";
+import BlankParameters from "./blank-parameters";
 var Blank;
 (function (Blank) {
     Blank.Parameter = BlankParameter;
-    Blank.Object = BlankObject;
+    Blank.Parameters = BlankParameters;
 })(Blank || (Blank = {}));
-export function BlankParameter(value, message) {
-    return ValidatableCallbacks(value, NotBlankBoolean, message);
-}
-export function BlankObject({ value, message }) {
-    return BlankParameter(value, message);
-}
+export default Blank;
+//
+// export function BlankParameter<ValueType extends string, MessageType>(
+//     value : ValueType,
+//     message : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType,
+// ) {
+//
+//     return ValidatableCallbacks<string, ValueType, MessageType>(value, NotBlankBoolean, message);
+// }
+//
+// export type BlankArgument<ValueType extends string, MessageType>
+//     = Value<ValueType> &
+//     Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>;
+//
+// export function BlankObject<ValueType extends string, MessageType>({
+//     value,
+//     message
+// } : Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>) {
+//
+//     return BlankParameter(value, message);
+// }
 //# sourceMappingURL=blank.js.map

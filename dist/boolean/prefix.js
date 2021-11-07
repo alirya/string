@@ -1,10 +1,14 @@
-import { startsWith } from "lodash";
+import PrefixParameter from "./prefix-parameter";
+import PrefixParameters from "./prefix-parameters";
 /**
  * @see startsWith
  * @param value
  * @param prefix
  */
-export default function Prefix({ value, prefix }) {
-    return startsWith(value, prefix);
-}
+var Prefix;
+(function (Prefix) {
+    Prefix.Parameters = PrefixParameters;
+    Prefix.Parameter = PrefixParameter;
+})(Prefix || (Prefix = {}));
+export default Prefix;
 //# sourceMappingURL=prefix.js.map

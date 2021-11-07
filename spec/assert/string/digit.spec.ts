@@ -4,7 +4,7 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 
-    expect(Digit(true, '0123456789', 'value')).toBe(
+    expect(Digit.Parameters( '0123456789', true, 'value')).toBe(
         'value is digit.'
     );
 
@@ -12,7 +12,7 @@ it('true valid', ()=>{
 
 it('true invalid', ()=>{
 
-    expect(Digit(true, '0123456789', 'value')).toBe(
+    expect(Digit.Parameters( '0123456789', true, 'value')).toBe(
         'value is digit.'
     );
 
@@ -20,7 +20,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Digit(false, '0123456789', 'value')).toBe(
+    expect(Digit.Parameters( '0123456789', false, 'value')).toBe(
         'value must digit.'
     );
 
@@ -28,7 +28,7 @@ it('false valid', ()=>{
 
 it('false invalid', ()=>{
 
-    expect(Digit(false, '0123ABCD456E789', 'value')).toBe(
+    expect(Digit.Parameters( '0123ABCD456E789', false, 'value')).toBe(
         'value must digit, contains "ABCD".'
     );
 

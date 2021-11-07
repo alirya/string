@@ -1,22 +1,10 @@
-import StringValidatable from "../validatable/string";
-import StringString from "../assert/string/string";
-export function StringObject(message = StringString.Object) {
-    return function (value) {
-        return StringValidatable.Object({ value, message });
-    };
-}
-export function StringVoid() {
-    return StringObject(StringString.Object);
-}
-export function StringParameter(message = StringString.Parameter) {
-    return function (value) {
-        return StringValidatable.Parameter(value, message);
-    };
-}
+import StringParameter from "./string-parameter";
+import StringParameters from "./string-parameters";
+import StringVoid from "./string-void";
 var String;
 (function (String) {
     String.Parameter = StringParameter;
-    String.Object = StringObject;
+    String.Parameters = StringParameters;
     String.Void = StringVoid;
 })(String || (String = {}));
 export default String;

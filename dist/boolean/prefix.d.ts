@@ -1,8 +1,13 @@
-import Value from "@dikac/t-value/value";
 import Prefix from "../prefix/prefix";
+import PrefixParameter from "./prefix-parameter";
+import PrefixParameters from "./prefix-parameters";
 /**
  * @see startsWith
  * @param value
  * @param prefix
  */
-export default function Prefix({ value, prefix }: Value<string> & Prefix<string>): boolean;
+declare namespace Prefix {
+    const Parameters: typeof PrefixParameters;
+    const Parameter: typeof PrefixParameter;
+}
+export default Prefix;

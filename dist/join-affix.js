@@ -1,14 +1,9 @@
-import SafeCast from "./safe-cast";
+import JoinAffixParameter from "./join-affix-parameter";
+import JoinAffixParameters from "./join-affix-parameters";
 var JoinAffix;
 (function (JoinAffix) {
     JoinAffix.Parameter = JoinAffixParameter;
-    JoinAffix.Object = JoinAffixObject;
+    JoinAffix.Parameters = JoinAffixParameters;
 })(JoinAffix || (JoinAffix = {}));
-export function JoinAffixParameter(value, separator, prefix, suffix) {
-    return SafeCast(prefix) + value.join(separator) + SafeCast(suffix);
-}
-export function JoinAffixObject({ value, separator, prefix, suffix, }) {
-    return JoinAffixParameter(value, separator, prefix, suffix);
-}
 export default JoinAffix;
 //# sourceMappingURL=join-affix.js.map

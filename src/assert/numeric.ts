@@ -4,8 +4,8 @@ import NumericError from "./throwable/numeric";
 
 export default function Numeric(
     value : string,
-    error : (value:string)=>Error = NumericError
+    error : (value:string)=>Error = NumericError.Parameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    Callback.Parameter(value, Guard, error);
 }

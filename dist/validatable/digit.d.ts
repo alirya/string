@@ -1,13 +1,8 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-export default Digit;
+import DigitParameter, { DigitArgument } from "./digit-parameter";
+import DigitParameters from "./digit-parameters";
 declare namespace Digit {
     const Parameter: typeof DigitParameter;
-    const Object: typeof DigitObject;
+    const Parameters: typeof DigitParameters;
     type Argument<ValueType extends string, MessageType> = DigitArgument<ValueType, MessageType>;
 }
-export declare function DigitParameter<ValueType extends string, MessageType>(value: ValueType, message: (result: Readonly<Value<ValueType> & Validatable>) => MessageType): Readonly<Value<ValueType> & Message<MessageType> & Validatable<boolean>>;
-export declare type DigitArgument<ValueType extends string, MessageType> = Value<ValueType> & Message<(result: Readonly<Value<ValueType> & Validatable>) => MessageType>;
-export declare function DigitObject<ValueType extends string, MessageType>({ value, // : ValueType,
-message, }: Value<ValueType> & Message<(result: Readonly<Value<ValueType> & Validatable>) => MessageType>): Readonly<Value<ValueType> & Message<MessageType> & Validatable>;
+export default Digit;

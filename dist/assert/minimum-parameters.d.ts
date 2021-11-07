@@ -1,0 +1,1 @@
+export default function MinimumParameters(value: string, minimum: number, inclusive: boolean, converter?: (value: string) => number, error?: (value: string, minimum: number, inclusive: boolean) => Error): asserts value is string;

@@ -1,5 +1,9 @@
-import MatchType from "../string/match";
-export default function Match({ value, pattern, subject = 'string', }) {
-    return new Error(MatchType(false, value, pattern, subject));
-}
+import MatchParameter from "./match-parameter";
+import MatchParameters from "./match-parameters";
+var Match;
+(function (Match) {
+    Match.Parameter = MatchParameter;
+    Match.Parameters = MatchParameters;
+})(Match || (Match = {}));
+export default Match;
 //# sourceMappingURL=match.js.map

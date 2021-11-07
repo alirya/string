@@ -1,6 +1,5 @@
-import IsMinimum from "./boolean/minimum";
-import Count from "../number/count";
-import Callback from "@dikac/t-validator/validatable/callback";
+import MinimumParameter from "./minimum-parameter";
+import MinimumParameters from "./minimum-parameters";
 //
 // export default class Minimum<ValueType extends string, MessageType>
 //     implements
@@ -36,16 +35,51 @@ import Callback from "@dikac/t-validator/validatable/callback";
 //         return this.messageFactory(this);
 //     }
 // }
-export default Minimum;
 var Minimum;
 (function (Minimum) {
     Minimum.Parameter = MinimumParameter;
-    Minimum.Object = MinimumObject;
+    Minimum.Parameters = MinimumParameters;
 })(Minimum || (Minimum = {}));
-export function MinimumParameter(value, minimum, inclusive, message, converter = Count) {
-    return Callback({ value, minimum, inclusive, converter }, IsMinimum, message);
-}
-export function MinimumObject({ value, minimum, inclusive, message, converter }) {
-    return MinimumParameter(value, minimum, inclusive, message, converter);
-}
+export default Minimum;
+//
+// export type MinimumType<ValueType, MessageType> = Readonly<Inclusive & MinimumNumber &  Value<ValueType> & Message<MessageType> & Validatable>;
+//
+//
+// export function MinimumParameter<ValueType extends string, MessageType>(
+//     value : ValueType,
+//     minimum : number,
+//     inclusive : boolean,
+//     // message : (result:Readonly<Value<ValueType> & Inclusive & MinimumNumber & Validatable>)=>MessageType,
+//     message : (result:Readonly<Value<ValueType> & Inclusive & MinimumNumber & Validatable>)=>MessageType,
+//     converter : (string:ValueType)=>number = Count,
+// ) : MinimumType<ValueType, MessageType> {
+//
+//     return Callback.Function.Parameter({value, minimum, inclusive, converter}, IsMinimum, message) as Readonly<Inclusive & MinimumNumber &  Value<ValueType> & Message<MessageType> & Validatable>
+// }
+//
+// export type MinimumArgument<ValueType extends string, MessageType> =
+//     Value<ValueType> &
+//     MinimumNumber &
+//     Inclusive &
+//     {converter ?: (value:ValueType)=>number} &
+//     Message<(result:Readonly<Value<ValueType> & Inclusive & MinimumNumber & Validatable>)=>MessageType>
+//
+// export function MinimumObject<ValueType extends string, MessageType>(
+//     // {
+//     //     value,
+//     //     minimum,
+//     //     inclusive,
+//     //     message,
+//     //     converter
+//     // }
+//     value: MinimumArgument<ValueType, MessageType>
+// ) : MinimumType<ValueType, MessageType> {
+//
+//     return Callback.Function.Object({
+//         value:value as Omit<MinimumArgument<ValueType, MessageType>, 'message'>,
+//         validation:IsMinimum,
+//         message:value.message
+//     }) as Readonly<Inclusive & MinimumNumber &  Value<ValueType> & Message<MessageType> & Validatable>
+//
+// }
 //# sourceMappingURL=minimum.js.map

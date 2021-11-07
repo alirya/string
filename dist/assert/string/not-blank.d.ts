@@ -1,13 +1,9 @@
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-export default NotBlank;
+import NotBlankParameter from "./not-blank-parameter";
+import NotBlankParameters from "./not-blank-parameters";
+import { NotEmptyArgument } from "./not-empty-parameter";
 declare namespace NotBlank {
     const Parameter: typeof NotBlankParameter;
-    const Object: typeof NotBlankObject;
-    type Argument = NotBlankArgument;
+    const Parameters: typeof NotBlankParameters;
+    type Argument = NotEmptyArgument;
 }
-export declare function NotBlankParameter(value: string, valid: boolean, subject?: string): string;
-export declare type NotBlankArgument = Validatable & Value<string> & {
-    subject?: string;
-};
-export declare function NotBlankObject({ valid, value, subject, }: NotBlankArgument): string;
+export default NotBlank;

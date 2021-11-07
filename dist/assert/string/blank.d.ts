@@ -1,13 +1,8 @@
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-export default Blank;
+import BlankParameter, { BlankArgument } from "./blank-parameter";
+import BlankParameters from "./blank-parameters";
 declare namespace Blank {
     const Parameter: typeof BlankParameter;
-    const Object: typeof BlankObject;
+    const Parameters: typeof BlankParameters;
     type Argument = BlankArgument;
 }
-export declare function BlankParameter(valid: boolean, value: string, subject?: string): string;
-export declare type BlankArgument = Validatable & Value<string> & {
-    subject?: string;
-};
-export declare function BlankObject({ valid, value, subject, }: BlankArgument): string;
+export default Blank;

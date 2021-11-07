@@ -1,6 +1,9 @@
-import Validator from "@dikac/t-validator/validator";
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-import Instance from "@dikac/t-validator/validatable/dynamic";
-export default function Digit(): Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
-export default function Digit<MessageType>(message: (result: Readonly<Value<string>> & Readonly<Validatable>) => MessageType): Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+import DigitParameter from "./digit-parameter";
+import DigitParameters from "./digit-parameters";
+import DigitVoid from "./digit-void";
+declare namespace Digit {
+    const Parameter: typeof DigitParameter;
+    const Parameters: typeof DigitParameters;
+    const Void: typeof DigitVoid;
+}
+export default Digit;

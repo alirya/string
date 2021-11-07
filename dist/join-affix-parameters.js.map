@@ -1,0 +1,1 @@
+{"version":3,"file":"join-affix-parameters.js","sourceRoot":"","sources":["../src/join-affix-parameters.ts"],"names":[],"mappings":"AAAA,OAAO,QAAQ,MAAM,aAAa,CAAC;AAEnC,MAAM,CAAC,OAAO,UAAU,mBAAmB,CACvC,KAAgB,EAChB,SAAkB,EAClB,MAAgB,EAChB,MAAgB;IAGhB,OAAO,QAAQ,CAAC,MAAM,CAAC,GAAG,KAAK,CAAC,IAAI,CAAC,SAAS,CAAC,GAAG,QAAQ,CAAC,MAAM,CAAC,CAAC;AACvE,CAAC"}

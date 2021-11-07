@@ -5,6 +5,6 @@ import Match from "./match";
  * @param source
  */
 export default function Numeric(source) {
-    return Match(source, /^[-+]*\d*(\.\d*)?$/i);
+    return Match.Parameter(source, /^[-+]*\d*(\.\d*)?$/i);
 }
 //# sourceMappingURL=numeric.js.map

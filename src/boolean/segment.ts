@@ -1,5 +1,5 @@
-import Difference from "@dikac/t-array/difference";
-import Separator from "../separator/separator";
+import SegmentParameter from "./segment-parameter";
+import SegmentParameters from "./segment-parameters";
 
 /**
  * check if {@param compare} is part of {@param root}
@@ -19,19 +19,11 @@ import Separator from "../separator/separator";
  * @example
  * Segment('root.parent', 'root', '.') : false
  */
-export default function Segment({
-    root,
-    compare,
-    separator
-} : Separator & {root:string, compare: string}) : boolean {
 
-    if(root === compare) {
+namespace Segment {
 
-        return true;
-    }
-
-    return Difference(
-        root.split(separator),
-        compare.split(separator),
-    ).length === 0;
+    export const Parameter = SegmentParameter;
+    export const Parameters = SegmentParameters;
 }
+
+export default Segment;

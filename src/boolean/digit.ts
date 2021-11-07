@@ -6,5 +6,5 @@ import Match from "./match";
  */
 export default function Digit(string : string) : boolean {
 
-    return Match(string, /^\d*$/i)
+    return Match.Parameter(string, /^\d*$/i)
 }

@@ -1,10 +1,5 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import IsDigit from "../boolean/digit";
-import ValueOf from "@dikac/t-value/value-of/value-of";
-import Callback from "@dikac/t-validator/validatable/callback";
-import EmptyParameter from "../boolean/empty";
+import DigitParameter, {DigitArgument} from "./digit-parameter";
+import DigitParameters from "./digit-parameters";
 
 //
 // export default class Digit<ValueType extends string, MessageType>
@@ -41,29 +36,29 @@ import EmptyParameter from "../boolean/empty";
 //     }
 // }
 
-export default Digit;
 namespace Digit {
 
     export const Parameter = DigitParameter;
-    export const Object = DigitObject;
+    export const Parameters = DigitParameters;
     export type Argument<ValueType extends string, MessageType> = DigitArgument<ValueType, MessageType>;
 }
+export default Digit;
 
 
-export function DigitParameter<ValueType extends string, MessageType>(
-    value: ValueType,
-    message: (result:Readonly<Value<ValueType> & Validatable>)=>MessageType)
-{
-
-    return Callback(value, IsDigit, message) as Readonly<Value<ValueType> & Message<MessageType> & Validatable>;
-}
-
-export type DigitArgument<ValueType extends string, MessageType> = Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>;
-
-export function DigitObject<ValueType extends string, MessageType>({
-    value,// : ValueType,
-    message,// : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType,
-} : Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>) : Readonly<Value<ValueType> & Message<MessageType> & Validatable>{
-
-    return DigitParameter(value, message);
-}
+// export function DigitParameter<ValueType extends string, MessageType>(
+//     value: ValueType,
+//     message: (result:Readonly<Value<ValueType> & Validatable>)=>MessageType)
+// {
+//
+//     return Callback(value, IsDigit, message) as Readonly<Value<ValueType> & Message<MessageType> & Validatable>;
+// }
+//
+// export type DigitArgument<ValueType extends string, MessageType> = Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>;
+//
+// export function DigitObject<ValueType extends string, MessageType>({
+//     value,// : ValueType,
+//     message,// : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType,
+// } : Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>) : Readonly<Value<ValueType> & Message<MessageType> & Validatable>{
+//
+//     return DigitParameter(value, message);
+// }

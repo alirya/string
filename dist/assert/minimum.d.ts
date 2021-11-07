@@ -1,1 +1,7 @@
-export default function Minimum(value: string, minimum: number, inclusive: boolean, converter?: (value: string) => number, error?: (value: string, minimum: number, inclusive: boolean) => Error): asserts value is string;
+import MinimumParameter from "./minimum-parameter";
+import MinimumParameters from "./minimum-parameters";
+declare namespace Minimum {
+    const Parameter: typeof MinimumParameter;
+    const Parameters: typeof MinimumParameters;
+}
+export default Minimum;

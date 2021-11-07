@@ -1,25 +1,13 @@
-import Validator from "@dikac/t-validator/validator";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Value from "@dikac/t-value/value";
-import NotEmptyValidatable from "../validatable/not-empty";
-import Instance from "@dikac/t-validator/validatable/dynamic";
-import Return from "@dikac/t-validator/validatable/simple";
-import NotEmptyString from "../validatable/string/not-empty";
+import NotEmptyParameter from "./not-empty-parameter";
+import NotEmptyParameters from "./not-empty-parameters";
+import NotEmptyVoid from "./not-empty-void";
 
-export default function NotEmpty() : Validator<string, '', true, false, Readonly<Instance<string, string>>>;
+namespace NotEmpty {
 
-export default function NotEmpty<MessageType>(
-    message : (result:Readonly<Value<string> & Validatable>)=>MessageType
-) : Validator<string, '', true, false, Readonly<Instance<string, MessageType>>>;
-
-export default function NotEmpty<MessageType>(
-    message : (result:Readonly<Value<string> & Validatable>)=>MessageType|string = NotEmptyString
-) : Validator<string, '', true, false, Readonly<Instance<string, MessageType>>> {
-
-    return function (value) {
-
-        return NotEmptyValidatable({value, message});
-
-    } as Validator<string, '', true, false, Readonly<Instance<string, MessageType>>>
+    export const Parameter = NotEmptyParameter;
+    export const Parameters = NotEmptyParameters;
+    export const Void = NotEmptyVoid;
 }
+
+export default NotEmpty;
+

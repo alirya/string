@@ -4,8 +4,8 @@ import BlankError from "./throwable/not-blank";
 
 export default function NotBlank(
     value : string,
-    error : (value:string)=>Error = BlankError
+    error : (value:string)=>Error = BlankError.Parameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    Callback.Parameter(value, Guard, error);
 }

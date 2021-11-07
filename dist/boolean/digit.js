@@ -4,6 +4,6 @@ import Match from "./match";
  * @param string
  */
 export default function Digit(string) {
-    return Match(string, /^\d*$/i);
+    return Match.Parameter(string, /^\d*$/i);
 }
 //# sourceMappingURL=digit.js.map

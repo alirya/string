@@ -1,14 +1,11 @@
-import {endsWith} from "lodash";
-import Value from "@dikac/t-value/value";
 import Suffix from "../suffix/suffix";
+import SuffixParameter from "./suffix-parameter";
+import SuffixParameters from "./suffix-parameters";
 
-/**
- * @see startsWith
- * @param string
- * @param suffix
- */
-export default function Suffix({value, suffix} : Value<string> & Suffix) : boolean {
+namespace Suffix {
 
-    return endsWith(value, suffix);
-
+    export const Parameter = SuffixParameter;
+    export const Parameters = SuffixParameters;
 }
+
+export default Suffix;

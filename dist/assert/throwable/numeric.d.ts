@@ -1,4 +1,7 @@
-import Value from "@dikac/t-value/value";
-export default function Numeric({ value, subject }: Value<string> & {
-    subject?: string;
-}): Error;
+import NumericParameter from "./numeric-parameter";
+import NumericParameters from "./numeric-parameters";
+declare namespace Numeric {
+    const Parameter: typeof NumericParameter;
+    const Parameters: typeof NumericParameters;
+}
+export default Numeric;

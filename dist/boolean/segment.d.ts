@@ -1,4 +1,5 @@
-import Separator from "../separator/separator";
+import SegmentParameter from "./segment-parameter";
+import SegmentParameters from "./segment-parameters";
 /**
  * check if {@param compare} is part of {@param root}
  *
@@ -17,7 +18,8 @@ import Separator from "../separator/separator";
  * @example
  * Segment('root.parent', 'root', '.') : false
  */
-export default function Segment({ root, compare, separator }: Separator & {
-    root: string;
-    compare: string;
-}): boolean;
+declare namespace Segment {
+    const Parameter: typeof SegmentParameter;
+    const Parameters: typeof SegmentParameters;
+}
+export default Segment;

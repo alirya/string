@@ -1,10 +1,14 @@
-import AlphabetType from "../string/alphabet";
 import Value from "@dikac/t-value/value";
+import AlphabetParameter from "./alphabet-parameters";
+import AlphabetParameters from "./alphabet-parameters";
 
-export default function Alphabet({
-    value,
-    subject = 'string'
-} : Value<string> & {subject ?: string}) : Error {
+export type AlphabetArgument = Value<string> & {subject ?: string};
 
-    return new Error(AlphabetType(false, value, subject))
+namespace Alphabet {
+
+    export const Parameter = AlphabetParameter;
+    export const Object = AlphabetParameters;
+    export type Argument = AlphabetArgument;
 }
+
+export default Alphabet;

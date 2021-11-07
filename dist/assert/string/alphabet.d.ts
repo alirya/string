@@ -1,13 +1,8 @@
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-export default Alphabet;
+import AlphabetParameter, { AlphabetArgument } from "./alphabet-parameter";
+import AlphabetParameters from "./alphabet-parameters";
 declare namespace Alphabet {
     const Parameter: typeof AlphabetParameter;
-    const Object: typeof AlphabetObject;
+    const Parameters: typeof AlphabetParameters;
     type Argument = AlphabetArgument;
 }
-export declare function AlphabetParameter(value: string, valid: boolean, subject?: string): string;
-export declare type AlphabetArgument = Validatable & Value<string> & {
-    subject?: string;
-};
-export declare function AlphabetObject({ valid, value, subject }: AlphabetArgument): string;
+export default Alphabet;

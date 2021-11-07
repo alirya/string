@@ -1,10 +1,11 @@
-import BlankType from "../string/blank";
-import Value from "@dikac/t-value/value";
+import BlankParameter, {BlankArgument} from "./blank-parameter";
+import BlankParameters from "./blank-parameters";
 
-export default function Blank({
-    value,
-    subject = 'string'
-} : Value<string> & {subject ?: string}) : Error {
+namespace Blank {
 
-    return new Error(BlankType(false, value, subject))
+    export const Parameter = BlankParameter;
+    export const Parameters = BlankParameters;
+    export type Argument = BlankArgument;
 }
+
+export default Blank;

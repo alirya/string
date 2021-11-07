@@ -4,8 +4,8 @@ import DigitError from "./throwable/digit";
 
 export default function Digit(
     value : string,
-    error : (value:string)=> Error = DigitError
+    error : (value:string)=> Error = DigitError.Parameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    Callback.Parameter(value, Guard, error);
 }

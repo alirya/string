@@ -1,12 +1,9 @@
-import { trimStart } from "lodash";
-export const TrimPrefixParameter = trimStart;
+import TrimSuffixParameters from "./trim-suffix-parameters";
+import TrimPrefixParameter from "./trim-prefix-parameter";
 var TrimPrefix;
 (function (TrimPrefix) {
+    TrimPrefix.Parameters = TrimSuffixParameters;
     TrimPrefix.Parameter = TrimPrefixParameter;
-    TrimPrefix.Object = TrimPrefixObject;
 })(TrimPrefix || (TrimPrefix = {}));
-export function TrimPrefixObject({ value, prefix }) {
-    return TrimPrefixParameter(value, prefix);
-}
 export default TrimPrefix;
 //# sourceMappingURL=trim-prefix.js.map

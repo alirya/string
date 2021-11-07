@@ -1,7 +1,9 @@
-import Guard from "../boolean/match";
-import Callback from "@dikac/t-function/assert/callback";
-import MatchError from "./throwable/match";
-export default function Match(value, pattern, error = MatchError) {
-    Callback(value, Guard, error, pattern);
-}
+import MatchParameter from "./match-parameter";
+import MatchParameters from "./match-parameters";
+var Match;
+(function (Match) {
+    Match.Parameter = MatchParameter;
+    Match.Parameters = MatchParameters;
+})(Match || (Match = {}));
+export default Match;
 //# sourceMappingURL=match.js.map

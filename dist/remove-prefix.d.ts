@@ -1,14 +1,8 @@
-import String from "./string/string";
-import Prefix from "./prefix/prefix";
+import RemovePrefixParameters from "./remove-prefix-parameters";
+import RemoveSuffixParameter, { RemoveSuffixArgument } from "./remove-suffix-parameter";
 declare namespace RemovePrefixCharacter {
-    const Parameter: typeof RemovePrefixCharacterParameter;
-    const Object: typeof RemovePrefixCharacterObject;
-    type Argument = RemovePrefixCharacterArgument;
+    const Parameters: typeof RemovePrefixParameters;
+    const Parameter: typeof RemoveSuffixParameter;
+    type Argument = RemoveSuffixArgument;
 }
-/**
- * remove {@param prefix} at the start of {@param value}
- */
-export declare function RemovePrefixCharacterParameter(value: string, prefix?: string): string;
-export declare type RemovePrefixCharacterArgument = String & Prefix;
-export declare function RemovePrefixCharacterObject({ value, prefix }: String & Prefix): string;
 export default RemovePrefixCharacter;

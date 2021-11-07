@@ -4,7 +4,7 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it("0 parts", function() {
 
-    let result = Segment('', '.');
+    let result = Segment.Parameters('', '.');
     expect(result).toEqual(['']);
 
 });
@@ -12,7 +12,7 @@ it("0 parts", function() {
 
 it("1 parts", function() {
 
-    let result = Segment('root', '.');
+    let result = Segment.Parameters('root', '.');
     expect(result).toEqual(['root']);
 
 });
@@ -20,14 +20,14 @@ it("1 parts", function() {
 
 it("2 parts", function() {
 
-    let result = Segment('root.parent', '.');
+    let result = Segment.Parameters('root.parent', '.');
     expect(result).toEqual(['root', 'root.parent']);
 
 });
 
 it("3 parts", function() {
 
-    let result = Segment('root.parent.child', '.');
+    let result = Segment.Parameters('root.parent.child', '.');
     expect(result).toEqual(['root', 'root.parent', 'root.parent.child']);
 
 });

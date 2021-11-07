@@ -4,7 +4,7 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 
-    expect(Alphanumeric(true, 'abcd12345', 'value')).toBe(
+    expect(Alphanumeric.Parameters('abcd12345', true, 'value')).toBe(
         'value is alphanumeric.'
     );
 
@@ -12,7 +12,7 @@ it('true valid', ()=>{
 
 it('true invalid', ()=>{
 
-    expect(Alphanumeric(true, '!@#$%^&*()_+', 'value')).toBe(
+    expect(Alphanumeric.Parameters('!@#$%^&*()_+', true, 'value')).toBe(
         'value is alphanumeric.'
     );
 
@@ -20,7 +20,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Alphanumeric(false, '123ABC', 'value')).toBe(
+    expect(Alphanumeric.Parameters('123ABC', false, 'value')).toBe(
         'value must alphanumeric.'
     );
 
@@ -28,7 +28,7 @@ it('false valid', ()=>{
 
 it('false invalid', ()=>{
 
-    expect(Alphanumeric(false, '12!@#$%^&*()_+AB', 'value')).toBe(
+    expect(Alphanumeric.Parameters('12!@#$%^&*()_+AB', false, 'value')).toBe(
         'value must alphanumeric, contains "!@#$%".'
     );
 

@@ -6,7 +6,7 @@ describe('true valid', ()=>{
 
     it('inclusive', ()=>{
 
-        expect(Minimum(true, 'abcde', 5, true,'value')).toBe(
+        expect(Minimum.Parameters( 'abcde', true, 5, true,undefined, undefined, 'value')).toBe(
             'value length is greater or equal than 5.'
         );
 
@@ -14,7 +14,7 @@ describe('true valid', ()=>{
 
     it('exclusive', ()=>{
 
-        expect(Minimum(true, 'abcdde', 5, false,'value')).toBe(
+        expect(Minimum.Parameters( 'abcdde', true, 5, false,undefined, undefined, 'value')).toBe(
             'value length is greater than 5.'
         );
 
@@ -27,7 +27,7 @@ describe('true invalid', ()=>{
 
     it('inclusive', ()=>{
 
-        expect(Minimum(true, 'abc', 5, true,'value')).toBe(
+        expect(Minimum.Parameters('abc', true,  5, true,undefined, undefined, 'value')).toBe(
             'value length is greater or equal than 5.'
         );
 
@@ -35,7 +35,7 @@ describe('true invalid', ()=>{
 
     it('exlusive', ()=>{
 
-        expect(Minimum(true, 'abc', 5, false,'value')).toBe(
+        expect(Minimum.Parameters('abc', true,  5, false,undefined, undefined, 'value')).toBe(
             'value length is greater than 5.'
         );
 
@@ -48,16 +48,16 @@ describe('false valid', ()=>{
 
     it('inclusive', ()=>{
 
-        expect(Minimum(false, 'abcdef', 5, true,'value')).toBe(
-            'value length must greater or equal than 5.'
+        expect(Minimum.Parameters( 'abcdef', false, 5, true,undefined, undefined, 'value')).toBe(
+            'value length must greater or equal than 5, actual length 6.'
         );
 
     });
 
     it('exclusive', ()=>{
 
-        expect(Minimum(false, 'abcde', 5, false,'value')).toBe(
-            'value length must greater than 5.'
+        expect(Minimum.Parameters( 'abcde', false, 5, false,undefined, undefined, 'value')).toBe(
+            'value length must greater than 5, actual length 5.'
         );
 
     });
@@ -68,16 +68,16 @@ describe('false invalid', ()=>{
 
     it('inclusive', ()=>{
 
-        expect(Minimum(false, '123456789', 5, true,'value')).toBe(
-            'value length must greater or equal than 5.'
+        expect(Minimum.Parameters('123456789', false,  5, true,undefined, undefined,'value')).toBe(
+            'value length must greater or equal than 5, actual length 9.'
         );
 
     });
 
     it('exclusive', ()=>{
 
-        expect(Minimum(false, '123456789', 5, false,'value')).toBe(
-            'value length must greater than 5.'
+        expect(Minimum.Parameters('123456789', false,  5, false,undefined, undefined,'value')).toBe(
+            'value length must greater than 5, actual length 9.'
         );
 
     });

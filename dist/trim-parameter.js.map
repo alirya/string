@@ -1,0 +1,1 @@
+{"version":3,"file":"trim-parameter.js","sourceRoot":"","sources":["../src/trim-parameter.ts"],"names":[],"mappings":"AAIA,OAAO,cAAc,MAAM,mBAAmB,CAAC;AAQ/C,MAAM,CAAC,OAAO,UAAU,aAAa,CAAC,EAAC,KAAK,EAAE,SAAS,EAAE,MAAM,EAAE,MAAM,EAA8D;IAEjI,OAAO,cAAc,CAAC,KAAK,EAAE,SAAS,IAAI,MAAM,EAAE,MAAM,CAAC,CAAC;AAC9D,CAAC"}

@@ -1,10 +1,10 @@
-import NumericType from "../string/numeric";
-import Value from "@dikac/t-value/value";
+import NumericParameter from "./numeric-parameter";
+import NumericParameters from "./numeric-parameters";
 
-export default function Numeric({
-    value,
-    subject = 'string'
-} : Value<string> & {subject ?: string}) : Error {
+namespace Numeric {
 
-    return new Error(NumericType(false, value, subject))
+    export const Parameter = NumericParameter;
+    export const Parameters = NumericParameters;
 }
+
+export default Numeric;

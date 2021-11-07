@@ -1,26 +1,8 @@
-import AffixOption from "./affix/affix";
-import Affix from "./affix/affix/affix";
-import String from "./string/string";
-import Padding from "./padding/padding";
+import PadOptionParameter, { PadOptionArgument } from "./pad-option-parameter";
+import PadOptionParameters from "./pad-option-parameters";
 declare namespace PadOption {
     const Parameter: typeof PadOptionParameter;
-    const Object: typeof PadOptionObject;
+    const Parameters: typeof PadOptionParameters;
     type Argument = PadOptionArgument;
 }
-/**
- * pad string depend on {@param mode}
- * {@see PadPrefix}
- * {@see PadSuffix}
- * {@see PadCircumfix}
- *
- * @param string
- * @param padding
- * @param length
- * @param mode
- */
-export declare function PadOptionParameter(value: string, padding: string, length: number, affix: AffixOption): string;
-export declare type PadOptionArgument = String & Padding & {
-    length: number;
-} & Affix;
-export declare function PadOptionObject({ value, padding, length, affix }: PadOptionArgument): string;
 export default PadOption;

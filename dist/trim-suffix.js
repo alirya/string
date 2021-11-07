@@ -1,12 +1,9 @@
-import { trimEnd } from "lodash";
-export const TrimSuffixParameter = trimEnd;
+import TrimSuffixParameters from "./trim-suffix-parameters";
+import TrimSuffixParameter from "./trim-suffix-parameter";
 var TrimSuffix;
 (function (TrimSuffix) {
+    TrimSuffix.Parameters = TrimSuffixParameters;
     TrimSuffix.Parameter = TrimSuffixParameter;
-    TrimSuffix.Object = TrimSuffixObject;
 })(TrimSuffix || (TrimSuffix = {}));
-export function TrimSuffixObject({ value, suffix }) {
-    return TrimSuffixParameter(value, suffix);
-}
 export default TrimSuffix;
 //# sourceMappingURL=trim-suffix.js.map

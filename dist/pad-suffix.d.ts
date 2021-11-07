@@ -1,16 +1,8 @@
-import String from "./string/string";
-import Suffix from "./suffix/suffix";
+import PadSuffixParameter from "./pad-suffix-parameters";
+import { PadSuffixArgument } from "./pad-suffix-parameter";
 declare namespace PadSuffix {
     const Parameter: typeof PadSuffixParameter;
-    const Object: typeof PadSuffixObject;
+    const Parameters: typeof PadSuffixParameter;
     type Argument = PadSuffixArgument;
 }
-/**
- * @see padEnd
- */
-export declare function PadSuffixParameter(string: string, length: number, suffix: string): string;
-export declare type PadSuffixArgument = String & Suffix & {
-    length: number;
-};
-export declare function PadSuffixObject({ value, length, suffix }: PadSuffixArgument): string;
 export default PadSuffix;

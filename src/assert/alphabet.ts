@@ -4,8 +4,8 @@ import AlphabetError from "./throwable/alphabet";
 
 export default function Alphabet(
     value : string,
-    error : (value:string)=>Error = AlphabetError
+    error : (value:string)=>Error = AlphabetError.Parameter
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    Callback.Parameter(value, Guard, error);
 }

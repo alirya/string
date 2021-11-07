@@ -1,11 +1,9 @@
-import PrefixCharacter from "./prefix";
-import SuffixCharacter from "./suffix";
-export function EncloseParameter(string, prefix, suffix) {
-    string = PrefixCharacter.Parameter(string, prefix);
-    string = SuffixCharacter.Parameter(string, suffix || prefix);
-    return string;
-}
-export function Enclose({ value, prefix, circumfix, suffix, }) {
-    return EncloseParameter(value, prefix || circumfix, suffix);
-}
+import EncloseParameter from "./enclose-parameter";
+import EncloseParameters from "./enclose-parameters";
+var Enclose;
+(function (Enclose) {
+    Enclose.Parameter = EncloseParameter;
+    Enclose.Parameters = EncloseParameters;
+})(Enclose || (Enclose = {}));
+export default Enclose;
 //# sourceMappingURL=enclose.js.map

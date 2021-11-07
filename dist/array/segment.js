@@ -1,19 +1,18 @@
+import AlphanumericParameter from "./segment-parameter";
+import AlphanumericParameters from "./segment-parameters";
 /**
- * split {@param string} to its each segment marked by {@param separator}
+ * split {@param string} to its each alphanumeric marked by {@param separator}
  *
  * @param string
  * @param separator
  *
  * example
- *     Segment('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
+ *     Alphanumeric('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
  */
-export default function Segment({ value, separator }) {
-    let list = value.split(separator);
-    let length = list.length;
-    let adds = [];
-    for (let i = 1; i <= length; i++) {
-        adds.push(list.slice(0, i).join(separator));
-    }
-    return adds;
-}
+var Alphanumeric;
+(function (Alphanumeric) {
+    Alphanumeric.Parameter = AlphanumericParameter;
+    Alphanumeric.Parameters = AlphanumericParameters;
+})(Alphanumeric || (Alphanumeric = {}));
+export default Alphanumeric;
 //# sourceMappingURL=segment.js.map

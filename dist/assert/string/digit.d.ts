@@ -1,13 +1,8 @@
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-export default Digit;
+import DigitParameter, { DigitArgument } from "./digit-parameter";
+import DigitParameters from "./digit-parameters";
 declare namespace Digit {
     const Parameter: typeof DigitParameter;
-    const Object: typeof DigitObject;
+    const Parameters: typeof DigitParameters;
     type Argument = DigitArgument;
 }
-export declare function DigitParameter(valid: boolean, value: string, subject?: string): string;
-export declare type DigitArgument = Validatable & Value<string> & {
-    subject?: string;
-};
-export declare function DigitObject({ valid, value, subject }: DigitArgument): string;
+export default Digit;

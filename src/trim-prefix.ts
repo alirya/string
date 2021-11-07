@@ -1,21 +1,11 @@
-import {trimStart} from "lodash";
-import Prefix from "./prefix/prefix";
-import String from "./string/string";
-
-export const TrimPrefixParameter : (string : string, prefix ?: string) => string = trimStart;
+import TrimSuffixParameters from "./trim-suffix-parameters";
+import TrimPrefixParameter, {TrimPrefixArgument} from "./trim-prefix-parameter";
 
 namespace TrimPrefix {
 
+    export const Parameters = TrimSuffixParameters;
     export const Parameter = TrimPrefixParameter;
-    export const Object = TrimPrefixObject;
     export type Argument = TrimPrefixArgument;
-}
-
-export type TrimPrefixArgument = String & Partial<Prefix>;
-
-export function TrimPrefixObject({value, prefix} : TrimPrefixArgument) {
-
-    return TrimPrefixParameter(value, prefix)
 }
 
 export default TrimPrefix;

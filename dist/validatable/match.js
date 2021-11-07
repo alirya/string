@@ -1,6 +1,5 @@
-import Callback from "@dikac/t-validator/validatable/callback";
-import MatchBoolean from "./boolean/match";
-import { MatchObject, MatchParameter } from "./alphanumeric";
+import MatchParameter from "./match-parameter";
+import MatchParameters from "./match-parameters";
 //
 // export default class Matchz<ValueType extends string, MessageType>
 //     extends ValueMatch<ValueType>
@@ -19,19 +18,34 @@ import { MatchObject, MatchParameter } from "./alphanumeric";
 //         return MemoizeGetter(this, 'message', this.messageFactory(this));
 //     }
 // }
-export default Match;
 var Match;
 (function (Match) {
     Match.Parameter = MatchParameter;
-    Match.Object = MatchObject;
+    Match.Parameters = MatchParameters;
 })(Match || (Match = {}));
-export function MatchParameter(value, pattern, message) {
-    return Callback({ pattern, value }, MatchBoolean, message);
-}
-export function MatchObject({ value, // : ValueType,
-pattern, // : RegExp,
-message, // : (result : Readonly<Value<ValueType> & Validatable>)=>MessageType,
- }) {
-    return MatchParameter(value, pattern, message);
-}
+export default Match;
+//
+// export function MatchParameter<ValueType extends string, MessageType>(
+//     value : ValueType,
+//     pattern : RegExp,
+//     message : (result : Readonly<Value<ValueType> & Validatable>)=>MessageType,
+// ) {
+//
+//     return Callback({pattern, value}, MatchBoolean, message);
+//
+// }
+//
+// export type MatchArgument<ValueType, MessageType>
+//     =
+//     Message<(result : Readonly<Value<ValueType> & Validatable>)=>MessageType> & Value<ValueType> & Pattern;
+//
+// export function MatchObject<ValueType extends string, MessageType>({
+//     value,// : ValueType,
+//     pattern,// : RegExp,
+//     message,// : (result : Readonly<Value<ValueType> & Validatable>)=>MessageType,
+// } : MatchArgument<ValueType, MessageType>) {
+//
+//     return MatchParameter(value, pattern, message);
+//
+// }
 //# sourceMappingURL=match.js.map

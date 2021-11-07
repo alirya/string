@@ -1,17 +1,9 @@
-import { padEnd } from "lodash";
+import PadSuffixParameter from "./pad-suffix-parameters";
+import PadSuffixParameters from "./pad-suffix-parameters";
 var PadSuffix;
 (function (PadSuffix) {
     PadSuffix.Parameter = PadSuffixParameter;
-    PadSuffix.Object = PadSuffixObject;
+    PadSuffix.Parameters = PadSuffixParameters;
 })(PadSuffix || (PadSuffix = {}));
-/**
- * @see padEnd
- */
-export function PadSuffixParameter(string, length, suffix) {
-    return padEnd(string, length, suffix);
-}
-export function PadSuffixObject({ value, length, suffix }) {
-    return PadSuffixParameter(value, length, suffix);
-}
 export default PadSuffix;
 //# sourceMappingURL=pad-suffix.js.map

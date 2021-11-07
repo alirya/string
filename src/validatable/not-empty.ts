@@ -1,10 +1,5 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import NotEmptyBoolean from "./boolean/not-empty";
-import ValueOf from "@dikac/t-value/value-of/value-of";
-import Callback from "@dikac/t-validator/validatable/callback";
-import NumericFromObject from "../boolean/numeric";
+import NotEmptyParameter, {NotEmptyArgument} from "./not-empty-parameter";
+import NotEmptyParameters from "./not-empty-parameters";
 //
 // export default class NotEmpty<ValueType extends string, MessageType>
 //     implements
@@ -40,33 +35,38 @@ import NumericFromObject from "../boolean/numeric";
 //     }
 // }
 
-export default NotEmpty;
+
 namespace NotEmpty {
 
     export const Parameter = NotEmptyParameter;
-    export const Object = NotEmptyObject;
+    export const Parameters = NotEmptyParameters;
     export type Argument<ValueType extends string, MessageType> = NotEmptyArgument<ValueType, MessageType>;
 }
 
-export function NotEmptyParameter<ValueType extends string, MessageType>(
-    value : ValueType,
-    message : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType
-) : Readonly<Value<ValueType> & Message<MessageType> & Validatable> {
-
-    return Callback(value, NotEmptyBoolean, message) as Readonly<Value<ValueType> & Message<MessageType> & Validatable>;
-}
-
-export type NotEmptyArgument<
-    ValueType extends string,
-    MessageType
-    > = Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType> & Value<ValueType>
-
-export function NotEmptyObject<ValueType extends string, MessageType>({
-      value,
-      message
-  } : NotEmptyArgument<ValueType, MessageType>
-) : Readonly<Value<ValueType> & Message<MessageType> & Validatable> {
-
-    return NotEmptyParameter(value, message);
-}
+export default NotEmpty;
+//
+// export function NotEmptyParameter<ValueType extends string, MessageType>(
+//     value : ValueType,
+//     message : FunctionStatic.Parameter<string, '', ValueType, false, true, MessageType>
+// ) : NotEmptyType<ValueType, MessageType>  {
+//
+//     return Callback.Function.Parameter(value, NotEmptyBoolean, message) as NotEmptyType<ValueType, MessageType>;
+// }
+//
+// export type NotEmptyArgument<
+//     ValueType extends string,
+//     MessageType
+//     > = Message<FunctionStatic.Object<string, '', ValueType, false, true, MessageType>> & Value<ValueType>
+//
+// export type NotEmptyType<ValueType extends string, MessageType>
+//     = Static<string, '', string, false, true, Message<MessageType> & Validatable & Value<ValueType>>;
+//
+// export function NotEmptyObject<ValueType extends string, MessageType>({
+//       value,
+//       message
+//   } : NotEmptyArgument<ValueType, MessageType>
+// ) : NotEmptyType<ValueType, MessageType> {
+//
+//     return NotEmptyParameter(value, (value, valid) => message({value, valid}));
+// }
 

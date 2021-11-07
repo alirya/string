@@ -1,18 +1,8 @@
-import String from "./string/string";
-import Prefix from "./prefix/prefix";
+import PadPrefixParameter, { PadPrefixArgument } from "./pad-prefix-parameter";
+import PadPrefixParameters from "./pad-prefix-parameters";
 declare namespace PadPrefix {
     const Parameter: typeof PadPrefixParameter;
-    const Object: typeof PadPrefixObject;
+    const Parameters: typeof PadPrefixParameters;
     type Argument = PadPrefixArgument;
 }
-/**
- * @see padStart
- */
-export declare function PadPrefixParameter(value: string, length: number, prefix: string): string;
-export declare type PadPrefixArgument = String & Prefix & {
-    length: number;
-};
-export declare function PadPrefixObject({ value, length, prefix }: String & Prefix & {
-    length: number;
-}): string;
 export default PadPrefix;

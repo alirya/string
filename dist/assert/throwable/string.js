@@ -1,5 +1,9 @@
-import StringType from "../string/string";
-export default function String({ value, subject = 'type', conversion = value => typeof value }) {
-    return new TypeError(StringType(false, value, subject, conversion));
-}
+import StringParameter from "./string-parameter";
+import StringParameters from "./string-parameters";
+var String;
+(function (String) {
+    String.Parameter = StringParameter;
+    String.Parameters = StringParameters;
+})(String || (String = {}));
+export default String;
 //# sourceMappingURL=string.js.map

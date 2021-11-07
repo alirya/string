@@ -1,13 +1,8 @@
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-export default Numeric;
+import NumericParameter, { NumericArgument } from "./numeric-parameter";
+import NumericParameters from "./numeric-parameters";
 declare namespace Numeric {
     const Parameter: typeof NumericParameter;
-    const Object: typeof NumericObject;
+    const Parameters: typeof NumericParameters;
     type Argument = NumericArgument;
 }
-export declare function NumericParameter(value: string, valid: boolean, subject?: string): string;
-export declare type NumericArgument = Validatable & Value<string> & {
-    subject?: string;
-};
-export declare function NumericObject({ valid, value, subject }: NumericArgument): string;
+export default Numeric;

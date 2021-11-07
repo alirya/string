@@ -1,13 +1,5 @@
-import MaximumNumber from "@dikac/t-number/maximum/maximum";
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import MaximumObject from "./boolean/maximum";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
-import Count from "../number/count";
-import ValueOf from "@dikac/t-value/value-of/value-of";
-import MinimumNumber from "@dikac/t-number/minimum/minimum";
-import Callback from "@dikac/t-validator/validatable/callback";
+import MaximumParameter, {MaximumArgument, MaximumType} from "./maximum-parameter";
+import MaximumParameters from "./maximum-parameters";
 
 
 //
@@ -47,42 +39,12 @@ import Callback from "@dikac/t-validator/validatable/callback";
 // }
 
 
-export default Minimum;
-namespace Minimum {
+namespace Maximum {
 
-    export const Parameter = MinimumParameter;
-    export const Object = MinimumObject;
-    export type Argument<ValueType extends string, MessageType> = MinimumArgument<ValueType, MessageType>;
+    export const Parameter = MaximumParameter;
+    export const Parameters = MaximumParameters;
+    export type Argument<ValueType extends string, MessageType> = MaximumArgument<ValueType, MessageType>;
+    export type Type<ValueType, MessageType> = MaximumType<ValueType, MessageType>;
 }
 
-
-export type MinimumType<ValueType, MessageType> = Readonly<Inclusive & MaximumNumber &  Value<ValueType> & Message<MessageType> & Validatable>;
-
-
-export function MinimumParameter<ValueType extends string, MessageType>(
-    value : ValueType,
-    maximum : number,
-    inclusive : boolean,
-    message : (result:Readonly<Value<ValueType> & Inclusive & MaximumNumber & Validatable>)=>MessageType,
-    converter : (string:ValueType)=>number = Count,
-) : MinimumType<ValueType, MessageType> {
-
-    return Callback({value, maximum, inclusive, converter}, MaximumObject, message) as Readonly<Inclusive & MaximumNumber &  Value<ValueType> & Message<MessageType> & Validatable>
-}
-
-export type MinimumArgument<ValueType extends string, MessageType> =
-
-    Value<ValueType> & MaximumNumber & Inclusive & {converter : (value:ValueType)=>number} & Message<(result:Readonly<Value<ValueType> & Inclusive & MaximumNumber & Validatable>)=>MessageType>
-
-export function MinimumObject<ValueType extends string, MessageType>(
-    {
-        value,
-        maximum,
-        inclusive,
-        message,
-        converter
-    } : MinimumArgument<ValueType, MessageType>
-) : MinimumType<ValueType, MessageType> {
-
-    return MinimumParameter(value, maximum, inclusive, message, converter);
-}
+export default Maximum;

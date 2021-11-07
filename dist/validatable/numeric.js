@@ -1,15 +1,9 @@
-import NumericFromObject from "../boolean/numeric";
-import Callback from "@dikac/t-validator/validatable/callback";
-export default Numeric;
+import NumericParameter from "./numeric-parameter";
+import NumericParameters from "./numeric-parameters";
 var Numeric;
 (function (Numeric) {
     Numeric.Parameter = NumericParameter;
-    Numeric.Object = NumericObject;
+    Numeric.Parameters = NumericParameters;
 })(Numeric || (Numeric = {}));
-export function NumericParameter(value, message) {
-    return Callback(value, NumericFromObject, message);
-}
-export function NumericObject({ value, message }) {
-    return NumericParameter(value, message);
-}
+export default Numeric;
 //# sourceMappingURL=numeric.js.map

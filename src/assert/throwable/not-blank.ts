@@ -1,10 +1,11 @@
-import NotBlankType from "../string/not-blank";
-import Value from "@dikac/t-value/value";
+import NotBlankParameter from "./not-blank-parameter";
+import NotBlankParameters from "./not-blank-parameters";
 
-export default function NotBlank({
-    value,
-    subject = 'string'
-} : Value<string> & {subject ?: string}) : Error {
+namespace NotBlank {
 
-    return new Error(NotBlankType(false, value, subject))
+    export const Parameter = NotBlankParameter;
+    export const Parameters = NotBlankParameters;
 }
+
+export default NotBlank;
+

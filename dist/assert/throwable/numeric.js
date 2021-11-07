@@ -1,5 +1,9 @@
-import NumericType from "../string/numeric";
-export default function Numeric({ value, subject = 'string' }) {
-    return new Error(NumericType(false, value, subject));
-}
+import NumericParameter from "./numeric-parameter";
+import NumericParameters from "./numeric-parameters";
+var Numeric;
+(function (Numeric) {
+    Numeric.Parameter = NumericParameter;
+    Numeric.Parameters = NumericParameters;
+})(Numeric || (Numeric = {}));
+export default Numeric;
 //# sourceMappingURL=numeric.js.map

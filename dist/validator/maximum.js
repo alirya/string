@@ -1,9 +1,9 @@
-import MaximumValidatable from "../validatable/maximum";
-import Count from "../number/count";
-import MaximumString from "../validatable/string/maximum";
-export default function Maximum({ maximum, inclusive, message = MaximumString, converter = Count, }) {
-    return function (value) {
-        return MaximumValidatable({ value, maximum, inclusive, message, converter });
-    };
-}
+import MaximumParameter from "./maximum-parameter";
+import MaximumParameters from "./maximum-parameters";
+var Maximum;
+(function (Maximum) {
+    Maximum.Parameter = MaximumParameter;
+    Maximum.Parameters = MaximumParameters;
+})(Maximum || (Maximum = {}));
+export default Maximum;
 //# sourceMappingURL=maximum.js.map

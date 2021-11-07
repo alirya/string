@@ -1,8 +1,9 @@
-import MatchValidatable from "../validatable/match";
-import MatchString from "../validatable/string/match";
-export default function Match({ pattern, message = MatchString }) {
-    return function (value) {
-        return MatchValidatable({ value, pattern, message });
-    };
-}
+import MatchParameter from "./match-parameter";
+import MatchParameters from "./match-parameters";
+var Match;
+(function (Match) {
+    Match.Parameter = MatchParameter;
+    Match.Parameters = MatchParameters;
+})(Match || (Match = {}));
+export default Match;
 //# sourceMappingURL=match.js.map

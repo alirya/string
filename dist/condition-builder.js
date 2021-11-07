@@ -1,17 +1,9 @@
-import Pad from "./pad";
-export default ConditionBuilder;
+import ConditionBuilderParameter from "./condition-builder-parameter";
+import ConditionBuilderParameters from "./condition-builder-parameters";
 var ConditionBuilder;
 (function (ConditionBuilder) {
     ConditionBuilder.Parameter = ConditionBuilderParameter;
-    ConditionBuilder.Object = ConditionBuilderObject;
+    ConditionBuilder.Parameters = ConditionBuilderParameters;
 })(ConditionBuilder || (ConditionBuilder = {}));
-export function ConditionBuilderParameter(argument, condition, separator = ' ') {
-    return argument
-        .filter(builder => builder.condition === undefined || builder.condition === condition)
-        .map(Pad.Object)
-        .join(separator);
-}
-export function ConditionBuilderObject({ argument, condition, separator, }) {
-    return ConditionBuilderParameter(argument, condition, separator);
-}
+export default ConditionBuilder;
 //# sourceMappingURL=condition-builder.js.map

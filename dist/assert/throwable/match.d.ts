@@ -1,5 +1,8 @@
-import Value from "@dikac/t-value/value";
-import Pattern from "../../pattern/pattern/pattern";
-export default function Match({ value, pattern, subject, }: Value<string> & Pattern & {
-    subject?: string;
-}): Error;
+import MatchParameter, { MatchArgument } from "./match-parameter";
+import MatchParameters from "./match-parameters";
+declare namespace Match {
+    const Parameter: typeof MatchParameter;
+    const Parameters: typeof MatchParameters;
+    type Argument = MatchArgument;
+}
+export default Match;

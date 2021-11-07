@@ -1,4 +1,8 @@
-import Value from "@dikac/t-value/value";
-export default function Digit({ value, subject }: Value<string> & {
-    subject?: string;
-}): Error;
+import DigitParameter, { DigitArgument } from "./digit-parameter";
+import DigitParameters from "./digit-parameters";
+declare namespace Digit {
+    const Parameter: typeof DigitParameter;
+    const Parameters: typeof DigitParameters;
+    type Argument = DigitArgument;
+}
+export default Digit;

@@ -1,5 +1,9 @@
-import DigitType from "../string/digit";
-export default function Digit({ value, subject = 'string' }) {
-    return new Error(DigitType(false, value, subject));
-}
+import DigitParameter from "./digit-parameter";
+import DigitParameters from "./digit-parameters";
+var Digit;
+(function (Digit) {
+    Digit.Parameter = DigitParameter;
+    Digit.Parameters = DigitParameters;
+})(Digit || (Digit = {}));
+export default Digit;
 //# sourceMappingURL=digit.js.map

@@ -1,10 +1,19 @@
 /**
- * match string {@param string} against {@param pattern}
+ * match string {@param value} against {@param pattern}
  *
- * @param string
+ * @param value
  * @param pattern
  */
-export default function Match(string, pattern) {
-    return string.match(pattern) !== null;
+export function MatchParameter(value, pattern) {
+    return value.match(pattern) !== null;
 }
+export function MatchObject({ value, pattern }) {
+    return MatchParameter(value, pattern);
+}
+var Match;
+(function (Match) {
+    Match.Parameter = MatchParameter;
+    Match.Object = MatchObject;
+})(Match || (Match = {}));
+export default Match;
 //# sourceMappingURL=match.js.map

@@ -1,12 +1,11 @@
-import MatchType from "../string/match";
-import Value from "@dikac/t-value/value";
-import Pattern from "../../pattern/pattern/pattern";
+import MatchParameter, {MatchArgument} from "./match-parameter";
+import MatchParameters from "./match-parameters";
 
-export default function Match({
-    value,
-    pattern,
-    subject = 'string',
-} : Value<string> & Pattern & {subject ?: string}) : Error {
+namespace Match {
 
-    return new Error(MatchType(false, value, pattern, subject))
+    export const Parameter = MatchParameter;
+    export const Parameters = MatchParameters;
+    export type Argument = MatchArgument;
 }
+
+export default Match;

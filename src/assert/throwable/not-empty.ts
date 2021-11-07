@@ -1,10 +1,11 @@
-import NotEmptyType from "../string/not-empty";
-import Value from "@dikac/t-value/value";
+import NotEmptyParameter from "./not-empty-parameter";
+import NotEmptyParameters from "./not-empty-parameters";
 
-export default function NotEmpty({
-    value,
-    subject = 'string'
-} : Value<string> & {subject ?: string}) : Error {
+namespace NotEmpty {
 
-    return new Error(NotEmptyType(false, value, subject))
+    export const Parameter = NotEmptyParameter;
+    export const Parameters = NotEmptyParameters;
 }
+
+export default NotEmpty;
+

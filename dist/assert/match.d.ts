@@ -1,1 +1,7 @@
-export default function Match(value: string, pattern: RegExp, error?: (value: string, pattern: RegExp) => Error): asserts value is string;
+import MatchParameter from "./match-parameter";
+import MatchParameters from "./match-parameters";
+declare namespace Match {
+    const Parameter: typeof MatchParameter;
+    const Parameters: typeof MatchParameters;
+}
+export default Match;

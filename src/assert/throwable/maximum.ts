@@ -2,13 +2,14 @@ import MaximumType from "../string/maximum";
 import Value from "@dikac/t-value/value";
 import MaximumNumber from "@dikac/t-number/maximum/maximum";
 import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import MaximumParameter, {MaximumArgument} from "./maximum-parameter";
+import MaximumParameters from "./maximum-parameters";
 
-export default function Maximum({
-    value,
-    maximum,
-    inclusive,
-    subject = 'string',
-} : Value<string> & MaximumNumber & Inclusive & {subject : string}) : Error {
+namespace Maximum {
 
-    return new Error(MaximumType(false, value, maximum, inclusive, subject))
+    export const Parameter = MaximumParameter;
+    export const Parameters = MaximumParameters;
+    export type Argument = MaximumArgument;
 }
+
+export default Maximum;

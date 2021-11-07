@@ -1,29 +1,20 @@
-import String from "../string/string";
-import Separator from "../separator/separator";
+import AlphanumericParameter, {AlphanumericArgument} from "./segment-parameter";
+import AlphanumericParameters from "./segment-parameters";
 
 /**
- * split {@param string} to its each segment marked by {@param separator}
+ * split {@param string} to its each alphanumeric marked by {@param separator}
  *
  * @param string
  * @param separator
  *
  * example
- *     Segment('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
+ *     Alphanumeric('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
  */
-export default function Segment({
-    value,
-    separator
-} : String & Separator) : string[] {
 
-    let list = value.split(separator);
-    let length = list.length;
+namespace Alphanumeric {
 
-    let adds : string[] = [];
-
-    for (let i = 1; i <= length; i++) {
-
-        adds.push(list.slice(0, i).join(separator));
-    }
-
-    return adds;
+    export const Parameter = AlphanumericParameter;
+    export const Parameters = AlphanumericParameters;
+    export type Argument = AlphanumericArgument;
 }
+export default Alphanumeric;

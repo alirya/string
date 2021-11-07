@@ -1,12 +1,12 @@
-import Guard from "../boolean/match";
-import Callback from "@dikac/t-function/assert/callback";
-import MatchError from "./throwable/match";
+import MatchParameter from "./match-parameter";
+import MatchParameters from "./match-parameters";
 
-export default function Match(
-    value : string,
-    pattern : RegExp,
-    error : (value:string, pattern:RegExp)=>Error = MatchError
-) : asserts value is string {
+namespace Match {
 
-    Callback(value, Guard, error, pattern);
+    export const Parameter = MatchParameter;
+    export const Parameters = MatchParameters;
 }
+
+export default Match;
+
+

@@ -1,16 +1,9 @@
-import String from "./string/string";
-import Suffix from "./suffix/suffix";
-import Circumfix from "./circumfix/circumfix";
-import Prefix from "./prefix/prefix";
+import TrimParameters from "./trim-parameters";
+import TrimParameter, { TrimParameterArgumentCircumfix, TrimParameterArgumentPair } from "./trim-parameter";
 declare namespace Trim {
+    const Parameters: typeof TrimParameters;
     const Parameter: typeof TrimParameter;
-    const Object: typeof TrimObject;
-    type Argument = TrimArgument;
+    type ArgumentCircumfix = TrimParameterArgumentCircumfix;
+    type ArgumentPair = TrimParameterArgumentPair;
 }
-/**
- * @see trim
- */
-export declare function TrimParameter(value: string, prefix?: string, suffix?: string, circumfix?: string): string;
-export declare type TrimArgument = String & Partial<Circumfix & Prefix & Suffix>;
-export declare function TrimObject({ value, circumfix, prefix, suffix }: TrimArgument): string;
 export default Trim;

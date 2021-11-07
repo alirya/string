@@ -1,11 +1,7 @@
-import Prefix from "./prefix/prefix";
-import String from "./string/string";
-export declare const TrimPrefixParameter: (string: string, prefix?: string) => string;
+import TrimPrefixParameter, { TrimPrefixArgument } from "./trim-prefix-parameter";
 declare namespace TrimPrefix {
-    const Parameter: (string: string, prefix?: string | undefined) => string;
-    const Object: typeof TrimPrefixObject;
+    const Parameters: (string: string, suffix?: string | undefined) => string;
+    const Parameter: typeof TrimPrefixParameter;
     type Argument = TrimPrefixArgument;
 }
-export declare type TrimPrefixArgument = String & Partial<Prefix>;
-export declare function TrimPrefixObject({ value, prefix }: TrimPrefixArgument): string;
 export default TrimPrefix;

@@ -1,10 +1,12 @@
-import EmptyType from "../string/empty";
-import Value from "@dikac/t-value/value";
+import EmptyParameter from "./empty-parameters";
+import EmptyParameters from "./empty-parameters";
+import {EmptyArgument} from "./empty-parameter";
 
-export default function Empty({
-    value,
-    subject = 'string'
-} : Value<string> & { subject?: string }) : Error {
+namespace Empty {
 
-    return new Error(EmptyType(false, value, subject))
+    export const Parameter = EmptyParameter;
+    export const Object = EmptyParameters;
+    export type Argument = EmptyArgument;
 }
+
+export default Empty;

@@ -1,11 +1,7 @@
-import Suffix from "./suffix/suffix";
-import String from "./string/string";
-export declare const TrimSuffixParameter: (string: string, suffix?: string) => string;
+import TrimSuffixParameter, { TrimSuffixArgument } from "./trim-suffix-parameter";
 declare namespace TrimSuffix {
-    const Parameter: (string: string, suffix?: string | undefined) => string;
-    const Object: typeof TrimSuffixObject;
+    const Parameters: (string: string, suffix?: string | undefined) => string;
+    const Parameter: typeof TrimSuffixParameter;
     type Argument = TrimSuffixArgument;
 }
-export declare type TrimSuffixArgument = String & Partial<Suffix>;
-export declare function TrimSuffixObject({ value, suffix }: TrimSuffixArgument): string;
 export default TrimSuffix;

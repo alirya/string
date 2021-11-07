@@ -1,10 +1,12 @@
-import AlphanumericType from "../string/alphanumeric";
-import Value from "@dikac/t-value/value";
+import AlphanumericParameter from "./alphanumeric-parameter";
+import AlphanumericParameters from "./alphanumeric-parameters";
+import {AlphanumericArgument} from "./alphanumeric-parameter";
 
-export default function Alphanumeric({
-    value,
-    subject = 'string'
-} : Value<string> & {subject ?: string }) : Error {
+namespace Alphanumeric {
 
-    return new Error(AlphanumericType(false, value, subject))
+    export const Parameter = AlphanumericParameter;
+    export const Parameters = AlphanumericParameters;
+    export type Argument = AlphanumericArgument;
 }
+
+export default Alphanumeric;

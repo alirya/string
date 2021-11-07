@@ -4,8 +4,8 @@ import AlphanumericError from "./throwable/alphanumeric";
 
 export default function Alphanumeric(
     value : string,
-    error : (value:string)=>Error = AlphanumericError
+    error : (value:string)=>Error = AlphanumericError.Parameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    Callback.Parameter(value, Guard, error);
 }

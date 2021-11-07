@@ -1,0 +1,1 @@
+{"version":3,"file":"match-parameter.js","sourceRoot":"","sources":["../../src/boolean/match-parameter.ts"],"names":[],"mappings":"AAEA,OAAO,eAAe,MAAM,oBAAoB,CAAC;AACjD;;;;;GAKG;AAEH,MAAM,CAAC,OAAO,UAAU,cAAc,CAAC,EACnC,KAAK,EACL,OAAO,EACgB;IAEvB,OAAO,eAAe,CAAC,KAAK,EAAE,OAAO,CAAC,CAAC;AAC3C,CAAC"}

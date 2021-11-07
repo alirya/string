@@ -1,4 +1,5 @@
-import Difference from "@dikac/t-array/difference";
+import SegmentParameter from "./segment-parameter";
+import SegmentParameters from "./segment-parameters";
 /**
  * check if {@param compare} is part of {@param root}
  *
@@ -17,10 +18,10 @@ import Difference from "@dikac/t-array/difference";
  * @example
  * Segment('root.parent', 'root', '.') : false
  */
-export default function Segment({ root, compare, separator }) {
-    if (root === compare) {
-        return true;
-    }
-    return Difference(root.split(separator), compare.split(separator)).length === 0;
-}
+var Segment;
+(function (Segment) {
+    Segment.Parameter = SegmentParameter;
+    Segment.Parameters = SegmentParameters;
+})(Segment || (Segment = {}));
+export default Segment;
 //# sourceMappingURL=segment.js.map

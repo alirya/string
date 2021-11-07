@@ -1,10 +1,11 @@
-import DigitType from "../string/digit";
-import Value from "@dikac/t-value/value";
+import DigitParameter, {DigitArgument} from "./digit-parameter";
+import DigitParameters from "./digit-parameters";
 
-export default function Digit({
-    value,
-    subject = 'string'
-} : Value<string> & {subject ?: string}) : Error {
+namespace Digit {
 
-    return new Error(DigitType(false, value, subject))
+    export const Parameter = DigitParameter;
+    export const Parameters = DigitParameters;
+    export type Argument = DigitArgument;
 }
+
+export default Digit;

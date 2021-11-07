@@ -1,8 +1,8 @@
-import Value from "@dikac/t-value/value";
 import Suffix from "../suffix/suffix";
-/**
- * @see startsWith
- * @param string
- * @param suffix
- */
-export default function Suffix({ value, suffix }: Value<string> & Suffix): boolean;
+import SuffixParameter from "./suffix-parameter";
+import SuffixParameters from "./suffix-parameters";
+declare namespace Suffix {
+    const Parameter: typeof SuffixParameter;
+    const Parameters: typeof SuffixParameters;
+}
+export default Suffix;

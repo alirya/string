@@ -1,6 +1,7 @@
-import Value from "@dikac/t-value/value";
-export default function String({ value, subject, conversion }: Value<unknown> & {
-    subject: string;
-} & {
-    conversion: (value: unknown) => string;
-}): Error;
+import StringParameter from "./string-parameter";
+import StringParameters from "./string-parameters";
+declare namespace String {
+    const Parameter: typeof StringParameter;
+    const Parameters: typeof StringParameters;
+}
+export default String;

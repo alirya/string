@@ -1,0 +1,1 @@
+{"version":3,"file":"numeric-parameter.js","sourceRoot":"","sources":["../../../src/assert/throwable/numeric-parameter.ts"],"names":[],"mappings":"AACA,OAAO,iBAAiB,MAAM,sBAAsB,CAAC;AAGrD,MAAM,CAAC,OAAO,UAAU,gBAAgB,CAAC,EACrC,KAAK,EACL,OAAO,EAC4B;IAEnC,OAAO,iBAAiB,CAAC,KAAK,EAAE,OAAO,CAAC,CAAC;AAC7C,CAAC"}

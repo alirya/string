@@ -1,5 +1,9 @@
-import EmptyType from "../string/empty";
-export default function Empty({ value, subject = 'string' }) {
-    return new Error(EmptyType(false, value, subject));
-}
+import EmptyParameter from "./empty-parameters";
+import EmptyParameters from "./empty-parameters";
+var Empty;
+(function (Empty) {
+    Empty.Parameter = EmptyParameter;
+    Empty.Object = EmptyParameters;
+})(Empty || (Empty = {}));
+export default Empty;
 //# sourceMappingURL=empty.js.map

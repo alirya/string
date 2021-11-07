@@ -1,11 +1,8 @@
-import Separator from "./separator/separator";
-import Value from "@dikac/t-value/value";
+import UpperWordsParameters from "./upper-words-parameters";
+import UpperWordsParameter, { UpperWordsArgument } from "./upper-words-parameter";
 declare namespace UpperWords {
+    const Parameters: typeof UpperWordsParameters;
     const Parameter: typeof UpperWordsParameter;
-    const Object: typeof UpperWordsObject;
     type Argument = UpperWordsArgument;
 }
-export declare function UpperWordsObject({ value, separator }: UpperWordsArgument): string;
-export declare type UpperWordsArgument = Value<string> & Separator;
-export declare function UpperWordsParameter(value: string, separator: string | RegExp): string;
 export default UpperWords;

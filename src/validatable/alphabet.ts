@@ -1,10 +1,6 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import AlphabetFromObject from "../boolean/alphabet";
-import ValueOf from "@dikac/t-value/value-of/value-of";
-import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
-import AlphanumericFromObject from "../boolean/alphanumeric";
+import AlphabetParameter from "./alphabet-parameter";
+import AlphabetParameters from "./alphabet-parameters";
+import {AlphanumericArgument} from "./alphanumeric-parameter";
 //
 // export default class Alphabet<ValueType extends string, MessageType>
 //     implements
@@ -42,32 +38,11 @@ import AlphanumericFromObject from "../boolean/alphanumeric";
 //     }
 // }
 
-export default Alphabet;
 namespace Alphabet {
 
     export const Parameter = AlphabetParameter;
-    export const Object = AlphabetObject;
-    export type Argument<ValueType extends string, MessageType> = AlphabetArgument<ValueType, MessageType>;
+    export const Parameters = AlphabetParameters;
+    export type Argument<ValueType extends string, MessageType> = AlphanumericArgument<ValueType, MessageType>;
 }
-
-
-export function AlphabetParameter<ValueType extends string, MessageType>(
-    value : ValueType,
-    message : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType
-) {
-
-    return new ValidatableCallbacks.Class.Parameter<string, ValueType, MessageType>(value, AlphabetFromObject, message);
-}
-
-export type AlphabetArgument<ValueType extends string, MessageType>
-    = Value<ValueType> &
-    Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>;
-
-export function AlphabetObject<ValueType extends string, MessageType>({
-    value,
-    message
-} : Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>) {
-
-    return new ValidatableCallbacks.Class.Parameter<string, ValueType, MessageType>(value, AlphabetFromObject, message);
-}
+export default Alphabet;
 

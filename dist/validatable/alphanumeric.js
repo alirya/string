@@ -1,5 +1,5 @@
-import AlphanumericFromObject from "../boolean/alphanumeric";
-import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
+import AlphanumericParameter from "./alphanumeric-parameter";
+import AlphanumericParameters from "./alphanumeric-parameters";
 //
 // export default class Alphanumeric<ValueType extends string, MessageType>
 //     implements
@@ -33,16 +33,10 @@ import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
 //         return this.messageFactory(this);
 //     }
 // }
-export default Alphanumeric;
 var Alphanumeric;
 (function (Alphanumeric) {
     Alphanumeric.Parameter = AlphanumericParameter;
-    Alphanumeric.Object = AlphanumericObject;
+    Alphanumeric.Parameters = AlphanumericParameters;
 })(Alphanumeric || (Alphanumeric = {}));
-export function AlphanumericParameter(value, message) {
-    return new ValidatableCallbacks.Class.Parameter(value, AlphanumericFromObject, message);
-}
-export function AlphanumericObject({ value, message }) {
-    return AlphanumericParameter(value, message);
-}
+export default Alphanumeric;
 //# sourceMappingURL=alphanumeric.js.map

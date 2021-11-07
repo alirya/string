@@ -1,5 +1,5 @@
-import IsDigit from "../boolean/digit";
-import Callback from "@dikac/t-validator/validatable/callback";
+import DigitParameter from "./digit-parameter";
+import DigitParameters from "./digit-parameters";
 //
 // export default class Digit<ValueType extends string, MessageType>
 //     implements
@@ -34,18 +34,27 @@ import Callback from "@dikac/t-validator/validatable/callback";
 //         return this.value;
 //     }
 // }
-export default Digit;
 var Digit;
 (function (Digit) {
     Digit.Parameter = DigitParameter;
-    Digit.Object = DigitObject;
+    Digit.Parameters = DigitParameters;
 })(Digit || (Digit = {}));
-export function DigitParameter(value, message) {
-    return Callback(value, IsDigit, message);
-}
-export function DigitObject({ value, // : ValueType,
-message, // : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType,
- }) {
-    return DigitParameter(value, message);
-}
+export default Digit;
+// export function DigitParameter<ValueType extends string, MessageType>(
+//     value: ValueType,
+//     message: (result:Readonly<Value<ValueType> & Validatable>)=>MessageType)
+// {
+//
+//     return Callback(value, IsDigit, message) as Readonly<Value<ValueType> & Message<MessageType> & Validatable>;
+// }
+//
+// export type DigitArgument<ValueType extends string, MessageType> = Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>;
+//
+// export function DigitObject<ValueType extends string, MessageType>({
+//     value,// : ValueType,
+//     message,// : (result:Readonly<Value<ValueType> & Validatable>)=>MessageType,
+// } : Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>) : Readonly<Value<ValueType> & Message<MessageType> & Validatable>{
+//
+//     return DigitParameter(value, message);
+// }
 //# sourceMappingURL=digit.js.map

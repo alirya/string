@@ -1,10 +1,9 @@
-import { endsWith } from "lodash";
-/**
- * @see startsWith
- * @param string
- * @param suffix
- */
-export default function Suffix({ value, suffix }) {
-    return endsWith(value, suffix);
-}
+import SuffixParameter from "./suffix-parameter";
+import SuffixParameters from "./suffix-parameters";
+var Suffix;
+(function (Suffix) {
+    Suffix.Parameter = SuffixParameter;
+    Suffix.Parameters = SuffixParameters;
+})(Suffix || (Suffix = {}));
+export default Suffix;
 //# sourceMappingURL=suffix.js.map

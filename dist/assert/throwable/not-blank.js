@@ -1,5 +1,9 @@
-import NotBlankType from "../string/not-blank";
-export default function NotBlank({ value, subject = 'string' }) {
-    return new Error(NotBlankType(false, value, subject));
-}
+import NotBlankParameter from "./not-blank-parameter";
+import NotBlankParameters from "./not-blank-parameters";
+var NotBlank;
+(function (NotBlank) {
+    NotBlank.Parameter = NotBlankParameter;
+    NotBlank.Parameters = NotBlankParameters;
+})(NotBlank || (NotBlank = {}));
+export default NotBlank;
 //# sourceMappingURL=not-blank.js.map

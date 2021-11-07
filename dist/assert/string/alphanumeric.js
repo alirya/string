@@ -1,25 +1,9 @@
-import Match from "../../value/match";
-import SentencesMust from "../../message/sentences-must";
-export default Alphanumeric;
+import AlphanumericParameter from "./alphanumeric-parameter";
+import AlphanumericParameters from "./alphanumeric-parameters";
 var Alphanumeric;
 (function (Alphanumeric) {
     Alphanumeric.Parameter = AlphanumericParameter;
-    Alphanumeric.Object = AlphanumericObject;
+    Alphanumeric.Parameters = AlphanumericParameters;
 })(Alphanumeric || (Alphanumeric = {}));
-export function AlphanumericParameter(valid, value, subject = 'string') {
-    let sentence = SentencesMust(valid);
-    sentence.expect.push('alphanumeric');
-    sentence.subject.push(subject);
-    sentence.comma.push('expect');
-    if (!valid) {
-        let match = new Match(value, /[^a-zA-Z0-9]{1,5}/);
-        if (match.valid) {
-            sentence.actual.push('contains', `"${match.match[0]}"`);
-        }
-    }
-    return sentence.message;
-}
-export function AlphanumericObject({ valid, value, subject = 'string' }) {
-    return AlphanumericParameter(valid, value, subject);
-}
+export default Alphanumeric;
 //# sourceMappingURL=alphanumeric.js.map

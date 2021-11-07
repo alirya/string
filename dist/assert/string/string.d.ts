@@ -1,15 +1,8 @@
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-export declare type StringArgument = Validatable & Value & {
-    subject?: string;
-} & {
-    conversion?: (value: unknown) => string;
-};
-export default String;
+import StringParameter, { StringArgument } from "./string-parameter";
+import StringParameters from "./string-parameters";
 declare namespace String {
     const Parameter: typeof StringParameter;
-    const Object: typeof StringObject;
+    const Parameters: typeof StringParameters;
     type Argument = StringArgument;
 }
-export declare function StringParameter(value: unknown, valid: boolean, subject?: string, conversion?: (value: unknown) => string): string;
-export declare function StringObject({ valid, value, subject, conversion }: StringArgument): string;
+export default String;

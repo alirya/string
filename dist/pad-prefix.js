@@ -1,17 +1,9 @@
-import { padStart } from "lodash";
+import PadPrefixParameter from "./pad-prefix-parameter";
+import PadPrefixParameters from "./pad-prefix-parameters";
 var PadPrefix;
 (function (PadPrefix) {
     PadPrefix.Parameter = PadPrefixParameter;
-    PadPrefix.Object = PadPrefixObject;
+    PadPrefix.Parameters = PadPrefixParameters;
 })(PadPrefix || (PadPrefix = {}));
-/**
- * @see padStart
- */
-export function PadPrefixParameter(value, length, prefix) {
-    return padStart(value, length, prefix);
-}
-export function PadPrefixObject({ value, length, prefix }) {
-    return PadPrefixParameter(value, length, prefix);
-}
 export default PadPrefix;
 //# sourceMappingURL=pad-prefix.js.map

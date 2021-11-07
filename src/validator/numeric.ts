@@ -1,49 +1,12 @@
-import Validator from "@dikac/t-validator/validator";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Value from "@dikac/t-value/value";
-import NumericValidatable from "../validatable/numeric";
-import Instance from "@dikac/t-validator/validatable/dynamic";
-import Return from "@dikac/t-validator/validatable/simple";
-import NumericString from "../assert/string/numeric";
+import NumericParameter from "./numeric-parameter";
+import NumericParameters from "./numeric-parameters";
+import NumericVoid from "./numeric-void";
 
-export function NumericObject() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
+namespace Numeric {
 
-export function NumericObject<MessageType>(
-    message : (result:Readonly<Value<string>> & Readonly<Validatable>)=>MessageType
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
-
-export function NumericObject<MessageType>(
-    message : (result:Readonly<Value<string>> & Readonly<Validatable>)=>MessageType|string = NumericString.Object
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
-
-    return function (value) {
-
-        return NumericValidatable.Object({value, message});
-
-    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
+    export const Parameter = NumericParameter;
+    export const Parameters = NumericParameters;
+    export const Void = NumericVoid;
 }
 
-export function NumericVoid<MessageType>(
-
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>> {
-
-    return NumericParameter();
-}
-
-export function NumericParameter() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
-
-export function NumericParameter<MessageType>(
-    message : (value:string, valid:boolean)=>MessageType
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
-
-export function NumericParameter<MessageType>(
-    message : (value:string, valid:boolean)=>MessageType|string = NumericString.Parameter
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
-
-    return function (value) {
-
-        return NumericValidatable.Parameter(value, message);
-
-    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
-}
+export default Numeric;

@@ -1,14 +1,11 @@
-import MinimumType from "../string/minimum";
-import Value from "@dikac/t-value/value";
-import MinimumNumber from "@dikac/t-number/minimum/minimum";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import MinimumParameter, {MinimumArgument} from "./minimum-parameter";
+import MinimumParameters from "./minimum-parameters";
 
-export default function Minimum({
-    value,
-    minimum,
-    inclusive,
-    subject = 'string',
-} : Value<string> & MinimumNumber & Inclusive & {subject ?: string}) : Error {
+namespace Minimum {
 
-    return new Error(MinimumType(false, value, minimum, inclusive, subject))
+    export const Parameter = MinimumParameter;
+    export const Parameters = MinimumParameters;
+    export type Argument = MinimumArgument;
 }
+
+export default Minimum;

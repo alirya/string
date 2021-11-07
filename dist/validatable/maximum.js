@@ -1,6 +1,5 @@
-import MaximumObject from "./boolean/maximum";
-import Count from "../number/count";
-import Callback from "@dikac/t-validator/validatable/callback";
+import MaximumParameter from "./maximum-parameter";
+import MaximumParameters from "./maximum-parameters";
 //
 // export default class Maximum<ValueType extends string, MessageType>
 //     implements
@@ -36,16 +35,10 @@ import Callback from "@dikac/t-validator/validatable/callback";
 //         return this.messageFactory(this);
 //     }
 // }
-export default Minimum;
-var Minimum;
-(function (Minimum) {
-    Minimum.Parameter = MinimumParameter;
-    Minimum.Object = MinimumObject;
-})(Minimum || (Minimum = {}));
-export function MinimumParameter(value, maximum, inclusive, message, converter = Count) {
-    return Callback({ value, maximum, inclusive, converter }, MaximumObject, message);
-}
-export function MinimumObject({ value, maximum, inclusive, message, converter }) {
-    return MinimumParameter(value, maximum, inclusive, message, converter);
-}
+var Maximum;
+(function (Maximum) {
+    Maximum.Parameter = MaximumParameter;
+    Maximum.Parameters = MaximumParameters;
+})(Maximum || (Maximum = {}));
+export default Maximum;
 //# sourceMappingURL=maximum.js.map

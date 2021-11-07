@@ -1,11 +1,10 @@
-import StringType from "../string/string";
-import Value from "@dikac/t-value/value";
+import StringParameter from "./string-parameter";
+import StringParameters from "./string-parameters";
 
-export default function String({
-    value,
-    subject = 'type',
-    conversion = value=>typeof value
-} : Value<unknown> & {subject: string} & {conversion : (value:unknown)=>string}) : Error {
+namespace String {
 
-    return new TypeError(StringType(false, value, subject, conversion))
+    export const Parameter = StringParameter;
+    export const Parameters = StringParameters;
 }
+
+export default String;

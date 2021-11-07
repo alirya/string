@@ -3,7 +3,7 @@ import StringError from "../assert/throwable/string";
 
 export default function String(
     value : unknown,
-    error : (value:unknown)=>Error = StringError
+    error : (value:unknown)=>Error = StringError.Parameters
 ) : string {
 
     AssertString(value, error);

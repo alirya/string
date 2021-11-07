@@ -1,14 +1,9 @@
-import MinimumValidatable from "../validatable/minimum";
-import Count from "../number/count";
-import MinimumString from "../assert/string/minimum";
-export function MinimumParameter(minimum, inclusive, message = MinimumString.Object, converter = Count) {
-    return function (value) {
-        return new MinimumValidatable.Parameter(value, minimum, inclusive, message, converter);
-    };
-}
-export default function Minimum({ minimum, inclusive, message = MinimumString, converter = Count }) {
-    return function (value) {
-        return MinimumValidatable({ value, minimum, inclusive, message, converter });
-    };
-}
+import MinimumParameter from "./minimum-parameter";
+import MinimumParameters from "./minimum-parameters";
+var Minimum;
+(function (Minimum) {
+    Minimum.Parameter = MinimumParameter;
+    Minimum.Parameters = MinimumParameters;
+})(Minimum || (Minimum = {}));
+export default Minimum;
 //# sourceMappingURL=minimum.js.map

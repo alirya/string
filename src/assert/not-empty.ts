@@ -4,8 +4,8 @@ import EmptyError from "./throwable/not-empty";
 
 export default function NotEmpty(
     value : string,
-    error : (value:string)=>Error = EmptyError
+    error : (value:string)=>Error = EmptyError.Parameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    Callback.Parameter(value, Guard, error);
 }

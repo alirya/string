@@ -1,5 +1,5 @@
-import NotEmptyBoolean from "./boolean/not-empty";
-import Callback from "@dikac/t-validator/validatable/callback";
+import NotEmptyParameter from "./not-empty-parameter";
+import NotEmptyParameters from "./not-empty-parameters";
 //
 // export default class NotEmpty<ValueType extends string, MessageType>
 //     implements
@@ -34,16 +34,35 @@ import Callback from "@dikac/t-validator/validatable/callback";
 //         return this.messageFactory(this);
 //     }
 // }
-export default NotEmpty;
 var NotEmpty;
 (function (NotEmpty) {
     NotEmpty.Parameter = NotEmptyParameter;
-    NotEmpty.Object = NotEmptyObject;
+    NotEmpty.Parameters = NotEmptyParameters;
 })(NotEmpty || (NotEmpty = {}));
-export function NotEmptyParameter(value, message) {
-    return Callback(value, NotEmptyBoolean, message);
-}
-export function NotEmptyObject({ value, message }) {
-    return NotEmptyParameter(value, message);
-}
+export default NotEmpty;
+//
+// export function NotEmptyParameter<ValueType extends string, MessageType>(
+//     value : ValueType,
+//     message : FunctionStatic.Parameter<string, '', ValueType, false, true, MessageType>
+// ) : NotEmptyType<ValueType, MessageType>  {
+//
+//     return Callback.Function.Parameter(value, NotEmptyBoolean, message) as NotEmptyType<ValueType, MessageType>;
+// }
+//
+// export type NotEmptyArgument<
+//     ValueType extends string,
+//     MessageType
+//     > = Message<FunctionStatic.Object<string, '', ValueType, false, true, MessageType>> & Value<ValueType>
+//
+// export type NotEmptyType<ValueType extends string, MessageType>
+//     = Static<string, '', string, false, true, Message<MessageType> & Validatable & Value<ValueType>>;
+//
+// export function NotEmptyObject<ValueType extends string, MessageType>({
+//       value,
+//       message
+//   } : NotEmptyArgument<ValueType, MessageType>
+// ) : NotEmptyType<ValueType, MessageType> {
+//
+//     return NotEmptyParameter(value, (value, valid) => message({value, valid}));
+// }
 //# sourceMappingURL=not-empty.js.map

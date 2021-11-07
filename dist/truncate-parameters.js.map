@@ -1,0 +1,1 @@
+{"version":3,"file":"truncate-parameters.js","sourceRoot":"","sources":["../src/truncate-parameters.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,QAAQ,EAAC,MAAM,QAAQ,CAAC;AAEhC,MAAM,CAAC,OAAO,UAAU,kBAAkB,CACtC,KAAc,EACd,MAAe,EACf,WAAoB,KAAK,EACzB,SAA0B;IAG1B,OAAO,QAAQ,CAAC,KAAK,EAAE;QACnB,MAAM,EAAG,MAAM;QACf,QAAQ,EAAG,QAAQ;QACnB,SAAS,EAAG,SAAS;KACxB,CAAC,CAAA;AACN,CAAC"}
