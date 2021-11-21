@@ -1,9 +1,9 @@
-import Match from "./match";
+import Match from "./match-parameters";
 /**
  * check if {@param string} is digit
  * @param string
  */
 export default function Digit(string) {
-    return Match.Parameter(string, /^\d*$/i);
+    return Match(string, /^\d*$/i);
 }
 //# sourceMappingURL=digit.js.map

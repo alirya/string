@@ -3,7 +3,6 @@ import String from "../../string/string";
 import Inclusive from "@dikac/t-number/inclusive/inclusive";
 import MaximumNumber from "@dikac/t-number/maximum/maximum";
 import MaximumParameters from "./maximum-parameters";
-import Count from "../../number/count";
 
 export type MaximumArgument = Validatable & String & MaximumNumber & Inclusive & {
     subject ?: string,

@@ -1,6 +1,6 @@
-import Match from "./match";
+import Match from "./match-parameters";
 
 export default function Alphabet(source : string) : boolean {
 
-    return Match.Parameter(source, /^[a-z]*$/i)
+    return Match(source, /^[a-z]*$/i)
 }

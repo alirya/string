@@ -2,9 +2,7 @@ import MinimumNumber from "@dikac/t-number/minimum/minimum";
 import Value from "@dikac/t-value/value";
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
-import IsMinimum from "../boolean/minimum";
 import Inclusive from "@dikac/t-number/inclusive/inclusive";
-import Callback from "@dikac/t-validator/validatable/callback";
 import MinimumParameters, {MinimumType} from "./minimum-parameters";
 
 

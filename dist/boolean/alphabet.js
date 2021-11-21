@@ -1,5 +1,5 @@
-import Match from "./match";
+import Match from "./match-parameters";
 export default function Alphabet(source) {
-    return Match.Parameter(source, /^[a-z]*$/i);
+    return Match(source, /^[a-z]*$/i);
 }
 //# sourceMappingURL=alphabet.js.map

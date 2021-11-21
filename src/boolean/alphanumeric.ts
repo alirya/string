@@ -1,6 +1,6 @@
-import Match from "./match";
+import Match from "./match-parameters";
 
 export default function Alphanumeric(source : string) : boolean {
 
-    return Match.Parameter(source, /^[0-9a-z]*$/i)
+    return Match(source, /^[0-9a-z]*$/i)
 }

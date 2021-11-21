@@ -1,5 +1,5 @@
 import Guard from "../boolean/not-empty";
-import Callback from "@dikac/t-function/assert/callback";
+import Callback from "@dikac/t-function/assert/callback-parameters";
 import EmptyError from "./throwable/not-empty";
 
 export default function NotEmpty(
@@ -7,5 +7,5 @@ export default function NotEmpty(
     error : (value:string)=>Error = EmptyError.Parameters
 ) : asserts value is string {
 
-    Callback.Parameter(value, Guard, error);
+    Callback(value, Guard, error);
 }

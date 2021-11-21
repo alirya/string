@@ -1,5 +1,5 @@
 import Guard from "../boolean/alphanumeric";
-import Callback from "@dikac/t-function/assert/callback";
+import Callback from "@dikac/t-function/assert/callback-parameters";
 import AlphanumericError from "./throwable/alphanumeric";
 
 export default function Alphanumeric(
@@ -7,5 +7,5 @@ export default function Alphanumeric(
     error : (value:string)=>Error = AlphanumericError.Parameters
 ) : asserts value is string {
 
-    Callback.Parameter(value, Guard, error);
+    Callback(value, Guard, error);
 }

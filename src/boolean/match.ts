@@ -1,5 +1,5 @@
-import Value from "@dikac/t-value/value";
-import Pattern from "../pattern/pattern/pattern";
+import MatchParameter from "./match-parameter";
+import MatchParameters from "./match-parameters";
 /**
  * match string {@param value} against {@param pattern}
  *
@@ -7,25 +7,10 @@ import Pattern from "../pattern/pattern/pattern";
  * @param pattern
  */
 
-export function MatchParameter(value : string, pattern : RegExp) : boolean {
-
-    return value.match(pattern) !== null;
-}
-
-
-export function MatchObject({
-    value,
-    pattern
-} : Value<string> & Pattern) : boolean {
-
-    return MatchParameter(value, pattern);
-}
-
-
 namespace Match {
 
     export const Parameter = MatchParameter;
-    export const Object = MatchObject;
+    export const Parameters = MatchParameters;
 }
 
 export default Match;

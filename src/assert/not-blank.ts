@@ -1,5 +1,5 @@
 import Guard from "../boolean/not-blank";
-import Callback from "@dikac/t-function/assert/callback";
+import Callback from "@dikac/t-function/assert/callback-parameters";
 import BlankError from "./throwable/not-blank";
 
 export default function NotBlank(
@@ -7,5 +7,5 @@ export default function NotBlank(
     error : (value:string)=>Error = BlankError.Parameters
 ) : asserts value is string {
 
-    Callback.Parameter(value, Guard, error);
+    Callback(value, Guard, error);
 }

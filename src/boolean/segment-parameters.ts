@@ -1,4 +1,4 @@
-import Difference from "@dikac/t-array/difference";
+import Difference from "@dikac/t-array/difference-parameters";
 
 /**
  * check if {@param compare} is part of {@param root}

@@ -1,4 +1,4 @@
-import Match from "./match";
+import Match from "./match-parameters";
 
 /**
  * check if {@param source} is numeric
@@ -7,5 +7,5 @@ import Match from "./match";
  */
 export default function Numeric(source : string) : boolean {
 
-    return Match.Parameter(source, /^[-+]*\d*(\.\d*)?$/i);
+    return Match(source, /^[-+]*\d*(\.\d*)?$/i);
 }
