@@ -1,4 +1,4 @@
-import Dynamic from "@dikac/t-validator/message/function/dynamic";
+import Dynamic from "@dikac/t-validator/message/function/validatable";
 import Match from "../value/match";
 //
 // export default class Matchz<ValueType extends string, MessageType>

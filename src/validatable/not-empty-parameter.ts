@@ -40,7 +40,7 @@ import NotEmptyParameters, {NotEmptyType} from "./not-empty-parameters";
 export type NotEmptyArgument<
     ValueType extends string,
     MessageType
-    > = Message<FunctionStatic.Parameter<string, '', ValueType, false, true, MessageType>> & Value<ValueType>
+    > = Message<FunctionStatic.Parameter<'', ValueType, false, true, MessageType>> & Value<ValueType>
 
 export {NotEmptyType};
 

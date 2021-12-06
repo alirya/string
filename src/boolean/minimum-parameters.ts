@@ -1,4 +1,4 @@
-import Greater from "@dikac/t-number/boolean/greater"
+import Greater from "@dikac/t-number/boolean/greater-parameters"
 import Count from "../number/count";
 
 /**

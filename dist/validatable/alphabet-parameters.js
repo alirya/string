@@ -37,6 +37,6 @@ import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
 //     }
 // }
 export default function AlphabetParameters(value, message) {
-    return new ValidatableCallbacks.Class.Parameters(value, AlphabetFromObject, message, []);
+    return new ValidatableCallbacks.Class.Parameters(value, AlphabetFromObject, message);
 }
 //# sourceMappingURL=alphabet-parameters.js.map

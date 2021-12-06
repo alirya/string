@@ -6,7 +6,7 @@ import MaximumObject from "../boolean/maximum";
 import Inclusive from "@dikac/t-number/inclusive/inclusive";
 import Count from "../number/count";
 import Callback from "@dikac/t-validator/validatable/callback";
-import Dynamic from "@dikac/t-validator/message/function/dynamic";
+import Dynamic from "@dikac/t-validator/message/function/validatable";
 
 
 //

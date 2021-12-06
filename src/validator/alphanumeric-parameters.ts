@@ -1,8 +1,8 @@
 import Validator from "@dikac/t-validator/validator";
 import AlphanumericValidatable from "../validatable/alphanumeric";
-import Instance from "@dikac/t-validator/validatable/dynamic";
+import Instance from "@dikac/t-validator/validatable/validatable";
 import AlphanumericString from "../assert/string/alphanumeric";
-import Dynamic from "@dikac/t-validator/message/function/dynamic";
+import Dynamic from "@dikac/t-validator/message/function/validatable";
 
 export default function AlphanumericParameters() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 

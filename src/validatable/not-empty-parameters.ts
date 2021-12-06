@@ -41,11 +41,11 @@ import Static from "@dikac/t-validator/validatable/static";
 // }
 
 export type NotEmptyType<ValueType extends string, MessageType>
-    = Static<string, '', string, false, true, Message<MessageType> & Validatable & Value<ValueType>>;
+    = Static<'', string, false, true, Message<MessageType> & Validatable & Value<ValueType>>;
 
 export default function NotEmptyParameters<ValueType extends string, MessageType>(
     value : ValueType,
-    message : FunctionStatic.Parameters<string, '', ValueType, false, true, MessageType>
+    message : FunctionStatic.Parameters<'', ValueType, false, true, MessageType>
 ) : NotEmptyType<ValueType, MessageType>  {
 
     return Callback.Function.Parameters(value, NotEmptyBoolean, message) as NotEmptyType<ValueType, MessageType>;

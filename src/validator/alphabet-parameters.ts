@@ -1,8 +1,8 @@
 import Validator from "@dikac/t-validator/validator";
 import AlphabetValidatable from "../validatable/alphabet";
-import Instance from "@dikac/t-validator/validatable/dynamic";
+import Instance from "@dikac/t-validator/validatable/validatable";
 import AlphabetString from "../assert/string/alphabet";
-import Dynamic from "@dikac/t-validator/message/function/dynamic";
+import Dynamic from "@dikac/t-validator/message/function/validatable";
 
 export default function Alphabet() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 

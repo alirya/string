@@ -2,7 +2,7 @@ import Value from "@dikac/t-value/value";
 import Message from "@dikac/t-message/message";
 import Pattern from "../pattern/pattern/pattern";
 import Match from "../value/match";
-import Dynamic from "@dikac/t-validator/message/function/dynamic";
+import Dynamic from "@dikac/t-validator/message/function/validatable";
 //
 // export default class Matchz<ValueType extends string, MessageType>
 //     extends ValueMatch<ValueType>

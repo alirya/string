@@ -52,11 +52,11 @@ import Static from "@dikac/t-validator/validatable/static";
 
 export default function EmptyParameters<ValueType extends string, MessageType>(
     value : ValueType,
-    message : MessageStatic.Parameters<string, '', ValueType, false, true, MessageType>,
-) : Readonly<Static<string, '', ValueType, false, true, Value<string> & Message<MessageType> & Validatable>> {
+    message : MessageStatic.Parameters<'', ValueType, false, true, MessageType>,
+) : Readonly<Static<'', ValueType, false, true, Value<string> & Message<MessageType> & Validatable>> {
 
     return Callback.Function.Parameters(value, IsEmpty, message) as
-        Readonly<Static<string, '', ValueType, false, true, Value<string> & Message<MessageType> & Validatable>>;
+        Readonly<Static<'', ValueType, false, true, Value<string> & Message<MessageType> & Validatable>>;
 }
 
 // export type EmptyArgument<ValueType extends string, MessageType> = Value<ValueType> & Message<(result:Readonly<Value<ValueType> & Validatable>)=>MessageType>;

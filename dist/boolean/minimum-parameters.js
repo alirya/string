@@ -1,4 +1,4 @@
-import Greater from "@dikac/t-number/boolean/greater";
+import Greater from "@dikac/t-number/boolean/greater-parameters";
 import Count from "../number/count";
 /**
  * check if {@param string} length/size is greater than {@param minimum} or equal if {@param inclusive} is "true"

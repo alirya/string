@@ -6,7 +6,7 @@ import MinimumValidatable from "../validatable/minimum";
 import Inclusive from "@dikac/t-number/inclusive/inclusive";
 import MinimumNumber from "@dikac/t-number/minimum/minimum";
 import StrictOmit from "@dikac/t-object/strict-omit";
-import Dynamic from "@dikac/t-validator/message/function/dynamic";
+import Dynamic from "@dikac/t-validator/message/function/validatable";
 export declare type Argument<MessageType> = MinimumNumber & Inclusive & Validatable & {
     converter?: (value: string) => number;
 } & Message<(result: Readonly<Value<string> & Inclusive & MinimumNumber & Validatable>) => MessageType> & Dynamic.Parameter<string, MessageType>;

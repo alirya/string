@@ -1,6 +1,6 @@
 import Value from "@dikac/t-value/value";
 import Message from "@dikac/t-message/message";
-import Dynamic from "@dikac/t-validator/message/function/dynamic";
+import Dynamic from "@dikac/t-validator/message/function/validatable";
 import AlphabetParameters from "./alphabet-parameters";
 //
 // export default class Alphabet<ValueType extends string, MessageType>

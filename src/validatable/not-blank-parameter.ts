@@ -1,7 +1,7 @@
 import Value from "@dikac/t-value/value";
 import Message from "@dikac/t-message/message";
-import Dynamic from "@dikac/t-validator/validatable/dynamic";
-import MessageDynamic from "@dikac/t-validator/message/function/dynamic";
+import Dynamic from "@dikac/t-validator/validatable/validatable";
+import MessageDynamic from "@dikac/t-validator/message/function/validatable";
 import NotBlankParameters from "./not-blank-parameters";
 
 export type NotBlankArgument<

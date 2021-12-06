@@ -3,7 +3,7 @@ import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
 import IsDigit from "../boolean/digit";
 import Callback from "@dikac/t-validator/validatable/callback";
-import Dynamic from "@dikac/t-validator/message/function/dynamic";
+import Dynamic from "@dikac/t-validator/message/function/validatable";
 
 //
 // export default class Digit<ValueType extends string, MessageType>
