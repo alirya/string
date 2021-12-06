@@ -12,6 +12,6 @@ map.set(ALPHABET + DIGIT + ALPHABET, [true, /[a-z]/ig, 'global']);
 for(let [value, [valid, regex, message]] of map) {
 
     it(message, ()=>{
-        expect(Match.Parameter(value, regex)).toBe(valid);
+        expect(Match.Parameters(value, regex)).toBe(valid);
     });
 }
