@@ -1,1 +1,0 @@
-{"version":3,"file":"remove-prefix.js","sourceRoot":"","sources":["../src/remove-prefix.ts"],"names":[],"mappings":"AAAA,OAAO,sBAAsB,MAAM,4BAA4B,CAAC;AAChE,OAAO,qBAA6C,MAAM,2BAA2B,CAAC;AAEtF,IAAU,qBAAqB,CAK9B;AALD,WAAU,qBAAqB;IAEd,gCAAU,GAAG,sBAAsB,CAAC;IACpC,+BAAS,GAAG,qBAAqB,CAAC;AAEnD,CAAC,EALS,qBAAqB,KAArB,qBAAqB,QAK9B;AAED,eAAe,qBAAqB,CAAC"}

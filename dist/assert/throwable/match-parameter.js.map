@@ -1,1 +1,0 @@
-{"version":3,"file":"match-parameter.js","sourceRoot":"","sources":["../../../src/assert/throwable/match-parameter.ts"],"names":[],"mappings":"AAEA,OAAO,eAAe,MAAM,oBAAoB,CAAC;AAIjD,MAAM,CAAC,OAAO,UAAU,cAAc,CAAC,EACnC,KAAK,EACL,OAAO,EACP,OAAO,GAAG,QAAQ,GACL;IAEb,OAAO,eAAe,CAAC,KAAK,EAAE,OAAO,EAAE,OAAO,CAAC,CAAA;AACnD,CAAC"}

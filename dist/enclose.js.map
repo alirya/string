@@ -1,1 +1,0 @@
-{"version":3,"file":"enclose.js","sourceRoot":"","sources":["../src/enclose.ts"],"names":[],"mappings":"AAAA,OAAO,gBAAiE,MAAM,qBAAqB,CAAC;AACpG,OAAO,iBAAiB,MAAM,sBAAsB,CAAC;AAGrD,IAAU,OAAO,CAMhB;AAND,WAAU,OAAO;IAEA,iBAAS,GAAG,gBAAgB,CAAC;IAC7B,kBAAU,GAAG,iBAAiB,CAAC;AAGhD,CAAC,EANS,OAAO,KAAP,OAAO,QAMhB;AAED,eAAe,OAAO,CAAC"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"pad-prefix-parameter.js","sourceRoot":"","sources":["../src/pad-prefix-parameter.ts"],"names":[],"mappings":"AAEA,OAAO,mBAAmB,MAAM,yBAAyB,CAAC;AAI1D,MAAM,CAAC,OAAO,UAAU,kBAAkB,CAAC,EAAC,KAAK,EAAE,MAAM,EAAG,MAAM,EAAqB;IAEnF,OAAO,mBAAmB,CAAC,KAAK,EAAE,MAAM,EAAE,MAAM,CAAC,CAAA;AACrD,CAAC"}

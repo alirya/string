@@ -1,1 +1,0 @@
-{"version":3,"file":"trim-prefix-parameter.js","sourceRoot":"","sources":["../src/trim-prefix-parameter.ts"],"names":[],"mappings":"AAEA,OAAO,oBAAoB,MAAM,0BAA0B,CAAC;AAI5D,MAAM,CAAC,OAAO,UAAU,mBAAmB,CAAC,EAAC,KAAK,EAAE,MAAM,EAAsB;IAE5E,OAAO,oBAAoB,CAAC,KAAK,EAAE,MAAM,CAAC,CAAA;AAC9C,CAAC"}
