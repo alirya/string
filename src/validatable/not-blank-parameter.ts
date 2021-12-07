@@ -1,13 +1,13 @@
 import Value from "@dikac/t-value/value";
 import Message from "@dikac/t-message/message";
 import Dynamic from "@dikac/t-validator/validatable/validatable";
-import MessageDynamic from "@dikac/t-validator/message/function/validatable";
+import MessageDynamic from "@dikac/t-validator/message/function/validatable-parameter";
 import NotBlankParameters from "./not-blank-parameters";
 
 export type NotBlankArgument<
     ValueType extends string,
     MessageType
-    > = Message<MessageDynamic.Parameter<ValueType, MessageType>> & Value<ValueType>
+    > = Message<MessageDynamic<ValueType, MessageType>> & Value<ValueType>
 
 export default function NotBlankParameter<ValueType extends string, MessageType>({
         value,

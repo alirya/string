@@ -1,6 +1,6 @@
 import AlphanumericFromObject from "../boolean/alphanumeric";
-import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
-import Dynamic from "@dikac/t-validator/message/function/validatable";
+import ValidatableCallbacks from "@dikac/t-validator/validatable/callback-class-parameters";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
 
 //
 // export default class Alphanumeric<ValueType extends string, MessageType>
@@ -39,10 +39,10 @@ import Dynamic from "@dikac/t-validator/message/function/validatable";
 
 export default function AlphanumericParameters<ValueType extends string, MessageType>(
     value : ValueType,
-    message : Dynamic.Parameters<ValueType, MessageType>
+    message : Dynamic<ValueType, MessageType>
 ) {
 
-    return new ValidatableCallbacks.Class.Parameters<ValueType, MessageType>(value, AlphanumericFromObject, message, []);
+    return new ValidatableCallbacks<ValueType, MessageType>(value, AlphanumericFromObject, message, []);
 }
 
 

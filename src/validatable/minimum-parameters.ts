@@ -5,7 +5,7 @@ import Message from "@dikac/t-message/message";
 import IsMinimum from "../boolean/minimum-parameters";
 import Inclusive from "@dikac/t-number/inclusive/inclusive";
 import Count from "../number/count";
-import Callback from "@dikac/t-validator/validatable/callback";
+import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
 
 export type MinimumType<ValueType, MessageType> =
     Readonly<Inclusive & MinimumNumber &  Value<ValueType> & Message<MessageType> & Validatable>;
@@ -20,7 +20,7 @@ export default function MinimumParameters<ValueType extends string, MessageType>
 ) : MinimumType<ValueType, MessageType> {
 
     return Object.assign(
-        Callback.Function.Parameters(value, IsMinimum, message, [minimum, inclusive, converter]),
+        Callback(value, IsMinimum, message, [minimum, inclusive, converter]),
     {minimum, inclusive}
     ) as MinimumType<ValueType, MessageType>;
 

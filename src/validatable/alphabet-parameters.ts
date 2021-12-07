@@ -1,6 +1,6 @@
 import AlphabetFromObject from "../boolean/alphabet";
-import ValidatableCallbacks from "@dikac/t-validator/validatable/callback";
-import Dynamic from "@dikac/t-validator/message/function/validatable";
+import ValidatableCallbacks from "@dikac/t-validator/validatable/callback-class-parameters";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
 //
 // export default class Alphabet<ValueType extends string, MessageType>
 //     implements
@@ -40,8 +40,8 @@ import Dynamic from "@dikac/t-validator/message/function/validatable";
 
 export default function AlphabetParameters<ValueType extends string, MessageType>(
     value : ValueType,
-    message : Dynamic.Parameters<ValueType, MessageType>
+    message : Dynamic<ValueType, MessageType>
 ) {
 
-    return new ValidatableCallbacks.Class.Parameters<ValueType, MessageType>(value, AlphabetFromObject, message);
+    return new ValidatableCallbacks<ValueType, MessageType>(value, AlphabetFromObject, message);
 }

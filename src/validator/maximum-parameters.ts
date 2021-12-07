@@ -2,10 +2,10 @@ import Validator from "@dikac/t-validator/simple";
 import MaximumValidatable, {MaximumType} from "../validatable/maximum-parameters";
 import Count from "../number/count";
 import MaximumString from "../assert/string/maximum-parameters";
-import Dynamic from "@dikac/t-validator/message/function/validatable";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
 
 export type MaximumArgumentMessage<MessageType> =
-    Dynamic.Parameters<string,  MessageType, [maximum : number, inclusive: boolean, converter : (string:string)=>number]>
+    Dynamic<string,  MessageType, [maximum : number, inclusive: boolean, converter : (string:string)=>number]>
 
 export default function MaximumParameters(
     maximum : number,

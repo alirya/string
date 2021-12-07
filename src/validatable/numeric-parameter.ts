@@ -1,11 +1,11 @@
 import Value from "@dikac/t-value/value";
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
-import Dynamic from "@dikac/t-validator/message/function/validatable";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
 import NumericParameters from "./numeric-parameters";
 
 export type NumericArgument<ValueType extends string, MessageType>
-    = Message<Dynamic.Parameter<ValueType, MessageType>> & Value<ValueType>;
+    = Message<Dynamic<ValueType, MessageType>> & Value<ValueType>;
 
 export default function NumericParameter<ValueType extends string, MessageType>({
         value,

@@ -2,7 +2,7 @@ import Value from "@dikac/t-value/value";
 import Message from "@dikac/t-message/message";
 import Pattern from "../pattern/pattern/pattern";
 import Match from "../value/match";
-import Dynamic from "@dikac/t-validator/message/function/validatable";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
 //
 // export default class Matchz<ValueType extends string, MessageType>
 //     extends ValueMatch<ValueType>
@@ -44,7 +44,7 @@ import Dynamic from "@dikac/t-validator/message/function/validatable";
 
 export type MatchArgument<ValueType, MessageType>
     =
-    Message<Dynamic.Parameter<ValueType, MessageType>> & Value<ValueType> & Pattern;
+    Message<Dynamic<ValueType, MessageType>> & Value<ValueType> & Pattern;
 //
 // export  function MatchParameter<ValueType extends string, MessageType>({
 //     value,// : ValueType,
@@ -58,7 +58,7 @@ export type MatchArgument<ValueType, MessageType>
 
 export default class MatchParameter<ValueType extends string, MessageType> extends Match<ValueType> {
 
-    #message : Dynamic.Parameter<ValueType, MessageType>;
+    #message : Dynamic<ValueType, MessageType>;
 
     constructor({
                     value,// : ValueType,

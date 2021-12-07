@@ -1,4 +1,4 @@
-import Dynamic from "@dikac/t-validator/message/function/validatable";
+import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
 import Match from "../value/match";
 //
 // export default class Matchz<ValueType extends string, MessageType>
@@ -41,12 +41,12 @@ import Match from "../value/match";
 
 export default class MatchParameter<ValueType extends string, MessageType> extends Match<ValueType> {
 
-    #message : Dynamic.Parameters<ValueType, MessageType>;
+    #message : Dynamic<ValueType, MessageType>;
 
     constructor(
         value : ValueType,
         pattern : RegExp,
-        message : Dynamic.Parameters<ValueType, MessageType>
+        message : Dynamic<ValueType, MessageType>
     ) {
         super(value, pattern);
 
