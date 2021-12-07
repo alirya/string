@@ -8,7 +8,6 @@ export type MaximumArgument = MaximumNumber & Inclusive & {
 
     converter ?: (value:string)=>number,
     error ?: (argument: Value<string> & MaximumNumber & Inclusive)=>Error
-    //error ?: (value:string, maximum:number, inclusive:boolean)=>Error
 }
 
 export default function MaximumParameter(
@@ -18,10 +17,6 @@ export default function MaximumParameter(
         converter,
         error
     } : MaximumArgument) : asserts value is string {
-    //
-    // let guard = (value : string, maximum : number, inclusive : boolean) => {
-    //     return Guard(value, maximum, inclusive, converter);
-    // }
 
     return MaximumParameters(
         value,

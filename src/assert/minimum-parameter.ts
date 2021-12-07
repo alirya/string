@@ -8,7 +8,6 @@ export type MinimumArgument = MinimumNumber & Inclusive & {
 
     converter ?: (value:string)=>number,
     error ?: (argument: Value<string> & MinimumNumber & Inclusive)=>Error
-    //error ?: (value:string, minimum:number, inclusive:boolean)=>Error
 }
 
 export default function MinimumParameter(
@@ -18,10 +17,6 @@ export default function MinimumParameter(
         converter,
         error
     } : MinimumArgument) : asserts value is string {
-    //
-    // let guard = (value : string, minimum : number, inclusive : boolean) => {
-    //     return Guard(value, minimum, inclusive, converter);
-    // }
 
     return MinimumParameters(
         value,

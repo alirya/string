@@ -9,8 +9,6 @@ export type MatchArgument = Pattern & {
 
 export default function MatchParameter(
     value : string,
-    // pattern : RegExp,
-    // error : (value:string, pattern:RegExp)=>Error = MatchError,
     {
         pattern,
         error,

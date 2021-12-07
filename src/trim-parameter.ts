@@ -4,7 +4,6 @@ import Circumfix from "./circumfix/circumfix";
 import Prefix from "./prefix/prefix";
 import TrimParameters from "./trim-parameters";
 
-// export type TrimArgument = String & Partial<Circumfix & Prefix & Suffix>;
 export type TrimParameterArgumentCircumfix = String & Circumfix;
 export type TrimParameterArgumentPair = String & Prefix & Suffix;
 

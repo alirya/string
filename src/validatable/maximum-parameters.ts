@@ -14,7 +14,7 @@ export default function MaximumParameters<ValueType extends string, MessageType>
     value : ValueType,
     maximum : number,
     inclusive : boolean,
-    message : Dynamic<ValueType,  MessageType, [maximum : number, inclusive: boolean, converter : (string:ValueType)=>number]>,//(result:Readonly<Value<ValueType> & Inclusive & MaximumNumber & Validatable>)=>MessageType,
+    message : Dynamic<ValueType,  MessageType, [maximum : number, inclusive: boolean, converter : (string:ValueType)=>number]>,
     converter : (string:ValueType)=>number = Count,
 ) : MaximumType<ValueType, MessageType> {
 
