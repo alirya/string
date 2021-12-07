@@ -1,7 +1,7 @@
 import Prefix from "./prefix/prefix";
 import Suffix from "./suffix/suffix";
 import Circumfix from "./circumfix/circumfix";
-import Pad from "./pad";
+import Pad from "./pad-parameter";
 import Value from "@dikac/t-value/value";
 
 export type ConditionBuilderArgumentList<Condition> =
@@ -19,6 +19,6 @@ export default function ConditionBuilderParameters<Condition>(
 
     return argument
         .filter(builder=>builder.condition === undefined || builder.condition === condition)
-        .map(Pad.Parameter)
+        .map(Pad)
         .join(separator)
 }

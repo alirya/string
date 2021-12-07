@@ -1,11 +1,11 @@
 import Guard from "../boolean/match-parameters";
 import Callback from "@dikac/t-function/assert/callback-parameters";
-import MatchError from "./throwable/match";
+import MatchError from "./throwable/match-parameters";
 
 export default function MatchParameters(
     value : string,
     pattern : RegExp,
-    error : (value:string, pattern:RegExp)=>Error = MatchError.Parameters
+    error : (value:string, pattern:RegExp)=>Error = MatchError
 ) : asserts value is string {
 
     Callback(value, Guard, error, pattern);

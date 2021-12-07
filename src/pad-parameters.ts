@@ -1,6 +1,6 @@
 import {padStart} from "lodash";
-import PadPrefix from "./pad-prefix";
-import PadSuffix from "./pad-suffix";
+import PadPrefix from "./pad-prefix-parameters";
+import PadSuffix from "./pad-suffix-parameters";
 
 
 /**
@@ -27,8 +27,8 @@ export default function PadParameters(
     suffix ?: string,
 ) : string {
 
-    value = PadPrefix.Parameters(value, length, prefix);
-    value = PadSuffix.Parameters(value, length, suffix || prefix);
+    value = PadPrefix(value, length, prefix);
+    value = PadSuffix(value, length, suffix || prefix);
 
     return value;
 }

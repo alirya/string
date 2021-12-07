@@ -1,9 +1,9 @@
-import NumericType from "../string/numeric";
+import NumericType from "../string/numeric-parameters";
 
 export default function NumericParameters(
     value : string,
     subject : string = 'string'
 ) : Error {
 
-    return new Error(NumericType.Parameters(value, false, subject))
+    return new Error(NumericType(value, false, subject))
 }

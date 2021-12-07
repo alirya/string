@@ -2,7 +2,7 @@ import Validator from "@dikac/t-validator/validator";
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
 import Value from "@dikac/t-value/value";
-import MaximumValidatable from "../validatable/maximum";
+import MaximumValidatable, {MaximumType} from "../validatable/maximum-parameters";
 import Inclusive from "@dikac/t-number/inclusive/inclusive";
 import MaximumNumber from "@dikac/t-number/maximum/maximum";
 import StrictOmit from "@dikac/t-object/strict-omit";
@@ -22,7 +22,7 @@ export default function MaximumParameter(
         maximum,
         inclusive,
     } : StrictOmit<MaximumParameterArgument<unknown>, 'message'|'converter'>
-) : Validator<string, string, boolean, boolean, MaximumValidatable.Type<string, string>>;
+) : Validator<string, string, boolean, boolean, MaximumType<string, string>>;
 
 export default function MaximumParameter(
     {
@@ -30,7 +30,7 @@ export default function MaximumParameter(
         inclusive,
         converter,
     } : Object.Required<MaximumParameterArgument<unknown>, 'converter'>
-) : Validator<string, string, boolean, boolean, MaximumValidatable.Type<string, string>>;
+) : Validator<string, string, boolean, boolean, MaximumType<string, string>>;
 
 export default function MaximumParameter<MessageType> (
     {
@@ -38,7 +38,7 @@ export default function MaximumParameter<MessageType> (
         inclusive,
         message,
     } : Object.Required<MaximumParameterArgument<unknown>, 'message'>
-) : Validator<string, string, boolean, boolean, MaximumValidatable.Type<string, MessageType>>;
+) : Validator<string, string, boolean, boolean, MaximumType<string, MessageType>>;
 
 export default function MaximumParameter<MessageType>(
     {
@@ -47,7 +47,7 @@ export default function MaximumParameter<MessageType>(
         message,
         converter,
     } : MaximumParameterArgument<MessageType|string>
-) : Validator<string, string, boolean, boolean, MaximumValidatable.Type<string, MessageType>>;
+) : Validator<string, string, boolean, boolean, MaximumType<string, MessageType>>;
 
 export default function MaximumParameter<MessageType>(
     {
@@ -56,7 +56,7 @@ export default function MaximumParameter<MessageType>(
         message,
         converter,
     } : MaximumParameterArgument<MessageType>
-) : Validator<string, string, boolean, boolean, MaximumValidatable.Type<string, MessageType|string>> {
+) : Validator<string, string, boolean, boolean, MaximumType<string, MessageType|string>> {
 
     if(message) {
 

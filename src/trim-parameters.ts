@@ -1,6 +1,6 @@
 import {trim} from "lodash";
-import TrimSuffix from "./trim-suffix";
-import TrimPrefix from "./trim-prefix";
+import TrimSuffix from "./trim-suffix-parameters";
+import TrimPrefix from "./trim-prefix-parameters";
 
 export default function TrimParameters(
     value: string,
@@ -21,8 +21,8 @@ export default function TrimParameters(
 
     if(suffix) {
 
-        value = TrimPrefix.Parameters(value, prefix);
-        value = TrimSuffix.Parameters(value, suffix);
+        value = TrimPrefix(value, prefix);
+        value = TrimSuffix(value, suffix);
 
     } else {
 

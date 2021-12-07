@@ -1,7 +1,7 @@
 import Validator from "@dikac/t-validator/simple";
-import MaximumValidatable from "../validatable/maximum";
+import MaximumValidatable, {MaximumType} from "../validatable/maximum-parameters";
 import Count from "../number/count";
-import MaximumString from "../assert/string/maximum";
+import MaximumString from "../assert/string/maximum-parameters";
 import Dynamic from "@dikac/t-validator/message/function/validatable";
 
 export type MaximumArgumentMessage<MessageType> =
@@ -10,40 +10,40 @@ export type MaximumArgumentMessage<MessageType> =
 export default function MaximumParameters(
     maximum : number,
     inclusive : boolean,
-) : Validator<string, string, MaximumValidatable.Type<string, string>>;
+) : Validator<string, string, MaximumType<string, string>>;
 
 export default function MaximumParameters<MessageType>(
     maximum : number,
     inclusive : boolean,
     message : MaximumArgumentMessage<MessageType>,
     converter ?: (value:string)=>number,
-) : Validator<string, string, MaximumValidatable.Type<string, MessageType>>;
+) : Validator<string, string, MaximumType<string, MessageType>>;
 
 export default function MaximumParameters<MessageType>(
     maximum : number,
     inclusive : boolean,
     message : MaximumArgumentMessage<MessageType>,
     converter : (value:string)=>number,
-) : Validator<string, string, MaximumValidatable.Type<string, MessageType>>;
+) : Validator<string, string, MaximumType<string, MessageType>>;
 
 export default function MaximumParameters(
     maximum : number,
     inclusive : boolean,
     message : undefined,
     converter ?: (value:string)=>number,
-) : Validator<string, string, MaximumValidatable.Type<string, string>>;
+) : Validator<string, string, MaximumType<string, string>>;
 
 
 export default function MaximumParameters<MessageType>(
     maximum : number,
     inclusive : boolean,
-    message : MaximumArgumentMessage<MessageType|string> = MaximumString.Parameters,
+    message : MaximumArgumentMessage<MessageType|string> = MaximumString,
     converter : (value:string)=>number = Count,
-) : Validator<string, string, MaximumValidatable.Type<string, MessageType>> {
+) : Validator<string, string, MaximumType<string, MessageType>> {
 
     return function (value) {
 
-        return MaximumValidatable.Parameters(value, maximum, inclusive, message, converter)
+        return MaximumValidatable(value, maximum, inclusive, message, converter)
 
-    } as Validator<string, string, MaximumValidatable.Type<string, MessageType>>
+    } as Validator<string, string, MaximumType<string, MessageType>>
 }

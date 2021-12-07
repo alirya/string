@@ -1,4 +1,4 @@
-import Truncate from "../../truncate";
+import Truncate from "../../truncate-parameters";
 
 export default function MatchParameters(
     value : string,
@@ -9,7 +9,7 @@ export default function MatchParameters(
 
     const strings : string[] = [];
 
-    strings.push(subject, `"${Truncate.Parameters(value, 8)}"`);
+    strings.push(subject, `"${Truncate(value, 8)}"`);
 
     if(valid) {
 

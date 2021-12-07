@@ -1,7 +1,7 @@
 import AffixOption from "./affix/affix";
-import PadPrefix from "./pad-prefix";
-import PadSuffix from "./pad-suffix";
-import PadCircumfix from "./pad-circumfix";
+import PadPrefix from "./pad-prefix-parameters";
+import PadSuffix from "./pad-suffix-parameters";
+import PadCircumfix from "./pad-circumfix-parameters";
 
 /**
  * pad string depend on {@param mode}
@@ -23,13 +23,13 @@ export default function PadOptionParameters(
 
     switch (affix) {
         case AffixOption.PREFIX :
-            return PadPrefix.Parameters(value, length, padding);
+            return PadPrefix(value, length, padding);
 
         case AffixOption.SUFFIX :
-            return PadSuffix.Parameters(value, length, padding);
+            return PadSuffix(value, length, padding);
 
         case AffixOption.CIRCUMFIX :
-            return PadCircumfix.Parameters(value, length, padding);
+            return PadCircumfix(value, length, padding);
     }
 
 }

@@ -2,7 +2,7 @@ import Validator from "@dikac/t-validator/validator";
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
 import Value from "@dikac/t-value/value";
-import MinimumValidatable from "../validatable/minimum";
+import MinimumValidatable, {MinimumType} from "../validatable/minimum-parameter";
 import Inclusive from "@dikac/t-number/inclusive/inclusive";
 import MinimumNumber from "@dikac/t-number/minimum/minimum";
 import StrictOmit from "@dikac/t-object/strict-omit";
@@ -23,7 +23,7 @@ export default function MinimumParameter(
         inclusive,
         converter
     } : StrictOmit<Argument<any>, 'message'>
-) : Validator<string, string, boolean, boolean, MinimumValidatable.Type<string, string>>;
+) : Validator<string, string, boolean, boolean, MinimumType<string, string>>;
 
 export default function MinimumParameter<MessageType>(
     {
@@ -32,7 +32,7 @@ export default function MinimumParameter<MessageType>(
         message,
         converter
     } : Argument<MessageType>
-) : Validator<string, string, boolean, boolean, MinimumValidatable.Type<string, MessageType>>;
+) : Validator<string, string, boolean, boolean, MinimumType<string, MessageType>>;
 
 export default function MinimumParameter<MessageType>(
     {
@@ -41,11 +41,11 @@ export default function MinimumParameter<MessageType>(
         message,
         converter
     } : Argument<MessageType|string>
-) : Validator<string, string, boolean, boolean, MinimumValidatable.Type<string, MessageType>> {
+) : Validator<string, string, boolean, boolean, MinimumType<string, MessageType>> {
 
     return function (value) {
 
-        return MinimumValidatable.Parameter({value, minimum, inclusive, message, converter})
+        return MinimumValidatable({value, minimum, inclusive, message, converter})
 
-    } as Validator<string, string, boolean, boolean, MinimumValidatable.Type<string, MessageType>>
+    } as Validator<string, string, boolean, boolean, MinimumType<string, MessageType>>
 }

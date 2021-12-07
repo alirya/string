@@ -1,4 +1,4 @@
-import StringType from "../string/string";
+import StringType from "../string/string-parameters";
 
 export default function StringParameter(
     value : unknown,
@@ -6,6 +6,6 @@ export default function StringParameter(
     conversion : (value:unknown)=>string = value=>typeof value
 ) : Error {
 
-    return new TypeError(StringType.Parameters(value, false, subject, conversion))
+    return new TypeError(StringType(value, false, subject, conversion))
 }
 

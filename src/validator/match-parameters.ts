@@ -1,7 +1,7 @@
 import Validator from "@dikac/t-validator/validator";
-import MatchValidatable from "../validatable/match";
+import MatchValidatable from "../validatable/match-parameters";
 import Instance from "@dikac/t-validator/validatable/validatable";
-import MatchString from "../assert/string/match";
+import MatchString from "../assert/string/match-parameters";
 import Dynamic from "@dikac/t-validator/message/function/validatable";
 
 export default function MatchParameters(
@@ -15,12 +15,12 @@ export default function MatchParameters<MessageType>(
 
 export default function MatchParameters<MessageType>(
     pattern : RegExp,
-    message : Dynamic.Parameters<string, MessageType|string, [pattern:RegExp]> = MatchString.Parameters
+    message : Dynamic.Parameters<string, MessageType|string, [pattern:RegExp]> = MatchString
 ) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
 
     return function (value) {
 
-        return new MatchValidatable.Parameters(value, pattern, message);
+        return new MatchValidatable(value, pattern, message);
 
     } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
 }

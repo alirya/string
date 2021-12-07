@@ -1,4 +1,4 @@
-import MinimumType from "../string/minimum";
+import MinimumType from "../string/minimum-parameters";
 import Count from "../../number/count";
 
 export default function MinimumParameters(
@@ -10,5 +10,5 @@ export default function MinimumParameters(
     subject : string = 'string',
 ) : Error {
 
-    return new Error(MinimumType.Parameters(value, false, minimum, inclusive, converter, criteria, subject))
+    return new Error(MinimumType(value, false, minimum, inclusive, converter, criteria, subject))
 }

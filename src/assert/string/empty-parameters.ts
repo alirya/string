@@ -1,4 +1,4 @@
-import Truncate from "../../truncate";
+import Truncate from "../../truncate-parameters";
 
 
 export default function EmptyParameters(
@@ -26,7 +26,7 @@ export default function EmptyParameters(
 
         strings[3] = 'string,';
 
-        strings.push('actual', `"${Truncate.Parameters(value, 8)}"`);
+        strings.push('actual', `"${Truncate(value, 8)}"`);
 
     }
 

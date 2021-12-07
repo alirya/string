@@ -1,5 +1,5 @@
-import PrefixCharacter from "./prefix";
-import SuffixCharacter from "./suffix";
+import PrefixCharacter from "./prefix-parameters";
+import SuffixCharacter from "./suffix-parameters";
 
 export default function EncloseParameters (
     string : string,
@@ -18,8 +18,8 @@ export default function EncloseParameters (
     suffix ?: string,
 ) : string {
 
-    string = PrefixCharacter.Parameters(string, prefix);
-    string = SuffixCharacter.Parameters(string, suffix || prefix);
+    string = PrefixCharacter(string, prefix);
+    string = SuffixCharacter(string, suffix || prefix);
 
     return string;
 }

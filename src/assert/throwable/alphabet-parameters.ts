@@ -1,4 +1,4 @@
-import AlphabetType from "../string/alphabet";
+import AlphabetType from "../string/alphabet-parameters";
 
 
 export default function AlphabetParameter(
@@ -6,6 +6,6 @@ export default function AlphabetParameter(
     subject : string = 'string'
 ) : Error {
 
-    return new Error(AlphabetType.Parameters(value, false, subject))
+    return new Error(AlphabetType(value, false, subject))
 }
 

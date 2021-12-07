@@ -1,7 +1,7 @@
 import Validator from "@dikac/t-validator/simple";
-import StringValidatable from "../validatable/string";
+import StringValidatable from "../validatable/string-parameters";
 import Instance from "@dikac/t-validator/validatable/validatable";
-import StringString from "../assert/string/string";
+import StringString from "../assert/string/string-parameters";
 import Simple from "@dikac/t-validator/message/function/simple";
 
 export type StringParametersType<MessageType> = Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
@@ -13,12 +13,12 @@ export default function StringParameters<MessageType>(
 ) : StringParametersType<MessageType>;
 
 export default function StringParameters<MessageType>(
-    message : Simple.Parameters<unknown, string, MessageType|string> = StringString.Parameters
+    message : Simple.Parameters<unknown, string, MessageType|string> = StringString
 ) : StringParametersType<MessageType> {
 
     return function (value) {
 
-        return StringValidatable.Parameters(value, message);
+        return StringValidatable(value, message);
 
     } as StringParametersType<MessageType>
 }
