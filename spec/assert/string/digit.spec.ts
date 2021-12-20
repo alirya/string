@@ -1,10 +1,10 @@
-import Digit from "../../../dist/assert/string/digit";
+import Digit from "../../../dist/assert/string/digit-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 
-    expect(Digit.Parameters( '0123456789', true, 'value')).toBe(
+    expect(Digit( '0123456789', true, 'value')).toBe(
         'value is digit.'
     );
 
@@ -12,7 +12,7 @@ it('true valid', ()=>{
 
 it('true invalid', ()=>{
 
-    expect(Digit.Parameters( '0123456789', true, 'value')).toBe(
+    expect(Digit( '0123456789', true, 'value')).toBe(
         'value is digit.'
     );
 
@@ -20,7 +20,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Digit.Parameters( '0123456789', false, 'value')).toBe(
+    expect(Digit( '0123456789', false, 'value')).toBe(
         'value must digit.'
     );
 
@@ -28,7 +28,7 @@ it('false valid', ()=>{
 
 it('false invalid', ()=>{
 
-    expect(Digit.Parameters( '0123ABCD456E789', false, 'value')).toBe(
+    expect(Digit( '0123ABCD456E789', false, 'value')).toBe(
         'value must digit, contains "ABCD".'
     );
 

@@ -1,4 +1,4 @@
-import String_ from "../../../dist/assert/string/string";
+import String_ from "../../../dist/assert/string/string-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -20,7 +20,7 @@ for(let [args, message] of data) {
 
     it(`test data[${i}]`, ()=>{
 
-        expect(String_.Parameters(...args)).toBe(message);
+        expect(String_(...args)).toBe(message);
 
     });
 

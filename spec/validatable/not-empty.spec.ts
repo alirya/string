@@ -1,8 +1,8 @@
 import ALPHABET from "../../dist/alphabet";
 import DIGIT from "../../dist/digit";
-import NotEmpty from "../../dist/validatable/not-empty";
-import NotEmptyMessage from "../../dist/assert/string/not-empty";
-import NotEmptyMessageArgument from "../../dist/assert/string/not-empty";
+import NotEmpty from "../../dist/validatable/not-empty-parameters";
+import NotEmptyMessage from "../../dist/assert/string/not-empty-parameters";
+import NotEmptyMessageArgument from "../../dist/assert/string/not-empty-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
 
@@ -55,12 +55,12 @@ for(let [value, [valid, message]] of map) {
 
         it(message, ()=>{
 
-            let validatable = NotEmpty.Parameters(value,  NotEmptyMessage.Parameters);
+            let validatable = NotEmpty(value,  NotEmptyMessage);
             expect(validatable.valid).toBe(!valid);
             expect(validatable.value).toBe(value);
 
 
-            expect(validatable.message).toBe(NotEmptyMessageArgument.Parameters(validatable.value, validatable.valid));
+            expect(validatable.message).toBe(NotEmptyMessageArgument(validatable.value, validatable.valid));
         });
     });
 

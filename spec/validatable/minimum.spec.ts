@@ -1,11 +1,11 @@
-import Minimum from "../../dist/validatable/minimum";
-import MinimumString from "../../dist/assert/string/minimum";
+import Minimum from "../../dist/validatable/minimum-parameters";
+import MinimumString from "../../dist/assert/string/minimum-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
-    let greater = Minimum.Parameters('ab', 1, false, MinimumString.Parameters);
+    let greater = Minimum('ab', 1, false, MinimumString);
 
     it('set valid', ()=>{
 
@@ -66,7 +66,7 @@ describe(`value equal to minimum`,function() {
 
     describe(`inclusive`,function() {
 
-        let greater = Minimum.Parameters<string, string>('1', 1, true, MinimumString.Parameters);
+        let greater = Minimum<string, string>('1', 1, true, MinimumString);
 
         it('validate object', ()=>{
 
@@ -80,7 +80,7 @@ describe(`value equal to minimum`,function() {
 
     describe(`exclusive`,function() {
 
-        let greater = Minimum.Parameters<string, string>('1', 1, false, MinimumString.Parameters);
+        let greater = Minimum<string, string>('1', 1, false, MinimumString);
 
         it('validate object', ()=>{
 
@@ -97,7 +97,7 @@ describe(`value greater to minimum`,function() {
 
     describe(`inclusive`,function() {
 
-        let greater = Minimum.Parameters<string, string>('ab', 1, true, MinimumString.Parameters);
+        let greater = Minimum<string, string>('ab', 1, true, MinimumString);
 
         it('validate object', ()=>{
 
@@ -111,7 +111,7 @@ describe(`value greater to minimum`,function() {
 
     describe(`exclusive`,function() {
 
-        let greater = Minimum.Parameters<string, string>('ab', 1, false, MinimumString.Parameters);
+        let greater = Minimum<string, string>('ab', 1, false, MinimumString);
 
         it('validate object', ()=>{
 
@@ -128,7 +128,7 @@ describe(`value lower to minimum`,function() {
 
     describe(`inclusive`,function() {
 
-        let greater = Minimum.Parameters<string, string>('a', 2, true, MinimumString.Parameters);
+        let greater = Minimum<string, string>('a', 2, true, MinimumString);
 
         it('validate object', ()=>{
 
@@ -142,7 +142,7 @@ describe(`value lower to minimum`,function() {
 
     describe(`exclusive`,function() {
 
-        let greater = Minimum.Parameters<string, string>('a', 2, false, MinimumString.Parameters);
+        let greater = Minimum<string, string>('a', 2, false, MinimumString);
 
         it('validate object', ()=>{
 

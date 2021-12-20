@@ -1,4 +1,4 @@
-import UpperWords from "../dist/upper-words";
+import UpperWords from "../dist/upper-words-parameters";
 
 it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
@@ -16,7 +16,7 @@ describe("construct & getter", function() {
 
     for(let [index, [original, transformed, delimiters]] of map.entries()) {
 
-        it(`[${index}] ${original}`, () => expect(transformed).toBe(UpperWords.Parameters(original, delimiters)));
+        it(`[${index}] ${original}`, () => expect(transformed).toBe(UpperWords(original, delimiters)));
     }
 
 });

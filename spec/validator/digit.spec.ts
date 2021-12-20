@@ -1,8 +1,8 @@
 import ALPHABET from "../../dist/alphabet";
 import DIGIT from "../../dist/digit";
-import Digit from "../../dist/validator/digit";
-import DigitMessage from "../../dist/assert/string/digit";
-import DigitMessageArgument from "../../dist/assert/string/digit";
+import Digit from "../../dist/validator/digit-parameters";
+import DigitMessage from "../../dist/assert/string/digit-parameters";
+import DigitMessageArgument from "../../dist/assert/string/digit-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
 
@@ -52,12 +52,12 @@ for(let [value, [valid, message]] of map) {
 
     it(message, ()=>{
 
-        let validator = Digit.Parameters(DigitMessage.Parameters);
+        let validator = Digit(DigitMessage);
         let validatable = validator(value);
         expect(validatable.valid).toBe(valid);
         expect(validatable.value).toBe(value);
 
-        expect(validatable.message).toBe(DigitMessageArgument.Parameters(validatable.value, validatable.valid));
+        expect(validatable.message).toBe(DigitMessageArgument(validatable.value, validatable.valid));
     });
 }
 

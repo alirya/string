@@ -1,10 +1,10 @@
-import Alphanumeric from "../../../dist/assert/string/alphanumeric";
+import Alphanumeric from "../../../dist/assert/string/alphanumeric-parameters";
 
 it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 
-    expect(Alphanumeric.Parameters('abcd12345', true, 'value')).toBe(
+    expect(Alphanumeric('abcd12345', true, 'value')).toBe(
         'value is alphanumeric.'
     );
 
@@ -12,7 +12,7 @@ it('true valid', ()=>{
 
 it('true invalid', ()=>{
 
-    expect(Alphanumeric.Parameters('!@#$%^&*()_+', true, 'value')).toBe(
+    expect(Alphanumeric('!@#$%^&*()_+', true, 'value')).toBe(
         'value is alphanumeric.'
     );
 
@@ -20,7 +20,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Alphanumeric.Parameters('123ABC', false, 'value')).toBe(
+    expect(Alphanumeric('123ABC', false, 'value')).toBe(
         'value must alphanumeric.'
     );
 
@@ -28,7 +28,7 @@ it('false valid', ()=>{
 
 it('false invalid', ()=>{
 
-    expect(Alphanumeric.Parameters('12!@#$%^&*()_+AB', false, 'value')).toBe(
+    expect(Alphanumeric('12!@#$%^&*()_+AB', false, 'value')).toBe(
         'value must alphanumeric, contains "!@#$%".'
     );
 
