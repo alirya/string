@@ -1,10 +1,10 @@
-import ALPHABET from "../../dist/alphabet";
-import DIGIT from "../../dist/digit";
-import Empty from "../../dist/validatable/empty-parameters";
-import EmptyMessage from "../../dist/assert/string/empty-parameters";
-import EmptyMessageArgument from "../../dist/assert/string/empty-parameters";
+import ALPHABET from '../../dist/alphabet';
+import DIGIT from '../../dist/digit';
+import Empty from '../../dist/validatable/empty-parameters';
+import EmptyMessage from '../../dist/assert/string/empty-parameters';
+import EmptyMessageArgument from '../../dist/assert/string/empty-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map = new Map<string, [boolean, string]>();
 

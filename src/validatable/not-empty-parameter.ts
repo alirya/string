@@ -1,12 +1,12 @@
-import Value from "@alirya/value/value";
-import Message from "@alirya/message/message";
-import FunctionStatic from "@alirya/validator/message/function/static-parameter";
-import NotEmptyParameters, {NotEmptyType} from "./not-empty-parameters";
+import Value from '@alirya/value/value';
+import Message from '@alirya/message/message';
+import FunctionStatic from '@alirya/validator/message/function/static-parameter';
+import NotEmptyParameters, {NotEmptyType} from './not-empty-parameters';
 
 export type NotEmptyArgument<
     ValueType extends string,
     MessageType
-    > = Message<FunctionStatic<'', ValueType, false, true, MessageType>> & Value<ValueType>
+    > = Message<FunctionStatic<'', ValueType, false, true, MessageType>> & Value<ValueType>;
 
 export {NotEmptyType};
 

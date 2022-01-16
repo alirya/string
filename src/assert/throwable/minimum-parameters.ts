@@ -1,5 +1,5 @@
-import MinimumType from "../string/minimum-parameters";
-import Count from "../../number/count";
+import MinimumType from '../string/minimum-parameters';
+import Count from '../../number/count';
 
 export default function MinimumParameters(
     value : string,
@@ -10,5 +10,5 @@ export default function MinimumParameters(
     subject : string = 'string',
 ) : Error {
 
-    return new Error(MinimumType(value, false, minimum, inclusive, converter, criteria, subject))
+    return new Error(MinimumType(value, false, minimum, inclusive, converter, criteria, subject));
 }

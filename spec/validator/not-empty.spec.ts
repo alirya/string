@@ -1,10 +1,10 @@
-import ALPHABET from "../../dist/alphabet";
-import DIGIT from "../../dist/digit";
-import NotEmpty from "../../dist/validator/not-empty-parameters";
-import NotEmptyMessage from "../../dist/assert/string/not-empty-parameters";
-import NotEmptyMessageArgument from "../../dist/assert/string/not-empty-parameters";
+import ALPHABET from '../../dist/alphabet';
+import DIGIT from '../../dist/digit';
+import NotEmpty from '../../dist/validator/not-empty-parameters';
+import NotEmptyMessage from '../../dist/assert/string/not-empty-parameters';
+import NotEmptyMessageArgument from '../../dist/assert/string/not-empty-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map = new Map<string, [boolean, string]>();
 

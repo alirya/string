@@ -1,6 +1,6 @@
-import Prefix from "../../dist/boolean/prefix-parameters";
+import Prefix from '../../dist/boolean/prefix-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 it('prefix', ()=>{

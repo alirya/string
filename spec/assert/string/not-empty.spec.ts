@@ -1,6 +1,6 @@
-import NotEmpty from "../../../dist/assert/string/not-empty-parameters";
+import NotEmpty from '../../../dist/assert/string/not-empty-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 

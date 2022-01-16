@@ -1,5 +1,5 @@
-import PrefixCharacter from "./prefix-parameters";
-import SuffixCharacter from "./suffix-parameters";
+import PrefixCharacter from './prefix-parameters';
+import SuffixCharacter from './suffix-parameters';
 
 export default function EncloseParameters (
     string : string,

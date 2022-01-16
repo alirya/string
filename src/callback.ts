@@ -1,5 +1,5 @@
-import Argument from "@alirya/function/argument/argument";
-import ToString from "./to-string";
+import Argument from '@alirya/function/argument/argument';
+import ToString from './to-string';
 
 export default class Callback<
     Arguments extends unknown[] = unknown[]

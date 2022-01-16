@@ -1,10 +1,10 @@
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import Message from "@alirya/message/message";
-import Callback from "@alirya/validator/validatable/callback-function-parameters";
-import IsEmpty from "../boolean/empty";
-import MessageStatic from "@alirya/validator/message/function/static-parameters";
-import Static from "@alirya/validator/validatable/static";
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import Message from '@alirya/message/message';
+import Callback from '@alirya/validator/validatable/callback-function-parameters';
+import IsEmpty from '../boolean/empty';
+import MessageStatic from '@alirya/validator/message/function/static-parameters';
+import Static from '@alirya/validator/validatable/static';
 
 export default function EmptyParameters<ValueType extends string, MessageType>(
     value : ValueType,

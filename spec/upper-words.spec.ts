@@ -1,9 +1,9 @@
-import UpperWords from "../dist/upper-words-parameters";
+import UpperWords from '../dist/upper-words-parameters';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-describe("construct & getter", function() {
+describe('construct & getter', function() {
 
 
     let map : [string, string, RegExp|string][] = [

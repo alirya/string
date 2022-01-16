@@ -1,7 +1,7 @@
-import Guard from "../boolean/maximum-parameters";
-import Callback from "@alirya/function/assert/callback-parameters";
-import MaximumError from "./throwable/maximum-parameters";
-import Count from "../number/count";
+import Guard from '../boolean/maximum-parameters';
+import Callback from '@alirya/function/assert/callback-parameters';
+import MaximumError from './throwable/maximum-parameters';
+import Count from '../number/count';
 
 
 export default function MaximumParameters(
@@ -14,7 +14,7 @@ export default function MaximumParameters(
 
     let guard = (value : string, maximum : number, inclusive : boolean) => {
         return Guard(value, maximum, inclusive, converter);
-    }
+    };
 
     Callback(value, guard, error, maximum, inclusive);
 }

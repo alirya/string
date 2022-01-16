@@ -1,6 +1,6 @@
-import String_ from "../../../dist/assert/string/string-parameters";
+import String_ from '../../../dist/assert/string/string-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let data = new Map<[any, boolean, string?], string>();
 

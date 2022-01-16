@@ -1,5 +1,5 @@
-import Separator from "../separator/separator";
-import SegmentParameters from "./segment-parameters";
+import Separator from '../separator/separator';
+import SegmentParameters from './segment-parameters';
 
 /**
  * check if {@param compare} is part of {@param root}

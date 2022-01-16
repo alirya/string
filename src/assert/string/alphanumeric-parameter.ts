@@ -1,6 +1,6 @@
-import Validatable from "@alirya/validatable/validatable";
-import Value from "@alirya/value/value";
-import AlphanumericParameters from "./alphanumeric-parameters";
+import Validatable from '@alirya/validatable/validatable';
+import Value from '@alirya/value/value';
+import AlphanumericParameters from './alphanumeric-parameters';
 
 export type AlphanumericArgument = Validatable & Value<string> & {subject ?: string};
 

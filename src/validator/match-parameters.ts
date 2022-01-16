@@ -1,8 +1,8 @@
-import Validator from "@alirya/validator/validator";
-import MatchValidatable from "../validatable/match-parameters";
-import Instance from "@alirya/validator/validatable/validatable";
-import MatchString from "../assert/string/match-parameters";
-import Dynamic from "@alirya/validator/message/function/validatable-parameters";
+import Validator from '@alirya/validator/validator';
+import MatchValidatable from '../validatable/match-parameters';
+import Instance from '@alirya/validator/validatable/validatable';
+import MatchString from '../assert/string/match-parameters';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 
 export default function MatchParameters(
     pattern : RegExp,
@@ -22,6 +22,6 @@ export default function MatchParameters<MessageType>(
 
         return new MatchValidatable(value, pattern, message);
 
-    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
+    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
 }
 

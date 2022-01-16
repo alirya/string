@@ -1,6 +1,6 @@
-import Guard from "../boolean/numeric";
-import Callback from "@alirya/function/assert/callback-parameters";
-import NumericError from "./throwable/numeric-parameters";
+import Guard from '../boolean/numeric';
+import Callback from '@alirya/function/assert/callback-parameters';
+import NumericError from './throwable/numeric-parameters';
 
 export default function Numeric(
     value : string,

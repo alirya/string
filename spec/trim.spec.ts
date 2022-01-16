@@ -1,8 +1,8 @@
-import Trim from "../dist/trim-parameters";
+import Trim from '../dist/trim-parameters';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe("trim", function() {
+describe('trim', function() {
 
 
     it(`trim to abcde`, () => expect(Trim('[abcde]', '[]')).toBe('abcde'));

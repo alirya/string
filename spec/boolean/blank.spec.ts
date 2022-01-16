@@ -1,6 +1,6 @@
-import Blank from "../../dist/boolean/blank";
+import Blank from '../../dist/boolean/blank';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 it('blank', ()=>{

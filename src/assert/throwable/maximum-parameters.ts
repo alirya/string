@@ -1,5 +1,5 @@
-import MaximumType from "../string/maximum-parameters";
-import Count from "../../number/count";
+import MaximumType from '../string/maximum-parameters';
+import Count from '../../number/count';
 
 export default function MaximumParameters(
     value : string,
@@ -10,5 +10,5 @@ export default function MaximumParameters(
     subject : string = 'string',
 ) : Error {
 
-    return new Error(MaximumType(value, false, maximum, inclusive, converter, criteria, subject))
+    return new Error(MaximumType(value, false, maximum, inclusive, converter, criteria, subject));
 }

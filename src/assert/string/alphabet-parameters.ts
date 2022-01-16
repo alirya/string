@@ -1,4 +1,4 @@
-import Match from "../../value/match";
+import Match from '../../value/match';
 
 export default function AlphabetParameters(
     value : string,
@@ -31,7 +31,7 @@ export default function AlphabetParameters(
 
             strings[2] = 'alphabet,';
 
-            strings.push('contains', `"${match.match[0]}"`)
+            strings.push('contains', `"${match.match[0]}"`);
         }
     }
 

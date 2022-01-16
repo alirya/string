@@ -1,6 +1,6 @@
-import Maximum from "../../dist/boolean/maximum-parameters";
+import Maximum from '../../dist/boolean/maximum-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`inclusive`,function() {
 

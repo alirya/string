@@ -1,4 +1,4 @@
-import Match from "../../value/match";
+import Match from '../../value/match';
 
 export default function AlphanumericParameters(
     value : string,
@@ -29,7 +29,7 @@ export default function AlphanumericParameters(
 
             strings[2] = 'alphanumeric,';
 
-            strings.push('contains', `"${match.match[0]}"`)
+            strings.push('contains', `"${match.match[0]}"`);
         }
     }
 

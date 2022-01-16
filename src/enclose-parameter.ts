@@ -1,8 +1,8 @@
-import Prefix from "./prefix/prefix";
-import Suffix from "./suffix/suffix";
-import String from "./string/string";
-import Circumfix from "./circumfix/circumfix";
-import EncloseParameters from "./enclose-parameters";
+import Prefix from './prefix/prefix';
+import Suffix from './suffix/suffix';
+import String from './string/string';
+import Circumfix from './circumfix/circumfix';
+import EncloseParameters from './enclose-parameters';
 
 export type EncloseArgumentPair = String & Prefix & Suffix;
 export type EncloseArgumentCircumfix = String & Circumfix;

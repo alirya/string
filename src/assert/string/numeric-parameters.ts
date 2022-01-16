@@ -1,4 +1,4 @@
-import Match from "../../value/match";
+import Match from '../../value/match';
 
 export default function NumericParameters(
     value : string,
@@ -8,7 +8,7 @@ export default function NumericParameters(
 
     const strings : string[] = [];
 
-    strings.push(subject)
+    strings.push(subject);
 
     if(valid) {
 

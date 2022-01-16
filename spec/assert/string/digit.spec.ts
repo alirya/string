@@ -1,6 +1,6 @@
-import Digit from "../../../dist/assert/string/digit-parameters";
+import Digit from '../../../dist/assert/string/digit-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 

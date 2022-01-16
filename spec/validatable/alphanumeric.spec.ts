@@ -1,10 +1,10 @@
-import ALPHABET from "../../dist/alphabet";
-import DIGIT from "../../dist/digit";
-import Alphanumeric from "../../dist/validatable/alphanumeric-parameters";
-import AlphanumericMessage from "../../dist/assert/string/alphanumeric-parameters";
-import AlphanumericMessageArgument from "../../dist/assert/string/alphanumeric-parameters";
+import ALPHABET from '../../dist/alphabet';
+import DIGIT from '../../dist/digit';
+import Alphanumeric from '../../dist/validatable/alphanumeric-parameters';
+import AlphanumericMessage from '../../dist/assert/string/alphanumeric-parameters';
+import AlphanumericMessageArgument from '../../dist/assert/string/alphanumeric-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough()});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map = new Map<string, [boolean, string]>();
 

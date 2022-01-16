@@ -1,6 +1,6 @@
-import Validatable from "@alirya/validatable/validatable";
-import Value from "@alirya/value/value";
-import EmptyParameters from "./empty-parameters";
+import Validatable from '@alirya/validatable/validatable';
+import Value from '@alirya/value/value';
+import EmptyParameters from './empty-parameters';
 
 export type EmptyArgument = Validatable & Value<string> & {subject?:string};
 

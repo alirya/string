@@ -1,7 +1,7 @@
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import Message from "@alirya/message/message";
-import AlphanumericParameters from "./alphanumeric-parameters";
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import Message from '@alirya/message/message';
+import AlphanumericParameters from './alphanumeric-parameters';
 
 export type AlphanumericArgument<ValueType extends string, MessageType>
     =

@@ -1,8 +1,8 @@
-import String from "../../string/string";
-import Validatable from "@alirya/validatable/validatable";
-import MinimumNumber from "@alirya/number/minimum/minimum";
-import Inclusive from "@alirya/number/inclusive/inclusive";
-import MinimumParameters from "./minimum-parameters";
+import String from '../../string/string';
+import Validatable from '@alirya/validatable/validatable';
+import MinimumNumber from '@alirya/number/minimum/minimum';
+import Inclusive from '@alirya/number/inclusive/inclusive';
+import MinimumParameters from './minimum-parameters';
 
 export type MinimumArgument = Validatable & String & MinimumNumber & Inclusive & {
     converter ?: (value:string)=>number,

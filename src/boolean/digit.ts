@@ -1,4 +1,4 @@
-import Match from "./match-parameters";
+import Match from './match-parameters';
 
 /**
  * check if {@param string} is digit
@@ -6,5 +6,5 @@ import Match from "./match-parameters";
  */
 export default function Digit(string : string) : boolean {
 
-    return Match(string, /^\d*$/i)
+    return Match(string, /^\d*$/i);
 }

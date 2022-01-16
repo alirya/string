@@ -1,5 +1,5 @@
-import AssertNotEmpty from "../assert/not-empty";
-import NotEmptyError from "../assert/throwable/not-empty-parameters";
+import AssertNotEmpty from '../assert/not-empty';
+import NotEmptyError from '../assert/throwable/not-empty-parameters';
 
 export default function NotEmpty(
     value : string,

@@ -1,4 +1,4 @@
-import {padStart} from "lodash";
+import {padStart} from 'lodash';
 
 /**
  * @see padStart
@@ -6,7 +6,7 @@ import {padStart} from "lodash";
 
 export default function PadPrefixParameters(value : string, length : number, prefix : string) : string {
 
-    return padStart(value, length, prefix)
+    return padStart(value, length, prefix);
 }
 
 

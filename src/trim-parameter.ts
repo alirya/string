@@ -1,8 +1,8 @@
-import String from "./string/string";
-import Suffix from "./suffix/suffix";
-import Circumfix from "./circumfix/circumfix";
-import Prefix from "./prefix/prefix";
-import TrimParameters from "./trim-parameters";
+import String from './string/string';
+import Suffix from './suffix/suffix';
+import Circumfix from './circumfix/circumfix';
+import Prefix from './prefix/prefix';
+import TrimParameters from './trim-parameters';
 
 export type TrimParameterArgumentCircumfix = String & Circumfix;
 export type TrimParameterArgumentPair = String & Prefix & Suffix;

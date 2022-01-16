@@ -1,11 +1,11 @@
-import Validator from "@alirya/validator/simple";
-import MaximumValidatable, {MaximumType} from "../validatable/maximum-parameters";
-import Count from "../number/count";
-import MaximumString from "../assert/string/maximum-parameters";
-import Dynamic from "@alirya/validator/message/function/validatable-parameters";
+import Validator from '@alirya/validator/simple';
+import MaximumValidatable, {MaximumType} from '../validatable/maximum-parameters';
+import Count from '../number/count';
+import MaximumString from '../assert/string/maximum-parameters';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 
 export type MaximumArgumentMessage<MessageType> =
-    Dynamic<string,  MessageType, [maximum : number, inclusive: boolean, converter : (string:string)=>number]>
+    Dynamic<string,  MessageType, [maximum : number, inclusive: boolean, converter : (string:string)=>number]>;
 
 export default function MaximumParameters(
     maximum : number,
@@ -43,7 +43,7 @@ export default function MaximumParameters<MessageType>(
 
     return function (value) {
 
-        return MaximumValidatable(value, maximum, inclusive, message, converter)
+        return MaximumValidatable(value, maximum, inclusive, message, converter);
 
-    } as Validator<string, string, MaximumType<string, MessageType>>
+    } as Validator<string, string, MaximumType<string, MessageType>>;
 }

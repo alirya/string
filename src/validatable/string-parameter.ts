@@ -1,9 +1,9 @@
-import Value from "@alirya/value/value";
-import Return from "@alirya/validator/validatable/simple";
-import Instance from "@alirya/validator/validatable/validatable";
-import Message from "@alirya/message/message";
-import StringParameters from "./string-parameters";
-import Simple from "@alirya/validator/message/function/simple-parameter";
+import Value from '@alirya/value/value';
+import Return from '@alirya/validator/validatable/simple';
+import Instance from '@alirya/validator/validatable/validatable';
+import Message from '@alirya/message/message';
+import StringParameters from './string-parameters';
+import Simple from '@alirya/validator/message/function/simple-parameter';
 
 export type StringArgument<Argument, MessageType> =
     Value<Argument> &

@@ -1,10 +1,10 @@
-import Validator from "@alirya/validator/validator";
-import MinimumValidatable, {MinimumType} from "../validatable/minimum-parameters";
-import Count from "../number/count";
-import MinimumString from "../assert/string/minimum-parameters";
+import Validator from '@alirya/validator/validator';
+import MinimumValidatable, {MinimumType} from '../validatable/minimum-parameters';
+import Count from '../number/count';
+import MinimumString from '../assert/string/minimum-parameters';
 
 export type MinimumParametersArgumentMessage<MessageType> =
-    (value:string, valid : boolean, minimum : number, inclusive : boolean)=>MessageType
+    (value:string, valid : boolean, minimum : number, inclusive : boolean)=>MessageType;
 
 
 export default function MinimumParameters(
@@ -34,7 +34,7 @@ export default function MinimumParameters<MessageType>(
 
     return function (value) {
 
-        return MinimumValidatable(value, minimum, inclusive, message, converter)
+        return MinimumValidatable(value, minimum, inclusive, message, converter);
 
-    } as Validator<string, string, boolean, boolean, MinimumType<string, MessageType>>
+    } as Validator<string, string, boolean, boolean, MinimumType<string, MessageType>>;
 }

@@ -1,7 +1,7 @@
-import AffixOption from "./affix/affix";
-import PadPrefix from "./pad-prefix-parameters";
-import PadSuffix from "./pad-suffix-parameters";
-import PadCircumfix from "./pad-circumfix-parameters";
+import AffixOption from './affix/affix';
+import PadPrefix from './pad-prefix-parameters';
+import PadSuffix from './pad-suffix-parameters';
+import PadCircumfix from './pad-circumfix-parameters';
 
 /**
  * pad string depend on {@param mode}

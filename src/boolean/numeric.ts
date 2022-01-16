@@ -1,4 +1,4 @@
-import Match from "./match-parameters";
+import Match from './match-parameters';
 
 /**
  * check if {@param source} is numeric

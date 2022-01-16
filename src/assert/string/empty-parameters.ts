@@ -1,4 +1,4 @@
-import Truncate from "../../truncate-parameters";
+import Truncate from '../../truncate-parameters';
 
 
 export default function EmptyParameters(

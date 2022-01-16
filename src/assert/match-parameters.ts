@@ -1,6 +1,6 @@
-import Guard from "../boolean/match-parameters";
-import Callback from "@alirya/function/assert/callback-parameters";
-import MatchError from "./throwable/match-parameters";
+import Guard from '../boolean/match-parameters';
+import Callback from '@alirya/function/assert/callback-parameters';
+import MatchError from './throwable/match-parameters';
 
 export default function MatchParameters(
     value : string,

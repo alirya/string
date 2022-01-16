@@ -1,10 +1,10 @@
-import Validator from "@alirya/validator/validator";
-import Validatable from "@alirya/validatable/validatable";
-import Message from "@alirya/message/message";
-import Value from "@alirya/value/value";
-import Instance from "@alirya/validator/validatable/validatable";
-import Pattern from "../pattern/pattern/pattern";
-import MatchParameters from "./match-parameters";
+import Validator from '@alirya/validator/validator';
+import Validatable from '@alirya/validatable/validatable';
+import Message from '@alirya/message/message';
+import Value from '@alirya/value/value';
+import Instance from '@alirya/validator/validatable/validatable';
+import Pattern from '../pattern/pattern/pattern';
+import MatchParameters from './match-parameters';
 
 
 export default function MatchParameter(

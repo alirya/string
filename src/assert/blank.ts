@@ -1,6 +1,6 @@
-import Guard from "../boolean/blank";
-import Callback from "@alirya/function/assert/callback-parameters";
-import BlankError from "./throwable/blank-parameters";
+import Guard from '../boolean/blank';
+import Callback from '@alirya/function/assert/callback-parameters';
+import BlankError from './throwable/blank-parameters';
 
 export default function Blank(
     value : string,

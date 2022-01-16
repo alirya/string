@@ -1,6 +1,6 @@
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import ValueOf from "@alirya/value/value-of/value-of";
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import ValueOf from '@alirya/value/value-of/value-of';
 
 export default class Match<ValueType extends string>
     implements

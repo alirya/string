@@ -1,6 +1,6 @@
-import Match from "../../../dist/assert/string/match-parameters";
+import Match from '../../../dist/assert/string/match-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 

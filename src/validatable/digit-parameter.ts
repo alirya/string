@@ -1,7 +1,7 @@
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import Message from "@alirya/message/message";
-import DigitParameters from "./digit-parameters";
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import Message from '@alirya/message/message';
+import DigitParameters from './digit-parameters';
 
 export type DigitArgument<ValueType extends string, MessageType> =
     Value<ValueType> &

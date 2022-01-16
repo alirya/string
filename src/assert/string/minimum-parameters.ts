@@ -1,4 +1,4 @@
-import Count from "../../number/count";
+import Count from '../../number/count';
 
 export default function MinimumParameters(
     value : string,
@@ -32,7 +32,7 @@ export default function MinimumParameters(
 
     if(!valid) {
 
-        strings.push(`actual`, criteria, converter(value).toString())
+        strings.push(`actual`, criteria, converter(value).toString());
 
     }
 

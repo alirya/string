@@ -1,7 +1,7 @@
-import Guard from "../boolean/minimum-parameters";
-import Callback from "@alirya/function/assert/callback-parameters";
-import MinimumError from "./throwable/minimum-parameters";
-import Count from "../number/count";
+import Guard from '../boolean/minimum-parameters';
+import Callback from '@alirya/function/assert/callback-parameters';
+import MinimumError from './throwable/minimum-parameters';
+import Count from '../number/count';
 
 
 export default function MinimumParameters(
@@ -14,7 +14,7 @@ export default function MinimumParameters(
 
     let guard = (value : string, minimum : number, inclusive : boolean) => {
         return Guard(value, minimum, inclusive, converter);
-    }
+    };
 
     Callback(value, guard, error, minimum, inclusive);
 }

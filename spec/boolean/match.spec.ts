@@ -1,8 +1,8 @@
-import Match from "../../dist/boolean/match-parameters";
-import ALPHABET from "../../dist/alphabet";
-import DIGIT from "../../dist/digit";
+import Match from '../../dist/boolean/match-parameters';
+import ALPHABET from '../../dist/alphabet';
+import DIGIT from '../../dist/digit';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map = new Map<string, [boolean, RegExp, string]>();
 

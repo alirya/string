@@ -1,8 +1,8 @@
-import Validator from "@alirya/validator/validator";
-import NumericValidatable from "../validatable/numeric-parameters";
-import Instance from "@alirya/validator/validatable/validatable";
-import NumericString from "../assert/string/numeric-parameters";
-import Dynamic from "@alirya/validator/message/function/validatable-parameters";
+import Validator from '@alirya/validator/validator';
+import NumericValidatable from '../validatable/numeric-parameters';
+import Instance from '@alirya/validator/validatable/validatable';
+import NumericString from '../assert/string/numeric-parameters';
+import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 
 export default function NumericParameters() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 
@@ -18,5 +18,5 @@ export default function NumericParameters<MessageType>(
 
         return NumericValidatable(value, message);
 
-    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
+    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
 }

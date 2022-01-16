@@ -1,13 +1,13 @@
-import Validator from "@alirya/validator/validator";
-import Validatable from "@alirya/validatable/validatable";
-import Message from "@alirya/message/message";
-import Value from "@alirya/value/value";
-import MaximumValidatable, {MaximumType} from "../validatable/maximum-parameters";
-import Inclusive from "@alirya/number/inclusive/inclusive";
-import MaximumNumber from "@alirya/number/maximum/maximum";
-import StrictOmit from "@alirya/object/strict-omit";
-import MaximumParameters from "./maximum-parameters";
-import {Object} from "ts-toolbelt";
+import Validator from '@alirya/validator/validator';
+import Validatable from '@alirya/validatable/validatable';
+import Message from '@alirya/message/message';
+import Value from '@alirya/value/value';
+import MaximumValidatable, {MaximumType} from '../validatable/maximum-parameters';
+import Inclusive from '@alirya/number/inclusive/inclusive';
+import MaximumNumber from '@alirya/number/maximum/maximum';
+import StrictOmit from '@alirya/object/strict-omit';
+import MaximumParameters from './maximum-parameters';
+import {Object} from 'ts-toolbelt';
 
 
 export type MaximumParameterArgument<MessageType> =
@@ -15,7 +15,7 @@ export type MaximumParameterArgument<MessageType> =
     Inclusive &
     Validatable &
     {converter ?: (value:string)=>number} &
-    Partial<Message<(result:Readonly<Value<string> & Inclusive & MaximumNumber & Validatable>)=>MessageType>>
+    Partial<Message<(result:Readonly<Value<string> & Inclusive & MaximumNumber & Validatable>)=>MessageType>>;
 
 export default function MaximumParameter(
     {

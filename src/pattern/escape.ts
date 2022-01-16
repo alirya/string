@@ -1,4 +1,4 @@
-import {escapeRegExp} from "lodash";
+import {escapeRegExp} from 'lodash';
 
 const Escape : (string : string) => string = escapeRegExp;
 export default Escape;

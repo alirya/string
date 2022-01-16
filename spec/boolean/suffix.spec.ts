@@ -1,6 +1,6 @@
-import Suffix from "../../dist/boolean/suffix-parameters";
+import Suffix from '../../dist/boolean/suffix-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 it('suffix', ()=>{

@@ -1,6 +1,6 @@
-import String from "../string/string";
-import Separator from "../separator/separator";
-import AlphanumericParameters from "./segment-parameters";
+import String from '../string/string';
+import Separator from '../separator/separator';
+import AlphanumericParameters from './segment-parameters';
 
 /**
  * split {@param string} to its each alphanumeric marked by {@param separator}

@@ -1,4 +1,4 @@
-import Count from "../../number/count";
+import Count from '../../number/count';
 
 export default function MaximumParameters(
     value : string,
@@ -12,16 +12,16 @@ export default function MaximumParameters(
 
     const strings : string[] = [];
 
-    strings.push(subject, criteria)
+    strings.push(subject, criteria);
 
 
     if(valid) {
 
-        strings.push('is lower')
+        strings.push('is lower');
 
     } else {
 
-        strings.push('must lower')
+        strings.push('must lower');
     }
 
     if(inclusive) {
@@ -33,7 +33,7 @@ export default function MaximumParameters(
 
     if(!valid) {
 
-        strings.push(`actual`, criteria, converter(value).toString())
+        strings.push(`actual`, criteria, converter(value).toString());
 
     }
 

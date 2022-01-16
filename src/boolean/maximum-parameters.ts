@@ -1,5 +1,5 @@
-import Lower from "@alirya/number/boolean/lower-parameters"
-import Count from "../number/count";
+import Lower from '@alirya/number/boolean/lower-parameters';
+import Count from '../number/count';
 
 /**
  * check if {@param string} length/size is lower than {@param maximum} or equal if {@param inclusive} is "true"
@@ -14,7 +14,7 @@ export default function MaximumParameters(
     converter : (value:string)=>number = Count
 ) : boolean {
 
-    return Lower(converter(value), maximum, inclusive)
+    return Lower(converter(value), maximum, inclusive);
 }
 
 

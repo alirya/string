@@ -1,6 +1,6 @@
-import Minimum from "../../../dist/assert/string/minimum-parameters";
+import Minimum from '../../../dist/assert/string/minimum-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe('true valid', ()=>{
 

@@ -1,9 +1,9 @@
-import UpperFirst from "../dist/upper-first";
+import UpperFirst from '../dist/upper-first';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-describe("construct & getter", function() {
+describe('construct & getter', function() {
 
     let map = new Map<string, string>();
     map.set('abcde', 'Abcde');

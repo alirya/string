@@ -1,4 +1,4 @@
-import {padEnd} from "lodash";
+import {padEnd} from 'lodash';
 
 /**
  * @see padEnd

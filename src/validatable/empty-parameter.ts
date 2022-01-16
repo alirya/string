@@ -1,9 +1,9 @@
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
-import Message from "@alirya/message/message";
-import EmptyParameters from "./empty-parameters";
-import MessageStatic from "@alirya/validator/message/function/static-parameter";
-import Static from "@alirya/validator/validatable/static";
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
+import Message from '@alirya/message/message';
+import EmptyParameters from './empty-parameters';
+import MessageStatic from '@alirya/validator/message/function/static-parameter';
+import Static from '@alirya/validator/validatable/static';
 
 export type EmptyArgument<ValueType extends string, MessageType> =
     Value<ValueType> &

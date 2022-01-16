@@ -1,7 +1,7 @@
-import Validatable from "@alirya/validatable/validatable";
-import Value from "@alirya/value/value";
-import Pattern from "../../pattern/pattern/pattern";
-import MatchParameters from "./match-parameters";
+import Validatable from '@alirya/validatable/validatable';
+import Value from '@alirya/value/value';
+import Pattern from '../../pattern/pattern/pattern';
+import MatchParameters from './match-parameters';
 
 export type MatchArgument = Validatable & Value<string> & Pattern & {subject ?: string};
 

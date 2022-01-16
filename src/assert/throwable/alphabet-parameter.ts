@@ -1,5 +1,5 @@
-import Value from "@alirya/value/value";
-import AlphabetParameters from "./alphabet-parameters";
+import Value from '@alirya/value/value';
+import AlphabetParameters from './alphabet-parameters';
 
 export type AlphabetArgument = Value<string> & {subject ?: string};
 

@@ -1,6 +1,6 @@
-import Minimum from "../../dist/boolean/minimum-parameters";
+import Minimum from '../../dist/boolean/minimum-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`inclusive`,function() {
 

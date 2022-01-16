@@ -1,4 +1,4 @@
-import {lowerFirst} from "lodash";
+import {lowerFirst} from 'lodash';
 
 /**
  * @see lowerFirst

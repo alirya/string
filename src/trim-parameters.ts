@@ -1,6 +1,6 @@
-import {trim} from "lodash";
-import TrimSuffix from "./trim-suffix-parameters";
-import TrimPrefix from "./trim-prefix-parameters";
+import {trim} from 'lodash';
+import TrimSuffix from './trim-suffix-parameters';
+import TrimPrefix from './trim-prefix-parameters';
 
 export default function TrimParameters(
     value: string,
@@ -26,7 +26,7 @@ export default function TrimParameters(
 
     } else {
 
-        value = trim(value, prefix)
+        value = trim(value, prefix);
     }
 
     return value;

@@ -1,6 +1,6 @@
-import {padStart} from "lodash";
-import PadPrefix from "./pad-prefix-parameters";
-import PadSuffix from "./pad-suffix-parameters";
+import {padStart} from 'lodash';
+import PadPrefix from './pad-prefix-parameters';
+import PadSuffix from './pad-suffix-parameters';
 
 
 /**

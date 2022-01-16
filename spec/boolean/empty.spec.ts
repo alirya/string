@@ -1,8 +1,8 @@
-import Empty from "../../dist/boolean/empty";
-import ALPHABET from "../../dist/alphabet";
-import DIGIT from "../../dist/digit";
+import Empty from '../../dist/boolean/empty';
+import ALPHABET from '../../dist/alphabet';
+import DIGIT from '../../dist/digit';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map = new Map<string, [boolean, string]>();
 

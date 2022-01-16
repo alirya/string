@@ -1,6 +1,6 @@
-import Numeric from "../../../dist/assert/string/numeric-parameters";
+import Numeric from '../../../dist/assert/string/numeric-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 

@@ -1,6 +1,6 @@
-import Separator from "./separator/separator";
-import Argument from "@alirya/function/argument/argument";
-import ConditionBuilderParameters, {ConditionBuilderArgumentList} from "./condition-builder-parameters";
+import Separator from './separator/separator';
+import Argument from '@alirya/function/argument/argument';
+import ConditionBuilderParameters, {ConditionBuilderArgumentList} from './condition-builder-parameters';
 
 export type {ConditionBuilderArgumentList};
 
@@ -14,6 +14,6 @@ export default function ConditionBuilderParameter<Condition>(
     } : ConditionBuilderArgument<Condition>
 ) : string {
 
-    return ConditionBuilderParameters(argument, condition, separator)
+    return ConditionBuilderParameters(argument, condition, separator);
 }
 

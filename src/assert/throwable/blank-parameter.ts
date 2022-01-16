@@ -1,5 +1,5 @@
-import Value from "@alirya/value/value";
-import BlankParameters from "./blank-parameters";
+import Value from '@alirya/value/value';
+import BlankParameters from './blank-parameters';
 
 export type BlankArgument = Value<string> & {subject ?: string};
 

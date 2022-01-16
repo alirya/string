@@ -1,4 +1,4 @@
-import Match from "../../value/match";
+import Match from '../../value/match';
 
 export default function DigitParameters(
     value : string,
@@ -28,7 +28,7 @@ export default function DigitParameters(
 
             strings[2] = 'digit,';
 
-            strings.push('contains', `"${match.match[0]}"`)
+            strings.push('contains', `"${match.match[0]}"`);
         }
     }
 

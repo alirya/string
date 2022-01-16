@@ -1,4 +1,4 @@
-import Truncate from "../../truncate-parameters";
+import Truncate from '../../truncate-parameters';
 
 export default function BlankParameters(
     valid : boolean,
@@ -25,7 +25,7 @@ export default function BlankParameters(
 
     if(!valid) {
 
-        strings.push(`, actual "${Truncate(value, 8)}"`)
+        strings.push(`, actual "${Truncate(value, 8)}"`);
     }
 
     return strings.join(' ') + '.';

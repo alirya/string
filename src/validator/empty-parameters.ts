@@ -1,8 +1,8 @@
-import Validator from "@alirya/validator/simple";
-import EmptyValidatable from "../validatable/empty-parameters";
-import Instance from "@alirya/validator/validatable/validatable";
-import EmptyString from "../assert/string/empty-parameters";
-import Static from "@alirya/validator/message/function/static-parameters";
+import Validator from '@alirya/validator/simple';
+import EmptyValidatable from '../validatable/empty-parameters';
+import Instance from '@alirya/validator/validatable/validatable';
+import EmptyString from '../assert/string/empty-parameters';
+import Static from '@alirya/validator/message/function/static-parameters';
 
 
 export default function EmptyParameters() : Validator<string, '', Readonly<Instance<'', string>>>;
@@ -19,5 +19,5 @@ export default function EmptyParameters<MessageType>(
 
         return EmptyValidatable(value, message);
 
-    } as Validator<string, '', Readonly<Instance<'', MessageType>>>
+    } as Validator<string, '', Readonly<Instance<'', MessageType>>>;
 }

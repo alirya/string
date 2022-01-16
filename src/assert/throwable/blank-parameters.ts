@@ -1,4 +1,4 @@
-import BlankType from "../string/blank-parameters";
+import BlankType from '../string/blank-parameters';
 
 
 export default function BlankParameters(
@@ -6,7 +6,7 @@ export default function BlankParameters(
     subject ?: string
 ) : Error {
 
-    return new Error(BlankType(false, value, subject))
+    return new Error(BlankType(false, value, subject));
 
 }
 

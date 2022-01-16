@@ -1,5 +1,5 @@
-import Value from "@alirya/value/value";
-import NumericParameters from "./numeric-parameters";
+import Value from '@alirya/value/value';
+import NumericParameters from './numeric-parameters';
 
 
 export default function NumericParameter({

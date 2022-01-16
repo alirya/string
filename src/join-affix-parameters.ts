@@ -1,4 +1,4 @@
-import SafeCast from "./safe-cast";
+import SafeCast from './safe-cast';
 
 export default function JoinAffixParameters(
     value : string[],

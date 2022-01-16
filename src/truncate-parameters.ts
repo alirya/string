@@ -1,4 +1,4 @@
-import {truncate} from "lodash";
+import {truncate} from 'lodash';
 
 export default function TruncateParameters (
     value : string,
@@ -11,6 +11,6 @@ export default function TruncateParameters (
         length : length,
         omission : omission,
         separator : separator
-    })
+    });
 }
 

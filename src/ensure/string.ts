@@ -1,5 +1,5 @@
-import AssertString from "../assert/string";
-import StringError from "../assert/throwable/string-parameters";
+import AssertString from '../assert/string';
+import StringError from '../assert/throwable/string-parameters';
 
 export default function String(
     value : unknown,

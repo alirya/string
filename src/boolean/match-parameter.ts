@@ -1,6 +1,6 @@
-import Value from "@alirya/value/value";
-import Pattern from "../pattern/pattern/pattern";
-import MatchParameters from "./match-parameters";
+import Value from '@alirya/value/value';
+import Pattern from '../pattern/pattern/pattern';
+import MatchParameters from './match-parameters';
 /**
  * match string {@param value} against {@param pattern}
  *

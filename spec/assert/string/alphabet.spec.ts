@@ -1,6 +1,6 @@
-import Alphabet from "../../../dist/assert/string/alphabet-parameters";
+import Alphabet from '../../../dist/assert/string/alphabet-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 

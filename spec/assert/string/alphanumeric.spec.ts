@@ -1,6 +1,6 @@
-import Alphanumeric from "../../../dist/assert/string/alphanumeric-parameters";
+import Alphanumeric from '../../../dist/assert/string/alphanumeric-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 

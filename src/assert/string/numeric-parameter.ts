@@ -1,8 +1,8 @@
-import Validatable from "@alirya/validatable/validatable";
-import Value from "@alirya/value/value";
-import NumericParameters from "./numeric-parameters";
+import Validatable from '@alirya/validatable/validatable';
+import Value from '@alirya/value/value';
+import NumericParameters from './numeric-parameters';
 
-export type NumericArgument = Validatable & Value<string> & {subject?:string}
+export type NumericArgument = Validatable & Value<string> & {subject?:string};
 
 export default function NumericParameter({
     valid,

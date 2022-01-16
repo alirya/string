@@ -1,4 +1,4 @@
-import MatchType from "../string/match-parameters";
+import MatchType from '../string/match-parameters';
 
 
 export default function MatchParameters(
@@ -7,7 +7,7 @@ export default function MatchParameters(
     subject : string = 'string',
 ) : Error {
 
-    return new Error(MatchType(value, false, pattern, subject))
+    return new Error(MatchType(value, false, pattern, subject));
 }
 
 

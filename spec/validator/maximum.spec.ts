@@ -1,7 +1,7 @@
-import Maximum from "../../dist/validator/maximum-parameters";
-import MaximumString from "../../dist/assert/string/maximum-parameters";
+import Maximum from '../../dist/validator/maximum-parameters';
+import MaximumString from '../../dist/assert/string/maximum-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
@@ -76,14 +76,14 @@ describe(`value equal to minimum`,function() {
             expect(greater.value).toBe('a');
             expect(greater.maximum).toBe(1);
             expect(greater.inclusive).toBeTrue();
-        })
+        });
     });
 
     describe(`exclusive`,function() {
 
         let validator = Maximum(1, false, MaximumString);
         let greater = validator('a');
-        greater
+        greater;
         it('validate object', ()=>{
 
             expect(greater.valid).toBeFalse();
@@ -91,7 +91,7 @@ describe(`value equal to minimum`,function() {
             expect(greater.maximum).toBe(1);
             expect(greater.inclusive).toBeFalse();
 
-        })
+        });
     });
 });
 
@@ -109,7 +109,7 @@ describe(`value greater to minimum`,function() {
             expect(greater.maximum).toBe(1);
             expect(greater.inclusive).toBeTrue();
 
-        })
+        });
     });
 
     describe(`exclusive`,function() {
@@ -124,7 +124,7 @@ describe(`value greater to minimum`,function() {
             expect(greater.maximum).toBe(1);
             expect(greater.inclusive).toBeFalse();
 
-        })
+        });
     });
 });
 
@@ -142,7 +142,7 @@ describe(`value lower to minimum`,function() {
             expect(greater.maximum).toBe(2);
             expect(greater.inclusive).toBeTrue();
 
-        })
+        });
     });
 
     describe(`exclusive`,function() {
@@ -157,6 +157,6 @@ describe(`value lower to minimum`,function() {
             expect(greater.maximum).toBe(2);
             expect(greater.inclusive).toBeFalse();
 
-        })
+        });
     });
 });

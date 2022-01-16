@@ -1,5 +1,5 @@
-import String from "./string/string";
-import Prefix from "./prefix/prefix";
+import String from './string/string';
+import Prefix from './prefix/prefix';
 
 export type PrefixArgument = String & Prefix;
 
