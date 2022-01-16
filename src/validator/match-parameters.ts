@@ -1,8 +1,8 @@
-import Validator from "@dikac/t-validator/validator";
+import Validator from "@alirya/validator/validator";
 import MatchValidatable from "../validatable/match-parameters";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Instance from "@alirya/validator/validatable/validatable";
 import MatchString from "../assert/string/match-parameters";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
+import Dynamic from "@alirya/validator/message/function/validatable-parameters";
 
 export default function MatchParameters(
     pattern : RegExp,

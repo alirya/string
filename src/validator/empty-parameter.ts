@@ -1,8 +1,8 @@
-import Validator from "@dikac/t-validator/simple";
+import Validator from "@alirya/validator/simple";
 import EmptyValidatable from "../validatable/empty-parameter";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Instance from "@alirya/validator/validatable/validatable";
 import EmptyString from "../assert/string/empty-parameter";
-import Static from "@dikac/t-validator/message/function/static-parameter";
+import Static from "@alirya/validator/message/function/static-parameter";
 
 export default function EmptyParameter() : Validator<string, '', Readonly<Instance<'', string>>>;
 

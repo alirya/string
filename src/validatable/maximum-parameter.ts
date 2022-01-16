@@ -1,8 +1,8 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
-import MaximumNumber from "@dikac/t-number/maximum/maximum";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
+import Message from "@alirya/message/message";
+import Inclusive from "@alirya/number/inclusive/inclusive";
+import MaximumNumber from "@alirya/number/maximum/maximum";
 import {MaximumType} from "./maximum-parameters";
 import MaximumParameters from "./maximum-parameters";
 

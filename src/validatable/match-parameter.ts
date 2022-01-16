@@ -1,8 +1,8 @@
-import Value from "@dikac/t-value/value";
-import Message from "@dikac/t-message/message";
+import Value from "@alirya/value/value";
+import Message from "@alirya/message/message";
 import Pattern from "../pattern/pattern/pattern";
 import Match from "../value/match";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
+import Dynamic from "@alirya/validator/message/function/validatable-parameter";
 
 export type MatchArgument<ValueType, MessageType>
     =

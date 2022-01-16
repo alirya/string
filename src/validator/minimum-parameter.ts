@@ -1,12 +1,12 @@
-import Validator from "@dikac/t-validator/validator";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Value from "@dikac/t-value/value";
+import Validator from "@alirya/validator/validator";
+import Validatable from "@alirya/validatable/validatable";
+import Message from "@alirya/message/message";
+import Value from "@alirya/value/value";
 import MinimumValidatable, {MinimumType} from "../validatable/minimum-parameter";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
-import MinimumNumber from "@dikac/t-number/minimum/minimum";
-import StrictOmit from "@dikac/t-object/strict-omit";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
+import Inclusive from "@alirya/number/inclusive/inclusive";
+import MinimumNumber from "@alirya/number/minimum/minimum";
+import StrictOmit from "@alirya/object/strict-omit";
+import Dynamic from "@alirya/validator/message/function/validatable-parameter";
 
 export type Argument<MessageType> =
     MinimumNumber &

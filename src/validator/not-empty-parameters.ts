@@ -1,8 +1,8 @@
-import Validator from "@dikac/t-validator/validator";
+import Validator from "@alirya/validator/validator";
 import NotEmptyValidatable from "../validatable/not-empty-parameters";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Instance from "@alirya/validator/validatable/validatable";
 import NotEmptyString from "../assert/string/not-empty-parameters";
-import FunctionStatic from "@dikac/t-validator/message/function/static-parameters";
+import FunctionStatic from "@alirya/validator/message/function/static-parameters";
 
 export default function NotEmptyParameters() : Validator<string, '', true, false, Readonly<Instance<string, string>>>;
 

@@ -1,2 +1,2 @@
-# t-string
+# string
 typescript string

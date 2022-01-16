@@ -1,4 +1,4 @@
-import Lower from "@dikac/t-number/boolean/lower-parameters"
+import Lower from "@alirya/number/boolean/lower-parameters"
 import Count from "../number/count";
 
 /**

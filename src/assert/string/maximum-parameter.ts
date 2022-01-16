@@ -1,7 +1,7 @@
-import Validatable from "@dikac/t-validatable/validatable";
+import Validatable from "@alirya/validatable/validatable";
 import String from "../../string/string";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
-import MaximumNumber from "@dikac/t-number/maximum/maximum";
+import Inclusive from "@alirya/number/inclusive/inclusive";
+import MaximumNumber from "@alirya/number/maximum/maximum";
 import MaximumParameters from "./maximum-parameters";
 
 export type MaximumArgument = Validatable & String & MaximumNumber & Inclusive & {

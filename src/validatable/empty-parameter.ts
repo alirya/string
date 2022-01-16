@@ -1,9 +1,9 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
+import Message from "@alirya/message/message";
 import EmptyParameters from "./empty-parameters";
-import MessageStatic from "@dikac/t-validator/message/function/static-parameter";
-import Static from "@dikac/t-validator/validatable/static";
+import MessageStatic from "@alirya/validator/message/function/static-parameter";
+import Static from "@alirya/validator/validatable/static";
 
 export type EmptyArgument<ValueType extends string, MessageType> =
     Value<ValueType> &

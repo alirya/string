@@ -1,4 +1,4 @@
-import Difference from "@dikac/t-array/difference-parameters";
+import Difference from "@alirya/array/difference-parameters";
 
 /**
  * check if {@param compare} is part of {@param root}

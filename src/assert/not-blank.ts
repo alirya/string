@@ -1,5 +1,5 @@
 import Guard from "../boolean/not-blank";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import BlankError from "./throwable/not-blank-parameters";
 
 export default function NotBlank(

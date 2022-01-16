@@ -1,8 +1,8 @@
-import Validator from "@dikac/t-validator/validator";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Value from "@dikac/t-value/value";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Validator from "@alirya/validator/validator";
+import Validatable from "@alirya/validatable/validatable";
+import Message from "@alirya/message/message";
+import Value from "@alirya/value/value";
+import Instance from "@alirya/validator/validatable/validatable";
 import Pattern from "../pattern/pattern/pattern";
 import MatchParameters from "./match-parameters";
 

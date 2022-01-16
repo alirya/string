@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import DigitParameters from "./digit-parameters";
 
 export type DigitArgument = Value<string> & {subject ?: string};

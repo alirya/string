@@ -1,6 +1,6 @@
-import Value from "@dikac/t-value/value";
-import MaximumNumber from "@dikac/t-number/maximum/maximum";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import Value from "@alirya/value/value";
+import MaximumNumber from "@alirya/number/maximum/maximum";
+import Inclusive from "@alirya/number/inclusive/inclusive";
 import MaximumParameters from "./maximum-parameters";
 
 

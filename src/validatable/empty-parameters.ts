@@ -1,10 +1,10 @@
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
+import Message from "@alirya/message/message";
+import Callback from "@alirya/validator/validatable/callback-function-parameters";
 import IsEmpty from "../boolean/empty";
-import MessageStatic from "@dikac/t-validator/message/function/static-parameters";
-import Static from "@dikac/t-validator/validatable/static";
+import MessageStatic from "@alirya/validator/message/function/static-parameters";
+import Static from "@alirya/validator/validatable/static";
 
 export default function EmptyParameters<ValueType extends string, MessageType>(
     value : ValueType,

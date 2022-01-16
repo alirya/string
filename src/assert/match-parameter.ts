@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import Pattern from "../pattern/pattern/pattern";
 import MatchParameters from "./match-parameters";
 

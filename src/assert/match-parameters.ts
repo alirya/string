@@ -1,5 +1,5 @@
 import Guard from "../boolean/match-parameters";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import MatchError from "./throwable/match-parameters";
 
 export default function MatchParameters(

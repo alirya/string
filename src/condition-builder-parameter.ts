@@ -1,5 +1,5 @@
 import Separator from "./separator/separator";
-import Argument from "@dikac/t-function/argument/argument";
+import Argument from "@alirya/function/argument/argument";
 import ConditionBuilderParameters, {ConditionBuilderArgumentList} from "./condition-builder-parameters";
 
 export type {ConditionBuilderArgumentList};

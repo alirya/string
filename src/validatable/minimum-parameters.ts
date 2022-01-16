@@ -1,11 +1,11 @@
-import MinimumNumber from "@dikac/t-number/minimum/minimum";
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
+import MinimumNumber from "@alirya/number/minimum/minimum";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
+import Message from "@alirya/message/message";
 import IsMinimum from "../boolean/minimum-parameters";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import Inclusive from "@alirya/number/inclusive/inclusive";
 import Count from "../number/count";
-import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
+import Callback from "@alirya/validator/validatable/callback-function-parameters";
 
 export type MinimumType<ValueType, MessageType> =
     Readonly<Inclusive & MinimumNumber &  Value<ValueType> & Message<MessageType> & Validatable>;

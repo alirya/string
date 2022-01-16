@@ -1,8 +1,8 @@
-import Validator from "@dikac/t-validator/simple";
+import Validator from "@alirya/validator/simple";
 import StringValidatable from "../validatable/string-parameters";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Instance from "@alirya/validator/validatable/validatable";
 import StringString from "../assert/string/string-parameters";
-import Simple from "@dikac/t-validator/message/function/simple-parameters";
+import Simple from "@alirya/validator/message/function/simple-parameters";
 
 export type StringParametersType<MessageType> = Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
 

@@ -1,7 +1,7 @@
-import MaximumNumber from "@dikac/t-number/maximum/maximum"
+import MaximumNumber from "@alirya/number/maximum/maximum"
 import Count from "../number/count";
-import Value from "@dikac/t-value/value";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import Value from "@alirya/value/value";
+import Inclusive from "@alirya/number/inclusive/inclusive";
 import MaximumParameters from "./maximum-parameters";
 
 

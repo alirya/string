@@ -1,5 +1,5 @@
 import Guard from "../boolean/minimum-parameters";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import MinimumError from "./throwable/minimum-parameters";
 import Count from "../number/count";
 

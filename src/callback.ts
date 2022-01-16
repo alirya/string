@@ -1,4 +1,4 @@
-import Argument from "@dikac/t-function/argument/argument";
+import Argument from "@alirya/function/argument/argument";
 import ToString from "./to-string";
 
 export default class Callback<

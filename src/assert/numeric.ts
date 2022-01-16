@@ -1,5 +1,5 @@
 import Guard from "../boolean/numeric";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import NumericError from "./throwable/numeric-parameters";
 
 export default function Numeric(

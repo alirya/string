@@ -1,4 +1,4 @@
-import Validator from "@dikac/t-validator/validator";
+import Validator from "@alirya/validator/validator";
 import MinimumValidatable, {MinimumType} from "../validatable/minimum-parameters";
 import Count from "../number/count";
 import MinimumString from "../assert/string/minimum-parameters";

@@ -1,5 +1,5 @@
 import Guard from "../boolean/alphanumeric";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import AlphanumericError from "./throwable/alphanumeric-parameters";
 
 export default function Alphanumeric(

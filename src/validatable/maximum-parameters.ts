@@ -1,12 +1,12 @@
-import MaximumNumber from "@dikac/t-number/maximum/maximum";
-import Value from "@dikac/t-value/value";
-import Validatable from "@dikac/t-validatable/validatable";
-import Message from "@dikac/t-message/message";
+import MaximumNumber from "@alirya/number/maximum/maximum";
+import Value from "@alirya/value/value";
+import Validatable from "@alirya/validatable/validatable";
+import Message from "@alirya/message/message";
 import MaximumObject from "../boolean/maximum-parameters";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import Inclusive from "@alirya/number/inclusive/inclusive";
 import Count from "../number/count";
-import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
+import Callback from "@alirya/validator/validatable/callback-function-parameters";
+import Dynamic from "@alirya/validator/message/function/validatable-parameters";
 
 export type MaximumType<ValueType, MessageType> = Readonly<Inclusive & MaximumNumber & Value<ValueType> & Message<MessageType> & Validatable>;
 

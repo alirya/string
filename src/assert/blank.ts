@@ -1,5 +1,5 @@
 import Guard from "../boolean/blank";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import BlankError from "./throwable/blank-parameters";
 
 export default function Blank(

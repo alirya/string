@@ -1,5 +1,5 @@
 import Guard from "../boolean/alphabet";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import AlphabetError from "./throwable/alphabet-parameters";
 
 export default function Alphabet(

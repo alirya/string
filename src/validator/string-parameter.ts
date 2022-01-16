@@ -1,8 +1,8 @@
-import Validator from "@dikac/t-validator/simple";
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
+import Validator from "@alirya/validator/simple";
+import Validatable from "@alirya/validatable/validatable";
+import Value from "@alirya/value/value";
 import StringValidatable from "../validatable/string-parameter";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Instance from "@alirya/validator/validatable/validatable";
 import StringString from "../assert/string/string-parameter";
 
 export default function StringParameter() : Validator<unknown, string, Readonly<Instance<unknown, string>>>;

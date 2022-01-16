@@ -1,7 +1,7 @@
 import Count from "../number/count";
-import Value from "@dikac/t-value/value";
-import MinimumNumber from "@dikac/t-number/minimum/minimum";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import Value from "@alirya/value/value";
+import MinimumNumber from "@alirya/number/minimum/minimum";
+import Inclusive from "@alirya/number/inclusive/inclusive";
 import MinimumParameters from "./minimum-parameters";
 
 /**

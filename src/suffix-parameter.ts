@@ -1,5 +1,5 @@
 import Suffix from "./suffix/suffix";
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import SuffixParameters from "./suffix-parameters";
 
 export type SuffixArgument = Value<string> & Partial<Suffix>;

@@ -1,7 +1,7 @@
 import String from "../../string/string";
-import Validatable from "@dikac/t-validatable/validatable";
-import MinimumNumber from "@dikac/t-number/minimum/minimum";
-import Inclusive from "@dikac/t-number/inclusive/inclusive";
+import Validatable from "@alirya/validatable/validatable";
+import MinimumNumber from "@alirya/number/minimum/minimum";
+import Inclusive from "@alirya/number/inclusive/inclusive";
 import MinimumParameters from "./minimum-parameters";
 
 export type MinimumArgument = Validatable & String & MinimumNumber & Inclusive & {

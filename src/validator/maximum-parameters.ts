@@ -1,8 +1,8 @@
-import Validator from "@dikac/t-validator/simple";
+import Validator from "@alirya/validator/simple";
 import MaximumValidatable, {MaximumType} from "../validatable/maximum-parameters";
 import Count from "../number/count";
 import MaximumString from "../assert/string/maximum-parameters";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
+import Dynamic from "@alirya/validator/message/function/validatable-parameters";
 
 export type MaximumArgumentMessage<MessageType> =
     Dynamic<string,  MessageType, [maximum : number, inclusive: boolean, converter : (string:string)=>number]>

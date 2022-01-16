@@ -1,8 +1,8 @@
-import Validator from "@dikac/t-validator/simple";
+import Validator from "@alirya/validator/simple";
 import DigitValidatable from "../validatable/digit-parameter";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import Instance from "@alirya/validator/validatable/validatable";
 import DigitString from "../assert/string/digit-parameter";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
+import Dynamic from "@alirya/validator/message/function/validatable-parameter";
 
 export default function DigitParameter() : Validator<string, string, Readonly<Instance<string, string>>>;
 

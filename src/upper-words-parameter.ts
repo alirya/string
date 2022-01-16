@@ -1,5 +1,5 @@
 import Separator from "./separator/separator";
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import UpperWordsParameters from "./upper-words-parameters";
 
 export type UpperWordsArgument = Value<string> & Separator;

@@ -1,5 +1,5 @@
 import Guard from "../boolean/maximum-parameters";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import MaximumError from "./throwable/maximum-parameters";
 import Count from "../number/count";
 

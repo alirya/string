@@ -1,5 +1,5 @@
 import Guard from "../boolean/string";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import StringError from "./throwable/string-parameters";
 
 export default function String(
