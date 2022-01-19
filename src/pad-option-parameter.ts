@@ -6,12 +6,12 @@ import PadOptionParameters from './pad-option-parameters';
 export type PadOptionArgument = String & Padding & {length:number} & Affix;
 
 export default function PadOptionParameter({
-    value,
+    string,
     padding,
     length,
     affix
 } : PadOptionArgument) : string {
 
-    return PadOptionParameters(value, padding, length, affix);
+    return PadOptionParameters(string, padding, length, affix);
 }
 

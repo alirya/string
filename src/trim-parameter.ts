@@ -7,10 +7,10 @@ import TrimParameters from './trim-parameters';
 export type TrimParameterArgumentCircumfix = String & Circumfix;
 export type TrimParameterArgumentPair = String & Prefix & Suffix;
 
-export default function TrimParameter({value, circumfix} : TrimParameterArgumentCircumfix);
-export default function TrimParameter({value, prefix, suffix} : TrimParameterArgumentPair);
-export default function TrimParameter({value, circumfix, prefix, suffix} : TrimParameterArgumentPair & TrimParameterArgumentCircumfix) {
+export default function TrimParameter({string, circumfix} : TrimParameterArgumentCircumfix);
+export default function TrimParameter({string, prefix, suffix} : TrimParameterArgumentPair);
+export default function TrimParameter({string, circumfix, prefix, suffix} : TrimParameterArgumentPair & TrimParameterArgumentCircumfix) {
 
-    return TrimParameters(value, circumfix || prefix, suffix);
+    return TrimParameters(string, circumfix || prefix, suffix);
 }
 

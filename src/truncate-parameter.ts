@@ -1,7 +1,7 @@
-import {truncate} from 'lodash';
-import Separator from './separator/separator';
-import String from './string/string';
-import TruncateParameters from './truncate-parameters';
+import {truncate} from "lodash";
+import Separator from "./separator/separator";
+import String from "./string/string";
+import TruncateParameters from "./truncate-parameters";
 
 export type TruncateArgument = String & {length:number} & Partial<Separator> & {omission?: string};
 
@@ -18,13 +18,13 @@ export type TruncateArgument = String & {length:number} & Partial<Separator> & {
 
 
 export default function TruncateParameter ({
-        value,
-        length,
-        omission = '...',
-        separator
+    string,
+    length,
+    omission = "...",
+    separator
 } : TruncateArgument)  : string {
 
-    return TruncateParameters(value, length, omission, separator);
+    return TruncateParameters(string, length, omission, separator)
 }
 
 

@@ -12,7 +12,7 @@ export type MaximumArgument = Validatable & String & MaximumNumber & Inclusive &
 
 export default function MaximumParameter({
     valid,
-    value,
+    string,
     maximum,
     inclusive,
     converter,
@@ -20,6 +20,6 @@ export default function MaximumParameter({
     subject,
 } : MaximumArgument) : string {
 
-    return MaximumParameters(value, valid, maximum, inclusive, converter, criteria, subject);
+    return MaximumParameters(string, valid, maximum, inclusive, converter, criteria, subject);
 }
 

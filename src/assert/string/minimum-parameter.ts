@@ -12,7 +12,7 @@ export type MinimumArgument = Validatable & String & MinimumNumber & Inclusive &
 
 export default function MinimumParameter(
     {
-        value,
+        string,
         valid,
         minimum,
         inclusive,
@@ -21,6 +21,6 @@ export default function MinimumParameter(
         criteria,
 } : MinimumArgument) : string {
 
-    return MinimumParameters(value, valid, minimum, inclusive, converter, criteria, subject);
+    return MinimumParameters(string, valid, minimum, inclusive, converter, criteria, subject);
 }
 

@@ -1,10 +1,10 @@
-import {MaximumArgument} from '../string/maximum-parameter';
-import MaximumParameters from './maximum-parameters';
+import {MaximumArgument} from "../string/maximum-parameter";
+import MaximumParameters from "./maximum-parameters";
 
 export {MaximumArgument};
 
 export default function MaximumParameter({
-    value,
+    string,
     maximum,
     inclusive,
     subject,
@@ -12,7 +12,7 @@ export default function MaximumParameter({
     converter
 } : MaximumArgument) : Error {
 
-    return MaximumParameters(value, maximum, inclusive, converter, criteria, subject);
+    return MaximumParameters(string, maximum, inclusive, converter, criteria, subject)
 }
 
 

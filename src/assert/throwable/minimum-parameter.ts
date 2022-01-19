@@ -1,10 +1,10 @@
-import MinimumParameters from './minimum-parameters';
-import {MinimumArgument} from '../string/minimum-parameter';
+import MinimumParameters from "./minimum-parameters";
+import {MinimumArgument} from "../string/minimum-parameter";
 
 export {MinimumArgument};
 
 export default function MinimumParameter({
-    value,
+    string,
     minimum,
     inclusive,
     converter,
@@ -12,5 +12,5 @@ export default function MinimumParameter({
     subject,
 } : MinimumArgument) : Error {
 
-    return MinimumParameters(value, minimum, inclusive, converter, criteria, subject);
+    return MinimumParameters(string, minimum, inclusive, converter, criteria, subject)
 }

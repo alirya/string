@@ -8,8 +8,8 @@ import RemoveSuffixParameters from './remove-suffix-parameters';
 
 export type RemoveSuffixArgument = String & Partial<Suffix>;
 
-export default function RemoveSuffixParameter({value, suffix} : RemoveSuffixArgument) : string {
+export default function RemoveSuffixParameter({string, suffix} : RemoveSuffixArgument) : string {
 
-    return RemoveSuffixParameters(value, suffix);
+    return RemoveSuffixParameters(string, suffix);
 
 }

@@ -16,22 +16,22 @@ export type EncloseArgumentCircumfix = String & Circumfix;
  * @param suffix
  */
 export default function EncloseParameter ({
-    value,
+    string,
     prefix,
     suffix,
 } : EncloseArgumentPair) : string ;
 
 export default function EncloseParameter ({
-    value,
+    string,
     circumfix,
 } : EncloseArgumentCircumfix) : string ;
 
 export default function EncloseParameter ({
-    value,
+    string,
     prefix,
     circumfix,
     suffix,
 } : EncloseArgumentCircumfix & EncloseArgumentPair) : string {
 
-    return EncloseParameters(value, prefix || circumfix, suffix);
+    return EncloseParameters(string, prefix || circumfix, suffix);
 }
