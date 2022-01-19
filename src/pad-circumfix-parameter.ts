@@ -4,9 +4,9 @@ import Circumfix from "./circumfix/circumfix";
 
 export type PadCircumfixArgument = String & Circumfix & {length:number};
 
-export default function PadCircumfixObject({value, length , circumfix} : PadCircumfixArgument) {
+export default function PadCircumfixObject({string, length , circumfix} : PadCircumfixArgument) {
 
-    return pad(value, length, circumfix)
+    return pad(string, length, circumfix)
 }
 
 

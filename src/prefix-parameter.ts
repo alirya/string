@@ -3,19 +3,19 @@ import Prefix from "./prefix/prefix";
 
 export type PrefixArgument = String & Prefix;
 
-export default function PrefixParameter({value, prefix} : PrefixArgument) : string {
+export default function PrefixParameter({string, prefix} : PrefixArgument) : string {
 
-    if(value.length !== 0) {
+    if(string.length !== 0) {
 
         prefix = prefix[0];
 
-        if(value[0] !== prefix) {
+        if(string[0] !== prefix) {
 
-            return prefix + value;
+            return prefix + string;
         }
     }
 
-    return value;
+    return string;
 
 }
 

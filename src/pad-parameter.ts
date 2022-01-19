@@ -7,10 +7,10 @@ import PadParameters from "./pad-parameters";
 export type PadArgumentPair = String & Prefix & Suffix & {length:number};
 export type PadArgumentCircumfix = String  & Circumfix & {length:number};
 
-export default function PadParameter({value, length, prefix, suffix} : PadArgumentPair) : string;
-export default function PadParameter({value, length, circumfix} : PadArgumentCircumfix) : string;
-export default function PadParameter({value, length, prefix, suffix, circumfix} : PadArgumentPair & PadArgumentCircumfix) : string {
+export default function PadParameter({string, length, prefix, suffix} : PadArgumentPair) : string;
+export default function PadParameter({string, length, circumfix} : PadArgumentCircumfix) : string;
+export default function PadParameter({string, length, prefix, suffix, circumfix} : PadArgumentPair & PadArgumentCircumfix) : string {
 
-    return PadParameters(value, length, circumfix || prefix, circumfix || suffix)
+    return PadParameters(string, length, circumfix || prefix, circumfix || suffix)
 }
 

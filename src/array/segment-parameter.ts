@@ -12,11 +12,11 @@ import AlphanumericParameters from "./segment-parameters";
  *     Alphanumeric('root.parent.child', '.') => ['root', 'root.parent', 'root.parent.child']
  */
 export default function AlphanumericParameter({
-    value,
+    string,
     separator
 } : String & Separator) : string[] {
 
-    return AlphanumericParameters(value, separator);
+    return AlphanumericParameters(string, separator);
 }
 
 export type AlphanumericArgument = String & Separator;

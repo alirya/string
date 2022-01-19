@@ -5,9 +5,9 @@ import PadSuffixParameter from "./pad-suffix-parameters";
 
 export type PadSuffixArgument = String & Suffix & {length:number};
 
-export default function PadSuffixObject({value, length , suffix} : PadSuffixArgument) {
+export default function PadSuffixObject({string, length , suffix} : PadSuffixArgument) {
 
-    return PadSuffixParameter(value, length, suffix)
+    return PadSuffixParameter(string, length, suffix)
 }
 
 

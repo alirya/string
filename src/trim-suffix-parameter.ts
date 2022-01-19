@@ -4,9 +4,9 @@ import TrimSuffixParameters from "./trim-suffix-parameters";
 
 export type TrimSuffixArgument = String & Partial<Suffix>;
 
-export default function TrimSuffixParameter({value, suffix} : TrimSuffixArgument) {
+export default function TrimSuffixParameter({string, suffix} : TrimSuffixArgument) {
 
-    return TrimSuffixParameters(value, suffix)
+    return TrimSuffixParameters(string, suffix)
 }
 
 
