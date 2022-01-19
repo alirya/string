@@ -3,7 +3,6 @@ import Suffix from "./suffix/suffix";
 import String from "./string/string";
 import Circumfix from "./circumfix/circumfix";
 import Pad from "./pad-parameter";
-import Value from "@dikac/t-value/value";
 
 export type ConditionBuilderArgumentList<Condition> =
     String<string> &

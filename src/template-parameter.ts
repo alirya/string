@@ -1,7 +1,7 @@
 import String from "./string/string";
 import Prefix from "./prefix/prefix";
 import Suffix from "./suffix/suffix";
-import Argument from "@dikac/t-function/argument/argument";
+import Argument from "@alirya/function/argument/argument";
 import TemplateParameters from "./template-parameters";
 
 /**
