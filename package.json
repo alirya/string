@@ -3,6 +3,7 @@
   "version": "0.16.0-alpha.4",
   "description": "Typescript string",
   "dependencies": {
+    "@alirya/array": "^0.26.0-alpha.4",
     "@alirya/function": "^0.15.0-beta.9",
     "@alirya/message": "^0.12.0-alpha.2",
     "@alirya/number": "^0.17.0-alpha.4",
@@ -10,7 +11,6 @@
     "@alirya/validatable": "^0.20.0-beta.7",
     "@alirya/validator": "^0.19.0-beta.20",
     "@alirya/value": "^0.15.0-beta.2",
-    "@alirya/array": "^0.26.0-alpha.4",
     "@types/lodash": "^4.14.177",
     "grapheme-splitter": "^1.0.4",
     "lodash": "^4.17.21",
@@ -29,7 +29,8 @@
     "ts-cleaner": "^1.0.5",
     "typescript": "^4.5.2",
     "tslint": "^5.13.0",
-    "typedoc": "^0.22.10"
+    "typedoc": "^0.22.10",
+    "tsc-fancy": "^1.1.2"
   },
   "scripts": {
     "spec-run-js": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine.json",
@@ -51,14 +52,14 @@
     "lint": "tslint --project ./tslint.json",
     "lint-fix": "tslint --project ./tslint.json --fix",
     "doc-generate": "npm-run-all _doc-clean _doc-generate",
-    "_compile-script": "tsc",
+    "_compile-script": "tsc-fancy --preserveConsoleOutput",
     "_spec-ensure-directory": "mkdirp dist-spec",
-    "_compile-script-watch": "tsc -w",
-    "_spec-compile-script": "tsc -p tsconfig-spec.json",
-    "_spec-compile-watch-script": "tsc -w -p tsconfig-spec.json",
+    "_compile-script-watch": "tsc-fancy --preserveConsoleOutput -w",
+    "_spec-compile-script": "tsc-fancy --preserveConsoleOutput -p tsconfig-spec.json",
+    "_spec-compile-watch-script": "tsc-fancy --preserveConsoleOutput -w -p tsconfig-spec.json",
     "_compile-ensure-directory": "mkdirp dist",
     "_release_copy-meta-files": "cpy package.json package-lock.json LICENSE Readme.md .npmignore dist",
-    "_release-remove-compile-cache": "rimraf ./dist/compiler-cache",
+    "_release-remove-compile-cache": "rimraf ./dist/compiler-cache.json",
     "_doc-generate": "typedoc --entryPointStrategy expand ./src --out docs",
     "_doc-clean": "rimraf docs"
   },
