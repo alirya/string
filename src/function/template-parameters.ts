@@ -15,6 +15,9 @@ import Escape from "../pattern/escape";
  * @default '}'
  * suffix key template
  *
+ * @param callback
+ * post process after string generated
+ *
  * @example
  * Template('hello, {target}', '{', '}') => ({target:'world'}) => hello, world'
  */
@@ -22,6 +25,7 @@ export default function TemplateParameters<Parameter extends object>(
     string : string,
     prefix : string = '{',
     suffix : string = '}',
+    callback : (string) => string = (string)=>string
 ) : (parameter : Partial<Parameter>) => string {
 
     prefix = prefix[0];
@@ -29,6 +33,7 @@ export default function TemplateParameters<Parameter extends object>(
 
     let prefixEscaped = Escape(prefix);
     let suffixEscaped = Escape(suffix);
+
 
     const prefixPattern = new RegExp(`^(${prefixEscaped})+`);
     const suffixPattern = new RegExp(`(${suffixEscaped})+$`);
@@ -39,7 +44,6 @@ export default function TemplateParameters<Parameter extends object>(
 
     const parts : string[] = [];
     const keys : number[] = [];
-
 
     string.replace(regex, (match : string, position : number, string : string) => {
 
@@ -78,6 +82,11 @@ export default function TemplateParameters<Parameter extends object>(
         return '';
     });
 
+    // push tail
+    if(current !== string.length) {
+
+        parts.push(string.slice(current));
+    }
 
     return function (parameter : Parameter) : string {
 
@@ -88,8 +97,8 @@ export default function TemplateParameters<Parameter extends object>(
             copy[key] = SafeCast(parameter[copy[key]]);
         }
 
-        return copy.join('')
-    }
+        return callback(copy.join(''));
+    };
 }
 
 

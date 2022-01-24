@@ -1,3 +1,5 @@
+import Callback from '@alirya/function/callback/callback';
+import Callable from '@alirya/function/dist/callable';
 import SafeCast from "../safe-cast";
 import String from "../string/string";
 import Escape from "../pattern/escape";
@@ -13,10 +15,11 @@ export default function TemplateParameter<Parameter extends object>(
         string,
         prefix,
         suffix,
-    } : String & Prefix & Suffix
+        callback
+    } : String & Partial<Prefix & Suffix & Callback<Callable<[string], string>>>
 ) : (parameter : Partial<Parameter>) => string {
 
-    return TemplateParameters(string, prefix, suffix)
+    return TemplateParameters(string, prefix, suffix, callback);
 }
 
 
