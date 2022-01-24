@@ -6,7 +6,7 @@ it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 let map = new Map<string, [boolean, string]>();
 
-describe('add alphabet', ()=>{
+it('add alphabet', ()=>{
 
     map.set(ALPHABET, [true, 'all alphabet']);
 
@@ -16,7 +16,7 @@ describe('add alphabet', ()=>{
 
 });
 
-describe('add digit', ()=>{
+it('add digit', ()=>{
 
     map.set(DIGIT, [false, 'all number']);
 
@@ -26,20 +26,20 @@ describe('add digit', ()=>{
     }
 });
 
-describe('add digit & alphabet', ()=>{
+it('add digit & alphabet', ()=>{
 
     map.set(ALPHABET + DIGIT, [false, 'mixed alphabet numeric']);
 });
 
 
-describe('add unicode', ()=>{
+it('add unicode', ()=>{
 
     map.set('🕵🏻‍♀️', [false, 'emoji']);
     map.set('ℋ', [false, 'astral']);
 });
 
 
-describe('add empty', ()=>{
+it('add empty', ()=>{
 
     map.set('', [true, 'empty']);
     map.set(String.fromCodePoint(0), [false, 'ASCII NULL']);

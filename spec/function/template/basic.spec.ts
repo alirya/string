@@ -5,26 +5,26 @@ it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it("single", function() {
 
-  expect(Template('data {a} and {b} and {c}')({
+  expect(Template('data {a} and {b} and {c}.')({
     a : 'first',
     b : 'second',
     c : 'third',
   })).toBe(
-      'data first and second and third'
+      'data first and second and third.'
   );
 
 });
 
 it("multi", function() {
 
-  const template = Template('data {a} and {b} and {c}');
+  const template = Template('data {a} and {b} and {c}.');
 
   expect(template({
     a : 'first',
     b : 'second',
     c : 'third',
   })).toBe(
-      'data first and second and third'
+      'data first and second and third.'
   );
 
   expect(template({
@@ -32,7 +32,7 @@ it("multi", function() {
     b : 'B',
     c : 'C',
   })).toBe(
-      'data A and B and C'
+      'data A and B and C.'
   );
 
 
@@ -41,7 +41,7 @@ it("multi", function() {
     b : 'and',
     c : 'and',
   })).toBe(
-      'data and and and and and'
+      'data and and and and and.'
   );
 
 });
