@@ -1,5 +1,5 @@
 import Callback from '@alirya/function/callback/callback';
-import Callable from '@alirya/function/dist/callable';
+import Callable from '@alirya/function/callable';
 import SafeCast from "../safe-cast";
 import String from "../string/string";
 import Escape from "../pattern/escape";
