@@ -3,17 +3,10 @@
  */
 export default function RemovePrefixParameters(value : string, prefix ?: string) : string {
 
-    if(!value) {
+    if(!value || !prefix) {
 
         return value;
     }
-
-    if(!prefix) {
-
-        return value;
-    }
-
-    prefix = prefix[0];
 
     if(value.slice(0, prefix.length) === prefix) {
 
@@ -21,5 +14,4 @@ export default function RemovePrefixParameters(value : string, prefix ?: string)
     }
 
     return value;
-
 }

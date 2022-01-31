@@ -3,21 +3,15 @@
  */
 export default function RemoveSuffixParameters(value : string, suffix ?: string) : string {
 
-    if(!value) {
+    if(!value || !suffix) {
 
         return value;
     }
 
-    if(!suffix) {
+    if(value.slice(-suffix.length) === suffix) {
 
-        return value;
-    }
-
-    if(value.slice(-value.length) === suffix) {
-
-        return value.slice(0, -value.length);
+        return value.slice(0, -suffix.length);
     }
 
     return value;
-
 }
