@@ -2,7 +2,7 @@ import Validator from '@alirya/validator/validator';
 import Validatable from '@alirya/validatable/validatable';
 import Message from '@alirya/message/message';
 import Value from '@alirya/value/value';
-import MaximumValidatable, {MaximumType} from '../validatable/maximum-parameters';
+import {MaximumType} from '../validatable/maximum-parameters';
 import Inclusive from '@alirya/number/inclusive/inclusive';
 import MaximumNumber from '@alirya/number/maximum/maximum';
 import StrictOmit from '@alirya/object/strict-omit';
