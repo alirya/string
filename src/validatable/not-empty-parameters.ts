@@ -6,15 +6,15 @@ import Callback from '@alirya/validator/validatable/callback-function-parameters
 import FunctionStatic from '@alirya/validator/message/function/static-parameters';
 import Static from '@alirya/validator/validatable/static';
 
-export type NotEmptyType<ValueType extends string, MessageType>
+export type NotEmptyReturn<ValueType extends string, MessageType>
     = Static<'', string, false, true, Message<MessageType> & Validatable & Value<ValueType>>;
 
 export default function NotEmptyParameters<ValueType extends string, MessageType>(
     value : ValueType,
     message : FunctionStatic<'', ValueType, false, true, MessageType>
-) : NotEmptyType<ValueType, MessageType>  {
+) : NotEmptyReturn<ValueType, MessageType>  {
 
-    return Callback(value, NotEmptyBoolean, message) as NotEmptyType<ValueType, MessageType>;
+    return Callback(value, NotEmptyBoolean, message) as NotEmptyReturn<ValueType, MessageType>;
 }
 
 

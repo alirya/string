@@ -7,7 +7,7 @@ import Inclusive from '@alirya/number/inclusive/inclusive';
 import Count from '../number/count';
 import Callback from '@alirya/validator/validatable/callback-function-parameters';
 
-export type MinimumType<ValueType, MessageType> =
+export type MinimumParametersReturn<ValueType, MessageType> =
     Readonly<Inclusive & MinimumNumber &  Value<ValueType> & Message<MessageType> & Validatable>;
 
 
@@ -17,11 +17,11 @@ export default function MinimumParameters<ValueType extends string, MessageType>
     inclusive : boolean,
     message : (value:ValueType, valid: boolean, minimum: number, inclusive: boolean)=>MessageType,
     converter : (string:ValueType)=>number = Count,
-) : MinimumType<ValueType, MessageType> {
+) : MinimumParametersReturn<ValueType, MessageType> {
 
     return Object.assign(
         Callback(value, IsMinimum, message, [minimum, inclusive, converter]),
     {minimum, inclusive}
-    ) as MinimumType<ValueType, MessageType>;
+    ) as MinimumParametersReturn<ValueType, MessageType>;
 
 }

@@ -8,7 +8,7 @@ import Count from '../number/count';
 import Callback from '@alirya/validator/validatable/callback-function-parameters';
 import Dynamic from '@alirya/validator/message/function/validatable-parameters';
 
-export type MaximumType<ValueType, MessageType> = Readonly<Inclusive & MaximumNumber & Value<ValueType> & Message<MessageType> & Validatable>;
+export type MaximumParametersReturn<ValueType, MessageType> = Readonly<Inclusive & MaximumNumber & Value<ValueType> & Message<MessageType> & Validatable>;
 
 export default function MaximumParameters<ValueType extends string, MessageType>(
     value : ValueType,
@@ -16,7 +16,7 @@ export default function MaximumParameters<ValueType extends string, MessageType>
     inclusive : boolean,
     message : Dynamic<ValueType,  MessageType, [maximum : number, inclusive: boolean, converter : (string:ValueType)=>number]>,
     converter : (string:ValueType)=>number = Count,
-) : MaximumType<ValueType, MessageType> {
+) : MaximumParametersReturn<ValueType, MessageType> {
 
     return Object.assign(
         Callback(value, MaximumObject, message, [maximum, inclusive, converter]),

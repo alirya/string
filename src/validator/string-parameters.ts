@@ -4,21 +4,21 @@ import Instance from '@alirya/validator/validatable/validatable';
 import StringString from '../assert/string/string-parameters';
 import Simple from '@alirya/validator/message/function/simple-parameters';
 
-export type StringParametersType<MessageType> = Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
+export type StringParametersReturn<MessageType> = Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
 
-export default function StringParameters() : StringParametersType<string>;
+export default function StringParameters() : StringParametersReturn<string>;
 
 export default function StringParameters<MessageType>(
     message : Simple<unknown, string, MessageType>
-) : StringParametersType<MessageType>;
+) : StringParametersReturn<MessageType>;
 
 export default function StringParameters<MessageType>(
     message : Simple<unknown, string, MessageType|string> = StringString
-) : StringParametersType<MessageType> {
+) : StringParametersReturn<MessageType> {
 
     return function (value) {
 
         return StringValidatable(value, message);
 
-    } as StringParametersType<MessageType>;
+    } as StringParametersReturn<MessageType>;
 }

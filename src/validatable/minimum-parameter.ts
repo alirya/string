@@ -3,9 +3,9 @@ import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
 import Message from '@alirya/message/message';
 import Inclusive from '@alirya/number/inclusive/inclusive';
-import MinimumParameters, {MinimumType} from './minimum-parameters';
+import MinimumParameters, {MinimumParametersReturn as MinimumParameterReturn} from './minimum-parameters';
 
-export {MinimumType};
+export {MinimumParameterReturn};
 
 export type MinimumArgument<ValueType extends string, MessageType> =
     Value<ValueType> &
@@ -22,7 +22,7 @@ export default function MinimumParameter<ValueType extends string, MessageType>(
          message,
          converter
      } : MinimumArgument<ValueType, MessageType>
-) : MinimumType<ValueType, MessageType> {
+) : MinimumParameterReturn<ValueType, MessageType> {
 
     return MinimumParameters(
         value,

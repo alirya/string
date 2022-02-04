@@ -2,7 +2,7 @@ import Validator from '@alirya/validator/validator';
 import Validatable from '@alirya/validatable/validatable';
 import Message from '@alirya/message/message';
 import Value from '@alirya/value/value';
-import {MaximumType} from '../validatable/maximum-parameters';
+import {MaximumParametersReturn} from '../validatable/maximum-parameters';
 import Inclusive from '@alirya/number/inclusive/inclusive';
 import MaximumNumber from '@alirya/number/maximum/maximum';
 import StrictOmit from '@alirya/object/strict-omit';
@@ -22,7 +22,7 @@ export default function MaximumParameter(
         maximum,
         inclusive,
     } : StrictOmit<MaximumParameterArgument<unknown>, 'message'|'converter'>
-) : Validator<string, string, boolean, boolean, MaximumType<string, string>>;
+) : Validator<string, string, boolean, boolean, MaximumParametersReturn<string, string>>;
 
 export default function MaximumParameter(
     {
@@ -30,7 +30,7 @@ export default function MaximumParameter(
         inclusive,
         converter,
     } : Object.Required<MaximumParameterArgument<unknown>, 'converter'>
-) : Validator<string, string, boolean, boolean, MaximumType<string, string>>;
+) : Validator<string, string, boolean, boolean, MaximumParametersReturn<string, string>>;
 
 export default function MaximumParameter<MessageType> (
     {
@@ -38,7 +38,7 @@ export default function MaximumParameter<MessageType> (
         inclusive,
         message,
     } : Object.Required<MaximumParameterArgument<unknown>, 'message'>
-) : Validator<string, string, boolean, boolean, MaximumType<string, MessageType>>;
+) : Validator<string, string, boolean, boolean, MaximumParametersReturn<string, MessageType>>;
 
 export default function MaximumParameter<MessageType>(
     {
@@ -47,7 +47,7 @@ export default function MaximumParameter<MessageType>(
         message,
         converter,
     } : MaximumParameterArgument<MessageType|string>
-) : Validator<string, string, boolean, boolean, MaximumType<string, MessageType>>;
+) : Validator<string, string, boolean, boolean, MaximumParametersReturn<string, MessageType>>;
 
 export default function MaximumParameter<MessageType>(
     {
@@ -56,7 +56,7 @@ export default function MaximumParameter<MessageType>(
         message,
         converter,
     } : MaximumParameterArgument<MessageType>
-) : Validator<string, string, boolean, boolean, MaximumType<string, MessageType|string>> {
+) : Validator<string, string, boolean, boolean, MaximumParametersReturn<string, MessageType|string>> {
 
     if(message) {
 
