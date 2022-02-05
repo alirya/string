@@ -1,6 +1,6 @@
 {
   "name": "@alirya/string",
-  "version": "0.16.1",
+  "version": "0.16.2",
   "description": "Typescript string",
   "dependencies": {
     "@alirya/array": "0.26.0",
