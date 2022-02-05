@@ -1,4 +1,4 @@
-import {trim} from 'lodash';
+import trim from 'lodash/trim';
 import TrimSuffix from './trim-suffix-parameters';
 import TrimPrefix from './trim-prefix-parameters';
 

@@ -1,4 +1,4 @@
-import {padStart} from 'lodash';
+import padStart from 'lodash/padStart';
 
 /**
  * @see padStart

@@ -1,4 +1,4 @@
-import {pad} from "lodash";
+import pad from "lodash/pad";
 import String from "./string/string";
 import Circumfix from "./circumfix/circumfix";
 

@@ -1,4 +1,4 @@
-import {endsWith} from 'lodash';
+import endsWith from 'lodash/endsWith';
 
 export default function SuffixParameter(string : string, suffix : string) : boolean {
 

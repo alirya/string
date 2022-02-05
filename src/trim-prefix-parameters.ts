@@ -1,4 +1,4 @@
-import {trimStart} from 'lodash';
+import trimStart from 'lodash/trimStart';
 
 const TrimPrefixParameters : (string : string, prefix ?: string) => string = trimStart;
 

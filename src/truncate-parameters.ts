@@ -1,4 +1,4 @@
-import {truncate} from 'lodash';
+import truncate from 'lodash/truncate';
 
 export default function TruncateParameters (
     value : string,
