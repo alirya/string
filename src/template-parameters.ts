@@ -1,4 +1,4 @@
-import CompiledTemplate from "./function/template-parameters";
+import CompiledTemplate from './function/template-parameters';
 
 /**
  * string template for key object or array
@@ -29,5 +29,5 @@ export default function TemplateParameters<Parameter extends object>(
     suffix ?: string
 ) : string {
 
-    return CompiledTemplate(string, prefix, suffix)(argument)
+    return CompiledTemplate(string, prefix, suffix)(argument);
 }

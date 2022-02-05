@@ -1,20 +1,20 @@
 import Suffix from './suffix/suffix';
-import Value from '@alirya/value/value';
+import String from './string/string';
 import SuffixParameters from './suffix-parameters';
 
-export type SuffixArgument = Value<string> & Partial<Suffix>;
+export type SuffixArgument = String & Suffix;
 
 /**
- * append {@param suffix} to {@param value} if not exist and {@param value} not empty
+ * append {@param suffix} to {@param string} if not exist and {@param string} not empty
  *
- * @param value
+ * @param string
  * @param suffix
  */
 
 
-export default function SuffixParameter({value, suffix} : SuffixArgument) : string {
+export default function SuffixParameter({string, suffix} : SuffixArgument) : string {
 
-    return SuffixParameters(value, suffix);
+    return SuffixParameters(string, suffix);
 }
 
 

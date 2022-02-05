@@ -1,9 +1,9 @@
 import Callback from '@alirya/function/callback/callback';
 import Callable from '@alirya/function/callable';
-import String from "../string/string";
-import Prefix from "../prefix/prefix";
-import Suffix from "../suffix/suffix";
-import TemplateParameters from "./template-parameters";
+import String from '../string/string';
+import Prefix from '../prefix/prefix';
+import Suffix from '../suffix/suffix';
+import TemplateParameters from './template-parameters';
 
 /**
  * Option version of {@see TemplateParameters}

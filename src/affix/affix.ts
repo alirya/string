@@ -1,5 +1,9 @@
 enum Affix {
     /**
+     * both end operation
+     */
+    CIRCUMFIX,
+    /**
      * starting, append operation
      */
     SUFFIX,
@@ -7,10 +11,6 @@ enum Affix {
      * ending, prepend operation
      */
     PREFIX,
-    /**
-     * both end operation
-     */
-    CIRCUMFIX
 }
 
 export default Affix;

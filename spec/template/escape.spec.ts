@@ -1,8 +1,8 @@
-import Template from "../../dist/template-parameters";
+import Template from '../../dist/template-parameters';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-it("clean", function() {
+it('clean', function() {
 
   expect(Template('data {{a}} and {{b}} and {{c}}',{
     a : 'first',

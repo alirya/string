@@ -1,5 +1,5 @@
-import SafeCast from "../safe-cast";
-import Escape from "../pattern/escape";
+import SafeCast from '../safe-cast';
+import Escape from '../pattern/escape';
 
 /**
  * create a string template callback for key object or array

@@ -1,8 +1,8 @@
-import Template from "../../../dist/function/template-parameters";
+import Template from '../../../dist/function/template-parameters';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-it("clean", function() {
+it('clean', function() {
 
   try {
 

@@ -1,9 +1,9 @@
-import Truncate from "../../../dist/truncate-parameters";
-import Template from "../../../dist/function/template-parameters";
+import Truncate from '../../../dist/truncate-parameters';
+import Template from '../../../dist/function/template-parameters';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-it("clean", function() {
+it('clean', function() {
 
   expect(Template('data {{a}} and {{b}} and {{c}}')({
     a : 'first',
@@ -15,7 +15,7 @@ it("clean", function() {
 
 });
 
-it("parsed with curly", function() {
+it('parsed with curly', function() {
 
   const template = Template('data {{{a}}} and {{{b}}} and {{{c}}}');
 

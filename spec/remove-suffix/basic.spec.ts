@@ -1,8 +1,8 @@
-import Unclosed from "../../dist/remove-suffix-parameters";
+import Unclosed from '../../dist/remove-suffix-parameters';
 
-it("force console log", () => { spyOn(console, 'log').and.callThrough();});
+it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
-it("basic", function() {
+it('basic', function() {
 
     expect(Unclosed('12345',  ']')).toBe('12345');
     expect(Unclosed('[12345]',  ']')).toBe('[12345');

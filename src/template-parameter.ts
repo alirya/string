@@ -1,8 +1,8 @@
-import String from "./string/string";
-import Prefix from "./prefix/prefix";
-import Suffix from "./suffix/suffix";
-import Argument from "@alirya/function/argument/argument";
-import TemplateParameters from "./template-parameters";
+import String from './string/string';
+import Prefix from './prefix/prefix';
+import Suffix from './suffix/suffix';
+import Argument from '@alirya/function/argument/argument';
+import TemplateParameters from './template-parameters';
 
 /**
  * Option version of {@see TemplateParameters}
@@ -16,5 +16,5 @@ export default function TemplateParameter<Parameter extends object>(
     } : String & Partial<Prefix & Suffix> & Argument<Parameter>
 ) : string {
 
-    return TemplateParameters(string, argument, prefix, suffix)
+    return TemplateParameters(string, argument, prefix, suffix);
 }

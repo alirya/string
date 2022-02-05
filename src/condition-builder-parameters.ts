@@ -1,8 +1,8 @@
-import Prefix from "./prefix/prefix";
-import Suffix from "./suffix/suffix";
-import String from "./string/string";
-import Circumfix from "./circumfix/circumfix";
-import Pad from "./pad-parameter";
+import Prefix from './prefix/prefix';
+import Suffix from './suffix/suffix';
+import String from './string/string';
+import Circumfix from './circumfix/circumfix';
+import Pad from './pad-parameter';
 
 export type ConditionBuilderArgumentList<Condition> =
     String<string> &
@@ -20,5 +20,5 @@ export default function ConditionBuilderParameters<Condition>(
     return argument
         .filter(builder=>builder.condition === undefined || builder.condition === condition)
         .map(Pad)
-        .join(separator)
+        .join(separator);
 }
