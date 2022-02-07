@@ -3,6 +3,7 @@
   "version": "0.16.2",
   "description": "Typescript string",
   "dependencies": {
+    "tslib": "^2.3.1",
     "@alirya/array": "0.26.0",
     "@alirya/function": "0.15.0",
     "@alirya/message": "0.12.0",
