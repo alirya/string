@@ -1,4 +1,3 @@
-import padStart from 'lodash/padStart';
 import PadPrefix from './pad-prefix-parameters';
 import PadSuffix from './pad-suffix-parameters';
 

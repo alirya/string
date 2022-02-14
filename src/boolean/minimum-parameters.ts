@@ -8,11 +8,11 @@ import Count from '../number/count';
  */
 
 export default function MinimumParameters(
-    value : string,
+    string : string,
     minimum : number,
     inclusive : boolean,
     converter : (value:string)=>number = Count
 ) : boolean {
 
-    return Greater(converter(value), minimum, inclusive);
+    return Greater(converter(string), minimum, inclusive);
 }

@@ -1,4 +1,3 @@
-import truncate from 'lodash/truncate';
 import Separator from './separator/separator';
 import String from './string/string';
 import TruncateParameters from './truncate-parameters';

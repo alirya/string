@@ -6,15 +6,11 @@
  */
 export default function PrefixParameters(value : string, prefix ?: string) : string {
 
-    if(!value) {
+    if(!value || !prefix) {
 
         return value;
     }
 
-    if(!prefix) {
-
-        return value;
-    }
     prefix = prefix[0];
 
     if(value[0] !== prefix) {

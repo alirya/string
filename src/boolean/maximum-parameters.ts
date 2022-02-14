@@ -8,13 +8,13 @@ import Count from '../number/count';
  */
 
 export default function MaximumParameters(
-    value : string,
+    string : string,
     maximum : number,
     inclusive : boolean = true,
     converter : (value:string)=>number = Count
 ) : boolean {
 
-    return Lower(converter(value), maximum, inclusive);
+    return Lower(converter(string), maximum, inclusive);
 }
 
 

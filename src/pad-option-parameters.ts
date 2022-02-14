@@ -4,7 +4,8 @@ import PadSuffix from './pad-suffix-parameters';
 import PadCircumfix from './pad-circumfix-parameters';
 
 /**
- * pad string depend on {@param mode}
+ * pad string depend on {@param affix}
+ *
  * {@see PadPrefix}
  * {@see PadSuffix}
  * {@see PadCircumfix}
@@ -12,10 +13,10 @@ import PadCircumfix from './pad-circumfix-parameters';
  * @param string
  * @param padding
  * @param length
- * @param mode
+ * @param affix
  */
 export default function PadOptionParameters(
-    value : string,
+    string : string,
     padding : string,
     length : number,
     affix : AffixOption
@@ -23,13 +24,13 @@ export default function PadOptionParameters(
 
     switch (affix) {
         case AffixOption.PREFIX :
-            return PadPrefix(value, length, padding);
+            return PadPrefix(string, length, padding);
 
         case AffixOption.SUFFIX :
-            return PadSuffix(value, length, padding);
+            return PadSuffix(string, length, padding);
 
         case AffixOption.CIRCUMFIX :
-            return PadCircumfix(value, length, padding);
+            return PadCircumfix(string, length, padding);
     }
 
 }
