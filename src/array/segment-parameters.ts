@@ -9,12 +9,12 @@
  */
 
 export default function AlphanumericParameters(
-    value : string,
+    string : string,
     separator : string
 ) : string[] {
 
-    let list = value.split(separator);
-    let length = list.length;
+    const list = string.split(separator);
+    const length = list.length;
 
     let adds : string[] = [];
 

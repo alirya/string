@@ -2,6 +2,8 @@ import String from '../string/string';
 import Separator from '../separator/separator';
 import AlphanumericParameters from './segment-parameters';
 
+export type AlphanumericArgument = String & Separator;
+
 /**
  * split {@param string} to its each alphanumeric marked by {@param separator}
  *
@@ -14,9 +16,8 @@ import AlphanumericParameters from './segment-parameters';
 export default function AlphanumericParameter({
     string,
     separator
-} : String & Separator) : string[] {
+} : AlphanumericArgument) : string[] {
 
     return AlphanumericParameters(string, separator);
 }
 
-export type AlphanumericArgument = String & Separator;
