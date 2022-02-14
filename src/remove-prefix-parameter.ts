@@ -1,6 +1,6 @@
 import String from './string/string';
-import Prefix from "./prefix/prefix";
-import RemovePrefixParameters from "./remove-prefix-parameters";
+import Prefix from './prefix/prefix';
+import RemovePrefixParameters from './remove-prefix-parameters';
 
 export type RemovePrefixParameterArgument = String & Partial<Prefix>;
 
