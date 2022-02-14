@@ -15,7 +15,11 @@ export default function TrimParameters(
 
 export default function TrimParameters(
     value: string,
-    prefix: string,
+) : string;
+
+export default function TrimParameters(
+    value: string,
+    prefix?: string,
     suffix?: string,
 ) : string {
 
