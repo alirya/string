@@ -1,4 +1,4 @@
-import Callable from '../../function/dist/callable';
+import Callable from '@alirya/function/callable';
 import Affix from './affix/affix';
 import AffixContainer from './affix/affix/affix';
 import String from './string/string';
