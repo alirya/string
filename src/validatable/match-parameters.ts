@@ -3,12 +3,12 @@ import Match from '../value/match';
 
 export default class MatchParameter<ValueType extends string, MessageType> extends Match<ValueType> {
 
-    #message : Dynamic<ValueType, MessageType>;
+    #message : Dynamic<ValueType, MessageType, [RegExp]>;
 
     constructor(
         value : ValueType,
         pattern : RegExp,
-        message : Dynamic<ValueType, MessageType>
+        message : Dynamic<ValueType, MessageType, [RegExp]>
     ) {
         super(value, pattern);
 
