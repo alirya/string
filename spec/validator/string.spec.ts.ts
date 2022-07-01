@@ -1,5 +1,5 @@
-import Validator from '../../dist/validator/string-parameters';
-import StringMessage from '../../dist/assert/string/string-parameters';
+import {StringParameters} from '../../dist/validator/string';
+import StringMessage from '../../dist/assert/string/string';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,7 +7,7 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validator = Validator(StringMessage);
+        let validator = StringParameters(StringMessage.Parameters);
         let validatable = validator(<unknown>'10');
 
         if(validatable.valid) {
@@ -26,7 +26,7 @@ describe(`compiler compatible`,function() {
 
     it(`invalid value`,function() {
 
-        let validator = Validator(StringMessage);
+        let validator = StringParameters(StringMessage.Parameters);
         let validatable = validator({});
 
         if(validatable.valid) {
@@ -46,7 +46,7 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validator = Validator(StringMessage);
+        let validator = StringParameters(StringMessage.Parameters);
         let validatable = validator('1');
 
         try {
@@ -79,7 +79,7 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validator = Validator(StringMessage);
+    let validator = StringParameters(StringMessage.Parameters);
     let validatable = validator('1');
 
     expect(validatable.valid).toBe(true);
@@ -90,7 +90,7 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validator = Validator(StringMessage);
+    let validator = StringParameters(StringMessage.Parameters);
     let validatable = validator(1);
 
     expect(validatable.valid).toBe(false);

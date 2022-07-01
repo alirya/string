@@ -1,4 +1,4 @@
-import Match from '../../dist/boolean/match-parameters';
+import {MatchParameters} from '../../dist/boolean/match';
 import ALPHABET from '../../dist/alphabet';
 import DIGIT from '../../dist/digit';
 
@@ -12,6 +12,6 @@ map.set(ALPHABET + DIGIT + ALPHABET, [true, /[a-z]/ig, 'global']);
 for(let [value, [valid, regex, message]] of map) {
 
     it(message, ()=>{
-        expect(Match(value, regex)).toBe(valid);
+        expect(MatchParameters(value, regex)).toBe(valid);
     });
 }

@@ -1,10 +1,10 @@
-import Alphabet from '../../../dist/assert/string/alphabet-parameters';
+import {AlphabetParameters} from '../../../dist/assert/string/alphabet';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 
-    expect(Alphabet('abcd', true, 'value')).toBe(
+    expect(AlphabetParameters('abcd', true, 'value')).toBe(
         'value is alphabet.'
     );
 
@@ -12,7 +12,7 @@ it('true valid', ()=>{
 
 it('true invalid', ()=>{
 
-    expect(Alphabet('123456789', true, 'value')).toBe(
+    expect(AlphabetParameters('123456789', true, 'value')).toBe(
         'value is alphabet.'
     );
 
@@ -20,7 +20,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Alphabet('abcded', false, 'value')).toBe(
+    expect(AlphabetParameters('abcded', false, 'value')).toBe(
         'value must alphabet.'
     );
 
@@ -28,7 +28,7 @@ it('false valid', ()=>{
 
 it('false invalid', ()=>{
 
-    expect(Alphabet('123456789', false, 'value')).toBe(
+    expect(AlphabetParameters('123456789', false, 'value')).toBe(
         'value must alphabet, contains "12345".'
     );
 

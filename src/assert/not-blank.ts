@@ -1,11 +1,11 @@
 import Guard from '../boolean/not-blank';
-import Callback from '@alirya/function/assert/callback-parameters';
-import BlankError from './throwable/not-blank-parameters';
+import {CallbackParameters} from '@alirya/function/assert/callback';
+import BlankError from './throwable/not-blank';
 
 export default function NotBlank(
     value : string,
-    error : (value:string)=>Error = BlankError
+    error : (value:string)=>Error = BlankError.Parameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    CallbackParameters(value, Guard, error);
 }

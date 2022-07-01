@@ -1,11 +1,11 @@
-import Unclosed from '../../dist/remove-suffix-parameters';
+import {RemoveSuffixParameters} from '../../dist/remove-suffix';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('basic', function() {
 
-    expect(Unclosed('12345',  ']')).toBe('12345');
-    expect(Unclosed('[12345]',  ']')).toBe('[12345');
-    expect(Unclosed('[[12345]]',  ']')).toBe('[[12345]');
+    expect(RemoveSuffixParameters('12345',  ']')).toBe('12345');
+    expect(RemoveSuffixParameters('[12345]',  ']')).toBe('[12345');
+    expect(RemoveSuffixParameters('[[12345]]',  ']')).toBe('[[12345]');
 });
 

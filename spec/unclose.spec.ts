@@ -1,4 +1,3 @@
-// import Unclosed from "../dist/unclose";
 //
 // it("force console log", () => { spyOn(console, 'log').and.callThrough();});
 //

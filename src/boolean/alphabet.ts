@@ -1,6 +1,6 @@
-import Match from './match-parameters';
+import {MatchParameters} from './match';
 
 export default function Alphabet(source : string) : boolean {
 
-    return Match(source, /^[a-z]*$/i);
+    return MatchParameters(source, /^[a-z]*$/i);
 }

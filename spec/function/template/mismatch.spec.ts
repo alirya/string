@@ -1,4 +1,4 @@
-import Template from '../../../dist/function/template-parameters';
+import {TemplateParameters} from '../../../dist/function/template';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -6,7 +6,7 @@ it('clean', function() {
 
   try {
 
-    Template('data {a}} and {{b} and {c}}')({
+    TemplateParameters('data {a}} and {{b} and {c}}')({
       a : 'first',
       b : 'second',
       c : 'third',

@@ -1,8 +1,8 @@
 import ALPHABET from '../../dist/alphabet';
 import DIGIT from '../../dist/digit';
-import Numeric from '../../dist/validatable/numeric-parameters';
-import NumericMessage from '../../dist/assert/string/numeric-parameters';
-import NumericMessageArgument from '../../dist/assert/string/numeric-parameters';
+import {NumericParameters} from '../../dist/validatable/numeric';
+import NumericMessage from '../../dist/assert/string/numeric';
+import NumericMessageArgument from '../../dist/assert/string/numeric';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -52,11 +52,11 @@ for(let [value, [valid, message]] of map) {
 
     it(message, ()=>{
 
-        let validatable = Numeric(value, NumericMessage);
+        let validatable = NumericParameters(value, NumericMessage.Parameters);
         expect(validatable.valid).toBe(valid);
         expect(validatable.value).toBe(value);
 
-        expect(validatable.message).toBe(NumericMessageArgument(validatable.value, validatable.valid));
+        expect(validatable.message).toBe(NumericMessageArgument.Parameters(validatable.value, validatable.valid));
     });
 }
 

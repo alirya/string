@@ -1,9 +1,7 @@
-import CircumfixParameters from '../../dist/circumfix-parameters';
-import PadPrefixParameters from '../../dist/pad-prefix-parameters';
-import PadSuffixParameters from '../../dist/pad-suffix-parameters';
+import {CircumfixParameters} from '../../dist/circumfix';
 import Affix from '../../dist/affix/affix';
-import PrefixParameters from '../../dist/prefix-parameters';
-import SuffixParameters from '../../dist/suffix-parameters';
+import {PrefixParameters} from '../../dist/prefix';
+import {SuffixParameters} from '../../dist/suffix';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,11 +1,10 @@
-import Truncate from '../../../dist/truncate-parameters';
-import Template from '../../../dist/function/template-parameters';
+import {TemplateParameters} from '../../../dist/function/template';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('single', function() {
 
-  expect(Template('data {a} and {b} and {c}.')({
+  expect(TemplateParameters('data {a} and {b} and {c}.')({
     a : 'first',
     b : 'second',
     c : 'third',
@@ -17,7 +16,7 @@ it('single', function() {
 
 it('multi', function() {
 
-  const template = Template('data {a} and {b} and {c}.');
+  const template = TemplateParameters('data {a} and {b} and {c}.');
 
   expect(template({
     a : 'first',

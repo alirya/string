@@ -1,11 +1,11 @@
 import Guard from '../boolean/empty';
-import Callback from '@alirya/function/assert/callback-parameters';
-import EmptyError from './throwable/empty-parameters';
+import {CallbackParameters} from '@alirya/function/assert/callback';
+import EmptyError from './throwable/empty';
 
 export default function Empty(
     value : string,
-    error : (value:string)=>Error = EmptyError
+    error : (value:string)=>Error = EmptyError.Parameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    CallbackParameters(value, Guard, error);
 }

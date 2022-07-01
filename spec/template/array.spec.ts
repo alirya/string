@@ -1,10 +1,10 @@
-import Template from '../../dist/template-parameters';
+import {TemplateParameters} from '../../dist/template';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('single', function() {
 
-  expect(Template('data {0} and {1} and {2}', [
+  expect(TemplateParameters('data {0} and {1} and {2}', [
     'first',
     'second',
     'third'

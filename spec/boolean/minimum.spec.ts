@@ -1,40 +1,40 @@
-import Minimum from '../../dist/boolean/minimum-parameters';
+import {MinimumParameters} from '../../dist/boolean/minimum';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`inclusive`,function() {
 
     it(`lower with limit`, () => {
-        expect(Minimum('', 1, false)).toBeFalse();
-        expect(Minimum('', 10, false)).toBeFalse();
+        expect(MinimumParameters('', 1, false)).toBeFalse();
+        expect(MinimumParameters('', 10, false)).toBeFalse();
     });
 
     it(`equal with limit`, () => {
-        expect(Minimum('', 0,true)).toBeTrue();
-        expect(Minimum('abcdefghij', 10,true)).toBeTrue();
+        expect(MinimumParameters('', 0,true)).toBeTrue();
+        expect(MinimumParameters('abcdefghij', 10,true)).toBeTrue();
     });
 
     it(`greater than limit`, () => {
-        expect(Minimum('a', 0,true)).toBeTrue();
-        expect(Minimum('abcdefghij01234', 10,true)).toBeTrue();
+        expect(MinimumParameters('a', 0,true)).toBeTrue();
+        expect(MinimumParameters('abcdefghij01234', 10,true)).toBeTrue();
     });
 });
 
 describe(`exclusive`,function() {
 
     it(`lower with limit`, () => {
-        expect(Minimum('', 1, false)).toBeFalse();
-        expect(Minimum('', 10, false)).toBeFalse();
+        expect(MinimumParameters('', 1, false)).toBeFalse();
+        expect(MinimumParameters('', 10, false)).toBeFalse();
     });
 
     it(`equal with limit`, () => {
-        expect(Minimum('a', 1,false)).toBeFalse();
-        expect(Minimum('abcdefghij', 10,false)).toBeFalse();
+        expect(MinimumParameters('a', 1,false)).toBeFalse();
+        expect(MinimumParameters('abcdefghij', 10,false)).toBeFalse();
     });
 
     it(`greater than limit`, () => {
-        expect(Minimum('a', 0,false)).toBeTrue();
-        expect(Minimum('abcdefghij01234', 10,false)).toBeTrue();
+        expect(MinimumParameters('a', 0,false)).toBeTrue();
+        expect(MinimumParameters('abcdefghij01234', 10,false)).toBeTrue();
     });
 });
 

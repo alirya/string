@@ -1,11 +1,11 @@
 import Guard from '../boolean/alphanumeric';
-import Callback from '@alirya/function/assert/callback-parameters';
-import AlphanumericError from './throwable/alphanumeric-parameters';
+import {CallbackParameters} from '@alirya/function/assert/callback';
+import AlphanumericError from './throwable/alphanumeric';
 
 export default function Alphanumeric(
     value : string,
-    error : (value:string)=>Error = AlphanumericError
+    error : (value:string)=>Error = AlphanumericError.Parameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    CallbackParameters(value, Guard, error);
 }

@@ -1,10 +1,10 @@
-import Empty from '../../../dist/assert/string/empty-parameters';
+import {EmptyParameters} from '../../../dist/assert/string/empty';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 
-    expect(Empty('', true, 'value')).toBe(
+    expect(EmptyParameters('', true, 'value')).toBe(
         'value is empty string.'
     );
 
@@ -12,7 +12,7 @@ it('true valid', ()=>{
 
 it('true invalid', ()=>{
 
-    expect(Empty('123456789', true, 'value')).toBe(
+    expect(EmptyParameters('123456789', true, 'value')).toBe(
         'value is empty string.'
     );
 
@@ -20,7 +20,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Empty('', false, 'value')).toBe(
+    expect(EmptyParameters('', false, 'value')).toBe(
         'value must empty string.'
     );
 
@@ -28,7 +28,7 @@ it('false valid', ()=>{
 
 it('false invalid', ()=>{
 
-    expect(Empty('123456789',false,  'value')).toBe(
+    expect(EmptyParameters('123456789',false,  'value')).toBe(
         'value must empty string, actual "12345...".'
     );
 

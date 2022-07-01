@@ -1,12 +1,12 @@
-import Enclosed from '../dist/enclose-parameters';
+import {EncloseParameters} from '../dist/enclose';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('square', function() {
 
-    expect(Enclosed('12345', '[', ']')).toBe('[12345]');
-    expect(Enclosed('[12345]', '[', ']')).toBe('[12345]');
-    expect(Enclosed('[[12345]]', '[', ']')).toBe('[[12345]]');
+    expect(EncloseParameters('12345', '[', ']')).toBe('[12345]');
+    expect(EncloseParameters('[12345]', '[', ']')).toBe('[12345]');
+    expect(EncloseParameters('[[12345]]', '[', ']')).toBe('[[12345]]');
 
 });
 

@@ -1,8 +1,8 @@
 import ALPHABET from '../../dist/alphabet';
 import DIGIT from '../../dist/digit';
-import Alphanumeric from '../../dist/validatable/alphanumeric-parameters';
-import AlphanumericMessage from '../../dist/assert/string/alphanumeric-parameters';
-import AlphanumericMessageArgument from '../../dist/assert/string/alphanumeric-parameters';
+import {AlphanumericParameters} from '../../dist/validatable/alphanumeric';
+import AlphanumericMessage from '../../dist/assert/string/alphanumeric';
+import AlphanumericMessageArgument from '../../dist/assert/string/alphanumeric';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -52,12 +52,12 @@ for(let [value, [valid, message]] of map) {
 
     it(message, ()=>{
 
-        let validatable = Alphanumeric(value, AlphanumericMessage);
+        let validatable = AlphanumericParameters(value, AlphanumericMessage.Parameters);
         expect(validatable.valid).toBe(valid);
         expect(validatable.value).toBe(value);
 
 
-        expect(validatable.message).toBe(AlphanumericMessageArgument(validatable.value, validatable.valid));
+        expect(validatable.message).toBe(AlphanumericMessageArgument.Parameters(validatable.value, validatable.valid));
     });
 }
 

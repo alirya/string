@@ -1,10 +1,10 @@
-import NotEmpty from '../../../dist/assert/string/not-empty-parameters';
+import {NotEmptyParameters} from '../../../dist/assert/string/not-empty';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 
-    expect(NotEmpty('123456789',true,  'value')).toBe(
+    expect(NotEmptyParameters('123456789',true,  'value')).toBe(
         'value is not empty string.'
     );
 
@@ -12,7 +12,7 @@ it('true valid', ()=>{
 
 it('true invalid', ()=>{
 
-    expect(NotEmpty('', true, 'value')).toBe(
+    expect(NotEmptyParameters('', true, 'value')).toBe(
         'value is not empty string.'
     );
 
@@ -20,7 +20,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(NotEmpty('123456789',false,  'value')).toBe(
+    expect(NotEmptyParameters('123456789',false,  'value')).toBe(
         'value must not empty string.'
     );
 
@@ -28,7 +28,7 @@ it('false valid', ()=>{
 
 it('false invalid', ()=>{
 
-    expect(NotEmpty('', false, 'value')).toBe(
+    expect(NotEmptyParameters('', false, 'value')).toBe(
         'value must not empty string.'
     );
 

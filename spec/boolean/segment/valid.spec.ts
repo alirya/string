@@ -1,26 +1,26 @@
-import Related from '../../../dist/boolean/segment-parameters';
+import {SegmentParameters} from '../../../dist/boolean/segment';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('equal empty', function() {
 
-    expect(Related('', '', '.')).toBeTrue();
+    expect(SegmentParameters('', '', '.')).toBeTrue();
 });
 
 
 it('equal', function() {
 
-    expect(Related('root', 'root', '.')).toBeTrue();
+    expect(SegmentParameters('root', 'root', '.')).toBeTrue();
 });
 
 it('equal 2 parts', function() {
 
-    expect(Related('root.parent', 'root.parent', '.')).toBeTrue();
+    expect(SegmentParameters('root.parent', 'root.parent', '.')).toBeTrue();
 });
 
 
 it('value shorter', function() {
 
-    expect(Related('root', 'root.parent', '.')).toBeTrue();
+    expect(SegmentParameters('root', 'root.parent', '.')).toBeTrue();
 });
 

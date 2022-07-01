@@ -1,10 +1,10 @@
-import Numeric from '../../../dist/assert/string/numeric-parameters';
+import {NumericParameters} from '../../../dist/assert/string/numeric';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true valid', ()=>{
 
-    expect(Numeric( '0123456789', true, 'value')).toBe(
+    expect(NumericParameters( '0123456789', true, 'value')).toBe(
         'value is numeric.'
     );
 
@@ -12,7 +12,7 @@ it('true valid', ()=>{
 
 it('true invalid', ()=>{
 
-    expect(Numeric( '0123456789', true, 'value')).toBe(
+    expect(NumericParameters( '0123456789', true, 'value')).toBe(
         'value is numeric.'
     );
 
@@ -20,7 +20,7 @@ it('true invalid', ()=>{
 
 it('false valid', ()=>{
 
-    expect(Numeric( '0123456789', false, 'value')).toBe(
+    expect(NumericParameters( '0123456789', false, 'value')).toBe(
         'value must numeric.'
     );
 
@@ -28,7 +28,7 @@ it('false valid', ()=>{
 
 it('false invalid', ()=>{
 
-    expect(Numeric( '0123ABCD456E789', false, 'value')).toBe(
+    expect(NumericParameters( '0123ABCD456E789', false, 'value')).toBe(
         'value must numeric, contain "ABCD".'
     );
 

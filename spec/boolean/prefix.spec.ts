@@ -1,18 +1,18 @@
-import Prefix from '../../dist/boolean/prefix-parameters';
+import {PrefixParameters} from '../../dist/boolean/prefix';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 it('prefix', ()=>{
 
-    expect(Prefix('abcdefghij', 'a')).toBe(true);
-    expect(Prefix('abcdefghij', 'abcde')).toBe(true);
+    expect(PrefixParameters('abcdefghij', 'a')).toBe(true);
+    expect(PrefixParameters('abcdefghij', 'abcde')).toBe(true);
 
 });
 
 it('suffix', ()=>{
 
-    expect(Prefix('abcdefghij', 'j')).toBe(false);
-    expect(Prefix('abcdefghij', 'fghij')).toBe(false);
+    expect(PrefixParameters('abcdefghij', 'j')).toBe(false);
+    expect(PrefixParameters('abcdefghij', 'fghij')).toBe(false);
 
 });

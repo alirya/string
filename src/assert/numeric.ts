@@ -1,11 +1,11 @@
 import Guard from '../boolean/numeric';
-import Callback from '@alirya/function/assert/callback-parameters';
-import NumericError from './throwable/numeric-parameters';
+import {CallbackParameters} from '@alirya/function/assert/callback';
+import NumericError from './throwable/numeric';
 
 export default function Numeric(
     value : string,
-    error : (value:string)=>Error = NumericError
+    error : (value:string)=>Error = NumericError.Parameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    CallbackParameters(value, Guard, error);
 }

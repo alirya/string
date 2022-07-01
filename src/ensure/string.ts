@@ -1,9 +1,9 @@
 import AssertString from '../assert/string';
-import StringError from '../assert/throwable/string-parameters';
+import {StringParameters} from '../assert/throwable/string';
 
 export default function String(
     value : unknown,
-    error : (value:unknown)=>Error = StringError
+    error : (value:unknown)=>Error = StringParameters
 ) : string {
 
     AssertString(value, error);

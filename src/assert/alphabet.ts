@@ -1,11 +1,11 @@
 import Guard from '../boolean/alphabet';
-import Callback from '@alirya/function/assert/callback-parameters';
-import AlphabetError from './throwable/alphabet-parameters';
+import {CallbackParameters} from '@alirya/function/assert/callback';
+import {AlphabetParameters} from './throwable/alphabet';
 
 export default function Alphabet(
     value : string,
-    error : (value:string)=>Error = AlphabetError
+    error : (value:string)=>Error = AlphabetParameters
 ) : asserts value is string {
 
-    Callback(value, Guard, error);
+    CallbackParameters(value, Guard, error);
 }
