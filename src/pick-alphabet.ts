@@ -1,4 +1,4 @@
-import PickAlphabet from "./pick-alpha";
+import PickAlphabet from './pick-alpha';
 
 
 export default PickAlphabet;

@@ -8,8 +8,8 @@ export interface MatchType<ValueType extends string> extends
     Readonly<ValueOf<string>> {
     readonly valid : boolean;
     readonly match : string[];
-    readonly value : ValueType,
-    readonly pattern : RegExp,
+    readonly value : ValueType;
+    readonly pattern : RegExp;
     toString() : string;
     valueOf() : string;
 }
