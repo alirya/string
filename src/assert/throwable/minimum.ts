@@ -1,6 +1,6 @@
-import MinimumType from '../string/minimum';
-import Count from '../../number/count';
-import {MinimumArgument, MinimumArgumentString, MinimumArgumentValue} from '../string/minimum';
+import MinimumType from '../string/minimum.js';
+import Count from '../../number/count.js';
+import {MinimumArgument, MinimumArgumentString, MinimumArgumentValue} from '../string/minimum.js';
 
 export function MinimumParameters(
     value : string,

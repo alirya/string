@@ -1,8 +1,8 @@
-import ALPHABET from '../../dist/alphabet';
-import DIGIT from '../../dist/digit';
-import {EmptyParameters} from '../../dist/validatable/empty';
-import EmptyMessage from '../../dist/assert/string/empty';
-import EmptyMessageArgument from '../../dist/assert/string/empty';
+import ALPHABET from '../../dist/alphabet.js';
+import DIGIT from '../../dist/digit.js';
+import {EmptyParameters} from '../../dist/validatable/empty.js';
+import EmptyMessage from '../../dist/assert/string/empty.js';
+import EmptyMessageArgument from '../../dist/assert/string/empty.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

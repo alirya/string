@@ -1,4 +1,4 @@
-import Grapheme from '../../dist/number/grapheme';
+import Grapheme from '../../dist/number/grapheme.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,5 +1,5 @@
-import NumericType from '../string/numeric';
-import Value from '@alirya/value/value';
+import NumericType from '../string/numeric.js';
+import Value from '@alirya/value/value.js';
 
 export function NumericParameters(
     value : string,

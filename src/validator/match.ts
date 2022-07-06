@@ -1,12 +1,12 @@
-import Validator from '@alirya/validator/validator';
-import MatchValidatable from '../validatable/match';
-import Instance from '@alirya/validator/validatable/validatable';
-import MatchString from '../assert/string/match';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import Value from '@alirya/value/value';
-import Pattern from '../pattern/pattern/pattern';
+import Validator from '@alirya/validator/validator.js';
+import MatchValidatable from '../validatable/match.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import MatchString from '../assert/string/match.js';
+import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import Value from '@alirya/value/value.js';
+import Pattern from '../pattern/pattern/pattern.js';
 
 export function MatchParameters(
     pattern : RegExp,

@@ -1,6 +1,6 @@
-import trim from 'lodash/trim';
-import {TrimSuffixParameters} from './trim-suffix';
-import {TrimPrefixParameters} from './trim-prefix';
+import trim from 'lodash/trim.js';
+import {TrimSuffixParameters} from './trim-suffix.js';
+import {TrimPrefixParameters} from './trim-prefix.js';
 
 export function TrimParameters(
     value: string,
@@ -37,10 +37,10 @@ export function TrimParameters(
 }
 
 
-import String from './string/string';
-import Suffix from './suffix/suffix';
-import Circumfix from './circumfix/circumfix';
-import Prefix from './prefix/prefix';
+import String from './string/string.js';
+import Suffix from './suffix/suffix.js';
+import Circumfix from './circumfix/circumfix.js';
+import Prefix from './prefix/prefix.js';
 
 export type TrimArgumentCircumfix = String & Circumfix;
 export type TrimArgumentPair = String & Prefix & Suffix;

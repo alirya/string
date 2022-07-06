@@ -1,10 +1,10 @@
-import Guard from '../boolean/minimum';
-import Callback from '@alirya/function/assert/callback';
-import MinimumError from './throwable/minimum';
-import Count from '../number/count';
-import Value from '@alirya/value/value';
-import MinimumNumber from '@alirya/number/minimum/minimum';
-import Inclusive from '@alirya/number/inclusive/inclusive';
+import Guard from '../boolean/minimum.js';
+import Callback from '@alirya/function/assert/callback.js';
+import MinimumError from './throwable/minimum.js';
+import Count from '../number/count.js';
+import Value from '@alirya/value/value.js';
+import MinimumNumber from '@alirya/number/minimum/minimum.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
 
 
 export function MinimumParameters(

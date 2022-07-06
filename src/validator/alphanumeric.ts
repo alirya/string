@@ -1,8 +1,8 @@
-import Validator from '@alirya/validator/validator';
-import AlphanumericValidatable from '../validatable/alphanumeric';
-import Instance from '@alirya/validator/validatable/validatable';
-import AlphanumericString from '../assert/string/alphanumeric';
-import Dynamic from '@alirya/validator/message/function/validatable';
+import Validator from '@alirya/validator/validator.js';
+import AlphanumericValidatable from '../validatable/alphanumeric.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import AlphanumericString from '../assert/string/alphanumeric.js';
+import Dynamic from '@alirya/validator/message/function/validatable.js';
 
 export function AlphanumericParameters() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 
@@ -22,7 +22,7 @@ export function AlphanumericParameters<MessageType>(
 
 }
 
-import SimpleValidator from '@alirya/validator/simple';
+import SimpleValidator from '@alirya/validator/simple.js';
 
 export function AlphanumericParameter() : SimpleValidator<string, string, Readonly<Instance<string, string>>>;
 

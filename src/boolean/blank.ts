@@ -1,4 +1,4 @@
-import Empty from './empty';
+import Empty from './empty.js';
 /**
  * check if {@param string} is all white space (space, tab, no-break space, etc.) or empty string {@see Empty}
  *

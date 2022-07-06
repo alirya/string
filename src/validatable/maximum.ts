@@ -1,12 +1,12 @@
-import MaximumNumber from '@alirya/number/maximum/maximum';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import MaximumObject from '../boolean/maximum';
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import Count from '../number/count';
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
+import MaximumNumber from '@alirya/number/maximum/maximum.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import MaximumObject from '../boolean/maximum.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import Count from '../number/count.js';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
 
 export type MaximumReturn<ValueType, MessageType> = Readonly<Inclusive & MaximumNumber & Value<ValueType> & Message<MessageType> & Validatable>;
 

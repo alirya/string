@@ -1,5 +1,5 @@
-import String from '../string/string';
-import Separator from '../separator/separator';
+import String from '../string/string.js';
+import Separator from '../separator/separator.js';
 
 /**
  * split {@param string} to its each alphanumeric marked by {@param separator}

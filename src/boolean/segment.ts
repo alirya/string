@@ -1,5 +1,5 @@
-import Difference from '@alirya/array/difference-parameters';
-import Separator from '../separator/separator';
+import {DifferenceParameters} from '@alirya/array/difference.js';
+import Separator from '../separator/separator.js';
 
 /**
  * check if {@param compare} is part of {@param root}
@@ -31,7 +31,7 @@ export function SegmentParameters(
         return true;
     }
 
-    return Difference(
+    return DifferenceParameters(
         root.split(separator),
         compare.split(separator),
     ).length === 0;

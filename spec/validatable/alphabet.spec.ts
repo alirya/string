@@ -1,8 +1,8 @@
-import ALPHABET from '../../dist/alphabet';
-import DIGIT from '../../dist/digit';
-import {AlphabetParameters} from '../../dist/validatable/alphabet';
-import AlphabetMessage from '../../dist/assert/string/alphabet';
-import AlphabetMessageArgument from '../../dist/assert/string/alphabet';
+import ALPHABET from '../../dist/alphabet.js';
+import DIGIT from '../../dist/digit.js';
+import {AlphabetParameters} from '../../dist/validatable/alphabet.js';
+import AlphabetMessage from '../../dist/assert/string/alphabet.js';
+import AlphabetMessageArgument from '../../dist/assert/string/alphabet.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

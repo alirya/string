@@ -1,4 +1,4 @@
-import {UpperWordsParameters} from '../dist/upper-words';
+import {UpperWordsParameters} from '../dist/upper-words.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

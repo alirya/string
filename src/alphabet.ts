@@ -1,5 +1,5 @@
-import AlphabetLowercase from './alphabet-lowercase';
-import AlphabetUppercase from './alphabet-uppercase';
+import AlphabetLowercase from './alphabet-lowercase.js';
+import AlphabetUppercase from './alphabet-uppercase.js';
 
 /**
  * lower case and upper case alphabet string

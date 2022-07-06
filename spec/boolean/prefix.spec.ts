@@ -1,4 +1,4 @@
-import {PrefixParameters} from '../../dist/boolean/prefix';
+import {PrefixParameters} from '../../dist/boolean/prefix.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

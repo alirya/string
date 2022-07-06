@@ -1,4 +1,4 @@
-import {TrimParameters} from '../dist/trim';
+import {TrimParameters} from '../dist/trim.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

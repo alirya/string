@@ -1,4 +1,4 @@
-import {MinimumParameters} from '../../../dist/assert/string/minimum';
+import {MinimumParameters} from '../../../dist/assert/string/minimum.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,6 +1,6 @@
-import MaximumType from '../string/maximum';
-import Count from '../../number/count';
-import {MaximumArgument} from '../string/maximum';
+import MaximumType from '../string/maximum.js';
+import Count from '../../number/count.js';
+import {MaximumArgument} from '../string/maximum.js';
 
 export function MaximumParameters(
     value : string,

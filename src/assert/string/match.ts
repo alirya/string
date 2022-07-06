@@ -1,7 +1,7 @@
-import {TruncateParameters} from '../../truncate';
-import Validatable from '@alirya/validatable/validatable';
-import Value from '@alirya/value/value';
-import Pattern from '../../pattern/pattern/pattern';
+import {TruncateParameters} from '../../truncate.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@alirya/value/value.js';
+import Pattern from '../../pattern/pattern/pattern.js';
 
 export function MatchParameters(
     value : string,

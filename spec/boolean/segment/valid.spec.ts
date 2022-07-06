@@ -1,4 +1,4 @@
-import {SegmentParameters} from '../../../dist/boolean/segment';
+import {SegmentParameters} from '../../../dist/boolean/segment.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

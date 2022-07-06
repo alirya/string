@@ -1,8 +1,8 @@
-import {LowerParameters} from '@alirya/number/boolean/lower';
-import Count from '../number/count';
-import MaximumNumber from '@alirya/number/maximum/maximum';
-import Value from '@alirya/value/value';
-import Inclusive from '@alirya/number/inclusive/inclusive';
+import {LowerParameters} from '@alirya/number/boolean/lower.js';
+import Count from '../number/count.js';
+import MaximumNumber from '@alirya/number/maximum/maximum.js';
+import Value from '@alirya/value/value.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
 
 /**
  * check if {@param string} length/size is lower than {@param maximum} or equal if {@param inclusive} is "true"

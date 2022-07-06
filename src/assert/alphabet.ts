@@ -1,6 +1,6 @@
-import Guard from '../boolean/alphabet';
-import {CallbackParameters} from '@alirya/function/assert/callback';
-import {AlphabetParameters} from './throwable/alphabet';
+import Guard from '../boolean/alphabet.js';
+import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {AlphabetParameters} from './throwable/alphabet.js';
 
 export default function Alphabet(
     value : string,

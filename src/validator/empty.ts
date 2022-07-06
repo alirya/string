@@ -1,8 +1,8 @@
-import Validator from '@alirya/validator/simple';
-import EmptyValidatable from '../validatable/empty';
-import Instance from '@alirya/validator/validatable/validatable';
-import EmptyString from '../assert/string/empty';
-import Static from '@alirya/validator/message/function/static';
+import Validator from '@alirya/validator/simple.js';
+import EmptyValidatable from '../validatable/empty.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import EmptyString from '../assert/string/empty.js';
+import Static from '@alirya/validator/message/function/static.js';
 
 
 export function EmptyParameters() : Validator<string, '', Readonly<Instance<'', string>>>;

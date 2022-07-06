@@ -1,10 +1,10 @@
-import Validator from '@alirya/validator/simple';
-import StringValidatable from '../validatable/string';
-import Instance from '@alirya/validator/validatable/validatable';
-import StringString from '../assert/string/string';
-import {SimpleParameters} from '@alirya/validator/message/function/simple';
-import Validatable from '@alirya/validatable/validatable';
-import Value from '@alirya/value/value';
+import Validator from '@alirya/validator/simple.js';
+import StringValidatable from '../validatable/string.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import StringString from '../assert/string/string.js';
+import {SimpleParameters} from '@alirya/validator/message/function/simple.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@alirya/value/value.js';
 
 export type StringParametersReturn<MessageType> = Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
 

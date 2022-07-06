@@ -1,4 +1,4 @@
-import NotBlank from '../../dist/boolean/not-blank';
+import NotBlank from '../../dist/boolean/not-blank.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

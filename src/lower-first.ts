@@ -1,4 +1,4 @@
-import lowerFirst from 'lodash/lowerFirst';
+import lowerFirst from 'lodash/lowerFirst.js';
 
 /**
  * @see lowerFirst

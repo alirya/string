@@ -1,5 +1,5 @@
-import EmptyType from '../string/empty';
-import Value from '@alirya/value/value';
+import EmptyType from '../string/empty.js';
+import Value from '@alirya/value/value.js';
 
 export function EmptyParameters(
     value : string,

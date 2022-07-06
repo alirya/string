@@ -1,8 +1,8 @@
-import Guard from '../boolean/match';
-import {CallbackParameters} from '@alirya/function/assert/callback';
-import MatchError from './throwable/match';
-import Value from '@alirya/value/value';
-import Pattern from '../pattern/pattern/pattern';
+import Guard from '../boolean/match.js';
+import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import MatchError from './throwable/match.js';
+import Value from '@alirya/value/value.js';
+import Pattern from '../pattern/pattern/pattern.js';
 
 export function MatchParameters(
     value : string,

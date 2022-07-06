@@ -1,4 +1,4 @@
-import StringGuard from '../../dist/boolean/string';
+import StringGuard from '../../dist/boolean/string.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

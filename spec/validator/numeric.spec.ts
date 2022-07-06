@@ -1,8 +1,8 @@
-import ALPHABET from '../../dist/alphabet';
-import DIGIT from '../../dist/digit';
-import {NumericParameters} from '../../dist/validator/numeric';
-import NumericMessageArgument from '../../dist/assert/string/numeric';
-import NumericMessage from '../../dist/assert/string/numeric';
+import ALPHABET from '../../dist/alphabet.js';
+import DIGIT from '../../dist/digit.js';
+import {NumericParameters} from '../../dist/validator/numeric.js';
+import NumericMessageArgument from '../../dist/assert/string/numeric.js';
+import NumericMessage from '../../dist/assert/string/numeric.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

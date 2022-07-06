@@ -1,6 +1,6 @@
-import {TruncateParameters} from '../../truncate';
-import Validatable from '@alirya/validatable/validatable';
-import Value from '@alirya/value/value';
+import {TruncateParameters} from '../../truncate.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@alirya/value/value.js';
 
 export function EmptyParameters(
     value : string,

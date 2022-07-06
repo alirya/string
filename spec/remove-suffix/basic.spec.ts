@@ -1,4 +1,4 @@
-import {RemoveSuffixParameters} from '../../dist/remove-suffix';
+import {RemoveSuffixParameters} from '../../dist/remove-suffix.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

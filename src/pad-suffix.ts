@@ -1,6 +1,6 @@
-import padEnd from 'lodash/padEnd';
-import String from './string/string';
-import Suffix from './suffix/suffix';
+import padEnd from 'lodash/padEnd.js';
+import String from './string/string.js';
+import Suffix from './suffix/suffix.js';
 
 /**
  * @see padEnd

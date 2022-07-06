@@ -1,5 +1,5 @@
-import StringType from '../string/string';
-import Value from '@alirya/value/value';
+import StringType from '../string/string.js';
+import Value from '@alirya/value/value.js';
 
 export function StringParameters(
     value : unknown,

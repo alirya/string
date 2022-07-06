@@ -1,7 +1,7 @@
-import {MatchParameters} from '../../dist/validatable/match';
-import ALPHABET from '../../dist/alphabet';
-import DIGIT from '../../dist/digit';
-import MatchMessage from '../../dist/assert/string/match';
+import {MatchParameters} from '../../dist/validatable/match.js';
+import ALPHABET from '../../dist/alphabet.js';
+import DIGIT from '../../dist/digit.js';
+import MatchMessage from '../../dist/assert/string/match.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

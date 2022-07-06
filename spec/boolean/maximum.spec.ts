@@ -1,4 +1,4 @@
-import {MaximumParameters} from '../../dist/boolean/maximum';
+import {MaximumParameters} from '../../dist/boolean/maximum.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

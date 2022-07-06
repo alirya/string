@@ -1,6 +1,6 @@
-import Empty from '../../dist/boolean/empty';
-import ALPHABET from '../../dist/alphabet';
-import DIGIT from '../../dist/digit';
+import Empty from '../../dist/boolean/empty.js';
+import ALPHABET from '../../dist/alphabet.js';
+import DIGIT from '../../dist/digit.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

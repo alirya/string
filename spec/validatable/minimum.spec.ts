@@ -1,5 +1,5 @@
-import {MinimumParameters} from '../../dist/validatable/minimum';
-import MinimumString from '../../dist/assert/string/minimum';
+import {MinimumParameters} from '../../dist/validatable/minimum.js';
+import MinimumString from '../../dist/assert/string/minimum.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

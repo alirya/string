@@ -1,8 +1,8 @@
-import Validator from '@alirya/validator/validator';
-import AlphabetValidatable from '../validatable/alphabet';
-import Instance from '@alirya/validator/validatable/validatable';
-import AlphabetString from '../assert/string/alphabet';
-import Dynamic from '@alirya/validator/message/function/validatable';
+import Validator from '@alirya/validator/validator.js';
+import AlphabetValidatable from '../validatable/alphabet.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import AlphabetString from '../assert/string/alphabet.js';
+import Dynamic from '@alirya/validator/message/function/validatable.js';
 
 export function AlphabetParameters() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 

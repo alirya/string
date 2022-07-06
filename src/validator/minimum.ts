@@ -1,14 +1,14 @@
-import Validator from '@alirya/validator/validator';
-import MinimumValidatable, {MinimumParametersReturn} from '../validatable/minimum';
-import Count from '../number/count';
-import MinimumString from '../assert/string/minimum';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import Value from '@alirya/value/value';
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import MinimumNumber from '@alirya/number/minimum/minimum';
-import StrictOmit from '@alirya/object/strict-omit';
-import {ValidatableParameter} from '@alirya/validator/message/function/validatable';
+import Validator from '@alirya/validator/validator.js';
+import MinimumValidatable, {MinimumParametersReturn} from '../validatable/minimum.js';
+import Count from '../number/count.js';
+import MinimumString from '../assert/string/minimum.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import Value from '@alirya/value/value.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import MinimumNumber from '@alirya/number/minimum/minimum.js';
+import StrictOmit from '@alirya/object/strict-omit.js';
+import {ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
 
 export type MinimumArgumentsMessage<MessageType> =
     (value:string, valid : boolean, minimum : number, inclusive : boolean)=>MessageType;

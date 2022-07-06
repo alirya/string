@@ -1,4 +1,4 @@
-import PickAlnum from '../../dist/pick-alnum';
+import PickAlnum from '../../dist/pick-alnum.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,8 +1,8 @@
-import Validator from '@alirya/validator/validator';
-import DigitValidatable from '../validatable/digit';
-import Instance from '@alirya/validator/validatable/validatable';
-import DigitString from '../assert/string/digit';
-import Dynamic from '@alirya/validator/message/function/validatable';
+import Validator from '@alirya/validator/validator.js';
+import DigitValidatable from '../validatable/digit.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import DigitString from '../assert/string/digit.js';
+import Dynamic from '@alirya/validator/message/function/validatable.js';
 
 export function DigitParameters() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 
@@ -21,7 +21,7 @@ export function DigitParameters<MessageType>(
     } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
 }
 
-import SimpleValidator from '@alirya/validator/simple';
+import SimpleValidator from '@alirya/validator/simple.js';
 
 export function DigitParameter() : SimpleValidator<string, string, Readonly<Instance<string, string>>>;
 

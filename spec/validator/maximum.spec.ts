@@ -1,5 +1,5 @@
-import {MaximumParameters} from '../../dist/validator/maximum';
-import MaximumString from '../../dist/assert/string/maximum';
+import {MaximumParameters} from '../../dist/validator/maximum.js';
+import MaximumString from '../../dist/assert/string/maximum.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

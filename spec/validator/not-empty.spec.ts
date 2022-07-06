@@ -1,8 +1,8 @@
-import ALPHABET from '../../dist/alphabet';
-import DIGIT from '../../dist/digit';
-import {NotEmptyParameters} from '../../dist/validator/not-empty';
-import NotEmptyMessage from '../../dist/assert/string/not-empty';
-import NotEmptyMessageArgument from '../../dist/assert/string/not-empty';
+import ALPHABET from '../../dist/alphabet.js';
+import DIGIT from '../../dist/digit.js';
+import {NotEmptyParameters} from '../../dist/validator/not-empty.js';
+import NotEmptyMessage from '../../dist/assert/string/not-empty.js';
+import NotEmptyMessageArgument from '../../dist/assert/string/not-empty.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

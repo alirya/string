@@ -1,10 +1,10 @@
-import SafeCast from '../safe-cast';
-import Escape from '../pattern/escape';
-import Callback from '@alirya/function/callback/callback';
-import Callable from '@alirya/function/callable';
-import String from '../string/string';
-import Prefix from '../prefix/prefix';
-import Suffix from '../suffix/suffix';
+import SafeCast from '../safe-cast.js';
+import Escape from '../pattern/escape.js';
+import Callback from '@alirya/function/callback/callback.js';
+import Callable from '@alirya/function/callable.js';
+import String from '../string/string.js';
+import Prefix from '../prefix/prefix.js';
+import Suffix from '../suffix/suffix.js';
 
 /**
  * create a string template callback for key object or array

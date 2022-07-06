@@ -1,4 +1,4 @@
-import {AlphanumericParameters} from '../../../dist/assert/string/alphanumeric';
+import {AlphanumericParameters} from '../../../dist/assert/string/alphanumeric.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

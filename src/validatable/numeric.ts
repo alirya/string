@@ -1,9 +1,9 @@
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import NumericFromObject from '../boolean/numeric';
-import Callback from '@alirya/validator/validatable/callback';
-import Dynamic from '@alirya/validator/message/function/validatable';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import NumericFromObject from '../boolean/numeric.js';
+import Callback from '@alirya/validator/validatable/callback.js';
+import Dynamic from '@alirya/validator/message/function/validatable.js';
 
 export function NumericParameters<ValueType extends string, MessageType>(
     value : ValueType,

@@ -1,5 +1,5 @@
-import AlphanumericType from '../string/alphanumeric';
-import Value from '@alirya/value/value';
+import AlphanumericType from '../string/alphanumeric.js';
+import Value from '@alirya/value/value.js';
 
 export function AlphanumericParameters(
     value : string,

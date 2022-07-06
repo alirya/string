@@ -1,5 +1,5 @@
-import {StringParameters} from '../../dist/validator/string';
-import StringMessage from '../../dist/assert/string/string';
+import {StringParameters} from '../../dist/validator/string.js';
+import StringMessage from '../../dist/assert/string/string.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

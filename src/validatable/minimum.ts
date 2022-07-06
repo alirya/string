@@ -1,11 +1,11 @@
-import MinimumNumber from '@alirya/number/minimum/minimum';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import IsMinimum from '../boolean/minimum';
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import Count from '../number/count';
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
+import MinimumNumber from '@alirya/number/minimum/minimum.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import IsMinimum from '../boolean/minimum.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import Count from '../number/count.js';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
 
 export type MinimumParametersReturn<ValueType, MessageType> =
     Readonly<Inclusive & MinimumNumber &  Value<ValueType> & Message<MessageType> & Validatable>;

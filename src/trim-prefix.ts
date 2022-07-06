@@ -1,6 +1,6 @@
-import trimStart from 'lodash/trimStart';
-import Prefix from './prefix/prefix';
-import String from './string/string';
+import trimStart from 'lodash/trimStart.js';
+import Prefix from './prefix/prefix.js';
+import String from './string/string.js';
 
 const TrimPrefixParameters : (string : string, prefix ?: string) => string = trimStart;
 

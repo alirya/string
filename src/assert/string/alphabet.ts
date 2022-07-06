@@ -1,6 +1,6 @@
-import Match from '../../value/match';
-import Validatable from '@alirya/validatable/validatable';
-import Value from '@alirya/value/value';
+import Match from '../../value/match.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@alirya/value/value.js';
 
 export function AlphabetParameters(
     value : string,

@@ -1,4 +1,4 @@
-import {MatchParameters} from '../../../dist/assert/string/match';
+import {MatchParameters} from '../../../dist/assert/string/match.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

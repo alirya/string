@@ -1,6 +1,6 @@
-import Guard from '../boolean/alphanumeric';
-import {CallbackParameters} from '@alirya/function/assert/callback';
-import AlphanumericError from './throwable/alphanumeric';
+import Guard from '../boolean/alphanumeric.js';
+import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import AlphanumericError from './throwable/alphanumeric.js';
 
 export default function Alphanumeric(
     value : string,

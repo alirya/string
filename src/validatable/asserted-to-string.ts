@@ -1,6 +1,6 @@
-import Validatable from '@alirya/validator/validatable/validatable';
-import ToString from '../to-string';
-import AssertValid from '@alirya/validator/validatable/assert/valid';
+import Validatable from '@alirya/validator/validatable/validatable.js';
+import ToString from '../to-string.js';
+import AssertValid from '@alirya/validator/validatable/assert/valid.js';
 
 export default function AssertedToString<ValidatableType extends Validatable<string>>(validatable : ValidatableType) : ValidatableType & ToString<[]> {
 

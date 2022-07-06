@@ -1,8 +1,8 @@
-import Validator from '@alirya/validator/validator';
-import NumericValidatable from '../validatable/numeric';
-import Instance from '@alirya/validator/validatable/validatable';
-import NumericString from '../assert/string/numeric';
-import Dynamic from '@alirya/validator/message/function/validatable';
+import Validator from '@alirya/validator/validator.js';
+import NumericValidatable from '../validatable/numeric.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import NumericString from '../assert/string/numeric.js';
+import Dynamic from '@alirya/validator/message/function/validatable.js';
 
 export function NumericParameters() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 

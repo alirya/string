@@ -1,4 +1,4 @@
-import {SegmentParameters} from '../../../dist/array/segment';
+import {SegmentParameters} from '../../../dist/array/segment.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

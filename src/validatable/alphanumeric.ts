@@ -1,9 +1,9 @@
-import AlphanumericFromObject from '../boolean/alphanumeric';
-import {CallbackClassParameters} from '@alirya/validator/validatable/callback';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
+import AlphanumericFromObject from '../boolean/alphanumeric.js';
+import {CallbackClassParameters} from '@alirya/validator/validatable/callback.js';
+import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
 
 export function AlphanumericParameters<ValueType extends string, MessageType>(
     value : ValueType,
