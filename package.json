@@ -19,7 +19,7 @@
     "@alirya/array": "^0.27.0",
     "@alirya/function": "^0.17.0",
     "@alirya/message": "^0.13.0",
-    "@alirya/number": "^0.18.0",
+    "@alirya/number": "^0.18.1",
     "@alirya/object": "^0.38.0",
     "@alirya/validatable": "^0.21.0",
     "@alirya/validator": "^0.20.0",
