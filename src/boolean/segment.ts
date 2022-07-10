@@ -1,4 +1,4 @@
-import Difference from '@alirya/array/difference-parameters';
+import { DifferenceParameters } from '@alirya/array/difference';
 import Separator from '../separator/separator';
 
 /**
@@ -31,7 +31,7 @@ export function SegmentParameters(
         return true;
     }
 
-    return Difference(
+    return DifferenceParameters(
         root.split(separator),
         compare.split(separator),
     ).length === 0;
