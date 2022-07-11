@@ -1,6 +1,6 @@
 {
   "name": "@alirya/string",
-  "version": "0.17.0",
+  "version": "0.17.1",
   "description": "Typescript string",
   "publishConfig": {
     "directory": "dist"
@@ -16,14 +16,14 @@
   },
   "dependencies": {
     "tslib": "^2.3.1",
-    "@alirya/array": "^0.27.0",
-    "@alirya/function": "^0.17.0",
-    "@alirya/message": "^0.13.0",
-    "@alirya/number": "^0.18.1",
-    "@alirya/object": "^0.38.0",
-    "@alirya/validatable": "^0.21.0",
-    "@alirya/validator": "^0.20.0",
-    "@alirya/value": "^0.16.0",
+    "@alirya/array": "^0.27.1",
+    "@alirya/function": "^0.17.1",
+    "@alirya/message": "^0.13.1",
+    "@alirya/number": "^0.18.2",
+    "@alirya/object": "^0.38.1",
+    "@alirya/validatable": "^0.21.1",
+    "@alirya/validator": "^0.20.1",
+    "@alirya/value": "^0.16.1",
     "@types/lodash": "^4.14.177",
     "grapheme-splitter": "^1.0.4",
     "lodash": "^4.17.21",
