@@ -3,6 +3,7 @@ import Validatable from '@alirya/validatable/validatable';
 import String from '../../string/string';
 import Inclusive from '@alirya/number/inclusive/inclusive';
 import MaximumNumber from '@alirya/number/maximum/maximum';
+import Value from "@alirya/value/value";
 
 export function MaximumParameters(
     value : string,
@@ -45,7 +46,7 @@ export function MaximumParameters(
 }
 
 
-export type MaximumArgument = Validatable & String & MaximumNumber & Inclusive & {
+export type MaximumArgument = Validatable & Value<string> & MaximumNumber & Inclusive & {
     subject ?: string,
     converter ?: (value:string)=>number,
     criteria ?: string,
@@ -53,7 +54,7 @@ export type MaximumArgument = Validatable & String & MaximumNumber & Inclusive &
 
 export function MaximumParameter({
     valid,
-    string,
+    value,
     maximum,
     inclusive,
     converter,
@@ -61,7 +62,7 @@ export function MaximumParameter({
     subject,
 } : MaximumArgument) : string {
 
-    return MaximumParameters(string, valid, maximum, inclusive, converter, criteria, subject);
+    return MaximumParameters(value, valid, maximum, inclusive, converter, criteria, subject);
 }
 
 

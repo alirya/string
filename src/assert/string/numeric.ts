@@ -3,7 +3,7 @@ import Validatable from '@alirya/validatable/validatable';
 import Value from '@alirya/value/value';
 
 export function NumericParameters(
-    value : string,
+    value : string|number,
     valid : boolean,
     subject : string = 'string'
 ) : string {
@@ -25,7 +25,7 @@ export function NumericParameters(
 
     if(!valid) {
 
-        let match = new Match(value, /[^0-9]{1,5}/);
+        let match = new Match(value.toString(), /[^0-9]{1,5}/);
 
         if(match.valid) {
 
@@ -39,7 +39,7 @@ export function NumericParameters(
 }
 
 
-export type NumericArgument = Validatable & Value<string> & {subject?:string};
+export type NumericArgument = Validatable & Value<number|string> & {subject?:string};
 
 export function NumericParameter({
     valid,

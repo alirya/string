@@ -36,11 +36,9 @@ export function StringParameter<MessageType>(
     message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageType|string = StringString.Parameter
 ) : Validator<unknown, string, Readonly<Instance<unknown, MessageType>>> {
 
-    return function (value) {
-
-        return StringValidatable.Parameter({value, message});
-
-    } as Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
+    return StringParameters(
+        (value, valid)=>message({value, valid})
+    ) as Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
 }
 
 
