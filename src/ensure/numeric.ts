@@ -2,7 +2,7 @@ import AssertNumeric from '../assert/numeric';
 import NumericError from '../assert/throwable/numeric';
 
 export default function Numeric(
-    value : string|number,
+    value : unknown,
     error : (value:unknown)=>Error = NumericError.Parameters
 ) : string|number {
 

@@ -1,9 +1,10 @@
 import Match from '../../value/match';
 import Validatable from '@alirya/validatable/validatable';
 import Value from '@alirya/value/value';
+import SafeCast from "../../safe-cast";
 
 export function NumericParameters(
-    value : string|number,
+    value : unknown,
     valid : boolean,
     subject : string = 'string'
 ) : string {
@@ -25,7 +26,7 @@ export function NumericParameters(
 
     if(!valid) {
 
-        let match = new Match(value.toString(), /[^0-9]{1,5}/);
+        let match = new Match(SafeCast(value), /[^0-9]{1,5}/);
 
         if(match.valid) {
 

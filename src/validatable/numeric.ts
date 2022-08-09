@@ -5,7 +5,7 @@ import NumericFromObject from '../boolean/numeric';
 import Callback from '@alirya/validator/validatable/callback';
 import Dynamic from '@alirya/validator/message/function/validatable';
 
-export function NumericParameters<ValueType extends string|number, MessageType>(
+export function NumericParameters<ValueType, MessageType>(
     value : ValueType,
     message : Dynamic.Parameters<ValueType, MessageType>
 ) : Readonly<Value<ValueType> & Message<MessageType> & Validatable> {
@@ -15,10 +15,10 @@ export function NumericParameters<ValueType extends string|number, MessageType>(
 
 
 
-export type NumericArgument<ValueType extends string|number, MessageType>
+export type NumericArgument<ValueType, MessageType>
     = Message<Dynamic.Parameter<ValueType, MessageType>> & Value<ValueType>;
 
-export function NumericParameter<ValueType extends string|number, MessageType>({
+export function NumericParameter<ValueType extends unknown, MessageType>({
         value,
         message
     } : NumericArgument<ValueType, MessageType>
@@ -31,6 +31,6 @@ export function NumericParameter<ValueType extends string|number, MessageType>({
 namespace Numeric {
     export const Parameters = NumericParameters;
     export const Parameter = NumericParameter;
-    export type Argument<ValueType extends string|number, MessageType> = NumericArgument<ValueType, MessageType>;
+    export type Argument<ValueType extends unknown, MessageType> = NumericArgument<ValueType, MessageType>;
 }
 export default Numeric;

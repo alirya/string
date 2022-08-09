@@ -1,12 +1,13 @@
 import {MatchParameters} from './match';
 import Number from "../../../number/dist/boolean/number";
+import String from "./string";
 
 /**
  * check if {@param value} is numeric
  *
  * @param value
  */
-export default function Numeric(value : string|number) : boolean {
+export default function Numeric(value : unknown) : boolean {
 
     if(value === '') {
 
@@ -17,6 +18,12 @@ export default function Numeric(value : string|number) : boolean {
 
         return true;
     }
+
+    if(!String(value)) {
+
+        return false;
+    }
+
 
     return MatchParameters(value, /^[-+]*\d*(\.\d*)?$/i);
 }
