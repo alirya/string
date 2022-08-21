@@ -8,9 +8,9 @@ import Message from '@alirya/message/message';
 import Value from '@alirya/value/value';
 import Pattern from '../pattern/pattern/pattern';
 import {StringParameters} from "./string";
-import {ValuePartialParameters} from "../../../array/dist/validator/value-partial";
-import {AndParameters} from "../../../array/dist/validatable/and";
-import InvalidFirstValidLast from "../../../array/dist/message/message/list/invalid-first-valid-last";
+import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
+import {AndParameters} from '@alirya/array/validatable/and';
+import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
 
 export function MatchParameters(
     pattern : RegExp,

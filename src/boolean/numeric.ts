@@ -1,5 +1,5 @@
 import {MatchParameters} from './match';
-import Number from "../../../number/dist/boolean/number";
+import Number from '@alirya/number/boolean/number';
 import String from "./string";
 
 /**

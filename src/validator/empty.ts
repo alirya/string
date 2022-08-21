@@ -4,9 +4,9 @@ import Instance from '@alirya/validator/validatable/validatable';
 import EmptyString from '../assert/string/empty';
 import Static from '@alirya/validator/message/function/static';
 import {StringParameters} from "./string";
-import {ValuePartialParameters} from "../../../array/dist/validator/value-partial";
-import {AndParameters} from "../../../array/dist/validatable/and";
-import InvalidFirstValidLast from "../../../array/dist/message/message/list/invalid-first-valid-last";
+import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
+import {AndParameters} from '@alirya/array/validatable/and';
+import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
 
 
 export function EmptyParameters() : Validator<string, '', Readonly<Instance<'', string>>>;

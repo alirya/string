@@ -4,11 +4,11 @@ import Instance from '@alirya/validator/validatable/validatable';
 import NumericString from '../assert/string/numeric';
 import Dynamic from '@alirya/validator/message/function/validatable';
 import {StringParameters} from "./string";
-import {ValuePartialParameters} from "../../../array/dist/validator/value-partial";
-import {AndParameters} from "../../../array/dist/validatable/and";
-import {OrParameters} from "../../../array/dist/validatable/or";
-import InvalidFirstValidLast from "../../../array/dist/message/message/list/invalid-first-valid-last";
-import {NumberParameters} from "../../../number/dist/validator/number";
+import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
+import {AndParameters} from '@alirya/array/validatable/and';
+import {OrParameters} from '@alirya/array/validatable/or';
+import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
+import {NumberParameters} from '@alirya/number/validator/number';
 
 export function NumericParameters() : Validator<unknown, string|number, boolean, boolean, Readonly<Instance<string, string>>>;
 
