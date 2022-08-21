@@ -6,7 +6,7 @@ import NumericMessage from '../../dist/assert/string/numeric';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let map = new Map<string, [boolean, string]>();
+let map = new Map<string|number, [boolean, string]>();
 
 it('add alphabet', ()=>{
 
@@ -20,12 +20,18 @@ it('add alphabet', ()=>{
 
 it('add numeric', ()=>{
 
-    map.set(DIGIT, [true, 'all number']);
+    map.set(DIGIT, [true, 'all numeric']);
 
     for (let number of DIGIT) {
 
-        map.set(number, [true, '1 number']);
+        map.set(number, [true, '1 numeric']);
     }
+});
+
+it('add number', ()=>{
+
+    map.set(10000, [true, 'integer']);
+    map.set(10.11, [true, 'float']);
 });
 
 it('add numeric & alphabet', ()=>{

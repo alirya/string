@@ -2,7 +2,7 @@ import NumericType from '../string/numeric';
 import Value from '@alirya/value/value';
 
 export function NumericParameters(
-    value : string,
+    value : unknown,
     subject : string = 'string'
 ) : Error {
 
@@ -12,12 +12,10 @@ export function NumericParameters(
 export function NumericParameter({
     value,
     subject
-} : Value<string> & {subject ?: string}) : Error {
+} : Value<unknown> & {subject ?: string}) : Error {
 
     return NumericParameters(value, subject);
 }
-
-
 
 
 namespace Numeric {

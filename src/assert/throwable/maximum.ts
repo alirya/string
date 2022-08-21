@@ -17,7 +17,7 @@ export function MaximumParameters(
 export {MaximumArgument};
 
 export function MaximumParameter({
-    string,
+    value,
     maximum,
     inclusive,
     subject,
@@ -25,7 +25,7 @@ export function MaximumParameter({
     converter
 } : MaximumArgument) : Error {
 
-    return MaximumParameters(string, maximum, inclusive, converter, criteria, subject);
+    return MaximumParameters(value, maximum, inclusive, converter, criteria, subject);
 }
 
 

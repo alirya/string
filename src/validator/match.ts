@@ -7,6 +7,10 @@ import Validatable from '@alirya/validatable/validatable';
 import Message from '@alirya/message/message';
 import Value from '@alirya/value/value';
 import Pattern from '../pattern/pattern/pattern';
+import {StringParameters} from "./string";
+import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
+import {AndParameters} from '@alirya/array/validatable/and';
+import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
 
 export function MatchParameters(
     pattern : RegExp,
@@ -20,13 +24,12 @@ export function MatchParameters<MessageType>(
 export function MatchParameters<MessageType>(
     pattern : RegExp,
     message : ValidatableParameters<string, MessageType|string, [pattern:RegExp]> = MatchString.Parameters
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
+) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType|string>>> {
 
-    return function (value) {
-
-        return new MatchValidatable.Parameters(value, pattern, message);
-
-    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+    return ValuePartialParameters([
+        StringParameters(),
+        (value) => new MatchValidatable.Parameters(value, pattern, message)
+    ], AndParameters, InvalidFirstValidLast, false) as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType|string>>>;
 }
 
 

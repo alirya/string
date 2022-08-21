@@ -10,7 +10,8 @@ import Value from '@alirya/value/value';
 import Inclusive from '@alirya/number/inclusive/inclusive';
 import MaximumNumber from '@alirya/number/maximum/maximum';
 import StrictOmit from '@alirya/object/strict-omit';
-import {Object} from 'ts-toolbelt';
+import {O} from 'ts-toolbelt';
+import {StringParameters} from "./string";
 
 export type MaximumArgumentMessage<MessageType> =
     Dynamic.Parameters<string,  MessageType, [maximum : number, inclusive: boolean, converter : (string:string)=>number]>;
@@ -47,9 +48,18 @@ export function MaximumParameters<MessageType>(
     inclusive : boolean,
     message : MaximumArgumentMessage<MessageType|string> = MaximumString.Parameters,
     converter : (value:string)=>number = Count,
-) : SimpleValidator<string, string, MaximumReturn<string, MessageType>> {
+) : SimpleValidator<string, string, MaximumReturn<string, MessageType|string>> {
+
+    const stringValidator = StringParameters();
 
     return function (value) {
+
+        const validatable = stringValidator(value);
+
+        if(!validatable.valid) {
+
+            return Object.assign(validatable, {maximum, inclusive});
+        }
 
         return MaximumValidatable.Parameters(value, maximum, inclusive, message, converter);
 
@@ -77,7 +87,7 @@ export function MaximumParameter(
         maximum,
         inclusive,
         converter,
-    } : Object.Required<MaximumArgument<unknown>, 'converter'>
+    } : O.Required<MaximumArgument<unknown>, 'converter'>
 ) : Validator<string, string, boolean, boolean, MaximumReturn<string, string>>;
 
 export function MaximumParameter<MessageType> (
@@ -85,7 +95,7 @@ export function MaximumParameter<MessageType> (
         maximum,
         inclusive,
         message,
-    } : Object.Required<MaximumArgument<unknown>, 'message'>
+    } : O.Required<MaximumArgument<unknown>, 'message'>
 ) : Validator<string, string, boolean, boolean, MaximumReturn<string, MessageType>>;
 
 export function MaximumParameter<MessageType>(
@@ -101,28 +111,17 @@ export function MaximumParameter<MessageType>(
     {
         maximum,
         inclusive,
-        message,
+        message = MaximumString.Parameter,
         converter,
-    } : MaximumArgument<MessageType>
+    } : MaximumArgument<MessageType|string>
 ) : Validator<string, string, boolean, boolean, MaximumReturn<string, MessageType|string>> {
 
-    if(message) {
-
-        return MaximumParameters(
-            maximum,
-            inclusive,
-            (value, valid, maximum, inclusive) => message({value, valid, maximum, inclusive}),
-            converter
-        );
-
-    } else {
-        return MaximumParameters(
-            maximum,
-            inclusive,
-            message,
-            converter
-        );
-    }
+    return MaximumParameters(
+        maximum,
+        inclusive,
+        (value, valid, maximum, inclusive) => message({value, valid, maximum, inclusive}),
+        converter
+    ) as Validator<string, string, boolean, boolean, MaximumReturn<string, MessageType|string>>;
 }
 
 

@@ -1,11 +1,29 @@
 import {MatchParameters} from './match';
+import Number from '@alirya/number/boolean/number';
+import String from "./string";
 
 /**
- * check if {@param source} is numeric
+ * check if {@param value} is numeric
  *
- * @param source
+ * @param value
  */
-export default function Numeric(source : string) : boolean {
+export default function Numeric(value : unknown) : boolean {
 
-    return MatchParameters(source, /^[-+]*\d*(\.\d*)?$/i);
+    if(value === '') {
+
+        return false;
+    }
+
+    if(Number(value)) {
+
+        return true;
+    }
+
+    if(!String(value)) {
+
+        return false;
+    }
+
+
+    return MatchParameters(value, /^[-+]*\d*(\.\d*)?$/i);
 }

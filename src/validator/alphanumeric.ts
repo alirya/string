@@ -3,6 +3,11 @@ import AlphanumericValidatable from '../validatable/alphanumeric';
 import Instance from '@alirya/validator/validatable/validatable';
 import AlphanumericString from '../assert/string/alphanumeric';
 import Dynamic from '@alirya/validator/message/function/validatable';
+import SimpleValidator from '@alirya/validator/simple';
+import {StringParameters} from "./string";
+import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
+import {AndParameters} from '@alirya/array/validatable/and';
+import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
 
 export function AlphanumericParameters() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
 
@@ -14,15 +19,12 @@ export function AlphanumericParameters<MessageType>(
     message : Dynamic.Parameters<string, MessageType|string> = AlphanumericString.Parameters
 ) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
 
-    return function (value) {
-
-        return AlphanumericValidatable.Parameters(value, message);
-
-    } as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+    return ValuePartialParameters([
+        StringParameters(),
+        (value) => AlphanumericValidatable.Parameters(value, message)
+    ], AndParameters, InvalidFirstValidLast, false) as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
 
 }
-
-import SimpleValidator from '@alirya/validator/simple';
 
 export function AlphanumericParameter() : SimpleValidator<string, string, Readonly<Instance<string, string>>>;
 
@@ -34,12 +36,9 @@ export function AlphanumericParameter<MessageType>(
     message : Dynamic.Parameter<string, MessageType|string> = AlphanumericString.Parameter
 ) : SimpleValidator<string, string, Readonly<Instance<string, MessageType>>> {
 
-    return function (value) {
-
-        return AlphanumericValidatable.Parameter({value, message});
-
-    } as SimpleValidator<string, string, Readonly<Instance<string, MessageType>>>;
-
+    return AlphanumericParameters(
+        (value, valid)=>message({value, valid})
+    ) as SimpleValidator<string, string, Readonly<Instance<string, MessageType>>>;
 }
 
 
