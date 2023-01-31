@@ -5,7 +5,7 @@ export function StringParameters(
     value : unknown,
     valid : boolean,
     subject : string = 'type',
-    conversion : (value:unknown)=>string = value=>typeof value
+    conversion : (value:unknown)=>string = value =>typeof value
 ) : string {
 
     const strings : string[] = [];
