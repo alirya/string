@@ -6,7 +6,7 @@ import {SimpleParameters} from '@alirya/validator/message/function/simple';
 import Validatable from '@alirya/validatable/validatable';
 import Value from '@alirya/value/value';
 
-export type StringParametersReturn<MessageType> = Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
+export type StringParametersReturn<MessageType> = Validator<unknown, string, MessageType>;
 
 export function StringParameters() : StringParametersReturn<string>;
 
@@ -26,19 +26,19 @@ export function StringParameters<MessageType>(
 }
 
 
-export function StringParameter() : Validator<unknown, string, Readonly<Instance<unknown, string>>>;
+export function StringParameter() : StringParametersReturn<string>;
 
 export function StringParameter<MessageType>(
     message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageType
-) : Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
+) : StringParametersReturn<MessageType>;
 
 export function StringParameter<MessageType>(
     message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageType|string = StringString.Parameter
-) : Validator<unknown, string, Readonly<Instance<unknown, MessageType>>> {
+) : StringParametersReturn<MessageType|string> {
 
     return StringParameters(
         (value, valid)=>message({value, valid})
-    ) as Validator<unknown, string, Readonly<Instance<unknown, MessageType>>>;
+    ) as StringParametersReturn<MessageType|string>;
 }
 
 

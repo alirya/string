@@ -9,10 +9,9 @@ import Static from '@alirya/validator/validatable/static';
 export function EmptyParameters<ValueType extends string, MessageType>(
     value : ValueType,
     message : MessageStatic.Parameters<'', ValueType, false, true, MessageType>,
-) : Readonly<Static<'', ValueType, false, true, Value<string> & Message<MessageType> & Validatable>> {
+) : Static<'', ValueType, false, true, MessageType> {
 
-    return CallbackParameters(value, IsEmpty, message) as
-        Readonly<Static<'', ValueType, false, true, Value<string> & Message<MessageType> & Validatable>>;
+    return CallbackParameters(value, IsEmpty, message) as Static<'', ValueType, false, true, MessageType>;
 }
 
 export type EmptyArgument<ValueType extends string, MessageType> =
@@ -23,7 +22,7 @@ export function EmptyParameter<ValueType extends string, MessageType>({
         value,
         message,
     } : EmptyArgument<ValueType, MessageType>
-) : Readonly<Static<'', ValueType, false, true, Value<string> & Message<MessageType> & Validatable>> {
+) : Static<'', ValueType, false, true, MessageType> {
 
     return EmptyParameters(
         value,

@@ -1,6 +1,7 @@
 import MaximumNumber from '@alirya/number/maximum/maximum';
 import Value from '@alirya/value/value';
 import Validatable from '@alirya/validatable/validatable';
+import ValidatorValidatable from '@alirya/validator/validatable/validatable';
 import Message from '@alirya/message/message';
 import MaximumObject from '../boolean/maximum';
 import Inclusive from '@alirya/number/inclusive/inclusive';
@@ -8,9 +9,10 @@ import Count from '../number/count';
 import {CallbackParameters} from '@alirya/validator/validatable/callback';
 import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
 
-export type MaximumReturn<ValueType, MessageType> = Readonly<Inclusive & MaximumNumber & Value<ValueType> & Message<MessageType> & Validatable>;
+export type MaximumReturnContext = Inclusive & MaximumNumber;
+export type MaximumReturn<ValueType, MessageType> = ValidatorValidatable<ValueType, MessageType, boolean, MaximumReturnContext>;
 
-export function MaximumParameters<ValueType extends string, MessageType>(
+export function MaximumParameters<ValueType extends string, MessageType> (
     value : ValueType,
     maximum : number,
     inclusive : boolean,
@@ -57,7 +59,7 @@ namespace Maximum {
     export const Parameters = MaximumParameters;
     export const Parameter = MaximumParameter;
 
-    export type Return<ValueType, MessageType> = MaximumReturn<ValueType, MessageType>;
+    export type Context/*<ValueType, MessageType>*/ = MaximumReturnContext/*<ValueType, MessageType>*/;
     export type Argument<ValueType extends string, MessageType> = MaximumArgument<ValueType, MessageType>;
 }
 export default Maximum;

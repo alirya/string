@@ -9,9 +9,9 @@ import Message from '@alirya/message/message';
 export function StringParameters<Argument, MessageType>(
     value : Argument,
     message : Simple.Parameters<unknown, Argument, MessageType>
-) : Return<Argument, string, Readonly<Instance<unknown, MessageType>>> {
+) : Return<Argument, string, MessageType> {
 
-    return <Return<Argument, string, Readonly<Instance<unknown, MessageType>>>>
+    return <Return<Argument, string, MessageType>>
         CallbackParameters(value, StringGuard, message);
 }
 
@@ -27,7 +27,7 @@ export function StringParameter<Argument, MessageType>(
       value,
       message
     } : StringArgument<Argument, MessageType>
-) : Return<Argument, string, Readonly<Instance<unknown, MessageType>>> {
+) : Return<Argument, string, MessageType> {
 
     return StringParameters(value, (value, valid)=>message({valid, value}));
 }

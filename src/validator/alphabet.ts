@@ -8,36 +8,36 @@ import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
 import {AndParameters} from '@alirya/array/validatable/and';
 import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
 
-export function AlphabetParameters() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
+export function AlphabetParameters() : Validator<string, string, boolean, boolean, string>;
 
 export function AlphabetParameters<MessageType>(
     message : Dynamic.Parameters<string, MessageType>
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+) : Validator<string, string, boolean, boolean, MessageType>;
 
 export function AlphabetParameters<MessageType>(
     message : Dynamic.Parameters<string, MessageType|string> = AlphabetString.Parameters
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
+) : Validator<string, string, boolean, boolean, MessageType|string> {
 
     return ValuePartialParameters([
         StringParameters(),
         (value) => AlphabetValidatable.Parameters(value, message)
-    ], AndParameters, InvalidFirstValidLast, false) as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+    ], AndParameters, InvalidFirstValidLast, false) as Validator<string, string, boolean, boolean, MessageType|string>;
 }
 
 
-export function AlphabetParameter() : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
+export function AlphabetParameter() : Validator<string, string, boolean, boolean, string>;
 
 export function AlphabetParameter<MessageType>(
     message : Dynamic.Parameter<string, MessageType>
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+) : Validator<string, string, boolean, boolean, MessageType>;
 
 export function AlphabetParameter<MessageType>(
     message : Dynamic.Parameter<string, MessageType|string> = AlphabetString.Parameter
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
+) : Validator<string, string, boolean, boolean, MessageType|string> {
 
     return AlphabetParameters(
         (value, valid)=>message({value, valid})
-    ) as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>
+    ) as Validator<string, string, boolean, boolean, MessageType|string>;
 }
 
 

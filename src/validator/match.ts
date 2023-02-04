@@ -14,22 +14,22 @@ import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-fi
 
 export function MatchParameters(
     pattern : RegExp,
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
+) : Validator<string, string, boolean, boolean, string>;
 
 export function MatchParameters<MessageType>(
     pattern : RegExp,
     message : ValidatableParameters<string, MessageType, [pattern:RegExp]>
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+) : Validator<string, string, boolean, boolean, MessageType>;
 
 export function MatchParameters<MessageType>(
     pattern : RegExp,
     message : ValidatableParameters<string, MessageType|string, [pattern:RegExp]> = MatchString.Parameters
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType|string>>> {
+) : Validator<string, string, boolean, boolean, MessageType|string> {
 
     return ValuePartialParameters([
         StringParameters(),
         (value) => new MatchValidatable.Parameters(value, pattern, message)
-    ], AndParameters, InvalidFirstValidLast, false) as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType|string>>>;
+    ], AndParameters, InvalidFirstValidLast, false) as Validator<string, string, boolean, boolean, MessageType|string>;
 }
 
 
@@ -37,26 +37,26 @@ export function MatchParameters<MessageType>(
 
 export function MatchParameter(
     {pattern} : Pattern,
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, string>>>;
+) : Validator<string, string, boolean, boolean, string>;
 
 export function MatchParameter<MessageType>(
     {
         pattern,
         message
     } : Message<(result: Readonly<Value<string> & Validatable & Pattern>) => MessageType> & Pattern
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+) : Validator<string, string, boolean, boolean, MessageType>;
 
 export function MatchParameter<MessageType>(
     {
        pattern,
        message
    } : Message<(result: Readonly<Value<string> & Validatable & Pattern>) => MessageType|string> & Pattern
-) : Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>> {
+) : Validator<string, string, boolean, boolean, MessageType|string> {
 
     return MatchParameters(
         pattern,
         (value, valid, pattern) => message({value, valid, pattern})
-    ) as Validator<string, string, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+    ) as Validator<string, string, boolean, boolean, MessageType|string>;
 }
 
 

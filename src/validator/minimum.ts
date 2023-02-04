@@ -1,5 +1,5 @@
 import Validator from '@alirya/validator/validator';
-import MinimumValidatable, {MinimumParametersReturn} from '../validatable/minimum';
+import MinimumValidatable, {MinimumReturnContext} from '../validatable/minimum';
 import Count from '../number/count';
 import MinimumString from '../assert/string/minimum';
 import Validatable from '@alirya/validatable/validatable';
@@ -12,42 +12,38 @@ import {ValidatableParameter} from '@alirya/validator/message/function/validatab
 import {StringParameters} from "./string";
 import SimpleValidator from "@alirya/validator/simple";
 
-export type MinimumArgumentsMessage<MessageType> =
-    (value:string, valid : boolean, minimum : number, inclusive : boolean)=>MessageType;
-
-
 export function MinimumParameters(
     minimum : number,
     inclusive : boolean,
-) : Validator<string, string, boolean, boolean, MinimumParametersReturn<string, string>>;
+) : MinimumReturn<string>;
 
 export function MinimumParameters<MessageType>(
     minimum : number,
     inclusive : boolean,
     message : MinimumArgumentsMessage<MessageType>,
     converter ?: (value:string)=>number,
-) : Validator<string, string, boolean, boolean, MinimumParametersReturn<string, MessageType>>;
+) : MinimumReturn<MessageType>;
 
 export function MinimumParameters<MessageType>(
     minimum : number,
     inclusive : boolean,
     message : MinimumArgumentsMessage<MessageType>,
     converter : (value:string)=>number,
-) : Validator<string, string, boolean, boolean, MinimumParametersReturn<string, MessageType>>;
+) : MinimumReturn<MessageType>;
 
 export function MinimumParameters(
     minimum : number,
     inclusive : boolean,
     message : undefined,
     converter ?: (value:string)=>number,
-) : SimpleValidator<string, string, MinimumParametersReturn<string, string>>;
+) : MinimumReturn<string>;
 
 export function MinimumParameters<MessageType>(
     minimum : number,
     inclusive : boolean,
     message : MinimumArgumentsMessage<MessageType|string> = MinimumString.Parameters,
     converter : (value:string)=>number = Count,
-) : Validator<string, string, boolean, boolean, MinimumParametersReturn<string, MessageType>> {
+) : MinimumReturn<MessageType> {
 
     const stringValidator = StringParameters();
 
@@ -62,17 +58,10 @@ export function MinimumParameters<MessageType>(
 
         return MinimumValidatable.Parameters(value, minimum, inclusive, message, converter);
 
-    } as Validator<string, string, boolean, boolean, MinimumParametersReturn<string, MessageType>>;
+    } as MinimumReturn<MessageType>;
 }
 
 
-export type MinimumArgument<MessageType> =
-    MinimumNumber &
-    Inclusive &
-    Validatable &
-    {converter ?: (value:string)=>number} &
-    Message<(result:Readonly<Value<string> & Inclusive & MinimumNumber & Validatable>)=>MessageType> &
-    ValidatableParameter<string, MessageType>;
 
 
 export function MinimumParameter(
@@ -81,7 +70,7 @@ export function MinimumParameter(
         inclusive,
         converter
     } : StrictOmit<MinimumArgument<any>, 'message'>
-) : Validator<string, string, boolean, boolean, MinimumParametersReturn<string, string>>;
+) : MinimumReturn<string>;
 
 export function MinimumParameter<MessageType>(
     {
@@ -90,7 +79,7 @@ export function MinimumParameter<MessageType>(
         message,
         converter
     } : MinimumArgument<MessageType>
-) : Validator<string, string, boolean, boolean, MinimumParametersReturn<string, MessageType>>;
+) : MinimumReturn<MessageType>;
 
 export function MinimumParameter<MessageType>(
     {
@@ -99,15 +88,26 @@ export function MinimumParameter<MessageType>(
         message = MinimumString.Parameter,
         converter
     } : MinimumArgument<MessageType|string>
-) : Validator<string, string, boolean, boolean, MinimumParametersReturn<string, MessageType>> {
+) : MinimumReturn<MessageType|string> {
 
     return MinimumParameters(
         minimum,
         inclusive,
         (value, valid, minimum, inclusive) => message({value, valid, minimum, inclusive}),
         converter
-    ) as Validator<string, string, boolean, boolean, MinimumParametersReturn<string, MessageType>>;
+    ) as MinimumReturn<MessageType|string>;
 }
+
+export type MinimumReturn<MessageType> = Validator<string, string, boolean, boolean, MessageType, MinimumReturnContext>;
+
+export type MinimumArgumentsMessage<MessageType> = (value:string, valid : boolean, minimum : number, inclusive : boolean)=>MessageType;
+
+export type MinimumArgument<MessageType> =
+    MinimumReturnContext &
+    Validatable &
+    {converter ?: (value:string)=>number} &
+    Message<(result:Readonly<Value<string> & MinimumReturnContext & Validatable>)=>MessageType> &
+    ValidatableParameter<string, MessageType>;
 
 
 namespace Minimum {

@@ -9,36 +9,36 @@ import {AndParameters} from '@alirya/array/validatable/and';
 import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
 
 
-export function EmptyParameters() : Validator<string, '', Readonly<Instance<'', string>>>;
+export function EmptyParameters() : Validator<string, '', string>;
 
 export function EmptyParameters<MessageType>(
     message : Static.Parameters<'', string, false, true, MessageType>
-) : Validator<string, '', Readonly<Instance<'', MessageType>>>;
+) : Validator<string, '', MessageType>;
 
 export function EmptyParameters<MessageType>(
     message : Static.Parameters<'', string, false, true, MessageType|string> = EmptyString.Parameters
-) : Validator<string, '', Readonly<Instance<'', MessageType>>> {
+) : Validator<string, '', MessageType|string> {
 
     return ValuePartialParameters([
         StringParameters(),
         (value) => EmptyValidatable.Parameters(value, message)
-    ], AndParameters, InvalidFirstValidLast, false) as Validator<string, '', Readonly<Instance<'', MessageType>>>;
+    ], AndParameters, InvalidFirstValidLast, false) as Validator<string, '', MessageType|string>;
 }
 
 
-export function EmptyParameter() : Validator<string, '', Readonly<Instance<'', string>>>;
+export function EmptyParameter() : Validator<string, '', string>;
 
 export function EmptyParameter<MessageType>(
     message : Static.Parameter<'', string, false, true, MessageType>
-) : Validator<string, '', Readonly<Instance<'', MessageType>>>;
+) : Validator<string, '', MessageType>;
 
 export function EmptyParameter<MessageType>(
     message : Static.Parameter<'', string, false, true, MessageType|string>= EmptyString.Parameter
-) : Validator<string, '', Readonly<Instance<'', MessageType>>> {
+) : Validator<string, '', MessageType|string> {
 
     return EmptyParameters(
         (value, valid)=>message({value, valid})
-    ) as Validator<string, '', Readonly<Instance<'', MessageType>>>;
+    ) as Validator<string, '', MessageType|string>;
 }
 
 

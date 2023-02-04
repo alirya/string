@@ -9,42 +9,49 @@ import {AndParameters} from '@alirya/array/validatable/and';
 import {OrParameters} from '@alirya/array/validatable/or';
 import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
 import {NumberParameters} from '@alirya/number/validator/number';
+import Chain from '../../../validator/dist/chain';
+import {TypeInParameters} from '../../../type/dist/validator/type-in';
 
-export function NumericParameters() : Validator<unknown, string|number, boolean, boolean, Readonly<Instance<string, string>>>;
+export function NumericParameters() : Validator<unknown, string|number, boolean, boolean, string>;
 
 export function NumericParameters<MessageType>(
     message : Dynamic.Parameters<unknown, MessageType>
-) : Validator<unknown, string|number, boolean, boolean, Readonly<Instance<string|number, MessageType>>>;
+) : Validator<unknown, string|number, boolean, boolean, string>;
 
 export function NumericParameters<MessageType>(
     message : Dynamic.Parameters<unknown, MessageType|string> = NumericString.Parameters
-) : Validator<unknown, string|number, boolean, boolean, Readonly<Instance<string, MessageType>>> {
+) : Validator<unknown, string|number, boolean, boolean, string|MessageType> {
 
-    return ValuePartialParameters([
+    return Chain(TypeInParameters(['string', 'number']), function (value) {
 
-        ValuePartialParameters([
-            StringParameters(),
-            NumberParameters(),
-        ], OrParameters, InvalidFirstValidLast, true),
+        return NumericValidatable.Parameters(value, message);
+    });
 
-        (value) => NumericValidatable.Parameters(value, message)
-    ], AndParameters, InvalidFirstValidLast, false) as Validator<unknown, string|number, boolean, boolean, Readonly<Instance<string, MessageType>>>;
+    // return ValuePartialParameters([
+    //
+    //     ValuePartialParameters([
+    //         StringParameters(),
+    //         NumberParameters(),
+    //     ], OrParameters, InvalidFirstValidLast, true),
+    //
+    //     (value) => NumericValidatable.Parameters(value, message)
+    // ], AndParameters, InvalidFirstValidLast, false) as Validator<unknown, string|number, boolean, boolean, string|MessageType>;
 }
 
 
-export function NumericParameter() : Validator<unknown, string|number, boolean, boolean, Readonly<Instance<unknown, string>>>;
+export function NumericParameter() : Validator<unknown, string|number, boolean, boolean, string>;
 
 export function NumericParameter<MessageType>(
     message : Dynamic.Parameter<unknown, MessageType|string>
-) : Validator<unknown, string|number, boolean, boolean, Readonly<Instance<unknown, MessageType>>>;
+) : Validator<unknown, string|number, boolean, boolean, MessageType>;
 
 export function NumericParameter<MessageType>(
     message : Dynamic.Parameter<unknown, MessageType|string> = NumericString.Parameter
-) : Validator<unknown, string|number, boolean, boolean, Readonly<Instance<unknown, MessageType>>> {
+) : Validator<unknown, string|number, boolean, boolean, MessageType|string> {
 
     return NumericParameters(
         (value, valid)=>message({value, valid})
-    ) as Validator<unknown, string|number, boolean, boolean, Readonly<Instance<unknown, MessageType>>>;
+    ) as Validator<unknown, string|number, boolean, boolean, MessageType|string>;
 }
 
 
