@@ -1,10 +1,10 @@
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import NotEmptyBoolean from '../boolean/not-empty';
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import {StaticParameter, StaticParameters} from '@alirya/validator/message/function/static';
-import Static from '@alirya/validator/validatable/static';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import NotEmptyBoolean from '../boolean/not-empty.js';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import {StaticParameter, StaticParameters} from '@alirya/validator/message/function/static.js';
+import Static from '@alirya/validator/validatable/static.js';
 
 export type NotEmptyReturn<ValueType extends string, MessageType> = Static<'', string, false, true, MessageType>;
 

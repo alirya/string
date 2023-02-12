@@ -1,18 +1,18 @@
-import ALPHABET from '../../dist/alphabet';
-import DIGIT from '../../dist/digit';
-import {NumericParameters} from '../../dist/validatable/numeric';
-import NumericMessage from '../../dist/assert/string/numeric';
-import NumericMessageArgument from '../../dist/assert/string/numeric';
+import ALPHABET from '../../dist/alphabet.js';
+import DIGIT from '../../dist/digit.js';
+import {NumericParameters} from '../../dist/validatable/numeric.js';
+import NumericMessage from '../../dist/assert/string/numeric.js';
+import NumericMessageArgument from '../../dist/assert/string/numeric.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let map = new Map<string, [boolean, string]>();
+const map = new Map<string, [boolean, string]>();
 
 it('add alphabet', ()=>{
 
     map.set(ALPHABET, [false, 'all alphabet']);
 
-    for (let letter of ALPHABET) {
+    for (const letter of ALPHABET) {
         map.set(letter, [false, '1 alphabet']);
     }
 
@@ -22,7 +22,7 @@ it('add numeric', ()=>{
 
     map.set(DIGIT, [true, 'all number']);
 
-    for (let number of DIGIT) {
+    for (const number of DIGIT) {
 
         map.set(number, [true, '1 number']);
     }
@@ -48,11 +48,11 @@ it('add empty', ()=>{
 
 });
 
-for(let [value, [valid, message]] of map) {
+for(const [value, [valid, message]] of map) {
 
     it(message, ()=>{
 
-        let validatable = NumericParameters(value, NumericMessage.Parameters);
+        const validatable = NumericParameters(value, NumericMessage.Parameters);
         expect(validatable.valid).toBe(valid);
         expect(validatable.value).toBe(value);
 

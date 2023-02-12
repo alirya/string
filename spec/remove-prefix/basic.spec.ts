@@ -1,4 +1,4 @@
-import {RemovePrefixParameters} from '../../dist/remove-prefix';
+import {RemovePrefixParameters} from '../../dist/remove-prefix.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

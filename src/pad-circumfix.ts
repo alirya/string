@@ -1,6 +1,6 @@
-import pad from 'lodash/pad';
-import String from './string/string';
-import Circumfix from './circumfix/circumfix';
+import { pad } from 'lodash-es';
+import String from './string/string.js';
+import Circumfix from './circumfix/circumfix.js';
 
 export function PadCircumfixParameters(value : string, length : number, circumfix : string) {
 

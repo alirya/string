@@ -1,4 +1,4 @@
-import PickAlpha from '../../dist/pick-alpha';
+import PickAlpha from '../../dist/pick-alpha.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

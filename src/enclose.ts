@@ -1,9 +1,9 @@
-import {PrefixParameters} from './prefix';
-import {SuffixParameters} from './suffix';
-import Prefix from './prefix/prefix';
-import Suffix from './suffix/suffix';
-import String from './string/string';
-import Circumfix from './circumfix/circumfix';
+import {PrefixParameters} from './prefix.js';
+import {SuffixParameters} from './suffix.js';
+import Prefix from './prefix/prefix.js';
+import Suffix from './suffix/suffix.js';
+import String from './string/string.js';
+import Circumfix from './circumfix/circumfix.js';
 
 export function EncloseParameters (
     string : string,

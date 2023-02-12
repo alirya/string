@@ -1,19 +1,19 @@
-import StringGuard from '../../dist/boolean/string';
+import StringGuard from '../../dist/boolean/string.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it(`compiler compatible`,function() {
 
-    let a : unknown = '1';
+    const a : unknown = '1';
 
     if(StringGuard(a)) {
 
-        let n : string = a;
+        const n : string = a;
 
     } else {
 
         // @ts-expect-error
-        let n : string = a;
+        const n : string = a;
     }
 
 });

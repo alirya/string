@@ -1,10 +1,10 @@
-import AffixOption from './affix/affix';
-import {PadPrefixParameters} from './pad-prefix';
-import {PadSuffixParameters} from './pad-suffix';
-import {PadCircumfixParameters} from './pad-circumfix';
-import Affix from './affix/affix/affix';
-import String from './string/string';
-import Padding from './padding/padding';
+import AffixOption from './affix/affix.js';
+import {PadPrefixParameters} from './pad-prefix.js';
+import {PadSuffixParameters} from './pad-suffix.js';
+import {PadCircumfixParameters} from './pad-circumfix.js';
+import Affix from './affix/affix/affix.js';
+import String from './string/string.js';
+import Padding from './padding/padding.js';
 
 /**
  * pad string depend on {@param affix}

@@ -1,9 +1,9 @@
-import EmptyType from '../string/empty';
-import Value from '@alirya/value/value';
+import EmptyType from '../string/empty.js';
+import Value from '@alirya/value/value.js';
 
 export function EmptyParameters(
     value : string,
-    subject : string = 'string'
+    subject  = 'string'
 ) : Error {
 
     return new Error(EmptyType.Parameters(value, false, subject));

@@ -1,5 +1,5 @@
-import String from './string/string';
-import Suffix from './suffix/suffix';
+import String from './string/string.js';
+import Suffix from './suffix/suffix.js';
 /**
  * remove {@param suffix} at the end of {@param value}
  */

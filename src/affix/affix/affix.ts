@@ -1,4 +1,4 @@
-import AffixType from '../affix';
+import AffixType from '../affix.js';
 
 export default interface Affix {
 

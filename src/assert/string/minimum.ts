@@ -1,9 +1,9 @@
-import Count from '../../number/count';
-import String from '../../string/string';
-import Validatable from '@alirya/validatable/validatable';
-import MinimumNumber from '@alirya/number/minimum/minimum';
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import Value from '@alirya/value/value';
+import Count from '../../number/count.js';
+import String from '../../string/string.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import MinimumNumber from '@alirya/number/minimum/minimum.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import Value from '@alirya/value/value.js';
 
 export function MinimumParameters(
     value : string,
@@ -11,8 +11,8 @@ export function MinimumParameters(
     minimum : number,
     inclusive : boolean,
     converter : (value:string)=>number = Count,
-    criteria : string = 'length',
-    subject : string = 'string',
+    criteria  = 'length',
+    subject  = 'string',
 ) : string {
 
     const strings : string[] = [];

@@ -1,11 +1,11 @@
-import truncate from 'lodash/truncate';
-import Separator from './separator/separator';
-import String from './string/string';
+import { truncate } from 'lodash-es';
+import Separator from './separator/separator.js';
+import String from './string/string.js';
 
 export function TruncateParameters (
     value : string,
     length : number,
-    omission : string = '...',
+    omission  = '...',
     separator ?: RegExp|string
 )  : string {
 

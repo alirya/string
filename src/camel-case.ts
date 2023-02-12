@@ -1,4 +1,4 @@
-import camelCase from 'lodash/camelCase';
+import { camelCase } from 'lodash-es';
 
 const CamelCase : (string : string) => string = camelCase;
 export default CamelCase;

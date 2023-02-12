@@ -1,10 +1,10 @@
-import SafeCast from '../safe-cast';
-import Escape from '../pattern/escape';
-import Callback from '@alirya/function/callback/callback';
-import Callable from '@alirya/function/callable';
-import String from '../string/string';
-import Prefix from '../prefix/prefix';
-import Suffix from '../suffix/suffix';
+import SafeCast from '../safe-cast.js';
+import Escape from '../pattern/escape.js';
+import Callback from '@alirya/function/callback/callback.js';
+import Callable from '@alirya/function/callable.js';
+import String from '../string/string.js';
+import Prefix from '../prefix/prefix.js';
+import Suffix from '../suffix/suffix.js';
 
 /**
  * create a string template callback for key object or array
@@ -28,16 +28,16 @@ import Suffix from '../suffix/suffix';
  */
 export function TemplateParameters<Parameter extends object>(
     string : string,
-    prefix : string = '{',
-    suffix : string = '}',
+    prefix  = '{',
+    suffix  = '}',
     callback : (string) => string = (string)=>string
 ) : (parameter : Partial<Parameter>) => string {
 
     prefix = prefix[0];
     suffix = suffix[0];
 
-    let prefixEscaped = Escape(prefix);
-    let suffixEscaped = Escape(suffix);
+    const prefixEscaped = Escape(prefix);
+    const suffixEscaped = Escape(suffix);
 
 
     const prefixPattern = new RegExp(`^(${prefixEscaped})+`);
@@ -45,7 +45,7 @@ export function TemplateParameters<Parameter extends object>(
 
     const regex = new RegExp(`${prefixEscaped}+[0-9a-zA-Z]+${suffixEscaped}+`, 'g');
 
-    let current : number = 0;
+    let current  = 0;
 
     const parts : string[] = [];
     const keys : number[] = [];
@@ -97,7 +97,7 @@ export function TemplateParameters<Parameter extends object>(
 
         const copy = Array.from(parts);
 
-        for (let key of keys) {
+        for (const key of keys) {
 
             copy[key] = SafeCast(parameter[copy[key]]);
         }

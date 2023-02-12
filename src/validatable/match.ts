@@ -1,9 +1,9 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import ValueMatch, {MatchType as ValueMatchType} from '../value/match';
-import Value from '@alirya/value/value';
-import Message from '@alirya/message/message';
-import Pattern from '../pattern/pattern/pattern';
-import Validatable from '@alirya/validator/value/validatable';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import ValueMatch, {MatchType as ValueMatchType} from '../value/match.js';
+import Value from '@alirya/value/value.js';
+import Message from '@alirya/message/message.js';
+import Pattern from '../pattern/pattern/pattern.js';
+import Validatable from '@alirya/validator/value/validatable.js';
 
 export interface MatchType<ValueType extends string, MessageType> extends ValueMatchType<ValueType> {
 

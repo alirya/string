@@ -1,9 +1,9 @@
-import {NotEmptyParameters} from '../string/not-empty';
-import Value from '@alirya/value/value';
+import {NotEmptyParameters} from '../string/not-empty.js';
+import Value from '@alirya/value/value.js';
 
 export function NotBlankParameters(
     value : string,
-    subject : string = 'string'
+    subject  = 'string'
 ) : Error {
 
     return new Error(NotEmptyParameters(value, false, subject));

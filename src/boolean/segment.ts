@@ -1,5 +1,5 @@
-import { DifferenceParameters } from '@alirya/array/difference';
-import Separator from '../separator/separator';
+import { DifferenceParameters } from '@alirya/array/difference.js';
+import Separator from '../separator/separator.js';
 
 /**
  * check if {@param compare} is part of {@param root}

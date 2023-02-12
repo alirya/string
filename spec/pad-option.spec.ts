@@ -1,5 +1,5 @@
-import {PadOptionParameters} from '../dist/pad-option';
-import Affix from '../dist/affix/affix';
+import {PadOptionParameters} from '../dist/pad-option.js';
+import Affix from '../dist/affix/affix.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

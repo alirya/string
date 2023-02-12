@@ -1,9 +1,9 @@
-import NumericType from '../string/numeric';
-import Value from '@alirya/value/value';
+import NumericType from '../string/numeric.js';
+import Value from '@alirya/value/value.js';
 
 export function NumericParameters(
     value : unknown,
-    subject : string = 'string'
+    subject  = 'string'
 ) : Error {
 
     return new Error(NumericType.Parameters(value, false, subject));

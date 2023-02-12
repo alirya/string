@@ -1,11 +1,11 @@
-import {MaximumParameters} from '../../dist/validatable/maximum';
-import MaximumString from '../../dist/assert/string/maximum';
+import {MaximumParameters} from '../../dist/validatable/maximum.js';
+import MaximumString from '../../dist/assert/string/maximum.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 describe(`compiler compatible`,function() {
 
-    let greater = MaximumParameters<string, string>('ab', 1, false, MaximumString.Parameters);
+    const greater = MaximumParameters<string, string>('ab', 1, false, MaximumString.Parameters);
 
     it('set valid', ()=>{
 
@@ -66,7 +66,7 @@ describe(`value equal to minimum`,function() {
 
     describe(`inclusive`,function() {
 
-        let greater = MaximumParameters<string, string>('a', 1, true, MaximumString.Parameters);
+        const greater = MaximumParameters<string, string>('a', 1, true, MaximumString.Parameters);
 
         it('validate object', ()=>{
 
@@ -80,7 +80,7 @@ describe(`value equal to minimum`,function() {
 
     describe(`exclusive`,function() {
 
-        let greater = MaximumParameters<string, string>('a', 1, false, MaximumString.Parameters);
+        const greater = MaximumParameters<string, string>('a', 1, false, MaximumString.Parameters);
 
         it('validate object', ()=>{
 
@@ -97,7 +97,7 @@ describe(`value greater to minimum`,function() {
 
     describe(`inclusive`,function() {
 
-        let greater = MaximumParameters<string, string>('ab', 1, true, MaximumString.Parameters);
+        const greater = MaximumParameters<string, string>('ab', 1, true, MaximumString.Parameters);
 
         it('validate object', ()=>{
 
@@ -111,7 +111,7 @@ describe(`value greater to minimum`,function() {
 
     describe(`exclusive`,function() {
 
-        let greater = MaximumParameters<string, string>('ab', 1, false, MaximumString.Parameters);
+        const greater = MaximumParameters<string, string>('ab', 1, false, MaximumString.Parameters);
 
         it('validate object', ()=>{
 
@@ -128,7 +128,7 @@ describe(`value lower to minimum`,function() {
 
     describe(`inclusive`,function() {
 
-        let greater = MaximumParameters<string, string>('a', 2, true, MaximumString.Parameters);
+        const greater = MaximumParameters<string, string>('a', 2, true, MaximumString.Parameters);
 
         it('validate object', ()=>{
 
@@ -142,7 +142,7 @@ describe(`value lower to minimum`,function() {
 
     describe(`exclusive`,function() {
 
-        let greater = MaximumParameters<string, string>('a', 2, false, MaximumString.Parameters);
+        const greater = MaximumParameters<string, string>('a', 2, false, MaximumString.Parameters);
 
         it('validate object', ()=>{
 

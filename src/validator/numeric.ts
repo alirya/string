@@ -1,16 +1,16 @@
-import Validator from '@alirya/validator/validator';
-import NumericValidatable from '../validatable/numeric';
-import Instance from '@alirya/validator/validatable/validatable';
-import NumericString from '../assert/string/numeric';
-import Dynamic from '@alirya/validator/message/function/validatable';
-import {StringParameters} from "./string";
-import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
-import {AndParameters} from '@alirya/array/validatable/and';
-import {OrParameters} from '@alirya/array/validatable/or';
-import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
-import {NumberParameters} from '@alirya/number/validator/number';
-import Chain from '../../../validator/dist/chain';
-import {TypeInParameters} from '../../../type/dist/validator/type-in';
+import Validator from '@alirya/validator/validator.js';
+import NumericValidatable from '../validatable/numeric.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import NumericString from '../assert/string/numeric.js';
+import Dynamic from '@alirya/validator/message/function/validatable.js';
+import {StringParameters} from './string.js';
+import {ValuePartialParameters} from '@alirya/array/validator/value-partial.js';
+import {AndParameters} from '@alirya/array/validatable/and.js';
+import {OrParameters} from '@alirya/array/validatable/or.js';
+import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last.js';
+import {NumberParameters} from '@alirya/number/validator/number.js';
+import Chain from '../../../validator/dist/chain.js';
+import {TypeInParameters} from '../../../type/dist/validator/type-in.js';
 
 export function NumericParameters() : Validator<unknown, string|number, boolean, boolean, string>;
 

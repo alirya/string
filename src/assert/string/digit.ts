@@ -1,11 +1,11 @@
-import Match from '../../value/match';
-import Validatable from '@alirya/validatable/validatable';
-import Value from '@alirya/value/value';
+import Match from '../../value/match.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@alirya/value/value.js';
 
 export function DigitParameters(
     value : string,
     valid : boolean,
-    subject : string = 'string'
+    subject  = 'string'
 ) : string {
 
     const strings: string[] = [];
@@ -24,7 +24,7 @@ export function DigitParameters(
 
     if(!valid) {
 
-        let match = new Match(value, /[^0-9]{1,5}/);
+        const match = new Match(value, /[^0-9]{1,5}/);
 
         if(match.valid) {
 

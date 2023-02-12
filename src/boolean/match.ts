@@ -1,5 +1,5 @@
-import Value from '@alirya/value/value';
-import Pattern from '../pattern/pattern/pattern';
+import Value from '@alirya/value/value.js';
+import Pattern from '../pattern/pattern/pattern.js';
 /**
  * match string {@param value} against {@param pattern}
  *

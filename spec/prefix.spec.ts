@@ -1,4 +1,4 @@
-import {PrefixParameters} from '../dist/prefix';
+import {PrefixParameters} from '../dist/prefix.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

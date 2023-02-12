@@ -1,6 +1,6 @@
-import trimEnd from 'lodash/trimEnd';
-import Suffix from './suffix/suffix';
-import String from './string/string';
+import { trimEnd } from 'lodash-es';
+import Suffix from './suffix/suffix.js';
+import String from './string/string.js';
 
 const TrimSuffixParameters : (string : string, suffix ?: string) => string = trimEnd;
 

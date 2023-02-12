@@ -1,14 +1,14 @@
-import MinimumType from '../string/minimum';
-import Count from '../../number/count';
-import {MinimumArgument, MinimumArgumentString, MinimumArgumentValue} from '../string/minimum';
+import MinimumType from '../string/minimum.js';
+import Count from '../../number/count.js';
+import {MinimumArgument, MinimumArgumentString, MinimumArgumentValue} from '../string/minimum.js';
 
 export function MinimumParameters(
     value : string,
     minimum : number,
     inclusive : boolean,
     converter : (value:string)=>number = Count,
-    criteria : string = 'length',
-    subject : string = 'string',
+    criteria  = 'length',
+    subject  = 'string',
 ) : Error {
 
     return new Error(MinimumType.Parameters(value, false, minimum, inclusive, converter, criteria, subject));

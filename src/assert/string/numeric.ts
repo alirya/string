@@ -1,12 +1,12 @@
-import Match from '../../value/match';
-import Validatable from '@alirya/validatable/validatable';
-import Value from '@alirya/value/value';
-import SafeCast from "../../safe-cast";
+import Match from '../../value/match.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Value from '@alirya/value/value.js';
+import SafeCast from '../../safe-cast.js';
 
 export function NumericParameters(
     value : unknown,
     valid : boolean,
-    subject : string = 'string'
+    subject  = 'string'
 ) : string {
 
     const strings : string[] = [];
@@ -26,7 +26,7 @@ export function NumericParameters(
 
     if(!valid) {
 
-        let match = new Match(SafeCast(value), /[^0-9]{1,5}/);
+        const match = new Match(SafeCast(value), /[^0-9]{1,5}/);
 
         if(match.valid) {
 

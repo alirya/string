@@ -1,5 +1,5 @@
-import Suffix from './suffix/suffix';
-import String from './string/string';
+import Suffix from './suffix/suffix.js';
+import String from './string/string.js';
 /**
  * append {@param suffix} to {@param value} if not exist and {@param value} not empty
  *

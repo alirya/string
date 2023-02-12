@@ -1,5 +1,5 @@
-import BlankType from '../string/blank';
-import Value from '@alirya/value/value';
+import BlankType from '../string/blank.js';
+import Value from '@alirya/value/value.js';
 
 export function BlankParameters(
     value : string,

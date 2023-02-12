@@ -1,16 +1,16 @@
-import Validator from '@alirya/validator/validator';
-import MatchValidatable from '../validatable/match';
-import Instance from '@alirya/validator/validatable/validatable';
-import MatchString from '../assert/string/match';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import Value from '@alirya/value/value';
-import Pattern from '../pattern/pattern/pattern';
-import {StringParameters} from "./string";
-import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
-import {AndParameters} from '@alirya/array/validatable/and';
-import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
+import Validator from '@alirya/validator/validator.js';
+import MatchValidatable from '../validatable/match.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import MatchString from '../assert/string/match.js';
+import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import Value from '@alirya/value/value.js';
+import Pattern from '../pattern/pattern/pattern.js';
+import {StringParameters} from './string.js';
+import {ValuePartialParameters} from '@alirya/array/validator/value-partial.js';
+import {AndParameters} from '@alirya/array/validatable/and.js';
+import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last.js';
 
 export function MatchParameters(
     pattern : RegExp,

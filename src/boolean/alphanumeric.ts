@@ -1,4 +1,4 @@
-import {MatchParameters} from './match';
+import {MatchParameters} from './match.js';
 
 export default function Alphanumeric(source : string) : boolean {
 

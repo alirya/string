@@ -1,4 +1,4 @@
-import Blank from '../../dist/boolean/blank';
+import Blank from '../../dist/boolean/blank.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

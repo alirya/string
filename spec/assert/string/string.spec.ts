@@ -1,8 +1,8 @@
-import {StringParameters} from '../../../dist/assert/string/string';
+import {StringParameters} from '../../../dist/assert/string/string.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let data = new Map<[any, boolean, string?], string>();
+const data = new Map<[any, boolean, string?], string>();
 
 data.set(['string', true], 'type is string.');
 data.set(['string', true, 'value'], 'value is string.');
@@ -16,7 +16,7 @@ data.set([{}, false], 'type must string, actual object.');
 
 
 let i = 0;
-for(let [args, message] of data) {
+for(const [args, message] of data) {
 
     it(`test data[${i}]`, ()=>{
 

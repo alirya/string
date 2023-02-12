@@ -1,5 +1,5 @@
-import String from './string/string';
-import Prefix from './prefix/prefix';
+import String from './string/string.js';
+import Prefix from './prefix/prefix.js';
 /**
  * remove {@param prefix} at the start of {@param value}
  */

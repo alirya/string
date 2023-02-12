@@ -1,5 +1,5 @@
-import AssertString from '../assert/string';
-import {StringParameters} from '../assert/throwable/string';
+import AssertString from '../assert/string.js';
+import {StringParameters} from '../assert/throwable/string.js';
 
 export default function String(
     value : unknown,

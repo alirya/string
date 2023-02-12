@@ -1,5 +1,5 @@
-import String from '../string/string';
-import Separator from '../separator/separator';
+import String from '../string/string.js';
+import Separator from '../separator/separator.js';
 
 /**
  * split {@param string} to its each alphanumeric marked by {@param separator}
@@ -19,7 +19,7 @@ export function SegmentParameters(
     const list = string.split(separator);
     const length = list.length;
 
-    let adds : string[] = [];
+    const adds : string[] = [];
 
     for (let i = 1; i <= length; i++) {
 

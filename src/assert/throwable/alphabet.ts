@@ -1,9 +1,9 @@
-import AlphabetType from '../string/alphabet';
-import Value from '@alirya/value/value';
+import AlphabetType from '../string/alphabet.js';
+import Value from '@alirya/value/value.js';
 
 export function AlphabetParameters(
     value : string,
-    subject : string = 'string'
+    subject  = 'string'
 ) : Error {
 
     return new Error(AlphabetType.Parameters(value, false, subject));

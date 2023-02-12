@@ -1,4 +1,4 @@
-import {SuffixParameters} from '../../dist/boolean/suffix';
+import {SuffixParameters} from '../../dist/boolean/suffix.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

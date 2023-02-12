@@ -1,4 +1,4 @@
-import {NumericParameters} from '../../../dist/assert/string/numeric';
+import {NumericParameters} from '../../../dist/assert/string/numeric.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

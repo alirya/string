@@ -1,21 +1,21 @@
-import {MatchParameters} from '../../dist/validator/match';
-import ALPHABET from '../../dist/alphabet';
-import DIGIT from '../../dist/digit';
-import MatchMessage from '../../dist/assert/string/match';
+import {MatchParameters} from '../../dist/validator/match.js';
+import ALPHABET from '../../dist/alphabet.js';
+import DIGIT from '../../dist/digit.js';
+import MatchMessage from '../../dist/assert/string/match.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let map = new Map<string, [boolean, RegExp, string]>();
+const map = new Map<string, [boolean, RegExp, string]>();
 
 map.set(ALPHABET, [true, /[a-z]/i, 'standard']);
 map.set(ALPHABET + DIGIT + ALPHABET, [true, /[a-z]/ig, 'global']);
 
-for(let [value, [valid, regex, message]] of map) {
+for(const [value, [valid, regex, message]] of map) {
 
     it(message, ()=>{
 
-        let validator = MatchParameters(regex, MatchMessage.Parameters);
-        let valdiatable = validator(value);
+        const validator = MatchParameters(regex, MatchMessage.Parameters);
+        const valdiatable = validator(value);
         expect(valdiatable.valid).toBe(valid);
     });
 }

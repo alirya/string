@@ -1,5 +1,5 @@
-import {StringParameters} from '../../dist/validator/string';
-import StringMessage from '../../dist/assert/string/string';
+import {StringParameters} from '../../dist/validator/string.js';
+import StringMessage from '../../dist/assert/string/string.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -7,38 +7,38 @@ describe(`compiler compatible`,function() {
 
     it(`valid value`,function() {
 
-        let validator = StringParameters(StringMessage.Parameters);
-        let validatable = validator(<unknown>'10');
+        const validator = StringParameters(StringMessage.Parameters);
+        const validatable = validator(<unknown>'10');
 
         if(validatable.valid) {
 
             // compiler pass
-            let string : string = validatable.value;
+            const string : string = validatable.value;
             expect(string).toBe('10');
 
         } else {
 
             // @ts-expect-error
-            let string : string = validatable.value;
+            const string : string = validatable.value;
             fail('validatable.valid should false');
         }
     });
 
     it(`invalid value`,function() {
 
-        let validator = StringParameters(StringMessage.Parameters);
-        let validatable = validator({});
+        const validator = StringParameters(StringMessage.Parameters);
+        const validatable = validator({});
 
         if(validatable.valid) {
 
             // compiler pass
-            let string : string = validatable.value;
+            const string : string = validatable.value;
             fail('validatable.valid should false');
 
         } else {
 
             // @ts-expect-error
-            let string : string = validatable.value;
+            const string : string = validatable.value;
             // @ts-expect-error
             expect(string).toEqual({});
         }
@@ -46,8 +46,8 @@ describe(`compiler compatible`,function() {
 
     it(`readonly`,function() {
 
-        let validator = StringParameters(StringMessage.Parameters);
-        let validatable = validator('1');
+        const validator = StringParameters(StringMessage.Parameters);
+        const validatable = validator('1');
 
         try {
             // @ts-expect-error
@@ -79,8 +79,8 @@ describe(`compiler compatible`,function() {
 
 it(`valid`,function() {
 
-    let validator = StringParameters(StringMessage.Parameters);
-    let validatable = validator('1');
+    const validator = StringParameters(StringMessage.Parameters);
+    const validatable = validator('1');
 
     expect(validatable.valid).toBe(true);
     expect(validatable.value).toBe('1');
@@ -90,8 +90,8 @@ it(`valid`,function() {
 
 it(`invalid`,function() {
 
-    let validator = StringParameters(StringMessage.Parameters);
-    let validatable = validator(1);
+    const validator = StringParameters(StringMessage.Parameters);
+    const validatable = validator(1);
 
     expect(validatable.valid).toBe(false);
     expect(validatable.value).toBe(1);

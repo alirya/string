@@ -1,10 +1,10 @@
-import Prefix from './prefix/prefix';
-import Suffix from './suffix/suffix';
-import String from './string/string';
-import Circumfix from './circumfix/circumfix';
-import Separator from './separator/separator';
-import Argument from '@alirya/function/argument/argument';
-import Pad from './pad';
+import Prefix from './prefix/prefix.js';
+import Suffix from './suffix/suffix.js';
+import String from './string/string.js';
+import Circumfix from './circumfix/circumfix.js';
+import Separator from './separator/separator.js';
+import Argument from '@alirya/function/argument/argument.js';
+import Pad from './pad.js';
 
 export type ConditionBuilderArgumentsList<Condition> =
     String<string> &
@@ -16,7 +16,7 @@ export type ConditionBuilderArgumentsList<Condition> =
 export function ConditionBuilderParameters<Condition>(
     argument : ConditionBuilderArgumentsList<Condition>[],
     condition : Condition,
-    separator : string = ' '
+    separator  = ' '
 ) : string {
 
     return argument

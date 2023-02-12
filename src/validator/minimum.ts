@@ -1,16 +1,16 @@
-import Validator from '@alirya/validator/validator';
-import MinimumValidatable, {MinimumReturnContext} from '../validatable/minimum';
-import Count from '../number/count';
-import MinimumString from '../assert/string/minimum';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import Value from '@alirya/value/value';
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import MinimumNumber from '@alirya/number/minimum/minimum';
-import StrictOmit from '@alirya/object/strict-omit';
-import {ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import {StringParameters} from "./string";
-import SimpleValidator from "@alirya/validator/simple";
+import Validator from '@alirya/validator/validator.js';
+import MinimumValidatable, {MinimumReturnContext} from '../validatable/minimum.js';
+import Count from '../number/count.js';
+import MinimumString from '../assert/string/minimum.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import Value from '@alirya/value/value.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import MinimumNumber from '@alirya/number/minimum/minimum.js';
+import StrictOmit from '@alirya/object/strict-omit.js';
+import {ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {StringParameters} from './string.js';
+import SimpleValidator from "@alirya/validator/simple.js";
 
 export function MinimumParameters(
     minimum : number,

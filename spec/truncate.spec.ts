@@ -1,4 +1,4 @@
-import {TruncateParameters} from '../dist/truncate';
+import {TruncateParameters} from '../dist/truncate.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

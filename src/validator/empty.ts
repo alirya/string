@@ -1,12 +1,12 @@
-import Validator from '@alirya/validator/simple';
-import EmptyValidatable from '../validatable/empty';
-import Instance from '@alirya/validator/validatable/validatable';
-import EmptyString from '../assert/string/empty';
-import Static from '@alirya/validator/message/function/static';
-import {StringParameters} from "./string";
-import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
-import {AndParameters} from '@alirya/array/validatable/and';
-import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
+import Validator from '@alirya/validator/simple.js';
+import EmptyValidatable from '../validatable/empty.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import EmptyString from '../assert/string/empty.js';
+import Static from '@alirya/validator/message/function/static.js';
+import {StringParameters} from './string.js';
+import {ValuePartialParameters} from '@alirya/array/validator/value-partial.js';
+import {AndParameters} from '@alirya/array/validatable/and.js';
+import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last.js';
 
 
 export function EmptyParameters() : Validator<string, '', string>;

@@ -1,13 +1,13 @@
-import Validator from '@alirya/validator/validator';
-import AlphanumericValidatable from '../validatable/alphanumeric';
-import Instance from '@alirya/validator/validatable/validatable';
-import AlphanumericString from '../assert/string/alphanumeric';
-import Dynamic from '@alirya/validator/message/function/validatable';
-import SimpleValidator from '@alirya/validator/simple';
-import {StringParameters} from "./string";
-import {ValuePartialParameters} from '@alirya/array/validator/value-partial';
-import {AndParameters} from '@alirya/array/validatable/and';
-import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last';
+import Validator from '@alirya/validator/validator.js';
+import AlphanumericValidatable from '../validatable/alphanumeric.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import AlphanumericString from '../assert/string/alphanumeric.js';
+import Dynamic from '@alirya/validator/message/function/validatable.js';
+import SimpleValidator from '@alirya/validator/simple.js';
+import {StringParameters} from './string.js';
+import {ValuePartialParameters} from '@alirya/array/validator/value-partial.js';
+import {AndParameters} from '@alirya/array/validatable/and.js';
+import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last.js';
 
 export function AlphanumericParameters() : Validator<string, string, boolean, boolean, string>;
 

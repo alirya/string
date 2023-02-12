@@ -1,8 +1,8 @@
-import SafeCast from './safe-cast';
-import Prefix from './prefix/prefix';
-import Suffix from './suffix/suffix';
-import Separator from './separator/separator';
-import Value from '@alirya/value/value';
+import SafeCast from './safe-cast.js';
+import Prefix from './prefix/prefix.js';
+import Suffix from './suffix/suffix.js';
+import Separator from './separator/separator.js';
+import Value from '@alirya/value/value.js';
 
 export function JoinAffixParameters(
     value : string[],

@@ -1,4 +1,4 @@
-import NotEmpty from './not-empty';
+import NotEmpty from './not-empty.js';
 /**
  * check if {@param string} contain non-white space (space, tab, no-break space, etc.) and not empty string {@see NotEmpty}
  *

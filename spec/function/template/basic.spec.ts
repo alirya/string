@@ -1,4 +1,4 @@
-import {TemplateParameters} from '../../../dist/function/template';
+import {TemplateParameters} from '../../../dist/function/template.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

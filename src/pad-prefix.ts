@@ -1,6 +1,6 @@
-import padStart from 'lodash/padStart';
-import String from './string/string';
-import Prefix from './prefix/prefix';
+import { padStart } from 'lodash-es';
+import String from './string/string.js';
+import Prefix from './prefix/prefix.js';
 
 /**
  * @see padStart

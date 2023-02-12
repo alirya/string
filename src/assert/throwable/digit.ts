@@ -1,9 +1,9 @@
-import DigitType from '../string/digit';
-import Value from '@alirya/value/value';
+import DigitType from '../string/digit.js';
+import Value from '@alirya/value/value.js';
 
 export function DigitParameters(
     value : string,
-    subject : string = 'string'
+    subject  = 'string'
 ) : Error {
 
     return new Error(DigitType.Parameters(value, false, subject));

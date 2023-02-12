@@ -1,9 +1,9 @@
-import Count from '../../number/count';
-import Validatable from '@alirya/validatable/validatable';
-import String from '../../string/string';
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import MaximumNumber from '@alirya/number/maximum/maximum';
-import Value from "@alirya/value/value";
+import Count from '../../number/count.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import String from '../../string/string.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import MaximumNumber from '@alirya/number/maximum/maximum.js';
+import Value from "@alirya/value/value.js";
 
 export function MaximumParameters(
     value : string,
@@ -11,8 +11,8 @@ export function MaximumParameters(
     maximum : number,
     inclusive : boolean,
     converter : (value:string)=>number = Count,
-    criteria : string = 'length',
-    subject : string = 'string',
+    criteria  = 'length',
+    subject  = 'string',
 ) : string {
 
     const strings : string[] = [];

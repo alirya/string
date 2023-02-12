@@ -1,9 +1,9 @@
-import Validator from '@alirya/validator/validator';
-import NotEmptyValidatable from '../validatable/not-empty';
-import Instance from '@alirya/validator/validatable/validatable';
-import NotEmptyString from '../assert/string/not-empty';
-import FunctionStatic from '@alirya/validator/message/function/static';
-import {StringParameters} from "./string";
+import Validator from '@alirya/validator/validator.js';
+import NotEmptyValidatable from '../validatable/not-empty.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import NotEmptyString from '../assert/string/not-empty.js';
+import FunctionStatic from '@alirya/validator/message/function/static.js';
+import {StringParameters} from './string.js';
 
 export function NotEmptyParameters() : Validator<string, '', true, false, string>;
 

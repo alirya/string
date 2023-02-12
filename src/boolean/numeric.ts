@@ -1,6 +1,6 @@
-import {MatchParameters} from './match';
-import Number from '@alirya/number/boolean/number';
-import String from "./string";
+import {MatchParameters} from './match.js';
+import Number from '@alirya/number/boolean/number.js';
+import String from './string.js';
 
 /**
  * check if {@param value} is numeric

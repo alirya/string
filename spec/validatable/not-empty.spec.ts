@@ -1,18 +1,18 @@
-import ALPHABET from '../../dist/alphabet';
-import DIGIT from '../../dist/digit';
-import {NotEmptyParameters} from '../../dist/validatable/not-empty';
-import NotEmptyMessage from '../../dist/assert/string/not-empty';
-import NotEmptyMessageArgument from '../../dist/assert/string/not-empty';
+import ALPHABET from '../../dist/alphabet.js';
+import DIGIT from '../../dist/digit.js';
+import {NotEmptyParameters} from '../../dist/validatable/not-empty.js';
+import NotEmptyMessage from '../../dist/assert/string/not-empty.js';
+import NotEmptyMessageArgument from '../../dist/assert/string/not-empty.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-let map = new Map<string, [boolean, string]>();
+const map = new Map<string, [boolean, string]>();
 
 it('add alphabet', ()=>{
 
     map.set(ALPHABET, [false, 'all alphabet']);
 
-    for (let letter of ALPHABET) {
+    for (const letter of ALPHABET) {
         map.set(letter, [false, '1 alphabet']);
     }
 
@@ -22,7 +22,7 @@ it('add digit', ()=>{
 
     map.set(DIGIT, [false, 'all number']);
 
-    for (let number of DIGIT) {
+    for (const number of DIGIT) {
 
         map.set(number, [false, '1 number']);
     }
@@ -48,14 +48,14 @@ it('add empty', ()=>{
 
 });
 
-for(let [value, [valid, message]] of map) {
+for(const [value, [valid, message]] of map) {
 
 
     describe('not empty', () => {
 
         it(message, ()=>{
 
-            let validatable = NotEmptyParameters(value, NotEmptyMessage.Parameters);
+            const validatable = NotEmptyParameters(value, NotEmptyMessage.Parameters);
             expect(validatable.valid).toBe(!valid);
             expect(validatable.value).toBe(value);
 

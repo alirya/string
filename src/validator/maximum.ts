@@ -1,17 +1,17 @@
-import SimpleValidator from '@alirya/validator/simple';
-import MaximumValidatable, {MaximumReturnContext} from '../validatable/maximum';
-import Count from '../number/count';
-import MaximumString from '../assert/string/maximum';
-import Dynamic from '@alirya/validator/message/function/validatable';
-import Validator from '@alirya/validator/validator';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import Value from '@alirya/value/value';
-import Inclusive from '@alirya/number/inclusive/inclusive';
-import MaximumNumber from '@alirya/number/maximum/maximum';
-import StrictOmit from '@alirya/object/strict-omit';
+import SimpleValidator from '@alirya/validator/simple.js';
+import MaximumValidatable, {MaximumReturnContext} from '../validatable/maximum.js';
+import Count from '../number/count.js';
+import MaximumString from '../assert/string/maximum.js';
+import Dynamic from '@alirya/validator/message/function/validatable.js';
+import Validator from '@alirya/validator/validator.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import Value from '@alirya/value/value.js';
+import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import MaximumNumber from '@alirya/number/maximum/maximum.js';
+import StrictOmit from '@alirya/object/strict-omit.js';
 import {O} from 'ts-toolbelt';
-import {StringParameters} from "./string";
+import {StringParameters} from './string.js';
 
 
 

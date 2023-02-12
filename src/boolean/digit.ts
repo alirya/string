@@ -1,4 +1,4 @@
-import {MatchParameters} from './match';
+import {MatchParameters} from './match.js';
 
 /**
  * check if {@param string} is digit

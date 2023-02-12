@@ -1,4 +1,4 @@
-import {MinimumParameters} from '../../dist/boolean/minimum';
+import {MinimumParameters} from '../../dist/boolean/minimum.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

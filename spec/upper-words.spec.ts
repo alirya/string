@@ -1,4 +1,4 @@
-import {UpperWordsParameters} from '../dist/upper-words';
+import {UpperWordsParameters} from '../dist/upper-words.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 
@@ -6,7 +6,7 @@ it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 describe('construct & getter', function() {
 
 
-    let map : [string, string, RegExp|string][] = [
+    const map : [string, string, RegExp|string][] = [
         ['abcde', 'Abcde', ' '],
         ['fghij', 'Fghij', ' '],
         ['abcde fghij', 'Abcde Fghij', ' '],
@@ -14,7 +14,7 @@ describe('construct & getter', function() {
         ['abcde fghij+klmno', 'Abcde Fghij+Klmno', /[ +]/g],
     ];
 
-    for(let [index, [original, transformed, delimiters]] of map.entries()) {
+    for(const [index, [original, transformed, delimiters]] of map.entries()) {
 
         it(`[${index}] ${original}`, () => expect(transformed).toBe(UpperWordsParameters(original, delimiters)));
     }

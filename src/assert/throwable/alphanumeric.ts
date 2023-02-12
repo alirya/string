@@ -1,9 +1,9 @@
-import AlphanumericType from '../string/alphanumeric';
-import Value from '@alirya/value/value';
+import AlphanumericType from '../string/alphanumeric.js';
+import Value from '@alirya/value/value.js';
 
 export function AlphanumericParameters(
     value : string,
-    subject : string = 'string'
+    subject  = 'string'
 ) : Error {
 
     return new Error(AlphanumericType.Parameters(value, false, subject));

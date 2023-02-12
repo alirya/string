@@ -1,9 +1,9 @@
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import IsDigit from '../boolean/digit';
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import IsDigit from '../boolean/digit.js';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
 
 export function DigitParameters<ValueType extends string, MessageType>(
     value: ValueType,

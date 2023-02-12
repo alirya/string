@@ -1,4 +1,4 @@
-import {EncloseParameters} from '../dist/enclose';
+import {EncloseParameters} from '../dist/enclose.js';
 
 it('force console log', () => { spyOn(console, 'log').and.callThrough();});
 

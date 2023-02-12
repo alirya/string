@@ -1,5 +1,5 @@
-import AssertNumeric from '../assert/numeric';
-import NumericError from '../assert/throwable/numeric';
+import AssertNumeric from '../assert/numeric.js';
+import NumericError from '../assert/throwable/numeric.js';
 
 export default function Numeric(
     value : unknown,

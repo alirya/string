@@ -1,10 +1,10 @@
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import StringGuard from '../boolean/string';
-import Return from '@alirya/validator/validatable/simple';
-import Instance from '@alirya/validator/validatable/validatable';
-import Simple from '@alirya/validator/message/function/simple';
-import Value from '@alirya/value/value';
-import Message from '@alirya/message/message';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import StringGuard from '../boolean/string.js';
+import Return from '@alirya/validator/validatable/simple.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import Simple from '@alirya/validator/message/function/simple.js';
+import Value from '@alirya/value/value.js';
+import Message from '@alirya/message/message.js';
 
 export function StringParameters<Argument, MessageType>(
     value : Argument,

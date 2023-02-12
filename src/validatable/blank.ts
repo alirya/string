@@ -1,9 +1,9 @@
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import NotBlankBoolean from '../boolean/not-blank';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import NotBlankBoolean from '../boolean/not-blank.js';
+import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
 
 
 export function BlankParameters<ValueType extends string, MessageType>(

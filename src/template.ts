@@ -1,8 +1,8 @@
-import CompiledTemplate from './function/template';
-import String from './string/string';
-import Prefix from './prefix/prefix';
-import Suffix from './suffix/suffix';
-import Argument from '@alirya/function/argument/argument';
+import CompiledTemplate from './function/template.js';
+import String from './string/string.js';
+import Prefix from './prefix/prefix.js';
+import Suffix from './suffix/suffix.js';
+import Argument from '@alirya/function/argument/argument.js';
 
 /**
  * string template for key object or array
