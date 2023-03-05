@@ -9,8 +9,8 @@ import {AndParameters} from '@alirya/array/validatable/and.js';
 import {OrParameters} from '@alirya/array/validatable/or.js';
 import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last.js';
 import {NumberParameters} from '@alirya/number/validator/number.js';
-import Chain from '../../../validator/dist/chain.js';
-import {TypeInParameters} from '../../../type/dist/validator/type-in.js';
+import Chain from '@alirya/validator/chain.js';
+import {TypeInParameters} from '@alirya/type/validator/type-in.js';
 
 export function NumericParameters() : Validator<unknown, string|number, boolean, boolean, string>;
 

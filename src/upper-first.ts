@@ -1,4 +1,4 @@
-import upperFirst from 'lodash/upperFirst.js';
+import {upperFirst} from 'lodash-es';
 
 /**
  * @see upperFirst
