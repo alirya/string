@@ -27,3 +27,5 @@ export default function Numeric(value : unknown) : boolean {
 
     return MatchParameters(value, /^[-+]*\d*(\.\d*)?$/i);
 }
+
+export {Numeric as IsNumeric};

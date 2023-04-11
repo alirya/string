@@ -11,3 +11,5 @@ export default function Blank(
 
     return Empty(string.trim());
 }
+
+export {Blank as IsBlank};

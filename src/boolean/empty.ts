@@ -9,3 +9,6 @@ export default function Empty(
 
     return string === '';
 }
+
+export {Empty as IsEmpty};
+export {Empty as IsEmptyString};

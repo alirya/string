@@ -8,3 +8,5 @@ export default function Digit(string : string) : boolean {
 
     return MatchParameters(string, /^\d*$/i);
 }
+
+export {Digit as IsDigit};

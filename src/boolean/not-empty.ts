@@ -9,3 +9,6 @@ export default function NotEmpty(
 
     return string !== '';
 }
+
+export {NotEmpty as IsNotEmpty};
+export {NotEmpty as IsNotEmptyString};

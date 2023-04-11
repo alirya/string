@@ -11,3 +11,5 @@ export default function NotBlank(
 
     return NotEmpty(string.trim());
 }
+
+export {NotBlank as IsNotBlank};
