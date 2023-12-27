@@ -1,9 +1,9 @@
 import AlphanumericFromObject from '../boolean/alphanumeric.js';
-import {CallbackClassParameters} from '@alirya/validator/validatable/callback.js';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
+import {CallbackClassParameters} from '@axiona/validator/validatable/callback.js';
+import {ValidatableParameters} from '@axiona/validator/message/function/validatable.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
 
 export function AlphanumericParameters<ValueType extends string, MessageType>(
     value : ValueType,

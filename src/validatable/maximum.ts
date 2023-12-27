@@ -1,13 +1,13 @@
-import MaximumNumber from '@alirya/number/maximum/maximum.js';
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import ValidatorValidatable from '@alirya/validator/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
+import MaximumNumber from '@axiona/number/maximum/maximum.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import ValidatorValidatable from '@axiona/validator/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
 import MaximumObject from '../boolean/maximum.js';
-import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import Inclusive from '@axiona/number/inclusive/inclusive.js';
 import Count from '../number/count.js';
-import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
+import {CallbackParameters} from '@axiona/validator/validatable/callback.js';
+import {ValidatableParameters} from '@axiona/validator/message/function/validatable.js';
 
 export type MaximumReturnContext = Inclusive & MaximumNumber;
 export type MaximumReturn<ValueType, MessageType> = ValidatorValidatable<ValueType, MessageType, boolean, MaximumReturnContext>;

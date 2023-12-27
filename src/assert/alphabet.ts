@@ -1,5 +1,5 @@
 import Guard from '../boolean/alphabet.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import {AlphabetParameters} from './throwable/alphabet.js';
 
 export default function Alphabet(

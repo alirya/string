@@ -1,4 +1,4 @@
-import { DifferenceParameters } from '@alirya/array/difference.js';
+import { DifferenceParameters } from '@axiona/array/difference.js';
 import Separator from '../separator/separator.js';
 
 /**

@@ -1,5 +1,5 @@
 import MatchType from '../string/match.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 import Pattern from '../../pattern/pattern/pattern.js';
 
 export function MatchParameters(

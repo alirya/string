@@ -1,16 +1,16 @@
-import Validator from '@alirya/validator/validator.js';
+import Validator from '@axiona/validator/validator.js';
 import MatchValidatable from '../validatable/match.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
 import MatchString from '../assert/string/match.js';
-import {ValidatableParameters} from '@alirya/validator/message/function/validatable.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
-import Value from '@alirya/value/value.js';
+import {ValidatableParameters} from '@axiona/validator/message/function/validatable.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
+import Value from '@axiona/value/value.js';
 import Pattern from '../pattern/pattern/pattern.js';
 import {StringParameters} from './string.js';
-import {ValuePartialParameters} from '@alirya/array/validator/value-partial.js';
-import {AndParameters} from '@alirya/array/validatable/and.js';
-import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last.js';
+import {ValuePartialParameters} from '@axiona/array/validator/value-partial.js';
+import {AndParameters} from '@axiona/array/validatable/and.js';
+import InvalidFirstValidLast from '@axiona/array/message/message/list/invalid-first-valid-last.js';
 
 export function MatchParameters(
     pattern : RegExp,

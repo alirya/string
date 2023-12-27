@@ -1,12 +1,12 @@
-import MinimumNumber from '@alirya/number/minimum/minimum.js';
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import ValidatorValidatable from '@alirya/validator/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
+import MinimumNumber from '@axiona/number/minimum/minimum.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import ValidatorValidatable from '@axiona/validator/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
 import IsMinimum from '../boolean/minimum.js';
-import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import Inclusive from '@axiona/number/inclusive/inclusive.js';
 import Count from '../number/count.js';
-import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import {CallbackParameters} from '@axiona/validator/validatable/callback.js';
 
 export type MinimumReturnContext = Inclusive & MinimumNumber;
 export type MinimumReturn<ValueType, MessageType> = ValidatorValidatable<ValueType, MessageType, boolean, MinimumReturnContext>;

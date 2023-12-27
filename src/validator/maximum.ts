@@ -1,15 +1,15 @@
-import SimpleValidator from '@alirya/validator/simple.js';
+import SimpleValidator from '@axiona/validator/simple.js';
 import MaximumValidatable, {MaximumReturnContext} from '../validatable/maximum.js';
 import Count from '../number/count.js';
 import MaximumString from '../assert/string/maximum.js';
-import Dynamic from '@alirya/validator/message/function/validatable.js';
-import Validator from '@alirya/validator/validator.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
-import Value from '@alirya/value/value.js';
-import Inclusive from '@alirya/number/inclusive/inclusive.js';
-import MaximumNumber from '@alirya/number/maximum/maximum.js';
-import StrictOmit from '@alirya/object/strict-omit.js';
+import Dynamic from '@axiona/validator/message/function/validatable.js';
+import Validator from '@axiona/validator/validator.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
+import Value from '@axiona/value/value.js';
+import Inclusive from '@axiona/number/inclusive/inclusive.js';
+import MaximumNumber from '@axiona/number/maximum/maximum.js';
+import StrictOmit from '@axiona/object/strict-omit.js';
 import {O} from 'ts-toolbelt';
 import {StringParameters} from './string.js';
 

@@ -1,12 +1,12 @@
-import Validator from '@alirya/validator/simple.js';
+import Validator from '@axiona/validator/simple.js';
 import EmptyValidatable from '../validatable/empty.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
 import EmptyString from '../assert/string/empty.js';
-import Static from '@alirya/validator/message/function/static.js';
+import Static from '@axiona/validator/message/function/static.js';
 import {StringParameters} from './string.js';
-import {ValuePartialParameters} from '@alirya/array/validator/value-partial.js';
-import {AndParameters} from '@alirya/array/validatable/and.js';
-import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last.js';
+import {ValuePartialParameters} from '@axiona/array/validator/value-partial.js';
+import {AndParameters} from '@axiona/array/validatable/and.js';
+import InvalidFirstValidLast from '@axiona/array/message/message/list/invalid-first-valid-last.js';
 
 
 export function EmptyParameters() : Validator<string, '', string>;

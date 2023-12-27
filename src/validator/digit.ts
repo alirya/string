@@ -1,13 +1,13 @@
-import Validator from '@alirya/validator/validator.js';
+import Validator from '@axiona/validator/validator.js';
 import DigitValidatable from '../validatable/digit.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
 import DigitString from '../assert/string/digit.js';
-import Dynamic from '@alirya/validator/message/function/validatable.js';
-import SimpleValidator from '@alirya/validator/simple.js';
+import Dynamic from '@axiona/validator/message/function/validatable.js';
+import SimpleValidator from '@axiona/validator/simple.js';
 import {StringParameters} from './string.js';
-import {ValuePartialParameters} from '@alirya/array/validator/value-partial.js';
-import {AndParameters} from '@alirya/array/validatable/and.js';
-import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last.js';
+import {ValuePartialParameters} from '@axiona/array/validator/value-partial.js';
+import {AndParameters} from '@axiona/array/validatable/and.js';
+import InvalidFirstValidLast from '@axiona/array/message/message/list/invalid-first-valid-last.js';
 
 export function DigitParameters() : Validator<string, string, boolean, boolean, string>;
 

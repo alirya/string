@@ -3,7 +3,7 @@ import Suffix from './suffix/suffix.js';
 import String from './string/string.js';
 import Circumfix from './circumfix/circumfix.js';
 import Separator from './separator/separator.js';
-import Argument from '@alirya/function/argument/argument.js';
+import Argument from '@axiona/function/argument/argument.js';
 import Pad from './pad.js';
 
 export type ConditionBuilderArgumentsList<Condition> =

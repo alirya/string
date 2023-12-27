@@ -2,7 +2,7 @@ import CompiledTemplate from './function/template.js';
 import String from './string/string.js';
 import Prefix from './prefix/prefix.js';
 import Suffix from './suffix/suffix.js';
-import Argument from '@alirya/function/argument/argument.js';
+import Argument from '@axiona/function/argument/argument.js';
 
 /**
  * string template for key object or array

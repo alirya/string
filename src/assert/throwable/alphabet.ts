@@ -1,5 +1,5 @@
 import AlphabetType from '../string/alphabet.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 
 export function AlphabetParameters(
     value : string,

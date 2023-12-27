@@ -1,6 +1,6 @@
 import UpperFirst from './upper-first.js';
 import Separator from './separator/separator.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 
 export function UpperWordsParameters (
     value : string,

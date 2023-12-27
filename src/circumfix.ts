@@ -1,4 +1,4 @@
-import Callable from '@alirya/function/callable.js';
+import Callable from '@axiona/function/callable.js';
 import Affix from './affix/affix.js';
 import AffixContainer from './affix/affix/affix.js';
 import String from './string/string.js';

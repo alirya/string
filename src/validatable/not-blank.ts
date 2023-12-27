@@ -1,9 +1,9 @@
 import NotBlankBoolean from '../boolean/not-blank.js';
-import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
-import Dynamic from '@alirya/validator/validatable/validatable.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
-import Value from '@alirya/value/value.js';
-import Message from '@alirya/message/message.js';
+import {CallbackParameters} from '@axiona/validator/validatable/callback.js';
+import Dynamic from '@axiona/validator/validatable/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
+import Value from '@axiona/value/value.js';
+import Message from '@axiona/message/message.js';
 
 export function NotBlankParameters<ValueType extends string, MessageType>(
     value : ValueType,

@@ -1,4 +1,4 @@
-import Argument from '@alirya/function/argument/argument.js';
+import Argument from '@axiona/function/argument/argument.js';
 import ToString from './to-string.js';
 
 export default class Callback<

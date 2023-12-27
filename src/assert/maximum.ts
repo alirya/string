@@ -1,10 +1,10 @@
 import Guard from '../boolean/maximum.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import MaximumError from './throwable/maximum.js';
 import Count from '../number/count.js';
-import Value from '@alirya/value/value.js';
-import MaximumNumber from '@alirya/number/maximum/maximum.js';
-import Inclusive from '@alirya/number/inclusive/inclusive.js';
+import Value from '@axiona/value/value.js';
+import MaximumNumber from '@axiona/number/maximum/maximum.js';
+import Inclusive from '@axiona/number/inclusive/inclusive.js';
 
 export function MaximumParameters(
     value : string,

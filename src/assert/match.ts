@@ -1,7 +1,7 @@
 import Guard from '../boolean/match.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import MatchError from './throwable/match.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 import Pattern from '../pattern/pattern/pattern.js';
 
 export function MatchParameters(

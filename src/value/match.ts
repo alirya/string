@@ -1,6 +1,6 @@
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import ValueOf from '@alirya/value/value-of/value-of.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import ValueOf from '@axiona/value/value-of/value-of.js';
 
 export interface MatchType<ValueType extends string> extends
     Readonly<Value<ValueType>>,

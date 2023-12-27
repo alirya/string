@@ -1,9 +1,9 @@
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import ValueMatch, {MatchType as ValueMatchType} from '../value/match.js';
-import Value from '@alirya/value/value.js';
-import Message from '@alirya/message/message.js';
+import Value from '@axiona/value/value.js';
+import Message from '@axiona/message/message.js';
 import Pattern from '../pattern/pattern/pattern.js';
-import Validatable from '@alirya/validator/value/validatable.js';
+import Validatable from '@axiona/validator/value/validatable.js';
 
 export interface MatchType<ValueType extends string, MessageType> extends ValueMatchType<ValueType> {
 

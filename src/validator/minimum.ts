@@ -1,16 +1,16 @@
-import Validator from '@alirya/validator/validator.js';
+import Validator from '@axiona/validator/validator.js';
 import MinimumValidatable, {MinimumReturnContext} from '../validatable/minimum.js';
 import Count from '../number/count.js';
 import MinimumString from '../assert/string/minimum.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
-import Value from '@alirya/value/value.js';
-import Inclusive from '@alirya/number/inclusive/inclusive.js';
-import MinimumNumber from '@alirya/number/minimum/minimum.js';
-import StrictOmit from '@alirya/object/strict-omit.js';
-import {ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
+import Value from '@axiona/value/value.js';
+import Inclusive from '@axiona/number/inclusive/inclusive.js';
+import MinimumNumber from '@axiona/number/minimum/minimum.js';
+import StrictOmit from '@axiona/object/strict-omit.js';
+import {ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import {StringParameters} from './string.js';
-import SimpleValidator from "@alirya/validator/simple.js";
+import SimpleValidator from "@axiona/validator/simple.js";
 
 export function MinimumParameters(
     minimum : number,

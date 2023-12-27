@@ -1,5 +1,5 @@
 import Guard from '../boolean/blank.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import BlankError from './throwable/blank.js';
 
 export default function Blank(

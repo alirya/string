@@ -1,5 +1,5 @@
 import {MatchParameters} from './match.js';
-import Number from '@alirya/number/boolean/number.js';
+import Number from '@axiona/number/boolean/number.js';
 import String from './string.js';
 
 /**

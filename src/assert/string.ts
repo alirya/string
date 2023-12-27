@@ -1,5 +1,5 @@
 import Guard from '../boolean/string.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import StringError from './throwable/string.js';
 
 export default function String(

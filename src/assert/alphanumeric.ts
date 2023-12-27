@@ -1,5 +1,5 @@
 import Guard from '../boolean/alphanumeric.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import AlphanumericError from './throwable/alphanumeric.js';
 
 export default function Alphanumeric(

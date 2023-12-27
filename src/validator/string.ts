@@ -1,10 +1,10 @@
-import Validator from '@alirya/validator/simple.js';
+import Validator from '@axiona/validator/simple.js';
 import StringValidatable from '../validatable/string.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
 import StringString from '../assert/string/string.js';
-import {SimpleParameters} from '@alirya/validator/message/function/simple.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import Value from '@alirya/value/value.js';
+import {SimpleParameters} from '@axiona/validator/message/function/simple.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import Value from '@axiona/value/value.js';
 
 export type StringParametersReturn<MessageType> = Validator<unknown, string, MessageType>;
 

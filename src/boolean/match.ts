@@ -1,4 +1,4 @@
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 import Pattern from '../pattern/pattern/pattern.js';
 /**
  * match string {@param value} against {@param pattern}

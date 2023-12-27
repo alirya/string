@@ -1,5 +1,5 @@
 import NumericType from '../string/numeric.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 
 export function NumericParameters(
     value : unknown,

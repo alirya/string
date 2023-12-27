@@ -1,10 +1,10 @@
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
-import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
+import {CallbackParameters} from '@axiona/validator/validatable/callback.js';
 import IsEmpty from '../boolean/empty.js';
-import MessageStatic from '@alirya/validator/message/function/static.js';
-import Static from '@alirya/validator/validatable/static.js';
+import MessageStatic from '@axiona/validator/message/function/static.js';
+import Static from '@axiona/validator/validatable/static.js';
 
 export function EmptyParameters<ValueType extends string, MessageType>(
     value : ValueType,

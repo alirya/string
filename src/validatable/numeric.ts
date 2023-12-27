@@ -1,9 +1,9 @@
-import Value from '@alirya/value/value.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import Message from '@alirya/message/message.js';
+import Value from '@axiona/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import Message from '@axiona/message/message.js';
 import NumericFromObject from '../boolean/numeric.js';
-import Callback from '@alirya/validator/validatable/callback.js';
-import Dynamic from '@alirya/validator/message/function/validatable.js';
+import Callback from '@axiona/validator/validatable/callback.js';
+import Dynamic from '@axiona/validator/message/function/validatable.js';
 
 export function NumericParameters<ValueType, MessageType>(
     value : ValueType,

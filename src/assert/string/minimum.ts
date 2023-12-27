@@ -1,9 +1,9 @@
 import Count from '../../number/count.js';
 import String from '../../string/string.js';
-import Validatable from '@alirya/validatable/validatable.js';
-import MinimumNumber from '@alirya/number/minimum/minimum.js';
-import Inclusive from '@alirya/number/inclusive/inclusive.js';
-import Value from '@alirya/value/value.js';
+import Validatable from '@axiona/validatable/validatable.js';
+import MinimumNumber from '@axiona/number/minimum/minimum.js';
+import Inclusive from '@axiona/number/inclusive/inclusive.js';
+import Value from '@axiona/value/value.js';
 
 export function MinimumParameters(
     value : string,

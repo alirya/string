@@ -1,16 +1,16 @@
-import Validator from '@alirya/validator/validator.js';
+import Validator from '@axiona/validator/validator.js';
 import NumericValidatable from '../validatable/numeric.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
 import NumericString from '../assert/string/numeric.js';
-import Dynamic from '@alirya/validator/message/function/validatable.js';
+import Dynamic from '@axiona/validator/message/function/validatable.js';
 import {StringParameters} from './string.js';
-import {ValuePartialParameters} from '@alirya/array/validator/value-partial.js';
-import {AndParameters} from '@alirya/array/validatable/and.js';
-import {OrParameters} from '@alirya/array/validatable/or.js';
-import InvalidFirstValidLast from '@alirya/array/message/message/list/invalid-first-valid-last.js';
-import {NumberParameters} from '@alirya/number/validator/number.js';
-import Chain from '@alirya/validator/chain.js';
-import {TypeInParameters} from '@alirya/type/validator/type-in.js';
+import {ValuePartialParameters} from '@axiona/array/validator/value-partial.js';
+import {AndParameters} from '@axiona/array/validatable/and.js';
+import {OrParameters} from '@axiona/array/validatable/or.js';
+import InvalidFirstValidLast from '@axiona/array/message/message/list/invalid-first-valid-last.js';
+import {NumberParameters} from '@axiona/number/validator/number.js';
+import Chain from '@axiona/validator/chain.js';
+import {TypeInParameters} from '@axiona/type/validator/type-in.js';
 
 export function NumericParameters() : Validator<unknown, string|number, boolean, boolean, string>;
 
